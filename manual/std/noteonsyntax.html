@@ -1,0 +1,127 @@
+<div>
+<p>
+    In Lua a function can have more than one signature. This provides considerable flexibility 
+    in function notation. Changing the number of arguments changes how a function works. 
+    Moreover, the data types for an argument can change as well. 
+    Furthermore, Lua provides support for named arguments through use of tables. 
+</p>
+
+<h2>Named arguments</h2>
+<p>The following command uses named arguments (note the opening and closing brackets).</p>
+
+<p class="CodeCommand">
+    &gt;&gt;std.pnorm{q=, mean=0, sd=1} &rarr; number</p>
+
+<p>
+    The function <em>pnorm</em> is under std library. By using the “{“ and “}” it allows name arguments. 
+    The names (as a matter of fact, these are Lua table keys) are: <em>q</em>, <em>mean</em> and <em>sd</em>. 
+    The names <em>mean</em> and <em>sd</em> have default values of 0 and 1 respectively, therefore, 
+    if not supplied, these values will be used. However, the name q must be provided. Also note that, when using name arguments, 
+    the order of the names does not matter. Finally the right arrow indicates that the function returns a number.
+</p>
+
+<p>&nbsp;</p>
+
+<p>Notice the variation in using the <em>std.pnorm</em> command with the name arguments:</p>
+
+<p class="CodeCommand">
+    &gt;&gt;std.pnorm{q=0.5, mean=0, sd=1}<br>
+    0.691462 <br>
+    
+    <br>
+    
+    
+    <span class="auto-style4"> --changing the argument order</span><br>
+    &gt;&gt;std.pnorm{q=0.5, sd=1, mean=0}  <br>
+    0.691462<br>
+    
+    <br>
+    
+    <span class="auto-style8">-- not providing sd</span><br>
+    &gt;&gt;std.pnorm{q=0.5, mean=0} <br>
+    0.691462<br>
+    
+    <br>
+    
+    <span class="auto-style8">-- not providing sd and mean</span><br>
+    &gt;&gt;std.pnorm{q=0.5} <br>
+    0.691462 <br />
+    
+    <br>
+    
+    <span class="auto-style8">-- not providing q</span><br>
+    &gt;&gt;std.pnorm{mean=0, sd=1} <br> 
+    <span class="auto-style5">ERROR:</span> First argument (q) must be either a number or of type Vector</p>
+
+<p>Please note that in the last call, the mandatory name q was not provided, therefore, the function threw and error.</p>
+
+<p>&nbsp;</p>
+
+<h2>Regular function call</h2>
+
+
+<p>
+    Here, the term regular function call is used since in Lua every function call is surrounded with parenthesis, (and ). 
+    The so-called named argument call <span style="background: #dddddd">std.pnorm{}</span> 
+    is just a syntactic sugar mechanism provided by Lua for the function call 
+    <span style="background: #dddddd">std.pnorm({})</span>.
+</p>
+<p>Notice the use of parenthesis in the following command:</p>
+
+<p class="CodeCommand">
+    &gt;&gt;std.pnorm(q=, mean=0, sd=1) &rarr; number
+</p>
+
+
+<p>
+    The function <em>pnorm</em> is under std library. Since "(" and ")" brackets are used, 
+    named arguments cannot be used. The following cases are possible:
+</p>
+
+<ol class="spaced">
+    <li>
+        <em>1 argument:</em> The argument will be considered as 
+        <em>q</em> and <em>mean</em> and <em>sd</em> will be considered as 0 and 1 respectively. 
+    </li>
+
+    <li>
+        <em>2 arguments:</em> First argument will be taken as 
+        <em>q</em> and second argument will be <em>mean</em> and <em>sd</em> will be considered as 1.
+    </li>
+
+    <li>
+        <em>3 arguments:</em> First one is <em>q</em>, second is <em>mean</em> and third one is <em>sd</em>. 
+    </li>
+</ol>
+
+<div class="CodeCommand">
+    <span class="LuaComment"> --only q is provided. By default mean=0 and sd=1 </span> <br>
+    &gt;&gt;std.pnorm(0.5)  <br />
+    0.691462  <br />
+
+    <br />
+
+    <span class="LuaComment">-- q=0.5 and mean=1 are provided. By default sd=1</span><br>
+    &gt;&gt;std.pnorm(0.5,0)  <br />
+    0.691462 <br />
+
+    <br />
+
+    <span class="LuaComment">-- q=0.5, mean=0 and sd=1 are provided </span><br>
+    &gt;&gt;std.pnorm(0.5,0,1)  <br />
+    0.691462  <br />
+
+    <br />
+
+    <span class="LuaComment">-- Changing the order. q=0.5, mean=1 and sd=0</span>
+    &gt;&gt;std.pnorm(0.5,1,0)   <br />
+    <span style="color: red;">ERROR:</span> Standard deviation must be greater than zero.
+</div>
+
+
+<p>Please note that, changing the order of the arguments 
+changes the value of the arguments. Therefore, for accuracy, all arguments must 
+be provided in the mentioned order.</p>
+
+</div>
+

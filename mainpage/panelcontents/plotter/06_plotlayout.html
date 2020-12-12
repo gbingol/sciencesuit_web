@@ -1,0 +1,102 @@
+<div>
+    <h4>Plot Using Commands</h4>
+    
+    <p>
+        <b>1)</b> Customize layout for multiple charts (maybe with multiple series) on a single plot window 
+        using <a href="/manual/std/funcs/plotlayout.php">std.plotlayout</a> function.
+    </p>
+
+    <p>&nbsp;</p>
+    
+    <p>
+        <b>2)</b> Start adding charts using <a href="/manual/std/funcs/scatter.php">std.scatter</a> and/or
+        <a href="/manual/std/funcs/boxplot.php">std.boxplot</a> functions as shown below.
+    </p>
+        
+    <p class="CodeCommand">
+        
+        &gt;&gt;t=std.plotlayout(2,2)  <br />
+
+         <br />
+       
+        &gt;&gt;x=std.sequence(-4,4,0.1);  <br />
+
+         <br />
+     
+        &gt;&gt;std.scatter{x=x, y=std.cos(x), <mark>hwnd=t[1][1]</mark>}  <br />
+        
+         <br />
+  
+        &gt;&gt;std.scatter{x=x, y=std.sin(x), <mark>hwnd=t[1][2]</mark>}  <br />    
+
+         <br />
+        
+        &gt;&gt;std.scatter{x=x, y=std.dnorm(x), <mark>hwnd=t[2][1]</mark>}  <br />
+        
+         <br />
+  
+        &gt;&gt;std.scatter{x=x, y=std.dt(x,5), <mark>hwnd=t[2][2]</mark>}  <br />   
+    </p>
+
+    <p>&nbsp;</p>
+    
+    
+    <p><b>3)</b> Obtain the chart and format it with "clicks"</p>
+    <img src="/manual/std/images/plotlayout-2x2.svg" alt="">
+    
+    
+    
+    <p>&nbsp;</p>
+    
+    <h4>Plot Using Clicks</h3>
+    
+    
+    <p>
+        To be able to use "clicks", we first need to generate the layout and show it.
+    </p>
+
+    <p class="CodeCommand">
+        <span class="LuaComment">--generate 2x1 matrix of window handles </span> <br />
+        &gt;&gt;t=std.plotlayout(2, 1, <span class="LuaKeyword">true</span>) 
+    </p>
+
+    <p>&nbsp;</p>
+
+    <p>
+        After running the command, as shown below, 
+        the multi-chart frame will be visible without any charts.
+    </p>
+
+    <img src="/manual/std/images/plotlayout-2x1.png" alt=""/>
+
+
+    <p>&nbsp;</p>
+
+    <p>
+        It is seen in above-shown figure that there are 2 containers, boundaries of which are shown, for accommodating different types of charts. 
+        Right-clicking on any of the container, will show the following menu:
+    </p>
+
+    <img src="/manual/std/images/plotlayout-2x1_convertcontextmenu.png" alt=""/>
+
+
+    <p>&nbsp;</p>
+
+    <p>
+        Selecting any of <em>"Convert to ..."</em> menu, will convert the respective container to the selected chart. For example,
+        if we convert the container located at (1,1) to a scatter chart and then right-click on it again, the following menu
+        options will be shown:
+    </p>
+
+
+    <img src="/manual/std/images/plotlayout-2x1_scatter_contextmenu.png" alt=""/>
+
+
+    <p>&nbsp;</p>
+
+    <p>
+        Now, for container (1, 1) it is possible to add series by following the steps described for the
+        <a href="/manual/plotter/scatter/scatterchart.php#New_Selection">scatter chart</a>.
+    </p>
+    
+</div>

@@ -1,0 +1,79 @@
+<div>
+
+<p >Needs vary and a user is not limited to the apps shipped with ScienceSuit. By 
+using <a href="https://www.tecgraf.puc-rio.br/iup/" target="_blank">IUP</a> and
+<a href="http://www.lua.org" target="_blank">Lua</a> and also the 
+provided data structures and built-in functions, it is easy for someone who has 
+an understanding of programming to develop apps and add new ribbon pages to 
+ScienceSuit framework. The following piece of code has been used to design the 
+page of the app shown in the figure below. </p>
+
+
+<img alt="" src="images/thermalprocessing_processcalc.png">
+
+
+<p>
+    Please also note that by using the <b>gridtext</b> control, 
+    which is provided in <em>std.gui</em> library, it is very easy to make 
+    an app to support the selection of a range from a worksheet and display the 
+    selection to the user as shown in figure below. It is seen from the figure 
+    that the selection is shown to user as "<mark>Sheet 1!A1:B3</mark>". 
+    
+    <br>
+    <br>
+
+    Here the worksheet name is "<i>Sheet 1</i>" and the selected 
+    range is from "<i>A1</i>" to "<i>B3</i>" as seen from the following figure. 
+    The selection can be changed by making a new selection or by simply editing the text.
+</p>
+
+<img alt="" src="images/excelstyleselection.svg">
+   
+<p>&nbsp;</p>
+
+<p class="CodeCommand">
+    <span class="LuaKeyword">local</span> lblTime=iup.label{title="<em>Time:</em>"} <br />
+    <span class="LuaKeyword">local</span> txtTime=std.gui.gridtext() <br />
+
+    <br />
+
+    <span class="LuaKeyword">local</span> lblTemperature=iup.label{title="<em>Temperature:</em>"} <br />
+    <span class="LuaKeyword">local</span> txtTemperature=std.gui.gridtext() <br />
+
+    <br />
+
+    <span class="LuaKeyword">local</span> lblRefTemp=iup.label{title="<em>Reference Temperature:</em>"} <br />
+    <span class="LuaKeyword">local</span> txtRefTemp=std.gui.numtext{min=1, max=150, value=121} <br />
+
+    <br />
+
+    <span class="LuaKeyword">local</span> btnCalc=iup.button{title="<em>Calculate</em>"} <br />
+    <span class="LuaKeyword">local</span> TimeTemps=iup.gridbox{lblTime, txtTime, lblTemperature, txtTemperature, lblRefTemp, txtRefTemp, numdiv=2, 
+    HOMOGENEOUSCOL="<em>yes</span>",CGAPLIN=10, CGAPCOL=5, orientation="<em>HORIZONTAL</em>"} <br />
+
+    <br />
+
+    <span class="LuaKeyword">local</span> vbox1=iup.vbox{iup.space{size="<em>x5</em>"}, TimeTemps, 
+    iup.space{size="<em>x20</span>"}, alignment="<em>ALEFT</span>"} <br />
+    <span class="LuaKeyword">local</span> vbox2=iup.vbox{btnCalc,alignment="<em>acenter</em>"} <br />
+    <span class="LuaKeyword">local</span> vboxes=iup.vbox{vbox1, vbox2, alignment="<em>acenter</em>"} <br />
+
+    <br />
+
+    <span class="LuaKeyword">local</span> page2=iup.hbox{vboxes, iup.space{size="<em>10x</em>"}} <br />
+    page2.tabtitle="<em>Thermal Process Calc</span>" <br />
+
+    <br />
+
+    <span class="LuaKeyword">local</span> m_tabs=iup.tabs{page1,page2}  <br />
+    <span class="LuaKeyword">local</span> dlgThermalProcess = iup.dialog{m_tabs, title="<em>Thermal Processing</em>", size="<em>350x200</em>"} <br />
+
+    <br />
+
+    txtTime:setOwner(dlgThermalProcess) <br />
+    txtTemperature:setOwner(dlgThermalProcess)  <br />
+</p>
+
+
+
+</div>

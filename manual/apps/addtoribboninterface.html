@@ -1,0 +1,98 @@
+
+<div>
+
+<p>
+    Once an app is developed, it is best to add it to a ribbon page for convenience. 
+    In the figure, we see 3 pages, namely "<em>Home</em>", "<em>Workbook</em>" and "<em>Apps</em>". 
+    At the "<em>Apps</em>" page, there are 2 panels, namely "<em>Process Engineering</em>" 
+    and "<em>Statistics</em>" and each panel has a number of buttons.
+</p>
+
+
+
+<p>Addition of a new page or editing an existing one is done through the <em>manifest.xml</em> file. 
+    The main idea is that clicking on a button executes a function which shows an app. 
+    Therefore, first of all we need to make a button and then assign a function to the button.
+</p>
+   <p>&nbsp;</p>
+
+
+<img alt="" src="images/ribboninterface_dropbutton.png" style="float:left; margin-right:15px">
+
+<p>
+    The button itself can be either directly added to a panel or become part of a dropdown. 
+    A dropdown button, namely "<em>t-test</em>, is shown in the figure. 
+    Clicking on a dropdown button shows a menu with entries, where each entry is considered as a button. 
+    Therefore, conceptually a dropdown button is a container for buttons.
+</p>
+
+<p style="clear:left">&nbsp;</p>
+<p style="clear:left">
+    Now that it is understood that it is possible to have many pages, which can have many panels, 
+    which can have many buttons, let's see how we can create using<em> manifest.xml</em> file. 
+    Currently, the XML file have the following tags (note the conceptual difference between the words, 
+    <em>make </em>and <em>add</em>):
+</p>
+
+<ol>
+    <li><em>RIBBON:</em> The root of the XML.</li>
+    
+    <li><em>PAGE:</em> <em>Adds </em>a new page. It has only 1 attribute, namely the TITLE.</li>
+    
+    <li>
+        <em>BUTTON:</em> Makes a button. It has two attributes, namely, NAME and TITLE. NAME attribute is s
+        imilar to a variable and all your buttons must have a unique name, whereas TITLE is what is 
+        shown as a text on the button. BUTTON can have two child elements:
+    </li>
+    
+    <ol>
+        <li><em>FUNCTION:</em> Exact name of the function with its location relative to global table.</li>
+        <li><em>IMAGE:</em> Exact location of the image relative to the Apps folder. The image must be 32x32 pixels.</li>
+    </ol>
+
+    <li>
+        <em>DROPBUTTON:</em> <em>Makes </em>a dropdown button. It has two attributes, namely NAME and TITLE, which 
+        functions exactly the same way as the BUTTON element. It can have only 1 child element as IMAGE and 
+        many child elements as ADD.
+    </li>
+    <ol>
+        <li>IMAGE: Exact location of the image relative to the Apps folder. The image must be 32x32 pixels.</li>
+        <li>ADD: <em>Name </em>of the button to be added to the DROPBUTTON.</li>
+    </ol>
+
+    <li>
+        <em>PANEL</em>: Adds a panel to the PAGE. It has only 1 attribute namely TITLE and can have many child 
+        elements with the tag ADD, which adds a dropbutton and a button.
+    </li>
+
+</ol>
+
+
+<p>&nbsp;</p>
+<p>
+    To be able to add a dropbutton similar to the one shown in the above figure (with only two entries) to 
+    the "<em>Apps</em>" page and to the "<em>Statistics</em>" panel, we would use the following XML structure:
+</p>
+
+<p class="CodeCommand">
+    <font size="2" style="font-size: 10pt">&lt;</font><font color="#355269"><font size="2" style="font-size: 10pt">RIBBON</font></font><font size="2" style="font-size: 10pt">&gt;<br>&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#355269">PAGE</font> TITLE="<i>Apps</i>"&gt;<br><br>&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#355269">BUTTON</font> NAME="<i>ttest1sample</i>" TITLE="<i>1 
+   sample t-test</i>"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;<font color="#5eb91e">FUNCTION</font>&gt;std.app.TTest1Sample&lt;/<font color="#5eb91e">FUNCTION</font>&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#5eb91e">IMAGE</font>&gt;images/t_test1sample.png&lt;/<font color="#5eb91e">IMAGE</font>&gt;<br>&nbsp;&nbsp;&nbsp; 
+   &lt;/<font color="#355269">BUTTON</font>&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;<font color="#355269">BUTTON</font> 
+   NAME="<i>ttest2sample</i>" TITLE="<i>2 sample t-test</i>"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#5eb91e">FUNCTION</font>&gt;std.app.TTest2Sample&lt;/<font color="#5eb91e">FUNCTION</font>&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#5eb91e">IMAGE</font>&gt;images/t_test2sample.png&lt;/<font color="#5eb91e">IMAGE</font>&gt;<br>&nbsp;&nbsp;&nbsp; 
+   &lt;/<font color="#355269">BUTTON</font>&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;<font color="#355269">DROPBUTTON</font> 
+   NAME="<i>ttest</i>" TITLE="<i>t-test</i>"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#5eb91e">IMAGE</font>&gt;images/t_test.png&lt;/<font color="#5eb91e">IMAGE</font>&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#5eb91e">ADD</font>&gt;ttest1sample&lt;/<font color="#5eb91e">ADD</font>&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   &lt;<font color="#5eb91e">ADD</font>&gt;ttest2sample&lt;/<font color="#5eb91e">ADD</font>&gt;<br>&nbsp;&nbsp;&nbsp; 
+   &lt;/<font color="#355269">DROPBUTTON</font>&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;<font color="#355269">PANEL</font> 
+   TITLE="<i>Statistics</i>"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;<font color="#5eb91e">ADD</font>&gt;ttest&lt;/<font color="#5eb91e">ADD</font>&gt;<br>&nbsp;&nbsp;&nbsp; 
+   &lt;/<font color="#355269">PANEL</font>&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;/<font color="#355269">PAGE</font>&gt;<br>
+   &lt;/<font color="#355269">RIBBON</font>&gt;</font></p>
+
+</div>
+

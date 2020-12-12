@@ -1,0 +1,258 @@
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+h2
+{
+    color: red;
+}
+
+
+h3
+{
+    color: maroon;
+}
+
+
+.CodeCommand 
+{
+    background-color: #f9f9f9;
+    
+    border: 2px solid green;
+    
+    border-radius: 10px;
+    
+    margin-right: 10%;
+    
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:5px;
+    
+    font-size: 0.9em;
+}
+
+.CodeCommand:hover
+{
+    border: 2px dashed green;
+    
+    background-color: #f1f1f1;
+}
+
+
+span.LuaKeyword 
+{
+    color: #0000FF;
+}
+
+
+span.LuaComment
+{
+    color: green;
+}
+
+
+p.funcsignature 
+{
+    border: 1px green dashed;
+    
+    padding: 10px;
+    
+    font-style:italic;
+    
+    background-color: blanchedalmond;
+    
+    display: inline-block;
+    
+    margin-top: 3px;
+}
+
+
+
+
+mark{
+    background-color: yellow; 
+}
+
+
+
+/*When function arguments are listed as a table*/
+table.funcarguments td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table.funcarguments td:first-child {
+    font-style: italic;
+}
+
+
+
+/*References at the end of the page*/
+
+
+
+.RelatedLinks a
+{ 
+    margin-right: 20px;
+}
+
+
+/*All links to external web sites must be highlighted*/
+a[target="_blank"] 
+{
+    background-color:lightyellow;
+}
+
+
+
+
+
+
+
+/*Matrix or Vector borders*/
+    table.matrix 
+    {
+        position: relative;
+    }
+
+    table.matrix:before, table.matrix:after 
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 1px solid black;
+        width: 6px;
+        height: 100%;
+    }
+
+    table.matrix:before 
+    {
+        left: -2px;
+        border-right: 0px;
+    }
+
+    table.matrix:after 
+    {
+        right: -2px;
+        border-left: 0px;
+    }
+
+    table.matrix td 
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+
+/*provides headings such as 1) 1.1).. */
+p.heading1 
+{
+    counter-increment: level1;
+    counter-reset: level2;
+    
+    font-weight: bold;
+    
+    font-size: large;
+    
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+p.heading2 
+{
+    counter-increment: level2;
+    counter-reset: level3;
+    
+    font-size: medium;
+    
+    margin-left: 20px;
+}
+
+p.heading3 
+{
+    counter-increment: level3;
+    font-size: medium;
+    margin-left: 40px;
+}
+
+p.heading1::before 
+{
+    content: counter(level1)") ";
+}
+
+p.heading2::before 
+{
+    content: counter(level1)"."counter(level2)") ";
+}
+
+p.heading3::before 
+{
+    content: counter(level1)"."counter(level2)"."counter(level3)") ";
+}
+
+p.reset
+{
+    counter-reset:level1;
+}
+        
+
+div.youtube
+{
+    width: 500px;
+    height: 400px;
+}
+
+
+
+@media only screen and (max-width:900px) 
+{
+    img 
+    {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    
+    
+    .CodeCommand 
+    {
+        font-size: 0.8em;
+       
+        margin-right: 1%;
+    }
+    
+    
+    .RelatedLinks 
+    { 
+        display: flex;
+        
+        flex-wrap: nowrap;
+    }
+
+    
+    
+}
+
+
+
+@media only screen and (max-width:600px) {
+   
+    
+    .CodeCommand 
+    {
+        padding-top:6px;
+        padding-bottom: 6px;
+    }
+    
+    
+    div.youtube
+    {
+        width: 340px;
+        height: 250px;
+    }
+
+    
+}

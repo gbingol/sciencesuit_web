@@ -1,0 +1,98 @@
+<div>
+
+<p>
+    The concept of iterators and containers are not new and as a matter of fact, the STL library of C++ language has been designed based on this simple but very powerful concept. 
+    As already mentioned most of the built-in data structures in <i> ScienceSuit </i>are iteratable containers and Lua tables are, by default, iteratable.
+</p>
+
+<p>
+    When designing a new function, understanding the concept of iterators and containers can save you significant amount of time and furthermore make your code 
+    significantly more readable. Let’s demonstrate the concept with a simple example. Suppose we want to design a simple function that finds the sum of the 
+    values and we want this to work, if not all, on many data structures:
+</p>
+
+<div class="CodeCommand">
+    <span class="LuaKeyword">function</span> Sum(entry)<br>
+    
+    <span class="LuaKeyword" style="margin-left: 12px;">local</span> total=0 <br>
+
+    <br>
+    
+    <span class="LuaKeyword" style="margin-left: 12px;">if</span>(type(entry)=="table" or type(entry)=="Vector") <span class="LuaKeyword">then</span> <br>
+        <span class="LuaKeyword" style="margin-left: 24px;">for</span> i=1,#entry <span class="LuaKeyword">do</span> <br> 
+        <span style="margin-left: 36px;">total=total+entry[i] </span><br> 
+        <span class="LuaKeyword" style="margin-left: 24px;">end</span> <br>
+        
+        <br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="LuaKeyword">elseif</span>(type(entry)=="Matrix") <span class="LuaKeyword">then</span> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="LuaKeyword">for</span> i=1,#entry do <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total=total+entry[{i}] <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="LuaKeyword">end</span> <br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="LuaKeyword">elseif</span> <br>
+    
+    <br>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="LuaComment">-- querying data types goes on</span> <br>
+    
+    <br>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="LuaKeyword">end</span> <br>
+    
+    <br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="LuaKeyword">return</span> total <br>
+    
+    <br>
+    
+<span class="LuaKeyword">end</span> 
+</div>
+
+<p>&nbsp;</p>
+
+<p>
+    It is immediately realized that as the number of data structures increases, there will be more <span class="LuaKeyword">if</span> 
+    blocks and it is indeed very easy to forget and rather cumbersome to add a data structure as the number 
+    of functions and data structures increases. Therefore, we will end up with an error-prone, 
+    hard-to-read and time-taking code. Here, comes the life-saver: <em>Iteratable containers</em>
+</p>
+
+
+<p>&nbsp;</p>
+
+<p>
+    Had we used the concept of iteratable containers, we could have designed the function in the following way:
+</p>
+
+<div class="CodeCommand">
+    <span class="LuaKeyword">function</span> Sum(container)<br>
+    &nbsp;&nbsp;&nbsp;<span class="LuaKeyword">local</span> total=0<br>
+    
+    <br>
+    
+    &nbsp;&nbsp;&nbsp; <span class="LuaKeyword">for</span> key, value <span class="LuaKeyword">in</span> pairs(container) <span class="LuaKeyword">do</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="LuaKeyword">if</span>(type(value)=="number") <span class="LuaKeyword">then</span> <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; total=total+value <br> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="LuaKeyword">end</span><br>
+    &nbsp;&nbsp;&nbsp; <span class="LuaKeyword">end</span><br>
+    
+    <br>
+    &nbsp;&nbsp;&nbsp;<span class="LuaKeyword">return</span> total<br>
+    
+    <br>
+    <span class="LuaKeyword">end</span> 
+</div>
+
+<p>
+    One can quickly notice that the code is more concise, 
+    readable and less error-prone. Furthermore, there are no <span class="LuaKeyword">if</span> 
+    blocks checking the type of the container. As long as the function 
+    argument, namely <i>container</i>, is an iteratable one, the code will work 
+    regardless of its type.
+</p>
+
+<p>&nbsp;</p>
+
+</div>
+

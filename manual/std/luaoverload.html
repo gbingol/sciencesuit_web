@@ -1,0 +1,201 @@
+<div>
+
+<h2 id="mathlib">1) Math Library</h2>
+
+<p>
+    Lua’s math library comes with essential mathematical functions; however, these only work on a
+    <em>single</em> number. As we know, ScienceSuit is equipped with different types of data structures and 
+    the overloaded math functions, which are under std 
+    library, work on these data structures and also on Lua tables.
+</p>
+
+<p>
+    <span class="auto-style4">Overloaded functions</span><span class="auto-style1">: 
+    abs, acos, asin, atan, ceil, cos, cosh, exp, floor, ln, log, log10, sin, sinh, 
+    sqrt, tan, tanh.</span>
+</p>
+
+
+<p>Let's do a demo with cos function. The same rationale is applicable to the other above-mentioned functions as well.</p>
+
+<h3>Using Lua's math library:</h3>
+
+<p class="CodeCommand">
+    &gt;&gt;math.cos(5)<br>
+    0.283662 
+</p>
+
+<p>Same result can be obtained using std library.</p>
+
+<p class="CodeCommand">
+    &gt;&gt;std.cos(5)<br>
+    0.283662
+</p>
+
+
+<p class="auto-style1">Lua table (return type is a table):</p>
+
+<p class="CodeCommand">
+    &gt;&gt;t={1,2,3,4}<br>
+    &gt;&gt;std.cos(t)<br>
+    0.540302&nbsp;&nbsp;&nbsp; -0.416147&nbsp;&nbsp;&nbsp; -0.989992&nbsp;&nbsp;&nbsp; -0.653644 
+</p>
+
+<p>&nbsp;</p>
+
+
+<h3>Vector</h3>
+
+<p class="CodeCommand">&gt;&gt;v=std.tovector{1, 2, 3, 4}<br>
+    &gt;&gt;std.cos(v)<br>
+    0.540302&nbsp;&nbsp;&nbsp; -0.416147&nbsp;&nbsp;&nbsp; -0.989992&nbsp;&nbsp;&nbsp; -0.653644&nbsp;&nbsp;&nbsp; COL
+</p>
+
+
+<p>&nbsp;</p>
+<h3>Matrix</h3>
+
+<p class="CodeCommand">&gt;&gt;m=std.tomatrix{ {1,2} , {3,4} }<br>
+    &gt;&gt;std.cos(m)<br>
+    0.540302&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.416147<br>-0.989992&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.653644
+</p>
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+<h2 id="type_next">2) type() and next()</h2>
+
+<p>
+    The functions, namely next and type, provided by Lua were 
+    overloaded for a better harmony with the framework. 
+</p>
+
+
+<h3 id="type">2.1) type()</h3>
+
+<p>Inherently, Lua has 8 data types:</p>
+
+<ol>
+    <li>nil</li>
+    <li>boolean</li>
+    <li>number</li>
+    <li>string</li>
+    <li>function</li>
+    <li>userdata</li>
+    <li>thread</li>
+    <li>table</li>
+</ol>
+
+
+<p>In ScienceSuit the types are reported by the function type is as expected:</p>
+
+<p class="CodeCommand">&gt;&gt;a<br>
+    nil<br>
+    
+    <br>
+    
+    &gt;&gt;a=3<br>
+    &gt;&gt;type(a)<br>
+    number<br>
+    
+    
+    <br>
+    
+    &gt;&gt;s="abc"<br>
+    &gt;&gt;type(s)<br>
+    string
+</p>
+
+<p style="margin-right: 5%;">
+    However, there is a catch with userdata and table. For example: Vector and Matrix are actually userdata types and say, 
+    if variables <em>v</em> and <em>m</em> were Vector and Matrix, respectively, a call to 
+    <span style="background: #dddddd">type(v)</span> or 
+    <span class="auto-style1" style="background: #dddddd">type(m)</span>, 
+    would have only returned as userdata. Therefore, there would be no way of knowing the difference between
+    <em>v</em> and <em>m</em>, except that they are userdata. Thus, for accuracy and convenience,
+    <em>type()</em> has been overloaded.</p>
+
+
+<p>&nbsp;</p>
+
+<p>
+    For data type table, the scenario is slightly different: A call to a regular table would return a 
+    value as table, which is expected.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;t={1,2,3}<br>
+    &gt;&gt;type(t)<br>
+    table
+</p>
+
+<p>However, had we provided a metamethod <em>__name()</em>, a call to 
+    function <em>type()</em> would return the value returned by the function <em>__name()</em>
+    which must be of type string.</p>
+
+<p class="CodeCommand">
+    function Food:__name()<br>
+    &nbsp;&nbsp;&nbsp;return "Food"   <br>
+    end
+</p>
+
+<p>
+    Now that a metamethod, namely <em>__name()</em>, is provided 
+    to the Food data structure, all variables created using the Food data structure 
+    will be reported as “Food” by function <em>type()</em>.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;milk=Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67}<br>
+    &gt;&gt;type(milk)<br>
+    Food
+</p>
+
+<p>Note that, the data structure name and the value 
+    reported by function <em>__name()</em> does not have to be the same. 
+    However, for convenience it is recommended that they are the same.</p>
+
+
+<p>&nbsp;</p>
+
+
+
+<h3 id="next">2.2) next()</h3>
+
+<p>
+    In Lua, the function <em>next()</em> only works with tables. Therefore, to be 
+    able to use it with the provided data structures it has been overloaded.
+</p>
+
+<p>
+    Please note that, for a data structure to be able to benefit from this, it must implement a 
+    metamethod named as <em>next()</em>. Otherwise, an error will be thrown.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;v=std.tovector{10,20,30,40}<br>
+    
+    <br>
+    <br>
+    
+    &gt;&gt;key,value=next(v,nil)<br>
+    <br>
+    
+    &gt;&gt;key<br>
+    1<br>
+    
+    <br>
+    
+    &gt;&gt;value<br>
+    10 
+</p>
+
+</div>

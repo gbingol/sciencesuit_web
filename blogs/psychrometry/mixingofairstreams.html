@@ -1,0 +1,150 @@
+<html dir="ltr"><head>
+<meta content="en-us" http-equiv="Content-Language">
+<link href="../../css/common.css" rel="stylesheet">
+
+    <title>Mixing of Air Streams</title>
+
+    <style type="text/css">
+
+        .auto-style9
+        {
+            text-align: left;
+            font-size: medium;
+            color: #FF0000;
+            font-weight: bold;
+            font-style: italic;
+
+        }
+        .auto-style10
+        {
+            color: #007700;
+        }
+
+        span.LuaComment
+        {
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+<h1>Mixing of Air Streams</h1>
+
+<p>
+    Mixing of air streams is important for many air-conditioning applications. It is widely used for large buildings,
+    most production / process plants, and hospitals, all of which require that the conditioned air be mixed
+    with a certain amount of fresh outside air before it is given back into the where it is required.
+    This is accomplished by simply merging the two air streams.
+</p>
+
+<img src="images/adiabatic mixing of airstreams.png">
+
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+
+ <p class="auto-style9">Example Problem</p>
+<p>
+    Air leaving the cooling section of an air conditioning system
+    at T<sub>1</sub>°C and RH<sub>1</sub> % relative humidity at a rate of V<sub>1</sub> (m<sup>3</sup>/min)
+    is mixed adiabatically with outside air
+    at T<sub>2</sub>°C and RH<sub>2</sub> % relative humidity at a rate of V<sub>2</sub> (m<sup>3</sup>/min).
+    Assuming that the mixing process occurs at a pressure of P(atm), determine the relative humidity, the dry-bulb
+    temperature, and the volume flow rate of the mixture.
+</p>
+
+
+<p>&nbsp;</p>
+
+<p class="auto-style9">
+        Solution code (hosted on <a target="_blank" href="https://github.com/gbingol/e-education/tree/master/sciencesuit">GitHub</a>)
+</p>
+
+
+<div>
+
+    <span class="LuaKeyword">local function</span> Compute(tbl) <br>
+    <span class="LuaKeyword">local</span> T1, T2=tbl.T1, tbl.T2 <span class="LuaComment">--C</span> <br>
+    <span class="LuaKeyword">local</span> RH1, RH2=tbl.RH1, tbl.RH2 <span class="LuaComment">--%</span> <br>
+    <span class="LuaKeyword">local</span> V1, V2=tbl.V1, tbl.V2 <span class="LuaComment">--m3/min</span> <br>
+    <span class="LuaKeyword">local</span> Ptotal=tbl.P <span class="LuaComment">-- kPa</span> <br>
+
+    <br>
+
+    <span class="LuaKeyword">local</span> state1=std.psychrometry{Tdb=T1, RH=RH1, P=Ptotal} <span class="LuaComment">-- First inlet stream</span> <br>
+    <span class="LuaKeyword">local</span> state2=std.psychrometry{Tdb=T2, RH=RH2, P=Ptotal} <span class="LuaComment">-- Second inlet stream</span> <br>
+
+    <br>
+
+    <span class="LuaKeyword">local</span> v1, v2=state1.V, state2.V <span class="LuaComment">-- m3/kg da</span> <br>
+    <span class="LuaKeyword">local</span> w1, w2=state1.W, state2.W <span class="LuaComment">-- kg/ kg da</span> <br>
+    <span class="LuaKeyword">local</span> h1, h2=state1.H, state2.H <span class="LuaComment">-- kJ/kg da</span> <br>
+
+    <br>
+
+    <span class="LuaKeyword">local</span> ma1, ma2=V1/v1, V2/v2 <span class="LuaComment">--kg da</span> <br>
+
+    <br>
+
+    <span class="LuaKeyword">local</span> ma3=ma1+ma2 <span class="LuaComment">--kg da</span> <br>
+    <span class="LuaKeyword">local</span> mwater=w2*ma2+w1*ma1 <span class="LuaComment">-- amount of water vapor in the exit stream</span> <br>
+    <span class="LuaKeyword">local</span> w3=mwater/ma3 <span class="LuaComment">-- absolute humidity of exiting air</span> <br>
+    <span class="LuaKeyword">local</span> E3=h2*ma2+h1*ma1 <span class="LuaComment">-- enthalpy of exiting air, kJ</span> <br>
+    <span class="LuaKeyword">local</span> h3=E3/ma3 <span class="LuaComment">-- enthalpy of exiting air, kJ/kg da</span> <br>
+
+    <br>
+
+    <span class="LuaComment">--Now that we know at least 3 properties of the exiting air, we can compute the rest</span> <br>
+    <span class="LuaKeyword">local</span> state3=std.psychrometry{P=Ptotal, W=w3, H=h3} <br>
+
+    <br>
+
+    <span class="LuaComment">--Volumetric flow rate of exiting air </span> <br>
+    <span class="LuaKeyword">local</span> V3=state3.V*ma3 <br>
+    <span class="LuaKeyword">local</span> RH3=state3.RH <br>
+    <span class="LuaKeyword">local</span> T3=state3.Tdb <br>
+
+
+
+    <br>
+    <span class="LuaKeyword">return</span> {V=V3, RH=RH3, T=T3} <br>
+
+    <br>
+
+    <span class="LuaKeyword">end</span> <br>
+
+    <br>
+
+
+<span class="LuaKeyword">local</span> tbl=Compute{T1=14, T2=32, P=100, V1=50, V2=20, RH1=100, RH2=60} <br>
+
+<br>
+
+print("Volumetric flow rate of mixture (m3/kg da):"..std.misc.tostring(tbl.V)) <br>
+print("Relative humidity of mixture (%):"..std.misc.tostring(tbl.RH)) <br>
+print("Temperature of mixture (C):"..std.misc.tostring(tbl.T)) <br>
+</div>
+
+
+    <p>&nbsp;</p>
+        <p>Here, one could wish to investigate the effect of relative humidities of inlet
+    air on the relative humidity of exit air. Here are the simulation results:</p>
+
+    <p>&nbsp;</p>
+
+    <img alt="" src="images/airmixing-simulation1.png">
+
+    <p>
+        Here we see that increasing relative humidity of either inlet stream while keeping the other constant, increases the relative
+        humidity of exit air linearly.
+        For the careful eyes, it is also noticed that we could have run the simulation for RH<sub>2</sub> up to 75% relative humidity level, why?
+    </p>
+
+
+</body>
+</html>
