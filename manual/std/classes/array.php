@@ -52,8 +52,9 @@
 
 <h1>Array</h1>
 <p>
-    <a href="vector.php">Vector</a> and <a href="matrix.php">Matrix</a> are specialized in numeric data 
-    and can only contain numeric values. However, Array can contain both numeric and non-numeric values.
+    Array can contain both numeric (float, integer) and non-numeric 
+    (string, <span class="LuaKeyword">nil</span>) values. When an
+    array is part of a <a href="dataframe.php">DataFrame</a>, then its status is called as <em>linked</em>.
 </p>
 <p>&nbsp;</p>
     
@@ -555,9 +556,8 @@
 
 
 <div class="RelatedLinks">
-    <a href="vector.php">Vector</a>
-    <a href="matrix.php">Matrix</a>
-    <a href="range.php">Range</a>
+    <a href="dataframe.php">DataFrame</a>
+    
 </div>
     
 </body>

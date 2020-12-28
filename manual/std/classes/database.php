@@ -10,7 +10,7 @@
     
     <link href="../../../css/common.css" rel="stylesheet" type="text/css" />
     
-    <style>
+    <style> 
 	
         .auto-style1 {
            
