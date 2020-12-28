@@ -36,6 +36,11 @@
             padding-top: 6px;
             padding-bottom: 6px;
         }
+        
+        table.padded td
+        {
+            padding: 6px;
+        }
 
     </style>
 
@@ -61,6 +66,8 @@
     DataFrame (DF) is a 2D data structure composed of columns of <a href="array.php">arrays</a>. 
     Therefore, each column of a DF is an Array and thus shows all properties of an Array. 
 </p>
+
+
 <p>&nbsp;</p>
     
    
@@ -84,10 +91,62 @@
 
 <h3>1.1) Using new member function</h3>
 
-    
-<p class="CodeCommand">
-    &gt;&gt;
+<p class="funcsignature">
+    DataFrame.new(tbl)
 </p>
+
+<p>
+    where parameter <em>tbl</em> is a Lua table. The parameter <em>tbl</em> can have keys 
+    <em>rows</em> and <em>cols</em> to specify the headers of rows and columns, respectively. 
+    The provided userdata must be of type <a href="array.php">array</a>. If an array is provided 
+    with an explicit key, then the key will be used as a header for the respective column.
+</p>
+
+<p>&nbsp;</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df=std.DataFrame.new{std.toarray{"a", 2, 3}, 
+    std.toarray{"abcde", 12, "b", 4}, std.toarray{10,20,30}} <br>
+    
+    &gt;&gt;df
+    
+    <table class="padded">
+        <tr>
+            <td>&nbsp;</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>"a"</td>
+            <td>"abcde"</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>12</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>"b"</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>nil</td>
+            <td>4</td>
+            <td>nil</td>
+        </tr>
+    </table>
+  
+</div>
+
+<p>
+    
 
 
 <p>&nbsp;</p>
