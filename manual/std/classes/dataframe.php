@@ -31,7 +31,7 @@
             color: #0000FF;
         }
         
-        ul.spaced li
+        ul.spaced li, ol.spaced li
         {
             padding-top: 6px;
             padding-bottom: 6px;
@@ -106,7 +106,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;df=std.DataFrame.new{std.toarray{"a", 2, 3}, 
-    std.toarray{"abcde", 12, "b", 4}, std.toarray{10,20,30}} <br>
+    std.toarray{"abc", 12, "b", 4}, std.toarray{10, 20, 30}} <br>
     
     &gt;&gt;df
     
@@ -120,7 +120,7 @@
         <tr>
             <td>1</td>
             <td>"a"</td>
-            <td>"abcde"</td>
+            <td>"abc"</td>
             <td>10</td>
         </tr>
         <tr>
@@ -146,14 +146,77 @@
 </div>
 
 <p>
-    
+    Few things to notice here are:
+</p>
 
+<ol class="spaced">
+    <li>Each table entry is an array (therefore satisfying the requirement).</li>
+    <li>Arrays are not of same size, therefore when printed out 
+        smaller ones are "padded" with <span class="LuaKeyword">nil</span>.
+    </li>
+    <li>None of the arrays have an explicit table key.</li>
+    <li>No explicit column or row header defined, therefore automatically assigned.</li>
+    <li>Columns (thus arrays) are printed out in the order they were defined.</li>
+</ol>
 
 <p>&nbsp;</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df=std.DataFrame.new{std.toarray{"a", 2, 3}, A=std.toarray{"abc", 12, "b", 4}, std.toarray{10, 20, 30}}
+    
+    <br>
+    
+    &gt;&gt;df
+    
+    <table class="padded">
+        <tr>
+            <td>&nbsp;</td>
+            <td>1</td>
+            <td>2</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>20</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>30</td>
+            <td>"b"</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>    
+</div>
+
+
 <p>
-    
+    Similar to previous example, notes #1 and #2 are still valid. However:
 </p>
-    
+
+<ol>
+    <li>One of the arrays has an explicit key, namely <em>A</em>.</li>
+    <li>
+        Array with explicit key is printed out last, although it was defined 
+        in the second order. This is important as when arrays have explicit keys, 
+        there is absolutely no guarantee that the order of definition will be 
+        preserved when printed out.
+    </li>
+</ol>
+
     
 <p>&nbsp;</p>
 

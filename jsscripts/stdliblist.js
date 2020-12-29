@@ -78,6 +78,12 @@ var StdLibFunctions = [
     
     
   
-  var StdLibClasses=[["Array","utility"],["Food","process"],["Database","utility"],["Matrix", "math"],["Range","utility"],
-      
-      ["Vector", "math"], ["Worksheet","utility"]];
+  var StdLibClasses=[
+      ["Array","utility"],
+      ["Food","process"],
+      ["Database","utility"],
+      ["DataFrame","utility"],
+      ["Matrix", "math"],
+      ["Range","utility"],
+      ["Vector", "math"], 
+      ["Worksheet","utility"]];

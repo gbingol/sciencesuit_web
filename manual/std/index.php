@@ -37,34 +37,10 @@
         table.datastruct td
         {
             padding: 6px;
-           
-            
-            text-align: center;
         }
         
-        table.datastruct td:first-child
-        {
-            border-right: 1px green dashed;
-            
-            text-align: left;
-            
-            
-        }
         
-        table.datastruct tr:first-child
-        {
-            font-weight: bold;
-            
-            font-size: large;
-            
-            color: green;
-        }
-        
-        h2
-        {
-            color: red;
-        }
-        
+       
         p
         {
             padding-bottom: 10px;
@@ -208,39 +184,24 @@ window.addEventListener("load", function()
 
 <h2 id="datastructs">Class List</h2>
 <table class="datastruct" >
-    <tr>
-        <td>General purpose</td>
-        <td>Purpose-specific</td>
-    </tr>
-    <tr>
-        <td><a href="classes/array.php">Array</a></td>
-        <td><a href="classes/food.php">Food</a></td>
-    </tr>
     
-    <tr>
-        <td><a href="classes/database.php">Database</a></td>
-        <td></td>
-    </tr>
+    <tr><td><a href="classes/array.php">Array</a></td></tr>
+        
+    <tr><td><a href="classes/food.php">Food</a></td></tr>
     
-    <tr>
-        <td><a href="classes/matrix.php">Matrix</a></td>
-        <td></td>
-    </tr>
     
-    <tr>
-        <td><a href="classes/range.php">Range</a></td>
-        <td></td>
-    </tr>
+    <tr><td><a href="classes/database.php">Database</a></td></tr>
     
-    <tr>
-        <td><a href="classes/vector.php">Vector</a></td>
-        <td></td>
-    </tr>
-    
-    <tr>
-        <td><a href="classes/worksheet.php">Worksheet</a></td>
-        <td></td>
-    </tr>
+    <tr><td><a href="classes/dataframe.php">DataFrame</a></td></tr>
+        
+    <tr><td><a href="classes/matrix.php">Matrix</a></td></tr>
+
+     <tr><td><a href="classes/range.php">Range</a></td></tr>
+
+     <tr><td><a href="classes/vector.php">Vector</a></td></tr>
+
+     <tr><td><a href="classes/worksheet.php">Worksheet</a></td></tr>
+        
     
 </table>
 
