@@ -83,15 +83,17 @@
 <p>&nbsp;</p>
 <p>
     In order to create an array from data, you can use either <em>toarray</em> function 
-    or <a href="../../workbook/index.php#createdatastructures">use the interface</a>. When interface is used 
-    to create an array, if a string can be converted to a valid number, then it will be stored as type number, otherwise as type string. 
+    or <a href="../../workbook/index.php#createdatastructures">use the interface</a>. 
+    When interface is used to create an array, if a string can be converted to a valid number, 
+    then it will be stored as type number, otherwise as type string. 
 </p>
     
     
 <p>&nbsp;</p>
 
 <p>
-    It should be noted that, unlike the <a href="vector.php">Vector</a> data type, there is <em>no algebra defined for arrays</em>. 
+    It should be noted that, unlike the <a href="vector.php">Vector</a> data type, 
+    there is <em>no algebra defined for arrays</em>. 
 </p>
     
 
@@ -103,7 +105,11 @@
 <h3>Array Manipulation</h3>
 
 
-<p>Consider the following array, <b>a</b>:&nbsp;&nbsp;&nbsp;&nbsp; a = 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"</p>
+<p>
+    Consider the following array, <b>a</b>:&nbsp;&nbsp;&nbsp;&nbsp; 
+    a = 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"
+</p>
+
 <p>&nbsp;</p>
 
 <p>
@@ -122,6 +128,7 @@
 <p>&nbsp;</p>
 
 <p> To read an entry from the array:</p>
+
 <p class="CodeCommand">
     &gt;&gt;a[1] or &gt;&gt;a(1) <br />
     10 <br />
@@ -138,7 +145,9 @@
 </p>
 
 <p>&nbsp;</p>
+
 <p>To change an entry:</p>
+
 <p  class="CodeCommand">
     &gt;&gt;a[1]=10 <span class="auto-style1">--a[1] will be numeric </span> <br />
 
