@@ -85,7 +85,15 @@
     
    
 
+
+
+
+
 <!-- ******************************************************************************* -->
+
+
+
+
     
 <h2 id="create">Creating a DataFrame</h2>
 
@@ -398,7 +406,7 @@
 </p>
 
   
-<table class="dataframe" style="border: green 1px solid;">
+<table id="accessdata_originaldf" class="dataframe" style="border: green 1px solid;">
 <tr>
     <td>&nbsp;</td>
     <td>C</td>
@@ -434,7 +442,7 @@
 
 <p>&nbsp;</p>
 
-<h3>1) Column Access</h3>
+<h3 id="columnaccess">1) Column Access</h3>
 
 <p class="CodeCommand">
     &gt;&gt;df("C") <br>
@@ -682,13 +690,65 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+<h3 id="rowaccess">2) Reading a Row</h3>
+
+<p>
+    Unlike column access, row access is read-only as a <em>copy</em> of the row is returned as an array. 
+    In the following demonstration we will continue working with the <a href="#accessdata_originaldf">dataframe</a> 
+    we had used in the <a href="#columnaccess">previous section</a>.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;df("a", {}) <br>
+    10  &emsp;  "a"   &emsp; "abc"    <br>
+    
+    <br>
+    
+    &gt;&gt;df(1, {}) <br>
+    30  &emsp;  3   &emsp; "b"    <br>
+    
+    <br>
+    
+    &gt;&gt;df(2, {}) <br>
+    nil  &emsp;  nil &emsp;   4 
+</p>
+
+<p>
+    Few things to notice:
+</p>
+
+<ul class="spaced">
+    <li>
+        The returned array is not of type LINK. Therefore, any operation 
+        on the array does not affect the dataframe itself.
+    </li>
+    <li>
+        If the requested row's position exceeds one of the column's (therefore array's) size, 
+        the returned array contains <span class="LuaKeyword">nil</span> value for 
+        that particular column's position.
+    </li>
+    <li>
+        Row-read notation is similar to the row-read notation used for <a href="matrix.php">matrix</a>.
+    </li>
+    
+</ul>
 
 
-<!-- ------------------------------------------------------------------ -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!-- ********************************************************************* -->
 
 <h2 id="memberfunc">Member Functions</h2>
 
 <h3 id="cbind">cbind</h3>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h3 id="clone">clone</h3>
+
 
 
 <p>&nbsp;</p>
@@ -772,7 +832,6 @@
 <div class="RelatedLinks">
     <a href="array.php">Array</a>
     <a href="range.php">Range</a>
-    <a href="../../"
 </div>
     
 </body>
