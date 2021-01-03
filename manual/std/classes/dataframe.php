@@ -734,42 +734,132 @@
 </ul>
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
 
 <!-- ********************************************************************* -->
 
 <h2 id="memberfunc">Member Functions</h2>
 
 <h3 id="cbind">cbind</h3>
+<p class="funcsignature">
+    cbind(arg, [label=])
+</p>
+
+<p>
+    Adds a given argument as a column with the specified label. The argument, <em>arg</em>, can be 
+    of type Lua table, <a href="array.php">array</a> or <a href="vector.php">vector</a>.
+    If the parameter <em>label</em> is not provided, a label is automatically assigned.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>             
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>   
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+</div>
+
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 <h3 id="clone">clone</h3>
 
+<p class="funcsignature">
+    clone() &rarr; DataFrame
+</p>
+
+<p>
+    Creates an exact copy of the current dataframe. 
+    Note that it is also possible to use the equivalent
+    <span style="background-color: lightgray">df({}, {})</span> command.
+</p>
+
+<p class="CodeCommand">
+    df2=df:clone() <br>
+    
+    <br>
+    <span class="LuaComment">--Following is also equivalent</span><br>
+    df2=df({}, {})
+</p>
+
+
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 <h3 id="colnames">colnames</h3>
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 <h3 id="dtypes">dtypes</h3>
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 <h3 id="head">head</h3>
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 <h3 id="ncols">ncols</h3>
@@ -777,6 +867,9 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 <h3 id="nrows">nrows</h3>
 
