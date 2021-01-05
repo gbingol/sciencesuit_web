@@ -1028,17 +1028,170 @@
 
 <h3 id="dtypes">dtypes</h3>
 
+<p class="funcsignature">
+    dtypes() &rarr; string
+</p>
+
+<p>
+    returns information about the data types about each individual column.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>             
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>   
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+    
+    
+    <br>
+    
+    &gt;&gt;df:dtypes() <br>
+    Breakdown of each column: <br>
+    A [3] : int: 2, string: 1  <br>
+    B [4] : int: 2, string: 2  <br>
+    C [3] : int: 3 
+</div>
+
+
+
+<p>
+    The numbers in brackets shows the number of elements in each column and information next to it is already 
+    self-explanatory, i.e., column <em>A</em> has 2 elements of type integer and 1 element of type string. 
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    In some cases, you might need to know the actual breakdown of the number of datatypes each column has. There is 
+    no need to parse the string, just remembering that each column is an <a href="array.php">array</a>:
+</p>
+
+<p class="CodeCommand">
+    <span class="LuaComment">--arr is of type array</span><br>
+    &gt;&gt;arr=df("A") <br>
+    
+    <br>
+    
+    <span class="LuaComment">--returned type is Lua table</span><br>
+    &gt;&gt;arr:dtypes() <br>
+    float=0 &emsp; string=1 &emsp; nil=0 &emsp; int=2
+</p>
+
+
+
+
 
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
 
 <h3 id="head">head</h3>
 
+<p class="funcsignature">
+    head(n=)
+</p>
+
+<p>
+    where the parameter <em>n</em> is a positive integer. The function prints the requested number 
+    of <em>n</em> rows starting from the beginning. 
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>             
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>   
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+    
+    <br>
+    
+    &gt;&gt;df:head(2) 
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>             
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>   
+        </tr>
+       
+    </table>
+</div>
 
 
 
