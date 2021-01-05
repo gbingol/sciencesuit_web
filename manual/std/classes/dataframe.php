@@ -76,16 +76,27 @@
 
 <h1>DataFrame</h1>
 <p>
-    DataFrame (DF) is a 2D data structure composed of columns of <a href="array.php">arrays</a>. 
-    Therefore, each column of a DF is an Array and thus shows all properties of an Array. 
+    DataFrame (DF) is a 2D data structure comprised of a data section and rows and columns labels. 
+    The data section is composed of columns of <a href="array.php">arrays</a> and therefore, when accessed, 
+    each column shows all properties of an array. 
 </p>
 
 
 <p>&nbsp;</p>
     
+
+<h3>Terminology</h3>
+
+<p>
+    <b>Label:</b> A string or an integer number used as a header of an individual column or a row. 
+    <em>Note</em> that the words header and label are interchangeably used and has the 
+    same meaning unless otherwise stated.
+</p>
+
    
 
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
@@ -714,7 +725,7 @@
 </p>
 
 <p>
-    Few things to notice:
+    A few things to notice:
 </p>
 
 <ul class="spaced">
@@ -788,13 +799,197 @@
             <td>4</td>
         </tr>
     </table>
-
+    
+    
+    <br>
+    
+    
+    <span class="LuaComment">--Adding a Lua table</span><br>
+    &gt;&gt;df:cbind( {1, "a", 2, "b", 3}, "TBL")
+    
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+            <td>TBL</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>   
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>  
+            <td>"a"</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+            <td>"b"</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>3</td>
+        </tr>
+    </table>
+    
+    <br>
+    
+    
+    <span class="LuaComment">--Adding an Array</span><br>
+    &gt;&gt;arr=std.toarray{"A", "B", 1, 2} <br>
+    &gt;&gt;df:cbind(arr, "ARRAY") <br>
+    &gt;&gt;df 
+    
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+            <td>TBL</td>
+            <td>ARRAY</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>   
+            <td>1</td>
+            <td>"A"</td>
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>  
+            <td>"a"</td>
+            <td>"B"</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+            <td>"b"</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>3</td>
+            <td>nil</td>
+        </tr>
+    </table>
+   
 </div>
 
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+<h3 id="clabels">clabels</h3>
+<p class="funcsignature">
+    clabels() &rarr; Lua Table
+</p>
+
+<p>
+    Returns the column labels in the order they would appear when printed out. The function is especially useful 
+    when accessing to data as column names can be long and/or with unknown number of spaces or could have been 
+    encoded which could then easily become a pain to write the exact column name.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>"a"</td>
+            <td>10</td>
+            <td>"abc"</td>             
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>   
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+    
+    
+    <br>
+    
+    &gt;&gt;cnames=df:clabels() <br>
+    &gt;&gt;cnames <br>
+    C &emsp; A &emsp; B	<br>
+    
+    <br>
+    
+    &gt;&gt;df( cnames[1] ) <br>
+    10 &emsp; 20 &emsp; 30 &emsp; LINK
+</div>
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
 
 
 
@@ -819,15 +1014,6 @@
 </p>
 
 
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-<h3 id="colnames">colnames</h3>
 
 
 
@@ -890,7 +1076,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h3 id="rownames">rownames</h3>
+<h3 id="rlabels">rlabels</h3>
 
 
 <p>&nbsp;</p>
