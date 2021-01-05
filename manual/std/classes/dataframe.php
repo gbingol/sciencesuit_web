@@ -71,6 +71,17 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+    
+<script>
+    function PrintOrigTable()
+    {
+        var elem=document.getElementById("accessdata_originaldf");
+        document.write("<table class=\"dataframe\">");
+        document.write(elem.innerHTML);
+        document.write("</table>");
+    }
+</script>
 
 
 
@@ -361,8 +372,8 @@
         </tr>
         <tr>
             <td>a</td>
-            <td>"a"</td>
             <td>10</td>
+            <td>"a"</td>  
             <td>"abc"</td>             
         </tr>
         <tr>
@@ -426,8 +437,8 @@
 </tr>
 <tr>
     <td>a</td>
-    <td>"a"</td>
     <td>10</td>
+    <td>"a"</td>  
     <td>"abc"</td>             
 </tr>
 <tr>
@@ -481,8 +492,8 @@
         </tr>
         <tr>
             <td>a</td>
-            <td>"a"</td>
             <td>10</td>
+            <td>"a"</td> 
             <td>"abc"</td>             
         </tr>
         <tr>
@@ -767,40 +778,9 @@
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <table  class="dataframe">
-        <tr>
-            <td>&nbsp;</td>
-            <td>C</td>
-            <td>A</td>
-            <td>B</td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>"a"</td>
-            <td>10</td>
-            <td>"abc"</td>             
-        </tr>
-        <tr>
-            <td>b</td>
-            <td>20</td>
-            <td>2</td>
-            <td>12</td>   
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>30</td>
-            <td>3</td>
-            <td>"b"</td>   
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>nil</td>
-            <td>nil</td>
-            <td>4</td>
-        </tr>
-    </table>
     
-    
+    <script>PrintOrigTable()</script>
+           
     <br>
     
     
@@ -817,8 +797,8 @@
         </tr>
         <tr>
             <td>a</td>
-            <td>"a"</td>
             <td>10</td>
+            <td>"a"</td>
             <td>"abc"</td>   
             <td>1</td>
         </tr>
@@ -871,8 +851,8 @@
         </tr>
         <tr>
             <td>a</td>
-            <td>"a"</td>
             <td>10</td>
+            <td>"a"</td> 
             <td>"abc"</td>   
             <td>1</td>
             <td>"A"</td>
@@ -915,8 +895,12 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 
@@ -934,39 +918,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <table  class="dataframe">
-        <tr>
-            <td>&nbsp;</td>
-            <td>C</td>
-            <td>A</td>
-            <td>B</td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>"a"</td>
-            <td>10</td>
-            <td>"abc"</td>             
-        </tr>
-        <tr>
-            <td>b</td>
-            <td>20</td>
-            <td>2</td>
-            <td>12</td>   
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>30</td>
-            <td>3</td>
-            <td>"b"</td>   
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>nil</td>
-            <td>nil</td>
-            <td>4</td>
-        </tr>
-    </table>
-    
+    <script>PrintOrigTable()</script>
     
     <br>
     
@@ -1038,39 +990,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <table  class="dataframe">
-        <tr>
-            <td>&nbsp;</td>
-            <td>C</td>
-            <td>A</td>
-            <td>B</td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>"a"</td>
-            <td>10</td>
-            <td>"abc"</td>             
-        </tr>
-        <tr>
-            <td>b</td>
-            <td>20</td>
-            <td>2</td>
-            <td>12</td>   
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>30</td>
-            <td>3</td>
-            <td>"b"</td>   
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>nil</td>
-            <td>nil</td>
-            <td>4</td>
-        </tr>
-    </table>
-    
+    <script>PrintOrigTable()</script>
     
     <br>
     
@@ -1134,38 +1054,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <table  class="dataframe">
-        <tr>
-            <td>&nbsp;</td>
-            <td>C</td>
-            <td>A</td>
-            <td>B</td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>"a"</td>
-            <td>10</td>
-            <td>"abc"</td>             
-        </tr>
-        <tr>
-            <td>b</td>
-            <td>20</td>
-            <td>2</td>
-            <td>12</td>   
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>30</td>
-            <td>3</td>
-            <td>"b"</td>   
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>nil</td>
-            <td>nil</td>
-            <td>4</td>
-        </tr>
-    </table>
+    <script>PrintOrigTable()</script>
     
     <br>
     
@@ -1179,8 +1068,8 @@
         </tr>
         <tr>
             <td>a</td>
-            <td>"a"</td>
             <td>10</td>
+            <td>"a"</td>  
             <td>"abc"</td>             
         </tr>
         <tr>
@@ -1195,6 +1084,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -1202,6 +1093,26 @@
 
 
 <h3 id="ncols">ncols</h3>
+<p class="funcsignature">
+    ncols() &rarr; integer
+</p>
+
+<p>
+    The function returns the number of columns that make up the data section of 
+    the dataframe.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df
+    
+    <script>PrintOrigTable()</script>
+    
+    <br>
+    
+    &gt;&gt;df:ncols() <br>
+    3
+</div>
+
 
 
 <p>&nbsp;</p>
@@ -1248,7 +1159,83 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
 <h3 id="tail">tail</h3>
+
+<p class="funcsignature">
+    tail(n=)
+</p>
+
+<p>
+    where <em>n</em> is an integer (negative or positive). If n>0, then 
+    the function prints the requested number of <em>n</em> rows starting from the end, 
+    and if n<0 then the function prints all rows starting from 
+    <em>(n+1)</em><sup>th</sup> row from the beginning. 
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <script>PrintOrigTable()</script>
+    
+    <br>
+    
+    &gt;&gt;df:tail(2) 
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+    
+    <br>
+    
+    &gt;&gt;df:tail(-1) <br>
+    <table  class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>C</td>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>   
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+    
+</div>
+
 
 
 <p>&nbsp;</p>
