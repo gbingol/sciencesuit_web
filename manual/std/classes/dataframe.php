@@ -416,7 +416,7 @@
 <p>&nbsp;</p>
 
 
-<!-- ------------------------------------------------------------------ -->
+<!-- ******************************************************* -->
 
 <h2 id="accessdata">Accessing Data</h2>
 <p>
@@ -765,7 +765,12 @@
 
 <h2 id="memberfunc">Member Functions</h2>
 
+
+
+
+
 <h3 id="cbind">cbind</h3>
+
 <p class="funcsignature">
     cbind(arg, [label=])
 </p>
@@ -779,7 +784,7 @@
 <div class="CodeCommand">
     &gt;&gt;df 
     
-    <script>PrintOrigTable()</script>
+    <script>PrintOrigTable();</script>
            
     <br>
     
@@ -918,7 +923,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <script>PrintOrigTable()</script>
+    <script>PrintOrigTable();</script>
     
     <br>
     
@@ -990,7 +995,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <script>PrintOrigTable()</script>
+    <script>PrintOrigTable();</script>
     
     <br>
     
@@ -1054,7 +1059,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <script>PrintOrigTable()</script>
+    <script>PrintOrigTable();</script>
     
     <br>
     
@@ -1105,7 +1110,7 @@
 <div class="CodeCommand">
     &gt;&gt;df
     
-    <script>PrintOrigTable()</script>
+    <script>PrintOrigTable();</script>
     
     <br>
     
@@ -1115,32 +1120,212 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 
 
 <h3 id="nrows">nrows</h3>
 
+<p class="funcsignature">
+    nrows() &rarr; integer
+</p>
+
+<p>
+    The function returns the maximum number of rows that make up the data section of 
+    the dataframe.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df
+    
+    <script>PrintOrigTable();</script>
+    
+    <br>
+    
+    &gt;&gt;df:nrows() <br>
+    4
+</div>
+
+
+
+
+
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 <h3 id="rbind">rbind</h3>
 
+<p class="funcsignature">
+    rbind(arg, [label=])
+</p>
+
+<p>
+    Similar to <a href="#cbind">cbind</a> adds a given argument as a row with the specified label. 
+    The argument, <em>arg</em>, can be of type Lua table, 
+    <a href="array.php">array</a> or <a href="vector.php">vector</a>.
+    If the parameter <em>label</em> is not provided, a label is automatically assigned.
+</p>
+
+<div class="CodeCommand">
+    
+   
+
+   
+
+    &gt;&gt;df = std.DataFrame.new{std.toarray{10, 20, 30}, std.toarray{"a", 2, 3}, 
+     std.toarray{"abc", 12, "b", 4},  cols={"C","A","B"}, rows={"a", "b"} } <br>
+    &gt;&gt;df <br> 
+    
+    <script>PrintOrigTable();</script>
+           
+    <br>
+    
+    &gt;&gt;df:rbind({"X","Y","Z"}) <br>
+    &gt;&gt;df <br>
+    
+    <table class="dataframe">       
+        <tr>
+            <td></td>
+            <td>C</td>
+            <td>B</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>10</td>
+            <td>"abc"</td>
+            <td>"a"</td>
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td> 
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>"X"</td>
+            <td>"Y"</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>"Z"</td>
+        </tr>   
+    </table>
+</div>
+
+<p>
+    Few things to note:
+</p>
+
+<ul class="spaced">
+    <li>
+        Unlike adding columns (<a href="#cbind">cbind</a>), 
+        when adding rows the order of columns is important. 
+        Therefore, to be able to control the order in which columns appear, 
+        <em>cols</em> table has been explicitly defined.
+    </li>
+    <li>
+        Although the table {"X", "Y", "Z"} was supposed to be the last row, when printed out the last row 
+        looks different than expected. Remember that, shorter columns are "padded" with 
+        <span class="LuaKeyword">nil</span> in the existence of columns with larger 
+        sizes. Therefore, for example, for column <em>C</em>, the entry "X" in the table now replaced the 
+        <span class="LuaKeyword">nil</span> in the column thus appearing in the row with label 2.
+    </li>
+    
+</ul>
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
 
 <h3 id="rename">rename</h3>
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
+
+
+
+
+
 <h3 id="rlabels">rlabels</h3>
+
+<p class="funcsignature">
+    rlabels() &rarr; Lua Table
+</p>
+
+<p>
+    Returns the row labels in the order they would appear when printed out. The function is especially useful 
+    when accessing to data as row names can be long and/or with unknown number of spaces or could have been 
+    encoded.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <script>PrintOrigTable();</script>
+    
+    <br>
+    
+    &gt;&gt;rnames=df:rlabels() <br>
+    &gt;&gt;rnames <br>
+    a &emsp; b &emsp; 1 &emsp; 2 <br>
+    
+    <br>
+    
+    &gt;&gt;df(rnames[2], {}) <br>
+    20 &emsp; 12 &emsp; 2    
+</div>
+
+
+
+
+
 
 
 <p>&nbsp;</p>
@@ -1150,10 +1335,47 @@
 <h3 id="swap">swap</h3>
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
+
+
+
 <h3 id="summary">summary</h3>
+
+<p class="funcsignature">
+    summary() &rarr; string
+</p>
+
+<p>
+    Prints out a basic statistical summary (min, max, mean, median) of each column if possible.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <script>PrintOrigTable();</script>
+    
+    <br>
+    
+    &gt;&gt;df:summary() <br>
+    Breakdown of each column: <br>
+    A: Min: 2, Max: 3, Mean: 2.5, Median: 2.5 <br>
+    B: Min: 4, Max: 12, Mean: 8, Median: 8 <br>
+    C: Min: 10, Max: 30, Mean: 20, Median: 20
+    
+</div>
+
+
+
+
 
 
 <p>&nbsp;</p>
@@ -1171,13 +1393,13 @@
 <p>
     where <em>n</em> is an integer (negative or positive). If n>0, then 
     the function prints the requested number of <em>n</em> rows starting from the end, 
-    and if n<0 then the function prints all rows starting from 
+    and if n &lt; 0 then the function prints all rows starting from 
     <em>(n+1)</em><sup>th</sup> row from the beginning. 
 </p>
 
 <div class="CodeCommand">
     &gt;&gt;df 
-    <script>PrintOrigTable()</script>
+    <script>PrintOrigTable();</script>
     
     <br>
     
