@@ -1415,6 +1415,69 @@
 
 <h3 id="swap">swap</h3>
 
+<p class="funcsignature">
+    swap(Label1, Label2)
+</p>
+
+<p>
+    Only applicable to columns. Swaps the column <em>Label1</em> with <em>Label2</em>.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <script>PrintOrigTable();</script>
+    
+    <br>
+    
+    &gt;&gt;df("a", "C") <br>
+    10 <br>
+    
+    <br>
+    
+    &gt;&gt;df:swap("C", "B") <br>
+    &gt;&gt;df
+    
+    <table class="dataframe">
+        <tr>
+            <td>&nbsp;</td>
+            <td>B</td>
+            <td>A</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>10</td>
+            <td>"a"</td>  
+            <td>"abc"</td>             
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>   
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>   
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+    
+    <br>
+    
+    &gt;&gt;df("a", "C") <br>
+    abc
+    
+    
+</div>
+
 
 
 
