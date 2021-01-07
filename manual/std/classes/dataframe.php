@@ -902,43 +902,6 @@
 
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-
-<h3 id="clabels">clabels</h3>
-<p class="funcsignature">
-    clabels() &rarr; Lua Table
-</p>
-
-<p>
-    Returns the column labels in the order they would appear when printed out. The function is especially useful 
-    when accessing to data as column names can be long and/or with unknown number of spaces or could have been 
-    encoded which could then easily become a pain to write the exact column name.
-</p>
-
-<div class="CodeCommand">
-    &gt;&gt;df 
-    <script>PrintOrigTable();</script>
-    
-    <br>
-    
-    &gt;&gt;cnames=df:clabels() <br>
-    &gt;&gt;cnames <br>
-    C &emsp; A &emsp; B	<br>
-    
-    <br>
-    
-    &gt;&gt;df( cnames[1] ) <br>
-    10 &emsp; 20 &emsp; 30 &emsp; LINK
-</div>
-
-
-
 
 
 
@@ -978,6 +941,51 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h3 id="colnames">colnames</h3>
+<p class="funcsignature">
+    colnames() &rarr; Lua Table
+</p>
+
+<p>
+    Returns the column labels in the order they would appear when printed out. The function is especially useful 
+    when accessing to data as column names can be long and/or with unknown number of spaces or could have been 
+    encoded which could then easily become a pain to write the exact column name.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;df 
+    <script>PrintOrigTable();</script>
+    
+    <br>
+    
+    &gt;&gt;cnames=df:colnames() <br>
+    &gt;&gt;cnames <br>
+    C &emsp; A &emsp; B	<br>
+    
+    <br>
+    
+    &gt;&gt;df( cnames[1] ) <br>
+    10 &emsp; 20 &emsp; 30 &emsp; LINK
+</div>
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
 
 
 
@@ -1185,11 +1193,6 @@
 </p>
 
 <div class="CodeCommand">
-    
-   
-
-   
-
     &gt;&gt;df = std.DataFrame.new{std.toarray{10, 20, 30}, std.toarray{"a", 2, 3}, 
      std.toarray{"abc", 12, "b", 4},  cols={"C","A","B"}, rows={"a", "b"} } <br>
     &gt;&gt;df <br> 
@@ -1264,6 +1267,10 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -1294,10 +1301,12 @@
 
 
 
-<h3 id="rlabels">rlabels</h3>
+
+
+<h3 id="rownames">rownames</h3>
 
 <p class="funcsignature">
-    rlabels() &rarr; Lua Table
+    rownames() &rarr; Lua Table
 </p>
 
 <p>
@@ -1312,7 +1321,7 @@
     
     <br>
     
-    &gt;&gt;rnames=df:rlabels() <br>
+    &gt;&gt;rnames=df:rownames() <br>
     &gt;&gt;rnames <br>
     a &emsp; b &emsp; 1 &emsp; 2 <br>
     
