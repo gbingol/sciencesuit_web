@@ -1607,7 +1607,31 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
 <h3 id="type">type</h3>
+
+<p class="funcsignature">
+    type() &rarr; string
+</p>
+
+<p>
+    This member function serves for the <a href="../index.php">overloaded Lua function</a> <em>type</em> to work correctly.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;df:type() <br>
+    DataFrame <br>
+    
+    <br>
+    
+    &gt;&gt;type(df) <br>
+    DataFrame
+</p>
+
+
+
 
 
 <p>&nbsp;</p>
@@ -1617,6 +1641,7 @@
 <div class="RelatedLinks">
     <a href="array.php">Array</a>
     <a href="range.php">Range</a>
+    <a href="../funcs/read_csv.php">read_csv</a>
 </div>
     
 </body>
