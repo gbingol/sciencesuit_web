@@ -982,6 +982,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -1045,8 +1047,13 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -1099,8 +1106,15 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
@@ -1125,6 +1139,9 @@
     &gt;&gt;df:ncols() <br>
     3
 </div>
+
+
+
 
 
 
@@ -1283,11 +1300,66 @@
 
 <h3 id="rename">rename</h3>
 
+<p class="funcsignature">
+    rename{cols={OldLabel=NewLabel, ...}, rows={OldLabel=NewLabel},... }
+</p>
 
+<p>
+    Renames the column and/or row labels with the new labels. The function 
+    issues an error, if one of the labels to be renamed does not already exist.
+</p>
 
+<div class="CodeCommand">
+    &gt;&gt;df     
+    <script>PrintOrigTable();</script>
+           
+    <br>
+    
+    &gt;&gt;df:rename{ rows={a="A", [1]=10}, cols={C="X", A="Y"} } <br>
+    
+    <table class="dataframe">
+        <tr>
+            <td></td>
+            <td>X</td>
+            <td>Y</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>10</td>
+            <td>"a"</td>
+            <td>"abc"</td>
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>20</td>
+            <td>2</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>30</td>
+            <td>3</td>
+            <td>"b"</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>nil</td>
+            <td>nil</td>
+            <td>4</td>
+        </tr>
+    </table>
+  
+    <br>
 
-
-
+    &gt;&gt;df("A", "X") <br>
+    10	<br>
+    
+    <br>
+    
+    &gt;&gt;df(10, "B") <br>
+    b
+</div>
 
 
 <p>&nbsp;</p>
