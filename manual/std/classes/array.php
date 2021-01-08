@@ -9,11 +9,7 @@
 	
     <style>
 		
-       .Links a{
-            margin-right:20px;
-        }
-
-	    .auto-style1 {
+       .auto-style1 {
             color: #008080;
         }
         .auto-style2 {
@@ -30,8 +26,33 @@
         .auto-style5 {
             color: #0000FF;
         }
+        
+        
+        .rightmargin
+        {
+            margin-right: 10%;
+        }
+        
+        .spaced li
+        {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+        
+        
+        
+         @media only screen and (max-width:900px) 
+        {
+            .rightmargin
+            {
+                margin-right: 1%;
+            }
+        }
 
     </style>
+    
+    
+    
 
     
     
@@ -50,37 +71,73 @@
 
 
 
+    
+    
+    
+    
 <h1>Array</h1>
-<p>
-    Array can contain both numeric (float, integer) and non-numeric 
-    (string, <span class="LuaKeyword">nil</span>) values. When an
-    array is part of a <a href="dataframe.php">DataFrame</a>, then its status is called as <em>linked</em>.
+<p class="rightmargin">
+    Array is a 1D data structure and has the following properties:
 </p>
+
+<ol class="spaced">
+    <li>
+        Can contain numeric (float, integer) and non-numeric 
+        (string, <span class="LuaKeyword">nil</span>) values. 
+    </li>
+    
+    <li>
+        The <span class="LuaKeyword">nil</span> value is a special type 
+        and is used to show the absence of a value.
+    </li>
+    
+    <li>
+        When an array is part of a <a href="dataframe.php">DataFrame</a>, 
+        then its status is called as <em>linked</em>.
+    </li>
+    
+    <li>
+        Unlike <a href="vector.php">Vector</a>, there is 
+        <em>no algebra defined for arrays</em>.
+    </li>
+</ol>
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>   
     
     
-    
+
+
+
+
+
 <h3>Creating an Array</h3>
     
     
 <p class="CodeCommand">
-    &gt;&gt;arr1=Array.new(3, &quot;a&quot;) <br />
+    &gt;&gt;arr1=Array.new(3, "a") <br />
     &gt;&gt;arr1 <br />
-    "a"&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "a" <br />
+    "a"&emsp; "a"&emsp; "a" <br />
     <br />
 
     &gt;&gt;arr2=Array.new(2, 3.14) <br />
     &gt;&gt;arr2 <br />
-    3.14&nbsp;&nbsp;&nbsp; 3.14	<br />
+    3.14&emsp; 3.14	<br />
 
     <br />
     &gt;&gt;arr3=std.toarray{1,2,"a","b"} <br />
     &gt;&gt;arr3 <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"
+    1&emsp; 2&emsp; "a"&emsp; "b"
 </p>
 
 
 <p>&nbsp;</p>
+
 <p>
     In order to create an array from data, you can use either <em>toarray</em> function 
     or <a href="../../workbook/index.php#createdatastructures">use the interface</a>. 
@@ -88,26 +145,29 @@
     then it will be stored as type number, otherwise as type string. 
 </p>
     
-    
-<p>&nbsp;</p>
 
-<p>
-    It should be noted that, unlike the <a href="vector.php">Vector</a> data type, 
-    there is <em>no algebra defined for arrays</em>. 
-</p>
-    
+
+
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
     
-    
+ 
+
+
+
+
+
+
 <h3>Array Manipulation</h3>
 
 
 <p>
-    Consider the following array, <b>a</b>:&nbsp;&nbsp;&nbsp;&nbsp; 
-    a = 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"
+    Consider the following array, <b>a</b>:&emsp; 
+    a = 1&emsp; 2&emsp; 3&emsp; "a"&emsp; "b"
 </p>
 
 <p>&nbsp;</p>
@@ -118,7 +178,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; &quot;a&quot;&nbsp;&nbsp;&nbsp; &quot;b&quot;
+    1&emsp; 2&emsp; 3&emsp; "a"&emsp; "b"
 </p>
    
 <p>
@@ -158,12 +218,25 @@
     <br />
 
     &gt;&gt;a <br />
-    <span class="auto-style2">10</span>&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; <span class="auto-style2">"c"</span>&nbsp;&nbsp;&nbsp; "b" 
+    <span class="auto-style2">10</span>&emsp; 2&emsp; 3&emsp; <span class="auto-style2">"c"</span>&emsp; "b" 
 
 </p>
     
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
 
 
 
@@ -171,22 +244,21 @@
 
 <!-- *************************************************************************** -->
 
-<h2>Member functions</h2>
-<p>&nbsp;</p>
-    
+<h2 id="memberfuncs">Member functions</h2>
     
 
+<h3 id="capacity">capacity</h3>
 
-
-<h3>capacity</h3>
 <p class="funcsignature">
     capacity() &rarr; integer
 </p>
+
 <p>Returns the capacity of the array. </p>
+
 <p class="CodeCommand">
     &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b" <br />
+    1&emsp; 2&emsp; 3&emsp; "a"&emsp; "b" <br />
 
     <br />
 
@@ -199,23 +271,40 @@
     &gt;&gt;#a  <br />
     5	
 </p>
+
 <p>
     <em>Note:</em> Capacity is important as nearing the limit of capacity will cause 
-    reallocation of the memory to accomodate more elements, thus causing the copying of the existing elements.
+    reallocation of the memory to accommodate more elements, thus causing a 
+    copying of all of the existing elements.
 </p>
 
 
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+ 
+
+
+
+
+
+
+
     
-    
-<h3>clone</h3>
+<h3 id="clone">clone</h3>
+
 <p class="funcsignature">
     clone() &rarr; Array
 </p>
+
 <p>Makes a deep copy of the array. Note that, the assignment operator such as 
     arr1=arr2 makes a shallow copy and arr1 and arr2 refers to the same data.
 </p>
@@ -231,13 +320,14 @@
     <br />
 
     &gt;&gt;a <br />
-    <span class="auto-style2">10</span>&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"	
+    <span class="auto-style2">10</span>&emsp; 2 &emsp; 3 &emsp; "a" &emsp; "b"	
 
 </p>
 
 <p>&nbsp;</p>
 
 <p>However, if we had used clone() function:</p>
+
 <p class="CodeCommand">
     &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
     &gt;&gt;b=a:clone() <br />
@@ -249,13 +339,16 @@
     <br />
 
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"	<br />
+    1 &emsp; 2 &emsp; 3 &emsp; "a" &emsp; "b"	<br />
 
     <br />
 
     &gt;&gt;b <br />
-    10&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"
+    10 &emsp; 2 &emsp; 3 &emsp; "a" &emsp; "b"
 </p>
+
+
+
 
 
 
@@ -263,14 +356,73 @@
 
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
-<h3>erase</h3>
+
+
+
+
+
+
+
+
+<h3 id="dtypes">dtypes</h3>
+
+<p class="funcsignature">
+    dtypes() &rarr; Lua table
+</p>
+
+<p>
+    Returns the number of float, int, <span class="LuaKeyword">nil</span> and string elements.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp; 2 &emsp; 3 <br>
+    
+    <br>
+    
+    &gt;&gt;arr:dtypes() <br>
+    string=1 &emsp; float=0 &emsp; int=2 &emsp; nil=0
+
+</p>
+
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="erase">erase</h3>
+
 <p class="funcsignature">
     erase(pos)
 </p>
-<p>Erases the element at the specified position as long as array will have at least one element at the end of the operation.</p>
+
+<p>
+    Erases the element at the specified position as long as array will have 
+    at least one element at the end of the operation.
+</p>
+
 <p class="CodeCommand">
     &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
 
@@ -278,7 +430,7 @@
 
     &gt;&gt;a:erase(4) <br />
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; "b"	<br />
+    1 &emsp; 2 &emsp; 3 &emsp; "b"	<br />
 
     <br />
 
@@ -295,16 +447,30 @@
 
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<h3>insert</h3>
+
+
+
+
+
+
+<h3 id="insert">insert</h3>
+
 <p class="funcsignature">
     insert(i, elem)
 </p>
+
 <p>Inserts a number, 1D Lua table or an array at <em>i<sup>th</sup> </em>position.</p>
+
 <p class="CodeCommand">
     &gt;&gt;a=std.toarray{"a", "b"} <br />
     &gt;&gt;a:insert( 2, {1, <span class="auto-style2">"c"</span>} ) <br />
@@ -312,7 +478,7 @@
     <br />
 
     &gt;&gt;a <br />
-    "a"&nbsp;&nbsp;&nbsp; <span class="auto-style2">"c"</span>&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; "b"	<br />
+    "a"&emsp; <span class="auto-style2">"c"</span> &emsp; 1 &emsp; "b"	<br />
 
     <br />
     <br />
@@ -324,8 +490,9 @@
 
     &gt;&gt;a:insert( 2, a2) <br />
     &gt;&gt;a <br />
-    "a"&nbsp;&nbsp;&nbsp; <span class="auto-style3">1</span>&nbsp;&nbsp;&nbsp; "c"&nbsp;&nbsp;&nbsp; "b"	
+    "a"&emsp; <span class="auto-style3">1</span>&emsp; "c" &emsp; "b"	
 </p>
+
 <p>
     Note that, when a Lua table is inserted into the array, there is no guarantee 
     that the order of the elements in the table will be preserved when they are inserted to the array. 
@@ -335,15 +502,81 @@
 
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
-<h3>push_back</h3>
+
+
+
+
+
+
+
+
+<h3 id="is_linked">is_linked</h3>
+
+<p class="funcsignature">
+    is_linked() &rarr; boolean
+</p>
+
+<p>
+    Returns <span class="LuaKeyword">true</span> if array is linked to a <a href="dataframe.php">DataFrame</a>, 
+    otherwise returns <span class="LuaKeyword">false</span>
+</p>
+
+<p class="CodeCommand">
+    <span class="LuaComment">--Reading a column from a DataFrame</span><br>
+    &gt;&gt;arr=df("A") <br>
+    &gt;&gt;arr:is_linked() <br>
+    <span class="LuaKeyword">true</span> <br>
+    
+    <br>
+    
+    &gt;&gt;arr2=arr:clone() <br>
+    &gt;&gt;arr2:is_linked() <br>
+    <span class="LuaKeyword">false</span>
+</p>
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="push_back">push_back</h3>
+
 <p class="funcsignature">
     push_back(elem)
 </p>
-<p>Inserts the <em>elem</em> at the end of the array. The argument <em>elem</em> can be either number or string.</p>
+
+<p>
+    Inserts the <em>elem</em> at the end of the array. The argument <em>elem</em> 
+    can be number (float, integer), string or <span class="LuaKeyword">nil</span> value.
+</p>
+
 <p class="CodeCommand">
     &gt;&gt;a=std.toarray{"a", "b"} <br />
     &gt;&gt;a:insert(3, "c") <br />
@@ -353,21 +586,153 @@
 
     &gt;&gt;>a:push_back("c") <br />
     &gt;&gt;a <br />
-    "a"&nbsp;&nbsp;&nbsp; "b"&nbsp;&nbsp;&nbsp; "c"
+    "a"&emsp; "b"&emsp; "c"
 </p>
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+<h3 id="remove_floats">remove_floats</h3>
+
+<p class="funcsignature">
+    remove_floats()
+</p>
+   
+<p>
+    Removes all the elements of type <em>float</em>.
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+<h3 id="remove_ints">remove_ints</h3>
+
+<p class="funcsignature">
+    remove_ints()
+</p>
+
+<p>
+    Removes all the elements of type <em>int</em>.
+</p>
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+<h3 id="remove_nils">remove_nils</h3>
+
+<p class="funcsignature">
+    remove_nils()
+</p>
+
+<p>
+    Removes all the elements of type <em>nil</em>.
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="remove_strings">remove_strings</h3>
+
+<p class="funcsignature">
+    remove_strings()
+</p>
+
+<p>
+    Removes all the elements of type <em>string</em>.
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
     
-    
-<h3>reserve</h3>
+<h3 id="reserve">reserve</h3>
+
 <p class="funcsignature">
     reserve(n)
 </p>
-<p>Requests that the array <em>capacity</em> be at least enough to contain 
+
+<p>
+    Requests that the array <em>capacity</em> be at least enough to contain 
     <em>n </em>number of elements. If the parameter <em>n</em> is smaller than 
-    the current capacity, calling reserve has no effect.</p>
+    the current capacity, calling reserve has no effect.
+</p>
+
 <p class="CodeCommand">
     &gt;&gt;arr=std.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;arr:capacity() <br />
@@ -392,23 +757,36 @@
 
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<h3>resize</h3>
+
+
+
+
+
+<h3 id="resize">resize</h3>
+
 <p class="funcsignature">
     resize(n) &rarr; Array
 </p>
+
 <p>
     Resizes the container so that it contains <em>n</em> number of elements. 
     Depending on the requested number, the Array can shrink or expand.
 </p>
+
 <p class="CodeCommand">
     &gt;&gt;arr=std.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"	<br />
+    1&emsp; 2&emsp; "a"&emsp; "b"	<br />
     &gt;&gt;#a <br />
     4	<br />
 
@@ -416,7 +794,8 @@
 
     &gt;&gt;a:resize(6) <br />
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0	<br />
+    1&emsp; 2&emsp; "a"&emsp; "b"&emsp; 0&emsp; 0	<br />
+    
     &gt;&gt;#a <br />
     6	<br />
 
@@ -424,7 +803,8 @@
 
     &gt;&gt;a:resize(3) <br />
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"	<br />
+    1&emsp; 2&emsp; "a"	<br />
+    
     &gt;&gt;#a <br />
     3	
 </p>
@@ -432,12 +812,20 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+  
+
+
+
+
+
     
-    
-<h3>shuffle </h3>
+<h3 id="shuffle">shuffle </h3>
 <p class="funcsignature">
     shuffle()
 </p>
@@ -449,51 +837,31 @@
     &gt;&gt;a:shuffle() <br />
     <br />
     &gt;&gt;a <br />
-    "a"&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; "b"&nbsp;&nbsp;&nbsp; 2
+    "a"&emsp; 1&emsp; "b"&emsp; 2
 </p>
 
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 
-    
-    
-    
-<h3>slice</h3>
-<p class="funcsignature">
-    slice(index) &rarr; Array, Array
-</p>
-<p>Slices the array into 2 arrays as of the requested <em>index </em>and returns 2 arrays<em>.</em> 
-    The original array itself is not affected.
-</p>
-<p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, "a", "b"} <br />
-    &gt;&gt;a1, a2=a:slice(2) <br />
-    <br />
-    &gt;&gt;a1 <br />
-    1&nbsp;&nbsp;&nbsp; 2	<br />
 
-    <br />
 
-    &gt;&gt;a2 <br />
-    "a"&nbsp;&nbsp;&nbsp; "b"	<br />
-
-    <br />
-
-    &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"
-</p>
 
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
+
+
+
+
+
+
+
     
     
-    
-<h3>sort</h3>
+<h3 id="sort">sort</h3>
+
 <p class="funcsignature">
     sort(order=, caseSensitive=<span class="LuaKeyword">true</span>)
 </p>
@@ -502,49 +870,65 @@
     Sorts the array either in ascending or descending order and/or case-sensitive or case-insensitive manner. Regardless of 
     case-sensitivity, the numbers are always assumed to be smaller than letters. <br />
 
-    If <em>order</em>=&quot;A&quot; then the array is sorted in ascending order, if <em>order</em>="D" 
+    If <em>order</em>="A" then the array is sorted in ascending order, if <em>order</em>="D" 
     then the array is sorted in descending order. The sorting by default is case-sensitive.
-    </p>
+</p>
 
 <p class="CodeCommand">
     &gt;&gt;a=std.toarray{2, "c", "a", "d", 1} <br />
     &gt;&gt;a <br />
-    2&nbsp;&nbsp;&nbsp; "c"&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "d"&nbsp;&nbsp;&nbsp; 1 <br />
+    2&emsp; "c"&emsp; "a"&emsp; "d"&emsp; 1 <br />
 
     <br />
 
     &gt;&gt;a:sort("A") <br />
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "c"&nbsp;&nbsp;&nbsp; "d" <br />
+    1&emsp; 2&emsp; "a"&emsp; "c"&emsp; "d" <br />
 
     <br />
 
     &gt;&gt;a:sort("D") <br />
     &gt;&gt;a <br />
-    "d"&nbsp;&nbsp;&nbsp; "c"&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1
+    "d"&emsp; "c"&emsp; "a"&emsp; 2&emsp; 1
 
 </p>
 
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
-<h3>unique</h3>
+
+
+
+
+
+
+<h3 id="unique">unique</h3>
+
 <p class="funcsignature">
     unique()
 </p>
+
 <p>
     Removes the recurring elements so that the array contains only the unique elements. 
     At the end of the operation, the array is resized to only contain unique elements.
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>", "a", "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>"} <br />
+    &gt;&gt;a=std.toarray{1, "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>", "a", 
+    "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>"} <br />
+    
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; "b"&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"&nbsp;&nbsp;&nbsp; 2 <br />
+    1&emsp; "b"&emsp; 2&emsp; "a"&emsp; "b"&emsp; 2 <br />
 
+    
     <br />
 
     &gt;&gt;a:unique() <br />
@@ -552,9 +936,13 @@
     <br />
 
     &gt;&gt;a <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; "a"&nbsp;&nbsp;&nbsp; "b"	
+    1&emsp; 2&emsp; "a"&emsp; "b"	
 </p>
     
+
+
+
+
 
 
 
@@ -566,8 +954,12 @@
 
 <div class="RelatedLinks">
     <a href="dataframe.php">DataFrame</a>
-    
+    <a href="vector.php">Vector</a> 
 </div>
-    
+   
+
+
+
+
 </body>
 </html>
