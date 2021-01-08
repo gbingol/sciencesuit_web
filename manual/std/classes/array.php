@@ -618,8 +618,17 @@
     Removes all the elements of type <em>float</em>.
 </p>
 
-
-
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5 <br>
+    
+    <br>
+    
+    &gt;&gt;arr:remove_floats() <br>
+    &gt;&gt;arr <br>
+    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  nil
+    
+</p>
 
 
 
@@ -646,7 +655,17 @@
     Removes all the elements of type <em>int</em>.
 </p>
 
-
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5 <br>
+    
+    <br>
+    
+    &gt;&gt;arr:remove_ints() <br>
+    &gt;&gt;arr <br>
+    "a" &emsp;  "b" &emsp; 3.14 &emsp;  nil &emsp;  4.5  
+    
+</p>
 
 
 
@@ -672,7 +691,17 @@
     Removes all the elements of type <em>nil</em>.
 </p>
 
-
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5 <br>
+    
+    <br>
+    
+    &gt;&gt;arr:remove_nils() <br>
+    &gt;&gt;arr <br>
+    a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14 &emsp;   4.5  
+    
+</p>
 
 
 
@@ -700,6 +729,18 @@
 
 <p>
     Removes all the elements of type <em>string</em>.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5 <br>
+    
+    <br>
+    
+    &gt;&gt;arr:remove_strings() <br>
+    &gt;&gt;arr <br>
+    1  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5  
+    
 </p>
 
 
@@ -779,7 +820,8 @@
 </p>
 
 <p>
-    Resizes the container so that it contains <em>n</em> number of elements. 
+    Resizes the array, which is not of type LINK, so that it contains 
+    <em>n</em> number of elements. 
     Depending on the requested number, the Array can shrink or expand.
 </p>
 
@@ -806,7 +848,22 @@
     1&emsp; 2&emsp; "a"	<br />
     
     &gt;&gt;#a <br />
-    3	
+    3	<br>
+    
+    
+    <br>
+    <br>
+    
+    
+    &gt;&gt;arr=df("A") <br>
+    &gt;&gt;arr <br>
+    "a" &emsp;   2  &emsp;  3 &emsp;   LINK <br>
+    
+    <br>
+    
+    &gt;&gt;arr:resize(5) <br>
+    <span style="color: red;">[string "return arr:resize(5)"]:1: resize operation is not allowed for linked arrays </span>
+    
 </p>
 
 
