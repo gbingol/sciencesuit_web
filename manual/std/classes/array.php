@@ -82,7 +82,7 @@
 
 <ol class="spaced">
     <li>
-        Can contain numeric (float, integer) and non-numeric 
+        Can contain numbers (float, integer) and non-numeric 
         (string, <span class="LuaKeyword">nil</span>) values. 
     </li>
     
@@ -97,8 +97,7 @@
     </li>
     
     <li>
-        Unlike <a href="vector.php">Vector</a>, there is 
-        <em>no algebra defined for arrays</em>.
+        Mathematical operations (+, -, *, /) are defined for arrays.
     </li>
 </ol>
 
@@ -120,17 +119,17 @@
     
     
 <p class="CodeCommand">
-    &gt;&gt;arr1=Array.new(3, "a") <br />
+    &gt;&gt;arr1=std.Array.new(3, "a") <br />
     &gt;&gt;arr1 <br />
     "a"&emsp; "a"&emsp; "a" <br />
     <br />
 
-    &gt;&gt;arr2=Array.new(2, 3.14) <br />
+    &gt;&gt;arr2=std.Array.new(2, 3.14) <br />
     &gt;&gt;arr2 <br />
     3.14&emsp; 3.14	<br />
 
     <br />
-    &gt;&gt;arr3=std.toarray{1,2,"a","b"} <br />
+    &gt;&gt;arr3=std.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;arr3 <br />
     1&emsp; 2&emsp; "a"&emsp; "b"
 </p>
@@ -139,15 +138,10 @@
 <p>&nbsp;</p>
 
 <p>
-    In order to create an array from data, you can use either <em>toarray</em> function 
-    or <a href="../../workbook/index.php#createdatastructures">use the interface</a>. 
-    When interface is used to create an array, if a string can be converted to a valid number, 
-    then it will be stored as type number, otherwise as type string. 
+    In order to create an array from a data in a Worksheet please see
+    or <a href="../../workbook/createdatastructures.php">create data structures.</a>. 
 </p>
     
-
-
-
 
 
 
@@ -156,10 +150,6 @@
     
     
  
-
-
-
-
 
 
 <h3>Array Manipulation</h3>
@@ -235,14 +225,69 @@
 
 
 
+<!-- ************************Arithmetic Operations ********************************* -->
+
+<h2 id="arithmeticops">Arithmetic Operations</h2>
+
+<p>
+    It has already been mentioned that an array can contain numbers (float, integer) 
+    and non-numeric (string, <span class="LuaKeyword">nil</span>) values. The arithmetic 
+    operations require array sizes to be equal. 
+    
+    <br> <br>
+    
+    If <em>A</em>, <em>B</em> and <em>C</em> are of type array and <b>op</b> is one of (+, -, *, /), then, 
+    array arithmetic is defined as: C<sub>i</sub> = A<sub>i</sub> <b>op</b> B<sub>i</sub> 
+</p>
+
+
+
+<p>&nbsp;</p>
+
+
+
+<p>
+    It is seen that the values contained at i<sup>th</sup> position for <em>A</em>, <em>B</em> is the determiner 
+    for the outcome of the i<sup>th</sup> position for <em>C</em>. 
+    Therefore, the following set of rules are followed:
+</p>
+
+<ol class="spaced">
+    <li>
+        Any operation on <span class="LuaKeyword">nil</span> value, results in a <span class="LuaKeyword">nil</span> value.
+    <li>
+        string + string = string, (concatenation)
+    </li>
+    
+    <li>
+        string <b>op</b> string = <span class="LuaKeyword">nil</span>, where <b>op</b> is (-, *, /)
+    </li>
+    
+    <li>
+        string <b>op</b> number = <span class="LuaKeyword">nil</span>, where <b>op</b> is (+, -, *, /)
+    </li>
+    
+    <li>
+        number <b>op</b> number = number, where <b>op</b> is (+, -, *, /)
+    </li>
+    
+</ol>
+
+<p>
+    Note that, <span style="background-color: lightgoldenrodyellow"> number <b>op</b> number = number</span> 
+    can result in one of the following: <b>inf</b>, <b>-inf</b> and <b>NAN</b>.
+</p>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
 
 
 
-
-<!-- *************************************************************************** -->
+<!-- ************************Member Functions********************************* -->
 
 <h2 id="memberfuncs">Member functions</h2>
     
@@ -385,7 +430,7 @@
     <br>
     
     &gt;&gt;arr:dtypes() <br>
-    string=1 &emsp; float=0 &emsp; int=2 &emsp; nil=0
+    string=1 &emsp; number=2 &emsp; nil=0
 
 </p>
 
@@ -608,10 +653,10 @@
 
 
 
-<h3 id="remove_floats">remove_floats</h3>
+<h3 id="remove_numbers">remove_numbers</h3>
 
 <p class="funcsignature">
-    remove_floats()
+    remove_numbers()
 </p>
    
 <p>
@@ -624,9 +669,9 @@
     
     <br>
     
-    &gt;&gt;arr:remove_floats() <br>
+    &gt;&gt;arr:remove_numbers() <br>
     &gt;&gt;arr <br>
-    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  nil
+    "a" &emsp;  "b"  &emsp;  nil
     
 </p>
 
@@ -640,38 +685,6 @@
 
 
 
-
-
-
-
-
-<h3 id="remove_ints">remove_ints</h3>
-
-<p class="funcsignature">
-    remove_ints()
-</p>
-
-<p>
-    Removes all the elements of type <em>int</em>.
-</p>
-
-<p class="CodeCommand">
-    &gt;&gt;arr <br>
-    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5 <br>
-    
-    <br>
-    
-    &gt;&gt;arr:remove_ints() <br>
-    &gt;&gt;arr <br>
-    "a" &emsp;  "b" &emsp; 3.14 &emsp;  nil &emsp;  4.5  
-    
-</p>
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 
 
 
