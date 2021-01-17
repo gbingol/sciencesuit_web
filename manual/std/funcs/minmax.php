@@ -13,6 +13,17 @@
     
     
     <script src="/jsscripts/siteanalytics.js"></script>
+    
+    <style>
+        table.algright td
+        {
+            text-align: right;
+            padding-right: 6px;
+            padding-left: 6px;
+        }
+    </style>
+    
+    
 
 </head>
 
@@ -51,6 +62,7 @@
 </p>
 
 
+
 <p>&nbsp;</p>
 
 
@@ -62,10 +74,10 @@
 <p class="CodeCommand">
     &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
-    3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL <br />
+    3 &emsp; 5&emsp; 2&emsp; 1&emsp; 7&emsp; 4&emsp; COL <br />
     <br />
     &gt;&gt;std.minmax(v) <br />
-    1 &nbsp;&nbsp;&nbsp;   7	
+    1 &emsp;   7	
 </p>
 
 
@@ -77,37 +89,72 @@
 
 <h3 id="matrix_minmax">Matrix</h3>
     
-<p class="CodeCommand">
+<div class="CodeCommand">
     
     
-    &gt;&gt;m  <br />
-    &nbsp;
-    2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; -1  <br />
-   -4&nbsp;&nbsp;&nbsp;&nbsp; -5&nbsp;&nbsp;&nbsp;&nbsp; 3 <br />
-    &nbsp;
-    2&nbsp;&nbsp;&nbsp; -5&nbsp;&nbsp;&nbsp; -4  <br />
+    &gt;&gt;m  
+    
+    <table class="algright">
+        <tr>
+            <td>2</td>
+            <td>4</td>
+            <td>-1</td>
+        </tr>
+        <tr>
+            <td>-4</td>
+            <td>-5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>-5</td>
+            <td>-4</td>
+        </tr> 
+    </table>
 
     <br />
 
     &gt;&gt;std.minmax(m) <br />
-    -5	&nbsp;&nbsp;&nbsp;  4 <br>
+    -5	&emsp;  4 <br>
     
     <br>
     &gt;&gt;std.minmax(m, 0) <br />
-    -4  &nbsp;&nbsp;&nbsp; -5  &nbsp;&nbsp;&nbsp; -4  &nbsp;&nbsp;&nbsp; COL <br>
-    2  &nbsp;&nbsp;&nbsp; 4  &nbsp;&nbsp;&nbsp; 3  &nbsp;&nbsp;&nbsp; COL <br>
+    -4  &emsp; -5  &emsp; -4  &emsp; COL <br>
+    2  &emsp; 4  &emsp; 3  &emsp; COL <br>
     
     <br>
     
     &gt;&gt;std.minmax(m, 1) <br>
-    -1  &nbsp;&nbsp;&nbsp; -5  &nbsp;&nbsp;&nbsp; -5 &nbsp;&nbsp;&nbsp;  COL <br>
-    4  &nbsp;&nbsp;&nbsp; 3  &nbsp;&nbsp;&nbsp; 2  &nbsp;&nbsp;&nbsp; COL <br>
+    -1  &emsp; -5  &emsp; -5 &emsp;  COL <br>
+    4  &emsp; 3  &emsp; 2  &emsp; COL <br>
 
-</p>
+</div>
 
 
 
 <p>&nbsp;</p>
+
+
+
+
+<h3 id="array">Array</h3>
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 <br> 
+    
+    <br>
+    
+    &gt;&gt;std.minmax(arr) <br>
+    1 <br>
+    b 
+</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
 
 
 
@@ -166,23 +213,49 @@
     
 </p>
 
-<p class="CodeCommand">
+
+<p>&nbsp;</p>
+
+
+<div class="CodeCommand">
+    
+    <span class="LuaComment">--Vector</span><br>
+    
     &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
-    3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL <br />
+    3&emsp; 5&emsp; 2&emsp; 1&emsp; 7&emsp; 4&emsp; COL <br />
+    
     <br />
+    
     &gt;&gt;std.min(v) <br />
     1	<br />
 
+    
+    
     <br />
     <br />
+    
+    
+    <span class="LuaComment">--Matrix</span><br>
 
-    &gt;&gt;m  <br />
-    &nbsp;
-    2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; -1  <br />
-   -4&nbsp;&nbsp;&nbsp;&nbsp; -5&nbsp;&nbsp;&nbsp;&nbsp; 3 <br />
-    &nbsp;
-    2&nbsp;&nbsp;&nbsp; -5&nbsp;&nbsp;&nbsp; -4  <br />
+    &gt;&gt;m  
+   <table class="algright">
+        <tr>
+            <td>2</td>
+            <td>4</td>
+            <td>-1</td>
+        </tr>
+        <tr>
+            <td>-4</td>
+            <td>-5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>-5</td>
+            <td>-4</td>
+        </tr> 
+    </table>
 
     <br />
 
@@ -191,15 +264,28 @@
     
     <br>
     &gt;&gt;std.min(m, 0) <br />
-    -4  &nbsp;&nbsp;&nbsp; -5  &nbsp;&nbsp;&nbsp; -4  &nbsp;&nbsp;&nbsp; COL <br>
+    -4  &emsp; -5  &emsp; -4  &emsp; COL <br>
     
     <br>
     
     &gt;&gt;std.min(m, 1) <br>
-    -1  &nbsp;&nbsp;&nbsp; -5  &nbsp;&nbsp;&nbsp; -5 &nbsp;&nbsp;&nbsp;  COL <br>
+    -1  &emsp; -5  &emsp; -5 &emsp;  COL <br>
     
+    <br>
+    <br>
+    
+    
+    <span class="LuaComment">--Array</span><br>
+    
+    &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 <br> 
+    
+    <br>
+    
+    &gt;&gt;std.min(arr) <br>
+    1	
 
-</p>
+</div>
 
 
 
@@ -241,10 +327,17 @@
     
 </p>
 
-<p class="CodeCommand">
+
+<p>&nbsp;</p>
+
+
+<div class="CodeCommand">
+    
+    
+    <span class="LuaComment">--Vector</span><br>
     &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
-    3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL <br />
+    3&emsp; 5&emsp; 2&emsp; 1&emsp; 7&emsp; 4&emsp; COL <br />
     <br />
     &gt;&gt;std.max(v) <br />
     7	<br />
@@ -255,13 +348,27 @@
     <br />
 
     
+    <span class="LuaComment">--Matrix</span><br>
     
     &gt;&gt;m  <br />
-    &nbsp;
-    2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; -1  <br />
-   -4&nbsp;&nbsp;&nbsp;&nbsp; -5&nbsp;&nbsp;&nbsp;&nbsp; 3 <br />
-    &nbsp;
-    2&nbsp;&nbsp;&nbsp; -5&nbsp;&nbsp;&nbsp; -4  <br />
+    <table class="algright">
+        <tr>
+            <td>2</td>
+            <td>4</td>
+            <td>-1</td>
+        </tr>
+        <tr>
+            <td>-4</td>
+            <td>-5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>-5</td>
+            <td>-4</td>
+        </tr>
+    </table>
+
 
     <br />
 
@@ -270,14 +377,31 @@
     
     <br>
     &gt;&gt;std.max(m, 0) <br />
-    2  &nbsp;&nbsp;&nbsp; 4  &nbsp;&nbsp;&nbsp; 3  &nbsp;&nbsp;&nbsp; COL <br>
+    2  &emsp; 4  &emsp; 3  &emsp; COL <br>
     
     <br>
     
     &gt;&gt;std.max(m, 1) <br>
-    4  &nbsp;&nbsp;&nbsp; 3  &nbsp;&nbsp;&nbsp; 2  &nbsp;&nbsp;&nbsp; COL <br>
+    4  &emsp; 3  &emsp; 2  &emsp; COL <br>
+    
+    
+    
+    
+    <br>
+    <br>
+    
+    
+    
+    <span class="LuaComment">--Array</span><br>
+     &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 <br> 
+    
+    <br>
+    
+    &gt;&gt;std.max(arr) <br>
+    b
 
-</p>
+</div>
 
 
 

@@ -45,8 +45,13 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -57,7 +62,7 @@
 <p class="CodeCommand">
     &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
-    3&emsp; 5&emsp; 2&emsp; 1&emsp; 7 &emsp; 4 &emsp; COL <br />
+    3 &emsp; 5 &emsp; 2&emsp; 1&emsp; 7 &emsp; 4 &emsp; COL <br />
     <br />
     &gt;&gt;std.sum(v) <br />
     22
@@ -68,8 +73,14 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -102,17 +113,26 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
 
 <h2 id="array">Array</h2>
 <p>
-    Array contains numeric and non-numeric entries. When summing 
-    entries in an array, only numeric entries are considered and the 
-    number of numeric entries considered along with the result is reported.
+    Array contains numeric and non-numeric entries. When computing the sum of  
+    the entries in an array, only numeric entries are considered. 
+    Therefore, along with the result the number of numeric entries 
+    considered is also reported.
 </p>
 
 <p class="CodeCommand">
@@ -135,8 +155,14 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 

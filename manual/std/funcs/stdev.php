@@ -55,6 +55,10 @@
 <p>&nbsp;</p>
 
 
+
+
+
+
 <h2 id="vector">Vector</h2>
 
 <p class="CodeCommand">
@@ -65,7 +69,66 @@
 
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h2 id="array">Array</h2>
+
+<p>
+    Array contains numeric and non-numeric entries. When computing standard deviation of  
+    the entries in an array, only numeric entries are considered. Therefore, along with the result 
+    the number of numeric entries considered is also reported.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 <br>
+    
+    <br>
+    
+    &gt;&gt;std.stdev(arr) <br>
+    1.25831 <br>
+    3	<br>
+    
+    <br>
+    
+    &gt;&gt;std.stdev(arr, "s") <br>
+    1.25831 <br>
+    3	<br>
+    
+    <br>
+    
+    &gt;&gt;std.stdev(arr, "p") <br>
+    1.0274 <br>
+    3	
+</p>
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
 
 
 <h2 id="matrix">Matrix</h2>
@@ -75,16 +138,24 @@
     &gt;&gt;m <br>
     <table class="spaced">
         <tr>
-            <td>14</td>	<td>18</td> <td>9</td>
+            <td>14</td>	
+            <td>18</td> 
+            <td>9</td>
         </tr>
         <tr>
-            <td>7</td>	<td>14</td> <td>8</td>
+            <td>7</td>	
+            <td>14</td> 
+            <td>8</td>
         </tr>
         <tr>
-            <td>12</td>	<td>19</td> <td>16</td>
+            <td>12</td>	
+            <td>19</td> 
+            <td>16</td>
         </tr>
         <tr>
-            <td>8</td>	<td>13</td> <td>11</td>
+            <td>8</td>	
+            <td>13</td> 
+            <td>11</td>
         </tr>
     </table>
 
@@ -96,17 +167,31 @@
     <br>
 
     &gt;&gt;std.stdev(m, "s", 0) <br>
-    3.30404 &nbsp;&nbsp;&nbsp;  2.94392 &nbsp;&nbsp;&nbsp;  3.55903 &nbsp;&nbsp;&nbsp;  COL <br>
+    3.30404 &emsp;  2.94392 &emsp;  3.55903 &emsp;  COL <br>
     
     <br>
 
     &gt;&gt;std.stdev(m, "s", 1) <br>
-    4.50925 &nbsp;&nbsp;&nbsp;  3.78594 &nbsp;&nbsp;&nbsp;  3.51188 &nbsp;&nbsp;&nbsp;  2.51661 &nbsp;&nbsp;&nbsp;  COL 
+    4.50925 &emsp;  3.78594 &emsp;  3.51188 &emsp;  2.51661 &emsp;  COL 
     
 </div>
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
 
 <h2 id="container">table & other containers </h2>
 <p class="CodeCommand">
@@ -136,8 +221,18 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
 
 <div class="RelatedLinks">
     <a href="var.php">var</a>
