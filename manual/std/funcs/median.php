@@ -46,16 +46,15 @@
 
 
 <div class="CodeCommand">
+    
+    <span class="LuaComment">--Lua table without keys</span><br>
     &gt;&gt;t={3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;std.median(t) <br />
     3.5 <br />
-
-    
     
     <br />
 
-    
-    
+    <span class="LuaComment">--Lua table with keys</span><br>
     &gt;&gt;t={a=3, b=5, c=2, d=1, e=7, f=4} <br />
     &gt;&gt;std.median(t) <br />
     3.5	<br />
@@ -69,6 +68,7 @@
 
     
     
+    <span class="LuaComment">--Vector</span><br>
     
     &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
@@ -84,7 +84,7 @@
     <br />
     
     
-    
+    <span class="LuaComment">--Matrix</span><br>
 
     &gt;&gt;m  
     
@@ -110,6 +110,24 @@
 
     &gt;&gt;std.median(m) <br />
     5	
+    
+    
+    <br />
+    <br />
+    
+    
+    <span class="LuaComment">--Array</span><br>
+    
+    &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 &emsp; 
+    <span class="LuaKeyword">nil</span> &emsp; 5 <br>
+    
+    <br>
+    
+    &gt;&gt;std.median(arr) <br>
+    2.75 
+    
+    
 </div>
 
 
