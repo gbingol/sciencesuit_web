@@ -115,47 +115,143 @@
 
 
 
-<h3>Creating an Array</h3>
+<h2 id="createarray">Creating Array</h2>
     
     
+<h3 id="array_new">Array.new</h3>
+
+<p class="funcsignature">
+    Array.new(n=, [value=]) &rarr; Array 
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array and 
+    <em>value</em> is the initial value to be assigned.
+</p>
+    
+
 <p class="CodeCommand">
-    &gt;&gt;arr1=std.Array.new(3, "a") <br />
-    &gt;&gt;arr1 <br />
+    
+    &gt;&gt;a=std.Array.new(3) <br>
+    &gt;&gt;a <br>
+    nil &emsp; nil &emsp; nil <br>
+    
+    
+    <br>
+    
+    
+    &gt;&gt;arr=std.Array.new(3, "a") <br />
+    &gt;&gt;arr<br />
     "a"&emsp; "a"&emsp; "a" <br />
     
     <br />
 
-    &gt;&gt;arr2=std.Array.new(2, 3.14) <br />
-    &gt;&gt;arr2 <br />
-    3.14 &emsp; 3.14	<br />
-
-    <br />
-    
-    &gt;&gt;arr3=std.toarray{1, 2, "a", "b"} <br />
-    &gt;&gt;arr3 <br />
-    1 &emsp; 2 &emsp; "a" &emsp; "b"
+    &gt;&gt;arr=std.Array.new(2, 3.14) <br />
+    &gt;&gt;arr <br />
+    3.14 &emsp; 3.14
 </p>
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h3 id="array_rbinom">Array.rbinom</h3>
+
+<p class="funcsignature">
+    Array.rbinom(n=, size=, prob=) &rarr; Array <br>
+    
+    <br>
+    
+    Array.rbinom{n=, size=, prob=} &rarr; Array
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array, 
+    <em>size</em> is number of independent trials, 
+    <em>prob</em> prob is probability of success on each trial.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.Array.rbinom(4, 5, 0.3) <br>
+    &gt;&gt;arr <br>
+    1 &emsp; 3 &emsp; 2 &emsp; 2 <br>
+    
+    <br>
+    
+    &gt;&gt;arr=std.Array.rbinom{n=4, size=5, prob=0.3} <br>
+    &gt;&gt;arr <br>
+    1 &emsp; 2 &emsp; 1 &emsp; 2 
+    
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+<h3>Other ways</h3>
+
+<p>
+    In order to create an array from:
+</p>
+<ul class="spaced">
+    <li>
+        Data in a Worksheet: <a href="../../workbook/createdatastructures.php">create data structures.</a>. 
+    </li>
+    
+    <li>
+        Vector, Matrix, Lua table: <a href="../funcs/toarray.php">std.toarray</a>
+    </li>
+    
+</ul>
 
 
 <p>
-    In order to create an array from a data in a Worksheet please see
-    or <a href="../../workbook/createdatastructures.php">create data structures.</a>. 
-</p>
     
+
+
+
 
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-    
+<p>&nbsp;</p>    
     
  
 
 
-<h3>Array Manipulation</h3>
+
+
+
+
+<h2>Array Manipulation</h2>
 
 
 <p>
@@ -228,6 +324,12 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
 
 
 
@@ -286,9 +388,16 @@
 </p>
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
