@@ -87,8 +87,8 @@
     </li>
     
     <li>
-        The <span class="LuaKeyword">nil</span> value is a special type 
-        and is used to show the absence of a value.
+        The <span class="LuaKeyword">nil</span> value is meant 
+        to show the absence of a value.
     </li>
     
     <li>
@@ -122,20 +122,23 @@
     &gt;&gt;arr1=std.Array.new(3, "a") <br />
     &gt;&gt;arr1 <br />
     "a"&emsp; "a"&emsp; "a" <br />
+    
     <br />
 
     &gt;&gt;arr2=std.Array.new(2, 3.14) <br />
     &gt;&gt;arr2 <br />
-    3.14&emsp; 3.14	<br />
+    3.14 &emsp; 3.14	<br />
 
     <br />
+    
     &gt;&gt;arr3=std.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;arr3 <br />
-    1&emsp; 2&emsp; "a"&emsp; "b"
+    1 &emsp; 2 &emsp; "a" &emsp; "b"
 </p>
 
 
 <p>&nbsp;</p>
+
 
 <p>
     In order to create an array from a data in a Worksheet please see
@@ -177,6 +180,8 @@
     
 <p>&nbsp;</p>
 
+
+
 <p> To read an entry from the array:</p>
 
 <p class="CodeCommand">
@@ -193,6 +198,8 @@
     &gt;&gt;type(a[4]) <br />
     string
 </p>
+
+
 
 <p>&nbsp;</p>
 
@@ -603,6 +610,92 @@
 
 
 
+
+
+
+
+
+
+
+<h3 id="keep_numbers">keep_numbers</h3>
+
+<p class="funcsignature">
+    keep_numbers()
+</p>
+
+<p>
+    Only keep the numbers and discard the others.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 &emsp; <span class="LuaKeyword">nil</span><br>
+
+    <br>
+    
+    &gt;&gt;arr:keep_numbers() <br>
+    
+    <br>
+    
+    &gt;&gt;arr <br>
+    1 &emsp; 2 &emsp; 3.5   
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="keep_strings">keep_strings</h3>
+
+<p class="funcsignature">
+    keep_strings()
+</p>
+
+<p>
+    Only keep the strings and discard the others.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 &emsp; <span class="LuaKeyword">nil</span><br>
+
+    <br>
+    
+    &gt;&gt;arr:keep_strings() <br>
+    
+    <br>
+    
+    &gt;&gt;arr <br>
+    "a" &emsp; "b"   
+</p>
+
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
