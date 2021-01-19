@@ -171,6 +171,11 @@
 
 <h3 id="array_rbinom">Array.rbinom</h3>
 
+<p>
+    Generates random sample for the binomial distribution. 
+    See also <a href="../funcs/dist_binom.php#rbinom">std.rbinom</a>
+</p>
+
 <p class="funcsignature">
     Array.rbinom(n=, size=, prob=) &rarr; Array <br>
     
@@ -217,6 +222,11 @@
 
 
 <h3 id="array_rnorm">Array.rnorm</h3>
+
+<p>
+    Generates random sample for the normal distribution. 
+    See also <a href="../funcs/dist_norm.php#rnorm">std.rnorm</a>
+</p>
 
 <p class="funcsignature">
     Array.rnorm(n=, mean=, sd=) &rarr; Array <br>
@@ -267,6 +277,11 @@
 
 <h3 id="array_rpois">Array.rpois</h3>
 
+<p>
+    Generates random sample for the Poisson distribution. 
+    See also <a href="../funcs/dist_pois.php#rpois">std.rpois</a>
+</p>
+
 <p class="funcsignature">
     Array.rpois(n=, lambda=) &rarr; Array <br>
     
@@ -292,6 +307,61 @@
     &gt;&gt;arr <br>
     2 &emsp; 3 &emsp; 5 &emsp; 7 &emsp; 2    
 </p>
+
+
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h3 id="array_rt">Array.rt</h3>
+
+<p>
+    Generates random sample for the Student t distribution. 
+    See also <a href="../funcs/dist_t.php#rt">std.rt</a>
+</p>
+
+<p class="funcsignature">
+    Array.rt(n=, df=) &rarr; Array <br>
+    
+    <br>
+    
+    Array.rt{n=, df=} &rarr; Array
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array, 
+    <em>df</em> is the degrees of freedom.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.Array.rt(5, 10) <br>
+    &gt;&gt;arr <br>
+    -0.154984 &emsp; 0.680384 &emsp; -0.617251 &emsp; 0.244669 &emsp; -0.876343  <br>  
+    
+    <br>
+    
+    &gt;&gt;arr=std.Array.rt{n=5, df=10} <br>
+    &gt;&gt;arr <br>
+    0.310501 &emsp; 0.415393 &emsp; -0.224671 &emsp; 0.325173 &emsp; -0.523907      
+</p>
+
+
 
 
 
