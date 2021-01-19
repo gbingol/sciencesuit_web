@@ -371,6 +371,72 @@
 
 
 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h3 id="array_runif">Array.runif</h3>
+
+<p>
+    Generates random sample for uniform distribution. 
+    See also <a href="../funcs/dist_unif.php#runif">std.runif</a>
+</p>
+
+<p class="funcsignature">
+    Array.runif(n=, [min=0], [max=1]) &rarr; Array <br>
+    
+    <br>
+    
+    Array.runif{n=, [min=0], [max=1]} &rarr; Array
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array, 
+    <em>min</em> and <em>max</em> are [min, max].
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.Array.runif{n=5} <br>
+    &gt;&gt;arr <br>
+    0.882343 &emsp; 0.806082 &emsp; 0.867014 &emsp; 0.670998 &emsp; 0.363004  <br>
+    
+    <br>
+    
+    &gt;&gt;arr=std.Array.runif(5) <br>
+    &gt;&gt;arr <br>
+    0.142298 &emsp; 0.334995 &emsp; 0.546012 &emsp; 0.809353 &emsp; 0.118543  <br>
+    
+    <br>
+    
+    &gt;&gt;arr=std.Array.runif(5, 0, 1) <br>
+    &gt;&gt;arr <br>
+    0.87369 &emsp; 0.570477 &emsp; 0.124015 &emsp; 0.702127 &emsp; 0.958103 <br>
+    
+    <br>
+    
+    
+    &gt;&gt;arr=std.Array.runif{n=5, min=0, max=1} <br>
+    &gt;&gt;arr <br>
+    0.871186 &emsp; 0.989612 &emsp; 0.660086 &emsp; 0.377646 &emsp; 0.627643    
+</p>
+
+
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
