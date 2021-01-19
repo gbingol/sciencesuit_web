@@ -133,8 +133,8 @@
 
 <p class="CodeCommand">
     
-    &gt;&gt;a=std.Array.new(3) <br>
-    &gt;&gt;a <br>
+    &gt;&gt;arr=std.Array.new(3) <br>
+    &gt;&gt;arr <br>
     nil &emsp; nil &emsp; nil <br>
     
     
@@ -183,7 +183,7 @@
 <p>
     where <em>n</em> is the size of the array, 
     <em>size</em> is number of independent trials, 
-    <em>prob</em> prob is probability of success on each trial.
+    <em>prob</em> is probability of success on each trial.
 </p>
 
 <p class="CodeCommand">
@@ -208,6 +208,105 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h3 id="array_rnorm">Array.rnorm</h3>
+
+<p class="funcsignature">
+    Array.rnorm(n=, mean=, sd=) &rarr; Array <br>
+    
+    <br>
+    
+    Array.rnorm{n=, mean=, sd=} &rarr; Array
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array, 
+    <em>mean</em> is the mean, 
+    <em>sd</em> is standard deviation.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.Array.rnorm(5, 0, 1) <br>
+    &gt;&gt;arr <br>
+    0.346302 &emsp; -0.927172 &emsp; -0.982216 &emsp; -0.426793 &emsp; 0.522837   <br> 
+    
+    <br>
+    
+    &gt;&gt;arr=std.Array.rnorm{n=5, mean=0, sd=1} <br>
+    &gt;&gt;arr <br>
+    0.948317 &emsp; -0.645659 &emsp; 0.930765 &emsp; -0.93667 &emsp; -1.27077  
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h3 id="array_rpois">Array.rpois</h3>
+
+<p class="funcsignature">
+    Array.rpois(n=, lambda=) &rarr; Array <br>
+    
+    <br>
+    
+    Array.rpois{n=, lambda=} &rarr; Array
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array, 
+    <em>lambda</em> is the average number of events per interval (event rate).
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.Array.rpois(5, 3) <br>
+    &gt;&gt;arr <br>
+    2    6    2    3    5  <br>
+    
+    <br>
+    
+    &gt;&gt;arr=std.Array.rpois{n=5, lambda=3} <br>
+    &gt;&gt;arr <br>
+    2 &emsp; 3 &emsp; 5 &emsp; 7 &emsp; 2    
+</p>
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
 
 
 
