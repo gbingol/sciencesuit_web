@@ -905,8 +905,13 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -939,8 +944,14 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -993,6 +1004,8 @@
 
 
 
+
+
 <h3 id="dtypes">dtypes</h3>
 
 <p class="funcsignature">
@@ -1011,9 +1024,9 @@
     
     &gt;&gt;df:dtypes() <br>
     Breakdown of each column: <br>
-    A [3] : int: 2, string: 1  <br>
-    B [4] : int: 2, string: 2  <br>
-    C [3] : int: 3 
+    A [3] : number: 2, string: 1  <br>
+    B [4] : number: 2, string: 2  <br>
+    C [3] : number: 3 
 </div>
 
 
@@ -1038,8 +1051,10 @@
     
     <span class="LuaComment">--returned type is Lua table</span><br>
     &gt;&gt;arr:dtypes() <br>
-    float=0 &emsp; string=1 &emsp; nil=0 &emsp; int=2
+    number=2 &emsp; string=1 &emsp; nil=0
 </p>
+
+
 
 
 
