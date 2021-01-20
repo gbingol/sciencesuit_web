@@ -280,6 +280,59 @@
 
 
 
+
+<h3 id="array_rf">Array.rf</h3>
+
+<p>
+    Generates random sample for the F distribution. 
+    See also <a href="../funcs/dist_f.php#rf">std.rf</a>
+</p>
+
+<p class="funcsignature">
+    Array.rf(n=, df1=, df2=) &rarr; Array <br>
+    
+    <br>
+    
+    Array.rf{n=, df1=, df2=} &rarr; Array
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array, 
+    <em>df1</em> and <em>df2</em> are the degrees of freedom.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.Array.rf(5, 2, 6) <br>
+    &gt;&gt;arr <br>
+    0.699865 &emsp; 1.34055 &emsp; 0.306613 &emsp; 1.32886 &emsp; 0.531962 <br> 
+    
+    <br>
+    
+    &gt;&gt;arr=std.Array.rf{n=5, df1=2, df2=6} <br>
+    &gt;&gt;arr <br>
+    3.06676 &emsp; 0.403764 &emsp; 1.05598 &emsp; 0.682219 &emsp; 1.65581 
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
 <h3 id="array_rnorm">Array.rnorm</h3>
 
 <p>
