@@ -211,6 +211,65 @@
 
 
 
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+<h3 id="array_rchisq">Array.rchisq</h3>
+
+<p>
+    Generates random sample for the chisq distribution. 
+    See also <a href="../funcs/dist_chisq.php#rchisq">std.rchisq</a>
+</p>
+
+<p class="funcsignature">
+    Array.rchisq(n=, df=) &rarr; Array <br>
+    
+    <br>
+    
+    Array.rchisq{n=, df=} &rarr; Array
+</p>
+    
+
+<p>
+    where <em>n</em> is the size of the array, 
+    <em>df</em> is the degrees of freedom.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.Array.rchisq(5, 7) <br>
+    &gt;&gt;arr <br>
+    6.90461 &emsp; 9.10524 &emsp; 4.61913 &emsp; 7.38469 &emsp; 12.8468  <br>
+
+    <br>
+
+    &gt;&gt;arr=std.Array.rchisq{n=5, df=7} <br>
+    &gt;&gt;arr <br>
+    13.9294 &emsp; 6.00932 &emsp; 12.5079 &emsp; 6.91396 &emsp; 5.33217    
+</p>
+
+
+
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -450,7 +509,7 @@
 
 
 
-<h3>Other ways</h3>
+<h3>From Existing Data</h3>
 
 <p>
     In order to create an array from:
@@ -1097,7 +1156,7 @@
 </p>
    
 <p>
-    Removes all the elements of type <em>float</em>.
+    Removes all the elements of type number (float, integer).
 </p>
 
 <p class="CodeCommand">
