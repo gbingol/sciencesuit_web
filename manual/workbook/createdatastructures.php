@@ -182,9 +182,28 @@
 
 <p>&nbsp;</p>
 
+<p>
+    A combination of possible selections and outputs are as follows:
+</p>
 
 
+<p class="CodeCommand">
+    <span class="LuaComment">--Treat String or Empty Cell: 0.0</span><br>
+    &gt;&gt;v <br>
+    0 &emsp; 0 &emsp; 1 &emsp; 2 &emsp; 3 &emsp; 4 &emsp; 5 &emsp; 6 &emsp; COL <br>
+    
+    <br>
+    
+    <span class="LuaComment">--Treat String or Empty Cell: Skip</span><br>
+    &gt;&gt;v <br>
+    0 &emsp; 1 &emsp; 2 &emsp; 3 &emsp; 4 &emsp; 5 &emsp; 6 &emsp; COL <br>
+    
+    <br>
 
+    <span class="LuaComment">--Treat String or Empty Cell: 0.0</span><br>
+    &gt;&gt;v <br>
+    -1.79769e+308 &emsp; 0 &emsp; 1 &emsp; 2 &emsp; 3 &emsp; 4 &emsp; 5 &emsp; 6 &emsp; COL 
+</p>
 
 
 
