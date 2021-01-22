@@ -10,14 +10,7 @@
     
     
     <script src="/jsscripts/siteanalytics.js"></script>
-    
-    <style>
-        .spaced li
-        {
-            padding-top: 6px;
-            padding-bottom: 6px;
-        }
-    </style>
+        
     
 </head>
 
@@ -65,7 +58,7 @@
 <img src="images/createvariable_maindialog.png" alt=""/>
 
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         <em>Name of the Variable:</em> 
         The name of the variable that will be created in the global workspace.
@@ -109,7 +102,7 @@
 
 <img src="images/createvariable_array_maindialog.png" alt=""/>
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         <em>Encode Unrecognized Characters:</em> 
         If the characters are not recognized, they will be encoded.
@@ -126,6 +119,32 @@
 
 
 <p>&nbsp;</p>
+
+<p>
+    A combination of possible selections and outputs are as follows:
+</p>
+
+
+<p class="CodeCommand">
+    <span class="LuaComment">--Encoding selected, Empty Cell: nil</span><br>
+    &gt;&gt;arr <br>
+    1 &emsp; 2 &emsp; nil &emsp; "cat" &emsp; "kaÄŸÄ±t" <br>
+    
+    <br>
+    
+    <span class="LuaComment">--Encoding not selected, Empty Cell: nil</span><br>
+    &gt;&gt;arr2 <br>
+    1 &emsp; 2 &emsp; nil &emsp; "cat" &emsp; "" <br>
+    
+    <br>
+    
+    <span class="LuaComment">--Encoding selected, Empty Cell: Emptry string</span><br>
+    &gt;&gt;arr3 <br>
+    1 &emsp; 2 &emsp; "" &emsp; "cat" &emsp; "kaÄŸÄ±t" <br> 
+</p>
+
+
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
@@ -136,6 +155,32 @@
 <!-- ************************** Vector ***************************** -->
 
 <h2 id="vector">Vector</h2>
+<p>
+    Assume the following selection is made on a worksheet:
+</p>
+
+<img src="images/createvariable_vector_selection.png" alt=""/>
+
+<p>&nbsp;</p>
+
+<p>
+    Selecting the type Vector from <em>Select Type</em> dropdown menu 
+    will show the following options:
+</p>
+
+<img src="images/createvariable_vector_maindialog.png" alt=""/>
+
+<ul class="linespaced">
+    <li>
+        <em>Treat String or Empty Cell:</em> 
+        When a string or an empty cell encountered, the action to be taken. Either a zero value 
+        or the lowest numeric value of a floating point can be assigned or it can be skipped.
+    </li>
+</ul>
+
+
+
+<p>&nbsp;</p>
 
 
 
