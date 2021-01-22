@@ -125,7 +125,7 @@
     to access (read/write) the elements of a matrix:
 </p>
 
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>Accessing single values</li>
     <li>Accessing multiple values</li>
 </ol>
@@ -409,7 +409,7 @@
 </p>
 
 <p>In the above example:</p>
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>Initially a link vector, namely <em>v</em>, is created using <mark>v=m[1]</mark> </li>
     <li>The first element of the <i>link</i> <i>Vector</i> is set to 10 by <mark>v[1]=10</mark>.</li>
 </ol>

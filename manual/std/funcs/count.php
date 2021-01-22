@@ -136,7 +136,7 @@
 
 <div class="CodeCommand">
     &gt;&gt;arr2 <br>
-    1.1 &nbsp;&nbsp;&nbsp; 1.2 &nbsp;&nbsp;&nbsp;1.3 &nbsp;&nbsp;&nbsp;1.2 &nbsp;&nbsp;&nbsp; 1.21 <br>
+    1.1 &emsp; 1.2 &emsp;1.3 &emsp;1.2 &emsp; 1.21 <br>
     
     <br>
     
@@ -439,7 +439,7 @@
     <p>&nbsp;</p>
     
     &gt;&gt;v <br>
-    1&nbsp;&nbsp;&nbsp;2 &nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;COL <br>
+    1 &emsp;2 &emsp; 3 &emsp; 5 &emsp; 9 &emsp; 11 &emsp; 4 &emsp; 6 &emsp;COL <br>
     
     <br>
     

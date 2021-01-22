@@ -101,7 +101,7 @@
         Charts can be plotted:
      </p>
 
-     <ol class="spaced">
+     <ol class="linespaced">
          <li>Using commands, </li>
          <li>Using the graphical user interface (GUI),</li>
          <li>A potpourri of commands and GUI. </li>

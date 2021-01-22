@@ -175,7 +175,7 @@
 
 
 <p >Possible combinations for the argument <em>tbl</em> are:</p>
-<ol class="spaced">
+<ol class="linespaced">
     <li>Single argument: only saturated properties are searched</li>
 
     <li><em>P,T</em> (compressed, saturated and superheated properties are searched)</li>

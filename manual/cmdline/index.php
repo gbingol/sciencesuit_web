@@ -99,7 +99,7 @@
     the contents will be listed and will be shown with the following signs: 
 </p>
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>Tables: <b>{}</b></li>
     <li>function: <b>f</b></li>
     <li>string: <b>s</b></li>

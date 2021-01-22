@@ -157,7 +157,7 @@
 <p>&nbsp;</p>
 <h3>Possible Usage:</h3>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li>
         <em><span class="auto-style13">1-sample t-test:</span> test_t{x=, mu=, alternative="two.sided", conflevel=0.95}</em>
     </li>

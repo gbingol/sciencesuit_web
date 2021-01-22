@@ -246,7 +246,7 @@
     on the extension of the file. Following are possible:
 </p>
 
-<ul class="spaced">
+<ul class="linespaced">
     <li><em>Lua files:</em> Will be loaded into the editor.</li>
 
     <li><em>Executable files:</em> No action will be performed and a warning message will be issued.</li>
@@ -301,7 +301,7 @@
 <img src="images/runningscript_outputwindow.png" alt=""/>
 
 <p>Output Window shows: </p>
-<ol class="spaced">
+<ol class="linespaced">
     <li>Date (year month day) and the time (hour, minute, seconds),</li>
 
     <li>If available a warning message,</li>
@@ -482,7 +482,7 @@
     Please note the following to be able to correctly use this feature:
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li>
         A selection must be made and the selected text must be an identifier and must qualify as a function.
     </li>

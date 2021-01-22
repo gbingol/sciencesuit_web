@@ -57,7 +57,7 @@
 
 <details>
     <summary><b>Notes:</b></summary>
-    <ul class="spaced">
+    <ul class="linespaced">
         <li>
             If parameter <em>path</em> is specified as empty string, "", then a file dialog will be 
             shown to select the file. Relative paths are not accepted. While specifying a full path 

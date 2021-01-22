@@ -43,7 +43,7 @@
 <p>&nbsp;</p>
 
 <p><em>The editor is capable of:</em></p>
-<ul class="spaced">
+<ul class="linespaced">
     <li>Code completion and context-based help.</li>
     <li>Multi-file editing.</li>
     <li>Find/Replace.</li>

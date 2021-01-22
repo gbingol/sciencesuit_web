@@ -178,7 +178,7 @@
     Few things to notice here are:
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li>Each table entry is an array (therefore satisfying the requirement).</li>
     <li>Arrays are not of same size, therefore when printed out 
         smaller ones are "padded" with <span class="LuaKeyword">nil</span>.
@@ -397,7 +397,7 @@
     </table>
 </div>
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         It is noted that the unlabeled array is labeled with <em>C</em> and printed out 
         as first column, the remaining two arrays, which were labeled with keys, might be 
@@ -739,7 +739,7 @@
     A few things to notice:
 </p>
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         The returned array is not of type LINK. Therefore, any operation 
         on the array does not affect the dataframe itself.
@@ -1280,7 +1280,7 @@
     Few things to note:
 </p>
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         Unlike adding columns (<a href="#cbind">cbind</a>), 
         when adding rows the order of columns is important. 

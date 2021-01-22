@@ -90,7 +90,7 @@
 
 
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>The default confidence level is 95% and a value between (0,100) is accepted. </li>
     <li>The alternative hypothesis can be: <em>1)</em> Less than, <em>2)</em> Not equal, <em>3)</em> Greater than. </li>
     <li>If <em>"Assume Equal Variances"</em> is selected, then pooled variance is also reported. </li>

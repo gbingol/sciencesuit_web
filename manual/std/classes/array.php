@@ -80,7 +80,7 @@
     Array is a 1D data structure and has the following properties:
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li>
         Can contain numbers (float, integer) and non-numeric 
         (string, <span class="LuaKeyword">nil</span>) values. 
@@ -567,7 +567,7 @@
 <p>
     In order to create an array from:
 </p>
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         Data in a Worksheet: <a href="../../workbook/createdatastructures.php">create data structures.</a>. 
     </li>
@@ -708,7 +708,7 @@
     Therefore, the following set of rules are followed:
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li>
         Any operation on <span class="LuaKeyword">nil</span> value, results in a <span class="LuaKeyword">nil</span> value.
     <li>

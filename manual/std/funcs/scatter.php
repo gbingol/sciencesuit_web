@@ -295,7 +295,7 @@
 
 
 <h3>Notes:</h3>
-<ol class="spaced">
+<ol class="linespaced">
     <li>
         The data series (x, y) must be represented either by a <em>marker</em> or by a <em>line</em> or by both.  
         If neither a <em>marker</em> nor a <em>line</em> is defined then a <em>marker</em> with default values will be shown. 

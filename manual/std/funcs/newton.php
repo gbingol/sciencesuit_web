@@ -115,7 +115,7 @@
 
 
 <h3>Notes</h3>
-<ol class="spaced">
+<ol class="linespaced">
     
     <li>
         If the derivative of the function, <em>fprime</em>, is provided, 

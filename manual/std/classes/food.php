@@ -23,12 +23,7 @@
         .auto-style11 {
         background-color: #FFFF00;
     }
-    
-    .spaced10px li
-    {
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
+
     
     </style>
     
@@ -49,7 +44,7 @@
 
 <h1>Food Class</h1>
 <p>Food in ScienceSuit is assumed to be composed of macronutrients, ash and salt: </p>
-<ul class="spaced10px">
+<ul class="linespaced">
     <li>Water,</li>
     <li>Carbohydrate (CHO),</li>
     <li>Protein, </li>
@@ -117,7 +112,7 @@
     Let f<sub>1</sub>, f<sub>2</sub> and f<sub>3</sub> denote <em>Food</em> and <em>a</em> and <em>b</em> an arbitrary numbers.
 </p>
 
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>
         <em>Addition</em>: f<sub>1</sub>+f<sub>2</sub>=f<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp; 
         a*f<sub>1</sub>+b*f<sub>2</sub>=f<sub>3</sub>
@@ -262,7 +257,7 @@
 
 
 <p>A few things should be noted here:</p>
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>
         We obtain a new food material, namely <em>powder</em>, of weight 0.13 units since we have subtracted 0.87 units 
         of <em>water</em> from 1 unit of milk. If you were to use the variable <em>powder</em>	as is, its weight 
@@ -329,14 +324,14 @@
 
 <p>The following assumptions were made:</p>
 
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>%Water &lt; 0.00001 &#8594; a<sub>w</sub>=0.01</li>
     <li>%Solute &lt;1 &#8594; a<sub>w</sub>=0.99</li>
 </ol>
 
 <p>For non-electrolyte solutions (% salt &lt;0.00001):</p>
 
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>%water &gt;99.0 &#8594; a<sub>w</sub>=0.98</li>
     <li>%CHO&gt;98 and all others &lt;1% &#8594; a<sub>w</sub>=0.70</li>
     <li>% water (1,5) &amp; %CHO&gt;5 &#8594; a<sub>w</sub>=<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/9780470376454.app3" target="_blank">MoneyBorn</a> equation</li>

@@ -66,7 +66,7 @@
 
 
 <p>If m is symmetric:</p>
-<ul class="spaced" style="margin-top: -12px;">
+<ul class="linespaced" style="margin-top: -12px;">
     <li>
         The function returns a Vector of eigenvalues.
     </li>
@@ -80,7 +80,7 @@
 
 
 <p>If m is NOT symmetric:</p>
-<ul class="spaced" style="margin-top: -12px;">
+<ul class="linespaced" style="margin-top: -12px;">
     
     <li>
         The function returns a matrix of eigenvalues.The eigenvalues matrix is n by 2, 

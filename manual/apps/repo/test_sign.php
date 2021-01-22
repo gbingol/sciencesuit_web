@@ -89,7 +89,7 @@
 <img src="../images/test_sign_1sample.png" alt="">
 
 
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         <red>Confidence level:</red> The default is 95% and a 
         value between (0,100) is accepted.
