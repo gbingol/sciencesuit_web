@@ -45,7 +45,6 @@
     <select id="selectsection" onchange="GotoSection();">
         <option selected disabled>Section</option>
         <option value="#basics">Basics</option>
-        <option value="#createdatastructures">Create Data Structure</option>
         <option value="#tokenizingtext">Tokenizing Text</option>
         <option value="#converttexttocolumns">Convert Text to Columns</option>
         <option value="#importfromworkspace">Import from Workspace</option>
@@ -86,8 +85,23 @@
 
 
 
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
 
 
 
@@ -95,7 +109,7 @@
 
 <!--*********************************** BASICS *********************************** -->
 
-<h2 id="basics">1) Basics</h2>
+<h2 id="basics">Basics</h2>
 
 <h3 >A) Saving / Opening:</h3>
 
@@ -141,7 +155,7 @@
 <p>&nbsp;</p>
 
 
-<h3 id="Selection_of_Cells">C)Selection of Cells</h3>
+<h3 id="Selection_of_Cells">C) Selection of Cells</h3>
 <p>
     Once a data range is selected, the dimension of the selection and some essential measures of the data 
     is immediately shown to the user at the status bar. 
@@ -149,21 +163,6 @@
 
 <img alt="" src="images/selectionshowingstatistics.png">
 
-<p>&nbsp;</p>
-	
-    
-<p>
-    Depending on dimension of the selection selection (compare Fig A with B) 
-    clicking the right button of the mouse will show a menu to allow the user to 
-    create variables (such as <a href="../std/classes/vector.php">Vector</a>, 
-    <a href="../std/classes/matrix.php">Matrix</a>, 
-    <a href="../std/classes/array.php">Array</a>, 
-    <a href="../std/classes/range.php">Range</a>) which can be manipulated by command editor. 
-    This feature brings a significant convenience when working with data sets 
-    (<a href="../workbook/createdatastructures.php">for more details</a>).
-</p>
-
-<img alt="" src="images/createdatastructure.png">
 
 <p>&nbsp;</p>
 	
@@ -255,63 +254,23 @@
 
 
     
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 
 
 
-
-
-
-<!-- *********************************CREATE DATA STRUCTURES *********************************** -->
-
-
-<h2 id="createdatastructures">2) Creating Data Structures</h2>
-
-<p>
-    Although it is very straightforward to create an empty <a href="../std/classes/matrix.php">Matrix</a>,
-    <a href="../std/classes/vector.php">Vector</a> and <a href="../std/classes/range.php">Range</a> using command line most of 
-    the time you will need to deal with data already entered to a spreadsheet, say Excel. 
-    The following steps will show you how to create a Vector, the rationale 
-    is the same for Matrix and Range. 
-</p>
-
-
-<ol>
-    <li>Copy and paste the data to a worksheet in ScienceSuit.</li>
-	
-    <li>
-        Select data part of "<em>Group 1</em>" and right-click. You should see the following:<br>
-        <img style="vertical-align:top" alt="" src="images/createvector_selectinsciencesuit.jpg" />
-    </li>
-	
-    <li>
-        Once you click on "Create Vector Variable" the following input box will 
-        popup. Enter the variable name as shown, here the variable is <em>v1</em>.<br />
-        <img alt="" src="images/createvector_entervariablename.jpg" />
-    </li>
-
-    <li>You are ready to use <em>v1</em> as a vector variable.</li>
-</ol>
-
-
-<p>&nbsp;</p>
-
-<p>
-    The steps for creating a <a href="../std/classes/matrix.php">Matrix</a> or a 
-    <a href="../std/classes/range.php">Range</a> is exactly the same as creating a 
-    <a href="../std/classes/vector.php">Vector</a>. However, needless to say, 
-    but for the <em>Matrix</em> data structure both the number of rows and columns selected 
-    must be greater than 1 in order to see the "<em>Create Matrix Variable</em>" option.
-</p>
-    
 
 
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-    
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 
@@ -319,7 +278,7 @@
 <!-- *********************************** TOKENIZING TEXT *********************************** -->
 
 
-<h2 id="tokenizingtext">3) Tokenizing Text</h2>
+<h2 id="tokenizingtext">Tokenizing Text</h2>
 
 <p>
     Every now and then we need to separate (tokenize) data in a text to be able to use the particular data entries separately. 
@@ -415,8 +374,21 @@
 
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
 
 
 
@@ -426,7 +398,7 @@
     
 <!-- *********************************** CONVERT TEXT TO COLUMNS *********************************** -->
 
-<h2 id="converttexttocolumns">4) Convert Text to Columns</h2>
+<h2 id="converttexttocolumns">Convert Text to Columns</h2>
 
 <p>
     It is used when you have text in the rows of a column and you wish to separate the text to multiple columns. 
@@ -486,9 +458,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
+
+
+
+
+
+
+
 
 
 
@@ -497,7 +485,7 @@
 
 <!-- *****************************************IMPORT FROM WORKSPACE ************************************ -->
     
-<h2 id="importfromworkspace">5) Import Data from Workspace</h2>
+<h2 id="importfromworkspace">Import Data from Workspace</h2>
 
 <p>
     It might sometimes be needed that after performing some calculations the variable holding the data should be saved or visualized in Workbook 
@@ -752,8 +740,14 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 <h4 id="Matrix">B.2) Matrix</h4>
 
@@ -773,15 +767,35 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
 
 
 
 
 <!-- ******************* IMPORT/EXPORT FROM EXTERNAL RESOURCES ************************* -->
 
-<h2 id="importexportexternalresources">6) Import/Export Data from/to External Resources</h2>
+<h2 id="importexportexternalresources">Import/Export Data from/to External Resources</h2>
 
 
 <p>
@@ -898,7 +912,10 @@
 
 <img src="images/export_txt_layoutinScienceSuit.png" alt=""/>
 
-<p>After exporting <em>Sheet 1</em> as text file and opening it with Notepad, the following layout will be observed:</p>
+<p>
+    After exporting <em>Sheet 1</em> as text file and opening it with Notepad, 
+    the following layout will be observed:
+</p>
 
 
 <img src="images/export_txt_layoutinnotepad.png" alt=""/>
@@ -934,8 +951,17 @@
 
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
