@@ -175,7 +175,7 @@
 
 <p>
     Create 4 vectors or a range or a matrix from the data in the worksheet. 
-    See <a href="../../workbook/index.php#createdatastructures">how to create vectors</a>. 
+    See <a href="../../workbook/createdatastructures.php#vector">how to create vectors</a>. 
     Assuming a vector was created for each color data:
 </p>
 

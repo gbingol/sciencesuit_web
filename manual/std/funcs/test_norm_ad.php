@@ -92,7 +92,7 @@
 </p>
 
 <p>
-    Create a vector, namely <em>vec</em>. See <a href="../../workbook/index.php#createdatastructures">how to create vectors</a>.
+    Create a vector, namely <em>vec</em>. See <a href="../../workbook/createdatastructures.php">how to create vectors</a>.
 </p>
 
 

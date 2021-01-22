@@ -10,22 +10,6 @@
     
     <style>
         
-        h2
-        {
-            color: red;
-        }
-        
-        h3
-        {
-            color:brown;
-        }
-        
-        h4
-        {
-            color: green;
-        }
-        
-        
         ol li
         {
             margin-top: 10px;
@@ -169,14 +153,14 @@
 	
     
 <p>
-    Depending on dimension of the selection selection (compare Fig A with B) clicking the right button of the mouse 
-    will show a menu to allow the user to 
+    Depending on dimension of the selection selection (compare Fig A with B) 
+    clicking the right button of the mouse will show a menu to allow the user to 
     create variables (such as <a href="../std/classes/vector.php">Vector</a>, 
     <a href="../std/classes/matrix.php">Matrix</a>, 
     <a href="../std/classes/array.php">Array</a>, 
     <a href="../std/classes/range.php">Range</a>) which can be manipulated by command editor. 
     This feature brings a significant convenience when working with data sets 
-    (<a href="#createdatastructures">for more details</a>).
+    (<a href="../workbook/createdatastructures.php">for more details</a>).
 </p>
 
 <img alt="" src="images/createdatastructure.png">
