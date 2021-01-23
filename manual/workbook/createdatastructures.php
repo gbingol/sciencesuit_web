@@ -10,6 +10,25 @@
     
     
     <script src="/jsscripts/siteanalytics.js"></script>
+    
+    <style>
+        table.dataframe tr:first-child
+        {
+            font-weight: bold;
+        }
+        
+        table.dataframe td:first-child
+        {
+            font-style: italic;
+        }
+        
+        
+        
+        table.dataframe td
+        {
+            padding: 6px;
+        }
+    </style>
         
     
 </head>
@@ -207,6 +226,10 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -218,6 +241,133 @@
 <!-- ************************** DataFrame ***************************** -->
 
 <h2 id="dataframe">DataFrame</h2>
+
+<p>
+    Assume the following selection is made on a worksheet:
+</p>
+
+<img src="images/createvariable_dataframe_selection.png" alt=""/>
+
+<p>&nbsp;</p>
+
+<p>
+    Selecting the type DataFrame from <em>Select Type</em> dropdown menu 
+    will show the following options:
+</p>
+
+<img src="images/createvariable_dataframe_maindialog.png" alt=""/>
+
+<ul class="linespaced">
+    <li>
+        <em>First Row is Header:</em> 
+       The very first row is used in the column header part of the dataframe. 
+       Otherwise, column headers will be assigned by the system.
+    </li>
+    
+    <li>
+        <em>Encode Unrecognized Characters:</em> 
+        If the characters are not recognized, they will be encoded.
+    </li>
+    
+    <li>
+        <em>Treat Empty Cell:</em> 
+        Empty cells will be considered as either <span class="LuaKeyword">nil</span> 
+        or as empty string ("").
+    </li>
+        
+    
+</ul>
+
+
+
+<p>&nbsp;</p>
+
+<p>
+    Here only <em>First Row is Header</em> option will be demonstrated as 
+    other options are already as same as <a href="#array">array</a>.
+</p>
+
+
+<div class="CodeCommand">
+    <span class="LuaComment">--First Row is Header: Checked</span><br>
+    &gt;&gt; df 
+    
+    <table class="dataframe">
+        <tr>
+            <td></td>
+            <td>Name</td>
+            <td>Q1</td>
+            <td>Q2</td>
+            <td>Q3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>"Student A"</td>
+            <td>10</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>"Student B"</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>"Student C"</td>
+            <td>9</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+    </table>
+    
+    <br>
+    <br>
+    
+    <span class="LuaComment">--First Row is Header: NOT Checked</span><br>
+    &gt;&gt; df2 
+
+    <table class="dataframe">
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>"Name"</td>
+            <td>"Q1"</td>
+            <td>"Q2"</td>
+            <td>"Q3"</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>"Student A"</td>
+            <td>10</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>"Student B"</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>"Student C"</td>
+            <td>9</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+    </table>
+    
+</div>
 
 
 
