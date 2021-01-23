@@ -24,10 +24,19 @@
         
         
         
-        table.dataframe td
+        table td
         {
             padding: 6px;
         }
+        
+        
+        table.raligned td
+        {
+            text-align: right;
+            
+            padding: 10px;
+        }
+        
     </style>
         
     
@@ -384,6 +393,85 @@
 <!-- ************************** Matrix ***************************** -->
 
 <h2 id="matrix">Matrix</h2>
+<p>
+    Assume the following selection is made on a worksheet:
+</p>
+
+<img src="images/createvariable_matrix_selection.png" alt=""/>
+
+<p>&nbsp;</p>
+
+<p>
+    Selecting the type Matrix from <em>Select Type</em> dropdown menu 
+    will show the following options:
+</p>
+
+<img src="images/createvariable_matrix_maindialog.png" alt=""/>
+
+<ul class="linespaced">
+    <li>
+        <em>Treat String or Empty Cell:</em> 
+        When a string or an empty cell encountered, the action to be taken. Either a zero value 
+        or the lowest numeric value of a floating point can be assigned.
+    </li>
+</ul>
+
+
+
+<p>&nbsp;</p>
+
+<p>
+    A combination of possible selections and outputs are as follows:
+</p>
+
+
+<div class="CodeCommand">
+    <span class="LuaComment">--Treat String or Empty Cell: 0.0</span><br>
+    &gt;&gt;m 
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+    </table>
+    
+    <br>
+    <br>
+    
+    <span class="LuaComment">--Treat String or Empty Cell: Lowest Floating Value</span><br>
+    &gt;&gt;m2
+    <table class="raligned">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>-1.79769e+308</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>-1.79769e+308</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+    </table>
+    
+        
+</div>
+
 
 
 
@@ -398,6 +486,44 @@
 
 
 
+
+<!-- ************************** Range ***************************** -->
+
+<h2 id="range">Range</h2>
+<p>
+    Assume the following selection is made on a worksheet:
+</p>
+
+<img src="images/createvariable_range_selection.png" alt=""/>
+
+<p>&nbsp;</p>
+
+<p>
+    Selecting the type Range from <em>Select Type</em> dropdown menu 
+    will show the following options:
+</p>
+
+<img src="images/createvariable_range_maindialog.png" alt=""/>
+
+
+<p>&nbsp;</p>
+
+<p class="CodeCommand">
+    &gt;&gt;rng<br>
+    df!A1:C4
+</p>
+
+
+
+
+
+    
+    
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+    
 
 
 
@@ -406,6 +532,7 @@
     <a href="../std/classes/vector.php">Vector</a>
     <a href="../std/classes/dataframe.php">DataFrame</a>
     <a href="../std/classes/matrix.php">Matrix</a>
+    <a href="../std/classes/range.php">Range</a>
 </div>
 
 </body>
