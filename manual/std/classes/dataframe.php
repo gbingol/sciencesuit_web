@@ -31,12 +31,6 @@
             color: #0000FF;
         }
         
-        ul.spaced li, ol.spaced li
-        {
-            padding-top: 6px;
-            padding-bottom: 6px;
-        }
-        
         
         table.dataframe tr:first-child
         {
