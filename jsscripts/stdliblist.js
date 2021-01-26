@@ -14,7 +14,9 @@ var StdLibFunctions = [
 
         ["appendworksheet", "utility"], ["besselj", "math", "specialfuncs.php#besselj"], ["beta", "math", "specialfuncs.php#beta"],
 
-        ["bisection","math"], ["boxplot", "stat"], ["const {}","utility", "const.php"], ["cor","stat"], ["count", "utility"],
+        ["bisection","math"], ["boxplot", "stat"],  ["brentq","math"],
+        
+        ["const {}","utility", "const.php"], ["cor","stat"], ["count", "utility"],
 
         ["cov", "stat"], ["cumsum","stat"],
 
