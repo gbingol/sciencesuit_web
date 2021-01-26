@@ -90,11 +90,11 @@
     </tr>
     <tr>
         <td>x0:</td>
-        <td>Initial guess &rarr; number</td>
+        <td>Initial guess &larr; number</td>
     </tr>
     <tr>
         <td>x1:</td>
-        <td>Initial guess &rarr; number</td>
+        <td>Initial guess &larr; number</td>
     </tr>
     <tr>
         <td>tol:</td>
@@ -210,6 +210,7 @@
 
 
 <div class="RelatedLinks">
+    <a href="brentq.php">brentq</a>
     <a href="bisection.php">bisection</a>
     <a href="solve.php">solve</a>
 </div>
