@@ -43,33 +43,33 @@
 </p>
 
 <p class="funcsignature">
-    read_csv(path=, [HasHeader=true], [UseEncoding=false]) &rarr; DataFrame<br>
+    read_csv(file=, [header=true], [encode=false]) &rarr; DataFrame<br>
     
     <br>
     
-    read_csv{ path=, [HasHeader=true], [UseEncoding=false]} &rarr; DataFrame
+    read_csv{ file=, [header=true], [encode=false]} &rarr; DataFrame
 </p>
 
 <p>
-    where parameter <em>path</em> is of type string, <em>HasHeader</em> and 
-    <em>UseEncoding</em> are of type <span class="LuaKeyword">boolean</span>.
+    where parameter <em>file</em> is of type string, <em>header</em> and 
+    <em>encode</em> are of type <span class="LuaKeyword">boolean</span>.
 </p>
 
 <details>
     <summary><b>Notes:</b></summary>
     <ul class="linespaced">
         <li>
-            If parameter <em>path</em> is specified as empty string, "", then a file dialog will be 
-            shown to select the file. Relative paths are not accepted. While specifying a full path 
-            forward-slash must be used as path separator.
+            If parameter <em>file</em> is specified as empty string, "", then a file dialog will be 
+            shown to select the file. Relative paths ("/mydocs/...") are not accepted. While specifying a full path 
+            forward-slash ("C:/users/...") must be used as path separator.
         </li>
         <li>
-            If parameter <em>HasHeader</em> is set as <span class="LuaKeyword">true</span>, then
+            If parameter <em>header</em> is set as <span class="LuaKeyword">true</span>, then
             the very first row will be considered as header.
         </li>
         
         <li>
-            If parameter <em>UseEncoding</em> is set as <span class="LuaKeyword">true</span>, then
+            If parameter <em>encode</em> is set as <span class="LuaKeyword">true</span>, then
             non-ASCII characters in the file will be encoded with ASCII characters. 
         </li>
         
@@ -80,15 +80,45 @@
 
 
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<p class="CodeCommand">
+    &gt;&gt;df=std.read_csv{ file="", header=<span class="LuaKeyword">false</span>, encode=<span class="LuaKeyword">true</span> } <br>
+</p>
+
+<img src="../images/read_csv_filedialog.png" alt=""/>
+
+<p class="CodeCommand">
+    &gt;&gt;type(df) <br>
+    DataFrame
+</p>
+
+
+<img src="../images/read_csv_file_emptystr_head_false_encode_false.png" alt=""/>
+
+
+<img src="../images/read_csv_file_emptystr_head_false_encode_true.png" alt=""/>
+
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
 <div class="RelatedLinks">
-
+    <a href="../classes/array.php">Array</a>
+    <a href="../classes/dataframe.php">DataFrame</a> 
 </div>
+
+
 
 </body>
 
