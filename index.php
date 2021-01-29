@@ -655,11 +655,24 @@
 <div id="mobiledownloadlink" style="font-size:0.8em;">
     Note that ScienceSuit is a desktop application. However, if you wish to download it to your mobile device then 
     click (<a href="downloads/index.php">download</a>).
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+
+
+<div>
+<img style="vertical-align: middle;" src="mainpage/images/github.png" alt=""/>
+<span>
+    Contribute or follow from 
+    <a href="https://github.com/gbingol" target="_blank">GitHub</a>
+</span>
 </div>
 
 
 
-<p>&nbsp;</p>
+
+<p style="clear: left;">&nbsp;</p>
 <p>&nbsp;</p>
 
 
