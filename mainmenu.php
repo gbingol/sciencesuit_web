@@ -261,6 +261,7 @@
                 <a href="/manual/cmdline/index.php">Command Editor</a>
                 <a href="/manual/scripteditor/index.php">Script Editor</a>
                 <a href="/manual/std/index.php"><em>std</em> Library</a>
+                <a href="/manual/environment/index.php">Environment</a>
             </div>
 
         </li>
@@ -291,7 +292,7 @@
     window.addEventListener("load",function()
     {
     
-        var VersionInfo="v1.9.1 (Nov 17, 2020)";
+        var VersionInfo="v1.9.2 (Feb 01, 2021)";
 
         var Elems=document.getElementsByClassName("VersionInfo");
 
