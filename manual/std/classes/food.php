@@ -56,7 +56,7 @@
 <p>In order to create a variable of type Food, we run the following command:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;myfood=Food.new{Water=30, CHO=70} <br>
+    &gt;&gt;myfood = std.Food.new{Water=30, CHO=70} <br>
 
     <br />
 
@@ -87,7 +87,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;myfood2=Food.new{Water=15, CHO=35 <br>
+    &gt;&gt;myfood2 = std.Food.new{Water=15, CHO=35} <br>
 
     <br />
 
@@ -154,11 +154,11 @@
 <p>Let's create two food materials:</p>
 
 <p class="CodeCommand">
-    &gt;&gt; f1=Food.new{Water=30, CHO=70}<br>
+    &gt;&gt; f1 = std.Food.new{Water=30, CHO=70}<br>
 
     <br />
 
-    &gt;&gt;f2=Food.new{oil=40, protein=60}
+    &gt;&gt;f2 = std.Food.new{oil=40, protein=60}
 </p>
 
 <p>&nbsp;</p>
@@ -228,15 +228,15 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;milk=Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67} <br>
+    &gt;&gt;milk = std.Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67} <br>
 
     <br />
 
-    &gt;&gt;water=Food.new{water=100} <br>
+    &gt;&gt;water = std.Food.new{water=100} <br>
 
     <br />
 
-    &gt;&gt;powder=milk-0.87*water <br>
+    &gt;&gt;powder = milk - 0.87*water <br>
 
     <br />
 
@@ -352,7 +352,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;milk=Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67}<br>
+    &gt;&gt;milk = std.Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67}<br>
 
     <br />
 
@@ -412,7 +412,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;milk=Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67}<br>
+    &gt;&gt;milk = std.Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67}<br>
 
     <br />
     
@@ -485,7 +485,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;milk=Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67} <br>
+    &gt;&gt;milk = std.Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67} <br>
 
     <br />
 
@@ -551,12 +551,12 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;milk=Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67} <br>
-    &gt;&gt;water=Food.new{water=100}<br>
+    &gt;&gt;milk = std.Food.new{water=88.13, protein=3.15, CHO=4.80, lipid=3.25, ash=0.67} <br>
+    &gt;&gt;water = std.Food.new{water=100}<br>
 
     <br>
 
-    &gt;&gt;powder=milk-0.87*water <br>
+    &gt;&gt;powder = milk - 0.87*water <br>
     &gt;&gt;powder <br>
     Weight (unit weight)=<span class="auto-style10">0.13</span>
 </p>
