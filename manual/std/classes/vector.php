@@ -25,13 +25,6 @@
             color: #FF0000;
         }
 
-        ol.spaced10px li
-        {
-            padding-bottom: 10px;
-            padding-top: 10px;
-        }
-
-
         red
         {
             color: red;
@@ -64,7 +57,7 @@
     elements of a vector in several ways. For accessing the elements of a vector the following are the possible cases:
 </p>
 
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>Accessing to single values</li>
     <li>Accessing to multiple values</li>
 </ol>
@@ -327,7 +320,7 @@
 </p>
 
 
-<ol class="spaced10px">
+<ol class="linespaced">
     <li>
         <u>Addition:</u> v<sub>1</sub> + v<sub>2</sub> = v<sub>3</sub> ;
         v<sub>1</sub> + a = a + v<sub>1</sub> = v<sub>2</sub>

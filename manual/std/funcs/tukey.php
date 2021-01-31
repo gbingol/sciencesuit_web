@@ -114,7 +114,7 @@
 
 <p>
     Create 4 vectors, namely v1, v2, v3 and v4, from each column of the data in the worksheet. 
-    See <a href="../../workbook/index.php#createdatastructures">how to create vectors</a>. 
+    See <a href="../../workbook/createdatastructures.php">how to create vectors</a>. 
 </p>
 
 

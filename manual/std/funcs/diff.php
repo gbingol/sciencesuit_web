@@ -187,7 +187,7 @@
 
 <p>
     Copy and paste the data to a worksheet and create two vector variables, namely <em>time</em> and <em>weight</em> (see 
-    <a href="../../workbook/index.php#createdatastructures">how to create vectors</a>).
+    <a href="../../workbook/createdatastructures.php#vector">how to create vectors</a>).
 </p>
 
 <p class="CodeCommand">

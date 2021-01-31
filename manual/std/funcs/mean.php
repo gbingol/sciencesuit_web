@@ -60,13 +60,13 @@
 
 
 
-<!-- *********************************************************************** -->
+
 
 <h2 id="vector">Vector</h2>
 <p class="CodeCommand">
     &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
-    3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL <br />
+    3 &emsp; 5 &emsp; 2 &emsp; 1&emsp; 7&emsp; 4&emsp; COL <br />
     
     <br />
     
@@ -90,14 +90,14 @@
 
 
 
-<!-- *********************************************************************** -->
+
 
 <h2 id="matrix">Matrix</h2>
 <p class="CodeCommand">
      &gt;&gt;m  <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3  <br />
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6 <br />
-    7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9  <br />
+    1 &emsp; 2 &emsp; 3  <br />
+    4 &emsp; 5 &emsp; 6 <br />
+    7 &emsp; 8 &emsp; 9  <br />
 
     <br />
 
@@ -106,12 +106,12 @@
     
     <br>
     &gt;&gt;std.mean(m, 0)<br />
-    4  &nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;  6 &nbsp;&nbsp;&nbsp;  COL <br />
+    4  &emsp; 5 &emsp; 6 &emsp;  COL <br />
     
     <br />
     
     &gt;&gt;std.mean(m, 1) <br />
-    2 &nbsp;&nbsp;&nbsp;  5  &nbsp;&nbsp;&nbsp; 8  &nbsp;&nbsp;&nbsp; COL
+    2 &emsp; 5 &emsp; 8 &emsp; COL
 </p>
 
 
@@ -130,7 +130,46 @@
 
 
 
-<!-- *********************************************************************** -->
+
+
+<h2 id="array">Array</h2>
+
+<p>
+    Array contains numeric and non-numeric entries. When averaging 
+    entries in an array, only numeric entries are considered and 
+    along with the result the number of numeric entries considered 
+    is also reported.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5   <br> 
+    
+    <br>
+    
+    &gt;&gt;std.mean(arr) <br>
+    2.16667 <br>
+    3	
+</p>
+
+
+
+    
+    
+    
+    
+    
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
 
 <h2 id="container">General containers</h2>
 
@@ -138,13 +177,13 @@
 <p class="CodeCommand">
     &gt;&gt;t={3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;std.mean(t) <br />
-    3.66667	<br />
+    3.66667 <br />
 
     <br />
 
     &gt;&gt;t={a=3, b=5, c=2, d=1, e=7, f=4} <br />
     &gt;&gt;std.mean(t) <br />
-    3.66667&nbsp;	
+    3.66667	
 </p>
 
 

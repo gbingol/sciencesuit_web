@@ -313,6 +313,7 @@
 
 
 <div class="RelatedLinks">
+    <a href="brentq.php">brentq</a>
     <a href="solve.php">solve</a>
     <a href="newton.php">newton</a>
     <a href="qr.php">qr</a>

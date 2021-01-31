@@ -134,7 +134,7 @@
 
 <img src="images/howtoplot_time-temperature_data-includingheaders.png" alt=""/>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li> Enter the data to a worksheet. </li>
 
     <li> Select the data as shown in the following figure:</li>
@@ -239,7 +239,7 @@
 
 <img src="images/dlgaddseries.png" alt=""/>
 
-<ul class="spaced">
+<ul class="linespaced">
 
     <li>
         <em>Type:</em> The type of the series to be plotted. Note that on the same chart, different type of series can be plotted.
@@ -268,7 +268,7 @@
     The following is doable as well:
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li> Click any of the plot buttons on the "Home" ribbon page to show an empty chart window.</li>
 
     <li> Right-click and if there is already a selection, the context-menu will offer 
@@ -279,7 +279,7 @@
 
 
     <img src="images/menu_addvisibleselection.png" alt=""/>
-<ol class="spaced" start="3">
+<ol class="linespaced" start="3">
    <li> Click on the <em>"Add Visible Selection As Scatter"</em> and if there is a valid selection, 
        a chart will be displayed.
    </li>

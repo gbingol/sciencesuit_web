@@ -42,8 +42,19 @@
 </p>
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
 
 
 <h2 id="vector">Vector</h2>
@@ -51,21 +62,36 @@
 <p class="CodeCommand">
     &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
-    3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL <br />
+    3 &emsp; 5 &emsp; 2&emsp; 1&emsp; 7 &emsp; 4 &emsp; COL <br />
     <br />
     &gt;&gt;std.sum(v) <br />
     22
 </p>
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 <h2 id="matrix">Matrix</h2>
 <p class="CodeCommand">
     &gt;&gt;m=std.tomatrix{ {1, 2} , {3, 4} } <br />
     &gt;&gt;m  <br />
-       1&nbsp;&nbsp;&nbsp; 2   <br />
-       3&nbsp;&nbsp;&nbsp; 4   <br />
+       1&emsp; 2   <br />
+       3&emsp; 4   <br />
 
     <br />
 
@@ -75,17 +101,72 @@
     <br>
 
     &gt;&gt;std.sum(m, 0) <br>
-    4  &nbsp;&nbsp;&nbsp; 6  &nbsp;&nbsp;&nbsp; COL <br>
+    4  &emsp; 6  &emsp; COL <br>
 
     <br>
     &gt;&gt;std.sum(m, 1) <br>
-    3 &nbsp;&nbsp;&nbsp;  7  &nbsp;&nbsp;&nbsp; COL
+    3 &emsp;  7  &emsp; COL
 
 </p>
 
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h2 id="array">Array</h2>
+<p>
+    Array contains numeric and non-numeric entries. When computing the sum of  
+    the entries in an array, only numeric entries are considered. 
+    Therefore, along with the result the number of numeric entries 
+    considered is also reported.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    "a"  &emsp;  "b" &emsp; 1 &emsp; 2  &emsp; 3.14 &emsp; 0   <br>
+    
+    <br>
+    
+    &gt;&gt;std.sum(arr) <br>
+    6.14 <span class="LuaComment">--result</span> <br>
+    4	<span class="LuaComment">--number of numeric entries</span><br>
+    
+    <br>
+    
+    &gt;&gt;std.sum(arr, 2.0) <br>
+    14.8596 <br>
+    4	
+</p>
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 <h2 id="container">General containers</h2>
 
@@ -121,14 +202,19 @@
 
     <br />
     &gt;&gt;std.sum(t) <br />
-    5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; COL <br />
+    5&emsp; 5 &emsp; 5 &emsp; 5 &emsp; COL <br />
 
 </p>
 
-<p>&nbsp;</p>
+
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 <div class="RelatedLinks">
     <a href="accumulate.php">accumulate</a>

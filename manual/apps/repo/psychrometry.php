@@ -55,7 +55,7 @@
     <em>In order to calculate thermodynamic properties of humid air:</em>
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
 
     <li> Exactly 3 properties must be selected* (the remaining of the selections are disabled). </li>
 

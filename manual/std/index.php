@@ -37,34 +37,10 @@
         table.datastruct td
         {
             padding: 6px;
-           
-            
-            text-align: center;
         }
         
-        table.datastruct td:first-child
-        {
-            border-right: 1px green dashed;
-            
-            text-align: left;
-            
-            
-        }
         
-        table.datastruct tr:first-child
-        {
-            font-weight: bold;
-            
-            font-size: large;
-            
-            color: green;
-        }
-        
-        h2
-        {
-            color: red;
-        }
-        
+       
         p
         {
             padding-bottom: 10px;
@@ -78,22 +54,15 @@
         
         
         
-        @media only screen and (max-width:900px) {
-            :root {
-                --screenmaxwidth: 900;
-            }
-            
+        @media only screen and (max-width:900px) 
+        { 
             table.functionlist
             {
                 width: 100%;
             }
         }
 
-        @media only screen and (max-width:600px) {
-            :root {
-                --screenmaxwidth: 600;
-            }
-        }
+ 
         
 
     </style>
@@ -106,74 +75,70 @@
     
 <script>
  
-function ShowFuncClass(functype)
+function ShowFuncClass(StdLibURL, Dir, DivID, RowDivisor)
 {
-    var NROWS = 15;
+    var  ScreenWidth= screen.width;
+    
+    
+    var NROWS = 15/RowDivisor;
+    if (ScreenWidth <= 600)
+        NROWS = 45/RowDivisor;
 
-    var  MaxScreenWidth= getComputedStyle(document.documentElement).getPropertyValue('--screenmaxwidth')
-
- 
-
-    if (MaxScreenWidth == 600)
-        NROWS = 40;
-
-    else if (MaxScreenWidth == 900)
-        NROWS = 30;
+    else if (ScreenWidth <= 900)
+        NROWS = 30/RowDivisor;
 
 	
         var HTMLText="<table class='functionlist'><tr><td>";
 
         var count=0;
-        var nfunctions=StdLibFunctions.length;
+        var nfunctions=StdLibURL.length;
 
-        for(i=0;i<nfunctions;i++)
+        for(i=0; i<nfunctions; i++)
         {
-            var FuncName=StdLibFunctions[i][0];
-            var linkName=StdLibFunctions[i][2];
+            var FuncName = StdLibURL[i][0];
+            var linkName = StdLibURL[i][2];
 
-            if(linkName==null) 
-                linkName=FuncName+".php"; 
+            if(linkName == null) 
+                linkName = FuncName.toLowerCase() + ".php"; 
 
-            if(functype!=null)
-            {
-                if(StdLibFunctions[i][1]==functype) 
-                    HTMLText=HTMLText+"<a href=./funcs/"+linkName+ ">"+FuncName+"</a><br>";
-                else 
-                    continue;
-            }
-            else 
-                HTMLText=HTMLText+"<a href=./funcs/"+linkName+ ">"+FuncName+"</a><br>";
+            
+        
+            HTMLText = HTMLText + "<a href="+ Dir + linkName+ ">"+ FuncName + "</a><br>";
 
 
 
             count++;
 
 
-            if(count==NROWS)
+            if(count === NROWS)
             { 
-                HTMLText=HTMLText+"</td><td>";
+                HTMLText=HTMLText + "</td><td>";
 
                 count=0;
             }
         }
 
 
-        HTMLText=HTMLText+"</td></tr>";
-        HTMLText=HTMLText+"</table>";
+        HTMLText=HTMLText + "</td></tr>";
+        HTMLText=HTMLText + "</table>";
         
-        document.getElementById("ScienceSuitFunctionsClasses").innerHTML=HTMLText;
+        document.getElementById(DivID).innerHTML = HTMLText;
 }
 
 
 window.addEventListener("load", function()
 {
-    var url=new URL(window.location.href);
-    var functype = url.searchParams.get("type");
+    ShowFuncClass(StdLibClasses, "./classes/", "datastructs", 15);
+    
+    ShowFuncClass(StdLibFunctions, "./funcs/", "functions", 1);
+});
 
-    if (functype === null)
-        ShowFuncClass();
-    else
-        ShowFuncClass("" + functype);
+
+window.addEventListener("resize", function()
+{
+    ShowFuncClass(StdLibClasses, "./classes/", "datastructs", 15);
+    
+    ShowFuncClass(StdLibFunctions, "./funcs/", "functions", 1);
 });
 
 
@@ -206,50 +171,16 @@ window.addEventListener("load", function()
 
 
 
-<h2 id="datastructs">Class List</h2>
-<table class="datastruct" >
-    <tr>
-        <td>General purpose</td>
-        <td>Purpose-specific</td>
-    </tr>
-    <tr>
-        <td><a href="classes/array.php">Array</a></td>
-        <td><a href="classes/food.php">Food</a></td>
-    </tr>
-    
-    <tr>
-        <td><a href="classes/database.php">Database</a></td>
-        <td></td>
-    </tr>
-    
-    <tr>
-        <td><a href="classes/matrix.php">Matrix</a></td>
-        <td></td>
-    </tr>
-    
-    <tr>
-        <td><a href="classes/range.php">Range</a></td>
-        <td></td>
-    </tr>
-    
-    <tr>
-        <td><a href="classes/vector.php">Vector</a></td>
-        <td></td>
-    </tr>
-    
-    <tr>
-        <td><a href="classes/worksheet.php">Worksheet</a></td>
-        <td></td>
-    </tr>
-    
-</table>
+<h2>Class List</h2>
+<div id="datastructs" >
+</div>
 
 
 <p>&nbsp;</p>
 
 
-<h2 id="functions">Function List</h2>
-<div id="ScienceSuitFunctionsClasses">
+<h2>Function List</h2>
+<div id="functions">
 </div>
 
 

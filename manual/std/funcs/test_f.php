@@ -112,7 +112,7 @@
 
 <p>
     Create two vectors, <em>confined</em> and <em>nonconfined</em>, from the data in a worksheet. 
-    See <a href="../../workbook/index.php#createdatastructures">how to create vectors</a>.
+    See <a href="../../workbook/createdatastructures.php">how to create vectors</a>.
 </p>
 
 

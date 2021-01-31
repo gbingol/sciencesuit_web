@@ -144,7 +144,7 @@
 
 <img src="images/bubble/life_fertil_population_data.png" alt=""/>
 
-<ol class="spaced">
+<ol class="linespaced">
     
     <li> Select the data as shown in the following figure:</li>
 
@@ -211,7 +211,7 @@
 
 <img src="images/bubble/dlgaddnewseries.png" alt=""/>
 
-<ul class="spaced">
+<ul class="linespaced">
 
     <li>
         <em>Name:</em> Name of the series. This field cannot be blank.
@@ -238,7 +238,7 @@
     The following is doable as well:
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li> Click on the bubble chart button on the "Home" ribbon page to show an empty chart window.</li>
 
     <li> Right-click and if there is already a selection, the context-menu will offer 
@@ -249,7 +249,7 @@
 
 <img src="images/bubble/addvisibleselection_contextmenu.png" alt=""/>
   
-<ol class="spaced" start="3">
+<ol class="linespaced" start="3">
    <li> 
        Click on the <em>"Add Visible Selection As Bubble"</em> and 
        if there is a valid selection, a chart will be displayed.

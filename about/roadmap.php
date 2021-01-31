@@ -39,7 +39,7 @@
 
 
 <p>The following work will be the focus of the next few <em>major</em> releases:</p>
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         The next few releases will focus on more <a href="../manual/plotter/index.php">chart</a> 
         types (histogram, line, bar and pie). 
@@ -75,7 +75,7 @@
 <p>
     <b>2)</b> <em>Requesting</em> a new feature: 
 </p>
-<ul class="spaced">
+<ul class="linespaced">
     <li>
         There is a feature missing in ScienceSuit and its inclusion 
         will be beneficial. If your request is aligned with the road map

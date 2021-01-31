@@ -3,16 +3,25 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
+    
     <title>Welcome to ScienceSuit</title>
 
+    
+    
     <script src="jsscripts/siteanalytics.js"></script> 
     
     <script src="jsscripts/struct/circularlist.js"></script>
     <script src="jsscripts/common.js"></script>
 
+    
+    
     <link href="css/common.css" rel="stylesheet" type="text/css" />
     <link href="css/contentpanel.css" rel="stylesheet" type="text/css" />
 
+    
+    
+    
     <style>
 
 
@@ -236,15 +245,25 @@
 </head>
     
 
+
+
+
+
+
+
 <body>
 
 
 <?php include 'mainmenu.php' ?>
 
+    
+    
+    
 <!-- will only be shown on desktop platforms -->
 <p class="FirstLetter" id="desktopheader">
     <em>ScienceSuit</em> is a feature-rich, high-performance computing environment aimed mainly at process engineers. 
 </p>
+
 
 
 <!-- will only be shown on mobile platforms -->
@@ -253,7 +272,15 @@
 </p>
 
 
+
+
+
+
 <p>&nbsp;</p>
+
+
+
+
 
 
 
@@ -286,8 +313,15 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -324,8 +358,14 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -362,8 +402,15 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -398,8 +445,16 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
@@ -433,8 +488,16 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
@@ -471,8 +534,15 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
@@ -528,6 +598,11 @@
     </div>
 
 </div>
+
+
+
+
+
 
 
 <script src="/jsscripts/stdliblist.js"></script>
@@ -601,8 +676,19 @@
 </script>
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
 
 
 
@@ -648,24 +734,61 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
 
 
 <div id="mobiledownloadlink" style="font-size:0.8em;">
     Note that ScienceSuit is a desktop application. However, if you wish to download it to your mobile device then 
     click (<a href="downloads/index.php">download</a>).
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 </div>
 
 
 
+
+
+
+
+<div>
+<img style="vertical-align: middle;" src="mainpage/images/github.png" alt=""/>
+<span>
+    Contribute or follow on 
+    <a href="https://github.com/gbingol" target="_blank">GitHub</a>.
+</span>
+</div>
+
+
+
+
+
+
+
+
+<p style="clear: left;">&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
+
+
+
+
+
 
 
 <p id="SecureConnection" style="text-align: center"></p>
 
-<script type="text/javascript">
+<script>
     if(window.location.protocol=="http:")
         document.getElementById("SecureConnection").innerHTML="Visit at: https://www.sciencesuit.org";
 </script>
@@ -673,12 +796,22 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
 <img style="float: right;" src="mainpage/email_admin.png" alt=""/>
+
+
+
 
 
 </body>

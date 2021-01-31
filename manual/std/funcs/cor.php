@@ -38,13 +38,28 @@
 
 
 <p>
-    where arguments <em>y1</em>, <em>y2</em> are of type Vector.
+    where arguments <em>y1</em>, <em>y2</em> must be iteratable containers of same size.
+</p>
+
+
+<p>&nbsp;</p>
+
+<p>
+    <em>Note:</em> If one (or both) of the arguments is of type 
+    <a href="../classes/array.php">Array</a>, the size of the array must be 
+    equivalent to the other container after removing 
+    <span class="LuaKeyword">nil</span>s and strings.
 </p>
 
 
 
 
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
 
 
 

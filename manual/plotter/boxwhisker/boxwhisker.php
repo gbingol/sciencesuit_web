@@ -104,7 +104,7 @@
 
 <p>Some definitions:</p>
 
-<ul class="spaced">
+<ul class="linespaced">
     <li><b>IQR:</b> Interquartile range (R<sub>3</sub> - R<sub>1</sub>).</li>
     
     <li><b>Outlier points:</b> Any data point greater than R<sub>3</sub>+1.5 &times; IQR or smaller than R<sub>1</sub> - 1.5 &times; IQR.</li>
@@ -120,7 +120,7 @@
     Possible scenarios would be:
 </p>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li> 
         When requested, the chart always displays the mean marker, however, the mean line will only be shown
         when it lies within the box.
@@ -365,7 +365,7 @@
         Although the options are self-explanatory, let's quickly go through:
     </p>
     
-    <ul class="spaced">
+    <ul class="linespaced">
         <li><em>Show Inner Points:</em> Shows points which are not outliers.</li>
         <li><em>Show Outlier Points:</em> If there are outlier points, they will be shown.</li>
         <li><em>Show Mean Marker:</em> The mean value will be shown with a marker.</li>

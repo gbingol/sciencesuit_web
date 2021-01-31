@@ -125,7 +125,7 @@
 
 <p>
     Let’s seek the answer by performing a linear regression.
-    <a href="../../workbook/index.php#createdatastructures">Create 2 vector</a> namely 
+    <a href="../../workbook/createdatastructures.php">Create 2 vector</a> namely 
     <em>response</em> (Mortality per 100000) and <em>factor</em> (Cigarette consumption).
 </p>
     

@@ -614,18 +614,6 @@
     The following sequence is followed to initiliaze an <a href="#Multiple_Instance">instance</a> of ScienceSuit:
 </p>
 
-<p class="heading1">
-    Welcome screen is shown, if <em>settings.sconfig</em> file does not exist, it is created.
-</p>
-    
-<p class="heading1">
-    Main frame, <a href="../workbook/index.php">Workbook</a> and 
-    <a href="../cmdline/index.php">Command Line</a> are loaded.
-</p>
-    <p class="heading2">
-        Command history file (<em>history.shist</em>) is loaded or created.
-    </p>
-
 
 <p class="heading1">
     Default <a href="http://www.lua.org/" target="_blank">Lua</a> libraries are loaded.
@@ -647,23 +635,42 @@
         <a href="../std/classes/matrix.php">Matrix</a>...) programmed in C++ are loaded.
     </p>
 
-
+    
+    
 <p class="heading1">
     <em>init.lua</em> file located under <span class="auto-style1"> <em>sys</em></span> directory is loaded.
 </p>
+
 
 
 <p class="heading1">
     Scripts in <span class="auto-style1"> <em>sys/std</em></span> and all its subfolders are recursively loaded.
 </p>
 
-<p class="heading1">
-    Scripts in <span class="auto-style1"> <em>apps</em></span> folder are loaded.
-</p>
 
 <p class="heading1">
     <a href="https://www.tecgraf.puc-rio.br/iup/" target="_blank">iup</a> library is loaded.
 </p>
+
+<p class="heading1">
+    Scripts in <span class="auto-style1"> <em>apps</em></span> folder are loaded.
+</p>
+
+
+    
+
+<p class="heading1">
+    Welcome screen is shown, if <em>settings.sconfig</em> file does not exist, it is created.
+</p>
+    
+<p class="heading1">
+    Main frame, <a href="../workbook/index.php">Workbook</a> and 
+    <a href="../cmdline/index.php">Command Line</a> are loaded.
+</p>
+    <p class="heading2">
+        Command history file (<em>history.shist</em>) is loaded or created.
+    </p>
+
 
 <p class="heading1">
     <em>init.lua</em> located under <span class="auto-style1"> <em>home</em></span> folder is loaded.

@@ -74,7 +74,8 @@
 </p>
 
 <p>
-    <a href="../../workbook/index.php#createdatastructures">Create 3 vectors</a> namely as <em>vent</em>, <em>O2</em> and <em>CO2</em>.
+    <a href="../../workbook/createdatastructures.php#vector">Create 3 vectors</a> 
+    namely as <em>vent</em>, <em>O2</em> and <em>CO2</em>.
 </p>
 
 

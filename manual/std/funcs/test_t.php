@@ -157,7 +157,7 @@
 <p>&nbsp;</p>
 <h3>Possible Usage:</h3>
 
-<ol class="spaced">
+<ol class="linespaced">
     <li>
         <em><span class="auto-style13">1-sample t-test:</span> test_t{x=, mu=, alternative="two.sided", conflevel=0.95}</em>
     </li>
@@ -341,17 +341,24 @@
             <td></td>
     </tr>
 </table>
-<p>Create two vectors, <em>treatment</em> and <em>control</em>, from the data in the worksheet. 
-See <a href="../../workbook/index.php#createdatastructures">how to create 
-vectors</a>.</p>
+
+
+<p>
+    Create two vectors, <em>treatment</em> and <em>control</em>, from the data in the worksheet. 
+    See <a href="../../workbook/createdatastructures.php">how to create vectors</a>.
+</p>
+
+
 <p class="CodeCommand">
-    <span class="auto-style12">--two sample t-test assuming unequal variances</span> <br />
+    <span class="LuaComment">--two sample t-test assuming unequal variances</span> <br />
+    
     &gt;&gt;pval, tbl=std.test_t{x=treatment, y=control, varequal=false} <br>
     
     <br>
     
     &gt;&gt;pval <br />
     0.0265149<br />
+    
     &gt;&gt;tbl<br />
     df=37&nbsp;&nbsp;&nbsp; xaver=51.4762&nbsp;&nbsp;&nbsp; yaver=41.5217&nbsp;&nbsp;&nbsp; s1=11.0074&nbsp;&nbsp;&nbsp; s2=17.1487&nbsp;&nbsp;&nbsp;
     n1=21&nbsp;&nbsp;&nbsp; n2=23&nbsp;&nbsp;&nbsp;

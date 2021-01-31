@@ -50,9 +50,15 @@
 
 
 <p class="CodeCommand">
+    
+    <span class="LuaComment">--Lua table</span><br>
     &gt;&gt;t={3, 5, 2, 1, 7, 4} <br />
+    
+    
     <br>
     <br>
+    
+    
     &gt;&gt;std.quantile{x=t, prob=0} <br>
     1 <br>
 
@@ -74,8 +80,45 @@
     <br>
 
     &gt;&gt;std.quantile{x=t, prob=1} <br>
-    7	
-
+    7	<br>
+    
+    
+    <br />
+    <br />
+    
+    
+    <span class="LuaComment">--Vector</span><br>
+    &gt;&gt;v <br>
+    1 &emsp; 2 &emsp; 3.5 &emsp; 5 &emsp; COL <br>
+    
+    <br>
+    
+    &gt;&gt;std.quantile(v, 0.5) <br>
+    2.75 <br>
+    
+    <br>
+    
+    &gt;&gt;std.quantile(v, 0.75) <br>
+    3.875 <br>
+    
+    
+    <br>
+    <br>
+    
+    <span class="LuaComment">--Array</span><br>
+     &gt;&gt;arr <br>
+    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 &emsp; 
+    <span class="LuaKeyword">nil</span> &emsp; 5 <br>
+    
+    <br>
+    
+    &gt;&gt;std.quantile(arr, 0.25) <br>
+    1.75 <br>
+    
+    <br>
+    	
+    &gt;&gt;std.quantile(arr, 0.75) <br>
+    3.875 
 </p>
 
 

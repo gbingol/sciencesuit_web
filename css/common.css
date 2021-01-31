@@ -15,6 +15,12 @@ h3
 }
 
 
+h4
+{
+    color: green;
+}
+
+
 .CodeCommand 
 {
     background-color: #f9f9f9;
@@ -206,6 +212,15 @@ div.youtube
 
 
 
+ol.linespaced li, ul.linespaced li
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    
+    margin-right: 15%;
+}
+
+
 @media only screen and (max-width:900px) 
 {
     img 
@@ -231,6 +246,13 @@ div.youtube
         
         flex-wrap: nowrap;
     }
+    
+    
+    
+    ol.linespaced li, ul.linespaced li
+    {
+         margin-right: 2%;
+    }
 
     
     
@@ -252,6 +274,12 @@ div.youtube
     {
         width: 340px;
         height: 250px;
+    }
+    
+    
+    ol.linespaced li, ul.linespaced li
+    {
+         margin-right: 1%;
     }
 
     

@@ -31,25 +31,21 @@
     include $mainmenuloc;
 ?>
 
+    
+    
 <h1>cov</h1>
 
-<p>Computes the covariance.</p>
+<p>Computes covariance.</p>
 
 <p class="funcsignature"> 
-    cov(y1, y2) &rarr; number (Sample)<br />
-    
-    <br>
-
-    cov.<span class="auto-style1">s</span>(y1, y2) &rarr; number (Sample) <br>
-    
-    <br>
-
-    cov.<span class="auto-style1">p</span>(y1, y2) &rarr; number (Population)
-    
+    cov(y1, y2, type="s") &rarr; number  
 </p>
 
 
-<p>where y1 and y2 are of type Vector.</p>
+<p>
+    where y1 and y2 are iteratable containers. Parameter <em>type</em> must be of type string and 
+    can take values "s" and "p" for sample and population, respectively.
+</p>
 
 
 <p>&nbsp;</p>
