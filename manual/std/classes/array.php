@@ -82,12 +82,12 @@
 
 <ol class="linespaced">
     <li>
-        Can contain numbers (float, integer) and non-numeric 
+        Can contain real numbers (float, integer) and non-numeric 
         (string, <span class="LuaKeyword">nil</span>) values. 
     </li>
     
     <li>
-        The <span class="LuaKeyword">nil</span> value is meant 
+        The <span class="LuaKeyword">nil</span> value is usually meant 
         to show the absence of a value.
     </li>
     
@@ -97,7 +97,7 @@
     </li>
     
     <li>
-        Mathematical operations (+, -, *, /) are defined for arrays.
+        Mathematical operations (+, -, *, /, ^) are defined for arrays.
     </li>
 </ol>
 
@@ -712,28 +712,39 @@
     <li>
         Any operation on <span class="LuaKeyword">nil</span> value, results in a <span class="LuaKeyword">nil</span> value.
     <li>
-        string + string = string, (concatenation)
+        <em>string</em> + <em>string</em> = <em>string</em>, (concatenation)
     </li>
     
     <li>
-        string <b>op</b> string = <span class="LuaKeyword">nil</span>, where <b>op</b> is (-, *, /)
+        <em>string</em> <b>op</b> <em>string</em> = <span class="LuaKeyword">nil</span>, where <b>op</b> is (-, *, /, ^)
     </li>
     
     <li>
-        string <b>op</b> number = <span class="LuaKeyword">nil</span>, where <b>op</b> is (+, -, *, /)
+        <em>string</em> <b>op</b> number = <span class="LuaKeyword">nil</span>, where <b>op</b> is (+, -, *, /, ^)
     </li>
     
     <li>
-        number <b>op</b> number = number, where <b>op</b> is (+, -, *, /)
+        number <b>op</b> number = number, where <b>op</b> is (+, -, *, /, ^)
     </li>
+    
     
 </ol>
 
-<p>
-    Note that, <span style="background-color: lightgoldenrodyellow"> number <b>op</b> number = number</span> 
-    can result in one of the following: <b>inf</b>, <b>-inf</b> and <b>NAN</b>.
-</p>
 
+<details>
+    <summary>Additional Notes</summary>
+    <ol class="linespaced">
+        <li>
+            <span style="background-color: lightgoldenrodyellow"> number <b>op</b> number = number</span> 
+            can result in one of the following: <b>inf</b>, <b>-inf</b> and <b>NAN</b>.
+        </li>
+        
+        <li>
+            integer <b>op</b> integer = float, where <b>op</b> is (/, ^)
+        </li>
+        
+    </ol>
+</details>
 
 
 
