@@ -105,7 +105,7 @@
 <table class="funcarguments">
     <tr>
         <td>... :</td>
-        <td>Any number of variable &larr; <em>Vector</em></td>
+        <td>Any number of variable &larr; <em>Vector/Array</em></td>
     </tr>
 
     <tr>
@@ -192,8 +192,10 @@
 
 <p class="CodeCommand">
     &gt;&gt;x=std.tovector{2, 1, 3, 6, 4} <br />
-    &gt;&gt;y=std.tovector{7, 7, 8, 4, 2}
+    &gt;&gt;y=std.toarray{7, 7, 8, 4, 2}
 </p>
+
+
 
 <p>&nbsp;</p>
  
@@ -211,7 +213,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.boxplot{x, y} <span style="color:green"> -- lets omit the returned windowID </span>
+    &gt;&gt;std.boxplot{x, y} <span class="LuaComment"> -- lets omit the returned windowID </span>
 </p>
 
 <img src="../images/boxplot_onlydata.png" alt=""/>
@@ -226,7 +228,7 @@
 
 
 
-<p >&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
     
     
@@ -250,14 +252,21 @@
 <img src="../images/boxplot_xysamefillcolor.png" alt=""/>
 
 <p>
-    Here, it is clearly seen that both series have the same fill color, since the fill color has been explicitly defined in the command. 
+    Here, it is clearly seen that both series have the same fill color, since the 
+    fill color has been explicitly defined in the command. 
     There are a few choices to overcome this situation:
 </p>
 
 <ol>
-    <li>Only defining the style and letting the system assign colors.</li>
-    <li>Letting system assign line properties, thus the boundaries of the box will have different colors.</li>
-    <li>For precise control, using the <span class="tablekey"><em>hwnd</em></span> property and running the boxplot command twice.</li>
+    <li>
+        Only defining the style and letting the system assign colors.
+    </li>
+    <li>
+        Letting system assign line properties, thus the boundaries of the box will have different colors.
+    </li>
+    <li>
+        For precise control, using the <span class="tablekey"><em>hwnd</em></span> property and running the boxplot command twice.
+    </li>
 </ol>
 
 
@@ -268,7 +277,7 @@
 </p>
 
 <p class="CodeCommand">
-    <span style="color: green">--Let's define some styles</span> <br>
+    <span class="LuaComment">--Let's define some styles</span> <br>
     &gt;&gt;solid=std.const.fillstyle.solid <br>
     &gt;&gt;dhatch=std.const.fillstyle.fdiaghatch <br>
 
@@ -282,7 +291,8 @@
 <img src="../images/boxplot_xydifferentfillcolor.png" alt=""/>
 
 <p>
-    Please note that, the above-mentioned rationale also applies to <span class="tablekey">name</span> property as well, such that 
+    Please note that, the above-mentioned rationale also applies to 
+    <span class="tablekey">name</span> property as well, such that 
     if we define the name, it will be applied to all of the defined vectors.
 </p>
 
@@ -301,8 +311,10 @@
     
 <h3 id="lineprops">C) Defining line properties</h3> 
 <p>
-   Similar to fill properties, if we define the line properties, they will be applied to the any number of vectors we define. For example,
-   the following commands produces a chart with fill color and style automatically assigned whereas line styles are custom defined.
+   Similar to fill properties, if we define the line properties, they will be 
+   applied to the any number of vectors we define. For example,
+   the following commands produces a chart with fill color and style 
+   automatically assigned whereas line styles are custom defined.
 </p>
 
 <p class="CodeCommand">

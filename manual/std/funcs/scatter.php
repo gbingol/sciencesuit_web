@@ -105,8 +105,10 @@
 
 
 
-<p> <span style="text-decoration: underline;"> <em>Note on Terminology:</em></span> 
-    The word Default in the arguments is used to denote that the so-called value is assigned/computed by the system until a new value is assigned.
+<p> 
+    <span style="text-decoration: underline;"> <em>Note on Terminology:</em></span> 
+    The word Default in the arguments is used to denote that the so-called value is 
+    assigned/computed by the system until a new value is assigned.
 </p>
 
 
@@ -121,7 +123,7 @@
 <table class="funcarguments">
     <tr>
         <td>x, y:</td>
-        <td>x- and y-data &larr; <em>Vector</em></td>
+        <td>x- and y-data &larr; <em>Vector/Array</em></td>
     </tr>
     
     
@@ -294,25 +296,26 @@
 <p>&nbsp;</p>
 
 
-<h3>Notes:</h3>
-<ol class="linespaced">
-    <li>
-        The data series (x, y) must be represented either by a <em>marker</em> or by a <em>line</em> or by both.  
-        If neither a <em>marker</em> nor a <em>line</em> is defined then a <em>marker</em> with default values will be shown. 
-    </li>
+<details>
+    <summary><b>Notes</b></summary>
+    
+    <ol class="linespaced">
+        <li>
+            The data series (x, y) must be represented either by a <em>marker</em> or by a <em>line</em> or by both.  
+            If neither a <em>marker</em> nor a <em>line</em> is defined then a <em>marker</em> with default values will be shown. 
+        </li>
 
-    <li>
-        Once a data series is represented either by a <em>marker</em> or by a <em>line</em> or by both 
-        then a <em>trendline</em> can be shown.
-    </li>
-    
-    <li>
-        If <em>bubble</em> is defined, then the <em>size</em> must be defined. Otherwise, an error will
-        be issued.
-    </li>
-    
-    
-</ol>
+        <li>
+            Once a data series is represented either by a <em>marker</em> or by a <em>line</em> or by both 
+            then a <em>trendline</em> can be shown.
+        </li>
+
+        <li>
+            If <em>bubble</em> is defined, then the <em>size</em> must be defined. Otherwise, an error will
+            be issued.
+        </li>
+    </ol>
+</details>
 
 
 
