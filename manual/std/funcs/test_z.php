@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Z test</title>
-    <style type="text/css">
+    <style>
 		
 
         .auto-style4 
@@ -54,7 +54,7 @@
 <table class="funcarguments">
     <tr>
         <td>x</td>
-        <td>sample &larr; <em>Vector</em></td>
+        <td>sample &larr; <em>Vector/Array</em></td>
     </tr>
     <tr>
         <td>alternative:</td>
@@ -80,23 +80,31 @@
     </tr>
 </table>
 
+
+
 <p>&nbsp;</p>
 
+
+
 <p class="auto-style5">
-    <em>Note on implementation:
-</em>
+    <em>Note on implementation:</em>
 </p>
 
 <p>
-    If the standard deviation of the population (&sigma;) is known we use one-sample t-test procedure to test &mu;=&mu;<sub>0</sub>.
+    If the standard deviation of the population (&sigma;) is known 
+    we use one-sample t-test procedure to test &mu;=&mu;<sub>0</sub>.
 </p>
 
 
 <div style="display: flex; vertical-align: middle">
     <p>Z value is defined as: &nbsp;</p>
+    
     <img src="../images/test_z_zvalueequation.png" alt=""/>
 </div>
     
+
+
+
 <p>&nbsp;</p>
 
 
@@ -119,7 +127,7 @@
 <p>&nbsp;</p>
 
 <p>
-    Create a vector, namely <em>x</em>. See <a href="../../workbook/createdatastructures.php">how to create vectors</a>.
+    Create a vector/array, namely <em>x</em>. See <a href="../../workbook/createdatastructures.php">how to create vectors/arrays</a>.
 </p>
 
 
@@ -134,14 +142,20 @@
      <br />
 
     &gt;&gt;tbl  <br />
-    SE=0.948&nbsp;&nbsp;&nbsp; zcritical=11.727&nbsp;&nbsp;&nbsp; mean=143.525&nbsp;&nbsp;&nbsp; 
-    stdev=6.038&nbsp;&nbsp;&nbsp; CI_lower=141.666&nbsp;&nbsp;&nbsp; CI_upper=145.384&nbsp;&nbsp;&nbsp; N=40
+    SE=0.948&emsp; zcritical=11.727&emsp; mean=143.525&emsp; 
+    stdev=6.038&emsp; CI_lower=141.666&emsp; CI_upper=145.384&emsp; N=40
 </p>
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 

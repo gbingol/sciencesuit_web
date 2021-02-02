@@ -50,10 +50,12 @@
 
 <table class="funcarguments">
     <tr>
-        <td>yobs:</td> <td>Data on observed (response) variable&nbsp; &larr; <em>Vector</em></td>
+        <td>yobs:</td> 
+        <td>Response variable &larr; <em>Vector/Array</em></td>
     </tr>
     <tr>
-        <td>x1, x2:</td> <td><em>Factor 1</em> and <em>factor 2</em>, respectively.&nbsp; &larr; <em>Vector / Array</em></td>
+        <td>x1, x2:</td> 
+        <td>Factors #1, #2  &larr; <em>Vector / Array</em></td>
     </tr>
 </table>
     
@@ -66,10 +68,10 @@
 
 
 
-
+<h3>Example</h3>
 
 <p>
-    <em><strong>Example:</strong></em> The following analysis is performed on the data available
+    The following analysis is performed on the data available
     <a href="https://newonlinecourses.science.psu.edu/onlinecourses/sites/stat501/files/data/babybirds.txt" target="_blank">here</a>.
 </p>
 
@@ -109,10 +111,14 @@
 
 <div class="RelatedLinks">
     <a href="anova.php">anova</a>
+    <a href="lm.php">lm</a>
     <a href="test_t.php">test_t</a>
     <a href="test_f.php">test_f</a>
 
 </div>
+
+
+
 
 </body>
 

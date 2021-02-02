@@ -98,7 +98,7 @@
 <h3>Arguments:</h3>
 <table class="funcarguments">
     <tr>
-        <td>v1, v2...</td> <td>Responses &larr; Vector</td>
+        <td>v1, v2...</td> <td>Responses &larr; Vector/Array</td>
     </tr>
 </table>
         
@@ -107,9 +107,9 @@
 
 
 
-
+<h3>Example:</h3>
 <p>
-    <em><strong>Example:</strong></em> The following data is obtained for relative attractiveness of various luminescent colors 
+    The following data is obtained for relative attractiveness of various luminescent colors 
     to the cereal leaf beetle*. The data shows the colors and the numbers of insects trapped.
 </p>
 
@@ -174,14 +174,13 @@
 
 
 <p>
-    Create 4 vectors or a range or a matrix from the data in the worksheet. 
+    Create 4 vectors/arrays from the data in the worksheet. 
     See <a href="../../workbook/createdatastructures.php#vector">how to create vectors</a>. 
     Assuming a vector was created for each color data:
 </p>
 
 
 <p class="CodeCommand">
-    <span style="color:green"> --each parameter is of type Vector</span> <br>
     &gt;&gt;pval, AnovaTable=std.anova(lemon, white, green, blue)   <br />
 
     <br />
@@ -192,7 +191,8 @@
 
 
 <p>
-    Although not shown here, the argument <em>AnovaTable</em> contains all the information to setup an ANOVA table.
+    Although not shown here, the parameter <em>AnovaTable</em> 
+    contains all the information to setup an ANOVA table.
 </p>
 
 

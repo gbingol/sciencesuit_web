@@ -31,7 +31,10 @@
 
 <h1>F test</h1>
 
-<p>Test for ratios of variances of two samples. If the assumed ratio is 1, then the test is equivalent to testing equality of variances.</p>
+<p>
+    Test for ratios of variances of two samples. 
+    If the assumed ratio is 1, then the test is equivalent to testing equality of variances.
+</p>
 
 
 <p class="funcsignature">
@@ -47,11 +50,11 @@
 <table class="funcarguments">
     <tr>
         <td>x:</td>
-        <td>First sample &larr; <em>Vector</em></td>
+        <td>First sample &larr; <em>Vector/Array</em></td>
     </tr>
     <tr>
         <td>y:</td>
-        <td>Second sample &larr; <em>Vector</em></td>
+        <td>Second sample &larr; <em>Vector/Array</em></td>
     </tr>
 
     <tr>
@@ -68,7 +71,11 @@
     </tr>
 </table>
 
+
+
 <p>&nbsp;</p>
+
+
 
 <p>
     Suppose that a given experiment consists of two independent random samples 
@@ -78,6 +85,8 @@
     We test H<sub>0</sub>: &sigma;<sup>2</sup><sub>X</sub>=&sigma;<sup>2</sup><sub>Y</sub>.
 </p>
  
+
+
 
 <div style="display: flex; vertical-align: middle;">
     <p>Critical F value has been defined as: &nbsp;</p>
@@ -94,11 +103,19 @@
 </div>
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
+
+<h3>Example</h3>
 <p>
-    <b>Example: </b>To test the equality of variances for the following data 
+    To test the equality of variances for the following data 
     (Data from: <span class="auto-style4"><a href="https://www.amazon.com/Introduction-Mathematical-Statistics-Its-Applications/dp/0321693949" target="_blank">Larsen & Marx, An Introduction to Mathematical Statistics and Its Applications</a></span>): 
 </p>
 
@@ -123,15 +140,19 @@
     &gt;&gt;pval <br />
     0.443301	<br />
     &gt;&gt; tbl <br />
-    df1=9&nbsp;&nbsp;&nbsp; df2=9&nbsp;&nbsp;&nbsp; var1=0.2106&nbsp;&nbsp;&nbsp; var2=0.3573&nbsp;&nbsp;&nbsp; 
-    Fcritical=0.5895&nbsp;&nbsp;&nbsp; CI_lower=0.1464&nbsp;&nbsp;&nbsp; CI_upper=2.373
+    df1=9 &emsp; df2=9 &emsp; var1=0.2106 &emsp; var2=0.3573&emsp; 
+    Fcritical=0.5895 &emsp; CI_lower=0.1464 &emsp; CI_upper=2.373
 </p>
 
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 
