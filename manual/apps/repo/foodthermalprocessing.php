@@ -207,7 +207,7 @@
 
 
 
-<h2>Process Single Location</h2>
+<h2>Process Single Temperature Location</h2>
 
 <p>
     In the following figure, the "<em>Thermal Process Calc</em>" tab is shown. It is seen that 
@@ -305,7 +305,7 @@
 <p>&nbsp;</p>
 
 
-<h2>Process Multiple Locations</h2>
+<h2>Process Multiple Temperature Locations</h2>
 
 <p>
     Processing of multiple locations is exactly the same as processing single location. Only the 
