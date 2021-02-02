@@ -195,8 +195,11 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
 <details>
-    <summary><b>Tricky Basics</b></summary>
+    <summary><b>Tricky Parts</b></summary>
     
     <p>
         The CSV file will not always be ASCII compliant as shown in <a href="#asciicompliant">above figure</a>. 
@@ -207,20 +210,68 @@
     <img src="../images/read_csv_file_trickybasics_csvfile_sciencesuitimported.png" alt=""/>
 
     <p class="CodeCommand">
-        &gt;&gt;df=std.read_csv{ file="", header=<span class="LuaKeyword">false</span>, encode=<span class="LuaKeyword">true</span> } <br>
+        &gt;&gt;df=std.read_csv{ file="", header=<span class="LuaKeyword">false</span>, encode=<span class="LuaKeyword">false</span> } <br>
     </p>
 
-    <p>
-        Selecting a different file, namely trickybasics.csv, will load it to variable <em>df</em>.
-    </p>
+    <p>&nbsp;</p>
     
     <img src="../images/read_csv_file_trickybasics_filedialog.png" alt=""/>
     
+    <p>
+        Selecting <em>trickybasics.csv</em> will load it to variable <em>df</em>. Let's inspect df:
+    </p>
+    
+    <img src="../images/read_csv_file_trickybasics_output_encodefalse.png" alt=""/>
+    
+    <p>
+        It is seen that some of the entries are completely missing. Let's use 
+        encoding.
+    </p>
+    
+    
+    
+    <p>&nbsp;</p>
     <p>&nbsp;</p>
 
-
+    
+    <p class="CodeCommand">
+        &gt;&gt;df=std.read_csv{ file="", header=<span class="LuaKeyword">false</span>, encode=<span class="LuaKeyword">true</span> } <br>
+        
+    </p>
+    
+    <img src="../images/read_csv_file_trickybasics_output_encodetrue_cpdefault.png" alt=""/>
+    
+    <p>
+        Now, there are no missing entries, but the names does not look human readable. This is 
+        where CodePage becomes important. The default encoding is based on the CodePage <em>UTF8</em>. 
+    </p>
+    
+    
+    
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <p>
+        If we change the CodePage to <em>ANSI</em>-Turkish, which is 1254, then things will look better. 
+        For more info, see <a href="https://en.wikipedia.org/wiki/Windows_code_page" target="_blank">Wikipedia</a>.
+    </p>
+    
+    <img src="../images/read_csv_file_trickybasics_output_encodetrue_cp1254.png" alt=""/>
+    
+    <p>
+        One can see that, now entries are more readable but still not perfect. At this stage 
+        there are two options: <b>1)</b> Write the particular entry to Worksheet using a simple command, 
+        <b>2)</b> <a href="https://superuser.com/questions/1033088/is-it-possible-to-set-locale-of-a-windows-application-to-utf-8" target="_blank">
+            Change Windows Region settings</a> (not recommended).
+    </p>
+    
+    
 
 </details>
+
+
+
 
 
 <p>&nbsp;</p>
