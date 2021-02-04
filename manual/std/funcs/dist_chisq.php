@@ -41,7 +41,7 @@
 <table class="funcarguments">
     <tr>
         <td>x:</td>   
-        <td>Quantile, <em>number / Vector</em></td>
+        <td>Quantile, <em>number/Vector/Array</em></td>
     </tr>
     <tr>
         <td>p:</td> 
@@ -49,7 +49,7 @@
     </tr>
     <tr>
         <td>q:</td> 
-        <td>quantile, <em>number / Vector</em></td>
+        <td>quantile, <em>number/Vector/Array</em></td>
     </tr>
     <tr>
         <td>df</td> 
@@ -60,10 +60,21 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
     
+
+
+
+
+
+
+
 
 <!-- ********************************************************************** -->
         
@@ -74,11 +85,11 @@
 
 <p class="funcsignature">
 
-    dchisq(x=, df=) &rarr; number/Vector <br>
+    dchisq(x=, df=) &rarr; number/Vector/Array <br>
 
     <br>
 
-    dchisq{x=, df=} &rarr; number/Vector
+    dchisq{x=, df=} &rarr; number/Vector/Array
 
 </p>
 
@@ -116,8 +127,16 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
@@ -132,11 +151,11 @@
 
 <p class="funcsignature">
 
-    pchisq{q=, df=} &rarr; number/Vector<br>
+    pchisq{q=, df=} &rarr; number/Vector/Array<br>
 
     <br>
 
-    pchisq(q=, df=) &rarr; number/Vector
+    pchisq(q=, df=) &rarr; number/Vector/Array
 
 </p>
 
@@ -164,7 +183,8 @@
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
-    &gt;&gt;<span class="LuaKeyword">function</span> f(u) <span class="LuaKeyword">return</span> u^1.5*math.exp(-u/2) / (2^2.5*std.gamma(2.5)) <span class="LuaKeyword">end</span>	
+    &gt;&gt;<span class="LuaKeyword">function</span> f(u) <span class="LuaKeyword">return</span> 
+    u^1.5*math.exp(-u/2) / (2^2.5*std.gamma(2.5)) <span class="LuaKeyword">end</span>	
     
     <br />
     
@@ -177,10 +197,21 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
         
+
+
+
+
+
+
+
 
 
 
@@ -192,11 +223,11 @@
 
 <p class="funcsignature">
 
-    qchisq{p=, df=} &rarr; number/Vector    <br>
+    qchisq{p=, df=} &rarr; number/Vector/Array  <br>
 
     <br>
 
-    qchisq(p=, df=) &rarr; number/Vector 
+    qchisq(p=, df=) &rarr; number/Vector/Array 
 
 </p>
 
@@ -221,10 +252,20 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
         
+
+
+
+
+
+
+
 
 
 <!-- ********************************************************************** -->
@@ -245,16 +286,24 @@
 </p>
 
 
+
+
+
 <p>&nbsp;</p>
+
+
 
 <p class="CodeCommand">
     &gt;&gt;std.rchisq{n=5, df=5} <br />
-    6.38474&nbsp;&nbsp;&nbsp; 8.02805&nbsp;&nbsp;&nbsp; 2.90747&nbsp;&nbsp;&nbsp; 3.27364&nbsp;&nbsp;&nbsp; 2.33255&nbsp;&nbsp;&nbsp; COL
+    6.38474 &emsp; 8.02805 &emsp; 2.90747 &emsp; 3.27364 &emsp; 2.33255 &emsp; COL
 </p>
 
 <p>&nbsp;</p>
 
-<p>Mathematically we know that <em>E(X)=k</em>, where k is the degrees of freedom (df).</p>
+<p>
+    Mathematically we know that <em>E(X)=k</em>, where k is the degrees of freedom (df).
+</p>
+
 <p class="CodeCommand">
     &gt;&gt;v=std.rchisq{n=100, df=5} <br />
 
@@ -269,8 +318,16 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
 
 
 

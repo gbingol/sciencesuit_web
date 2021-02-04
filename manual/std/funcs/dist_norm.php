@@ -49,7 +49,7 @@
 <table class="funcarguments">
     <tr>
         <td>x:</td> 
-        <td>Quantile, <em>number / Vector</em></td>
+        <td>Quantile, <em>number / Vector / Array</em></td>
     </tr>
     <tr>
         <td>p:</td> 
@@ -57,7 +57,7 @@
     </tr>
     <tr>
         <td>q:</td> 
-        <td>quantile, <em>number / Vector</em></td>
+        <td>quantile, <em>number / Vector / Array</em></td>
     </tr>
     <tr>
         <td>mean:</td>   
@@ -91,11 +91,11 @@
 
 <p class="funcsignature">
 
-    dnorm(x, mean=0, sd=1) &rarr; number/Vector <br>
+    dnorm(x, mean=0, sd=1) &rarr; number/Vector/Array <br>
 
     <br>
 
-    dnorm{x=, mean=0, sd=1} &rarr; number/Vector
+    dnorm{x=, mean=0, sd=1} &rarr; number/Vector/Array
 
 </p>
 
@@ -155,11 +155,11 @@
 
 <p class="funcsignature">
 
-    pnorm(q=,mean=0, sd=1) &rarr; number/Vector<br>
+    pnorm(q=,mean=0, sd=1) &rarr; number/Vector/Array<br>
 
     <br>
 
-    pnorm{q=, mean=0, sd=1} &rarr; number/Vector
+    pnorm{q=, mean=0, sd=1} &rarr; number/Vector/Array
 
 </p>
 
@@ -176,7 +176,7 @@
 
     <br />
 
-    &gt;&gt;std.pnorm{q=1, mean=0, sd=1}
+    &gt;&gt;std.pnorm{q=1, mean=0, sd=1} <br>
     0.841345
 </p>
 
@@ -225,11 +225,11 @@
 
 <p class="funcsignature">
 
-    qnorm(p=,mean=0, sd=1) &rarr; number/Vector<br>
+    qnorm(p=,mean=0, sd=1) &rarr; number/Vector/Array<br>
 
     <br>
 
-    qnorm{p=,mean=0, sd=1} &rarr; number/Vector 
+    qnorm{p=,mean=0, sd=1} &rarr; number/Vector/Array 
 
 </p>
 
@@ -267,7 +267,6 @@
 
 <h2 id="rnorm">rnorm</h2>
 <p>Generates normally distributed random numbers.</p>
-<h3>Syntax</h3>
 
 <p class="funcsignature">
 
