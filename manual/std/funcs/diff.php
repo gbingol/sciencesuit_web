@@ -69,30 +69,33 @@
 </p>
 
 <p class="funcsignature"> 
-    diff(x=, y=nil) &rarr; Vector 
+    diff(x=, y=nil) &rarr; Vector/Array 
+</p>
+
+<p>
+    where parameters <em>x, y</em> are Vectors/Arrays.
 </p>
 
 <p>&nbsp;</p>
 
 
 <h3>Arguments:</h3>
-
-<p>
-    <em>x,y:</em>&nbsp;&nbsp;&nbsp; Vectors
-</p>
-
-<ul>
+<ul class="linespaced">
     <li>
-        If only one argument is provided then the function returns a Vector whose elements are the 
-        differences (x<sub>i+1</sub>-x<sub>i</sub>) of the given vector.
+        <em>One argument is provided:</em> The function returns a Vector/Array whose elements are the 
+        differences (x<sub>i+1</sub>-x<sub>i</sub>) of the given vector/array.
     </li>
     
     <li>
-        If two arguments are provided, then the function returns a Vector whose elements are the 
-        derivative (dy/dx) of the given two vectors, <em>x</em> and <em>y; </em>therefore 
-        the order of vectors are important. At the end points the function uses 
-        <em>forward and backward difference</em>s and elsewhere the derivative is 
-        computed using <em>central differences</em>.
+        <em>Two args are provided:</em> If at least one is a Vector, the function returns a Vector.
+    </li>
+    
+    <li>
+        <em>Two args are provided:</em> The function returns the derivative (dy/dx) of 
+        <em>x</em> and <em>y;</em> therefore the order of parameters are important. 
+        
+        At the end points the function uses <em>forward and backward difference</em>s and 
+        elsewhere uses <em>central differences</em>.
     </li>
 </ul>
     
@@ -105,19 +108,32 @@
 
 
 
+
+
 <p class="CodeCommand">
     &gt;&gt;v=std.tovector{1, 1, 3, 2, 5, 7, 9} <br />
-    &gt;&gt;v <br />
-    1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; COL <br />
-    <br />
+    
     &gt;&gt;std.diff(v) <br />
-    0&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; -1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; COL
+    0 &emsp; 2 &emsp; -1 &emsp; 3 &emsp; 2 &emsp; 2 &emsp; COL <br>
+    
+    <br>
+    <br>
+    
+    &gt;&gt;arr=std.toarray(v) <br>
+    
+    &gt;&gt;std.diff(arr) <br>
+    0&emsp; 2&emsp; -1&emsp; 3&emsp; 2&emsp; 2   
 
 </p>
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 
@@ -126,10 +142,13 @@
 <p>
     In drying operations, the drying can proceed either in constant 
     or in falling drying period. In order to clearly see the trend, it is advised to 
-    plot <em>t</em> vs <em>dW/dt</em>, where the latter one is the derivative of weight with respect 
-    to time. The following data is collected during a dehydration operation:
+    plot <em>t</em> vs <em>dW/dt</em>, where the latter parameter is the derivative of weight with respect 
+    to time. 
 </p>
 
+<p>
+    The following data is collected during a dehydration operation:
+</p>
 
 <table>
     <tr>
@@ -186,17 +205,17 @@
 
 
 <p>
-    Copy and paste the data to a worksheet and create two vector variables, namely <em>time</em> and <em>weight</em> (see 
-    <a href="../../workbook/createdatastructures.php#vector">how to create vectors</a>).
+    Copy and paste the data to a worksheet and create two vector/array variables, namely <em>time</em> and <em>weight</em> (see 
+    <a href="../../workbook/createdatastructures.php">how to create vector/array</a>).
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;dw_dt=std.diff(time,weight) <br />
+    &gt;&gt;dw_dt=std.diff(time, weight) <br />
 
     <br />
 
     &gt;&gt;dw_dt <br />
-    -0.66&nbsp;&nbsp;&nbsp; -0.555&nbsp;&nbsp;&nbsp; -0.385&nbsp;&nbsp;&nbsp; -0.255&nbsp;&nbsp;&nbsp; -0.175&nbsp;&nbsp;&nbsp; -0.13&nbsp;&nbsp;&nbsp; -0.085&nbsp;&nbsp;&nbsp; -0.065&nbsp;&nbsp;&nbsp; -0.05&nbsp;&nbsp;&nbsp; -0.04&nbsp;&nbsp;&nbsp; COL
+    -0.66&emsp; -0.555&emsp; -0.385&emsp; -0.255&emsp; -0.175&emsp; -0.13&emsp; -0.085&emsp; -0.065&emsp; -0.05&emsp; -0.04&emsp; COL
 </p>
     
 
