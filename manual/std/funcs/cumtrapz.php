@@ -11,7 +11,8 @@
     <link href="../../../css/common.css" rel="stylesheet" type="text/css" />
 
     <style>
-        .auto-style1 {
+        .auto-style1 
+        {
             color: #0000FF;
         }
     </style>
@@ -129,8 +130,10 @@
 
 
 
+
 <p>
-    Let's work on <em>f(x)=x</em><sup>2</sup>.
+    Below, notice that both <em>x</em> and <em>y</em> are of type Vector, 
+    therefore function returns a Vector.
 </p>
 
 <p class="CodeCommand">
@@ -146,11 +149,54 @@
 
 
 
+
+<p>&nbsp;</p>
+
+<p>
+    In the following example, both <em>arr_x</em> and <em>arr_y</em> are 
+    of type Array, therefore the function returns an Array.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr_x=std.toarray{1, 2, 3, 4, 5} <br>
+    &gt;&gt;arr_y=arr_x^2 <br>
+    
+    <br>
+    
+    &gt;&gt;std.cumtrapz(arr_x, arr_y) <br>
+    0&emsp; 2.5&emsp; 9&emsp; 21.5&emsp; 4
+</p>
+
+
+<p>&nbsp;</p>
+
+<p>
+    Unlike the previous two examples where both inputs were either Array or Vector, 
+    in the example below, one is an Array and the other is a Vector. The return type 
+    is a Vector.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr=std.toarray{1, 2, 3, 4, 5} <br>
+    &gt;&gt;vec=std.tovector(arr^2) <br>
+    
+    <br>
+
+    &gt;&gt;std.cumtrapz(arr, vec) <br>
+    0&emsp; 2.5&emsp; 9&emsp; 21.5&emsp; 42&emsp; COL
+</p>
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
-
+<p>
+    In the below example, first parameter is function and the second is first an Array 
+    and secondly a Vector. Notice that the return type is as same as the second parameter.
+</p>
 
 <p class="CodeCommand">
     &gt;&gt;arr=std.toarray{1, 2, 3, 4, 5} <br>
@@ -184,7 +230,11 @@
 
 
 
-
+<p>
+    The below form of input uses neither an Array nor a Vector. It is 
+    a function with its bounds and number of intervals. The function returns 
+    a Vector.
+</p>
 
 <p class="CodeCommand">
     &gt;&gt;std.cumtrapz{f=<span class="auto-style1">function</span>(x) 
