@@ -42,13 +42,38 @@
 
 <p class="funcsignature">
     
-    cumtrapz([f=], [arg1=], [arg2=]) &rarr; Vector/Array <br />
+    cumtrapz([f=], [a=], [b=]) &rarr; Vector<br />
     
     <br>
     
-    cumtrapz{[f=], [a=], [b=], [inter=10], [x=], [y=]} &rarr; Vector
+    cumtrapz(f=, nodes=) &rarr; Vector/Array<br>
+    
+    <br>
+    
+    cumtrapz{[f=], [a=], [b=], [inter=10], [x=], [y=], [nodes=]} &rarr; Vector/Array
     
 </p>
+
+<p>&nbsp;</p>
+
+<details>
+    <summary><b>Expected Combinations for Table Input</b></summary>
+
+    <ul class="linespaced">
+        <li>
+            cumtrapz{f=, a=, b=,  [inter=10]} &rarr; Vector
+        </li>
+
+        <li>
+            cumtrapz{f=, nodes= } &rarr; Vector/Array
+        </li>
+
+        <li>
+            cumtrapz{x=, y= } &rarr; Vector/Array
+        </li>
+
+    </ul>
+</details>
 
 
 
@@ -61,18 +86,29 @@
 
 <table class="funcarguments">
     <tr>
-        <td>f:</td> <td>A unary function, f(x) &larr; function</td>
+        <td>f:</td> 
+        <td>A unary function, f(x) &larr; function</td>
     </tr>
     <tr>
-        <td>a, b:</td> <td>Limits of the integral &larr; number</td>
+        <td>a, b:</td> 
+        <td>Limits of the integral &larr; number</td>
     </tr>
     <tr>
-        <td>inter:</td> <td>Number of intervals in the limits [a,b]. Default value is 10 &larr; integer</td>
+        <td>inter:</td> 
+        <td>Number of intervals in the limits [a,b]. Default value is 10 &larr; integer</td>
     </tr>
     <tr>
-        <td>x, y, arg1, arg2:</td> <td>x- or y-axis values. &larr; Vector/Array</td>
+        <td>nodes:</td> 
+        <td>Nodes at which the integral will be accumulated &larr; Array/Vector</td>
+    </tr>
+    
+    <tr>
+        <td>x, y</td> 
+        <td>x- and y-axis values, respectively. &larr; Vector/Array</td>
     </tr>
 </table>
+
+
 
 <p>
     If the return value is Vector or Array, then if at least 1 parameter is 
@@ -84,49 +120,14 @@
 
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-<details>
-    <summary><b>Possible Usage Cases</b></summary>
-
-    <ul class="linespaced">
-        <li>
-            cumtrapz(arg1=, arg2=) &rarr; Vector/Array
-        </li>
-
-        <li>
-            cumtrapz(f=, arg2=) &rarr; Vector/Array
-        </li>
-
-        <li>
-            cumtrapz(f=, a=, b=,  [N=10]) &rarr; Vector
-        </li>
-
-        <li>
-            cumtrapz{f=, a=, b=,  [inter=10]} &rarr; Vector
-        </li>
-
-        <li>
-            cumtrapz{f=, [x=], [y=] } &rarr; Vector/Array, either <em>x or y</em>
-        </li>
-
-        <li>
-            cumtrapz{x=, y= } &rarr; Vector/Array
-        </li>
-
-    </ul>
-</details>
-
-
 
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
