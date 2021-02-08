@@ -74,6 +74,12 @@ p.funcsignature
 }
 
 
+p.rightmargined
+{
+    margin-right: 10%;
+}
+
+
 
 
 mark{
@@ -254,7 +260,10 @@ ol.linespaced li, ul.linespaced li
          margin-right: 2%;
     }
 
-    
+    p.rightmargined
+    {
+        margin-right: 2%;
+    }
     
 }
 
@@ -280,6 +289,11 @@ ol.linespaced li, ul.linespaced li
     ol.linespaced li, ul.linespaced li
     {
          margin-right: 1%;
+    }
+    
+    p.rightmargined
+    {
+        margin-right: 1%;
     }
 
     
