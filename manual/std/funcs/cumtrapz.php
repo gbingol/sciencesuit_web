@@ -10,13 +10,6 @@
 
     <link href="../../../css/common.css" rel="stylesheet" type="text/css" />
 
-    <style>
-        .auto-style1 
-        {
-            color: #0000FF;
-        }
-    </style>
-    
     
     <script src="/jsscripts/siteanalytics.js"></script>
 
@@ -42,7 +35,7 @@
 
 <p class="funcsignature">
     
-    cumtrapz([f=], [a=], [b=]) &rarr; Vector<br />
+    cumtrapz(f=, a=, b=) &rarr; Vector<br />
     
     <br>
     
@@ -87,7 +80,7 @@
 <table class="funcarguments">
     <tr>
         <td>f:</td> 
-        <td>A unary function, f(x) &larr; function</td>
+        <td>A unary function (integrand), f(x) &larr; function</td>
     </tr>
     <tr>
         <td>a, b:</td> 
@@ -99,7 +92,7 @@
     </tr>
     <tr>
         <td>nodes:</td> 
-        <td>Nodes at which the integral will be accumulated &larr; Array/Vector</td>
+        <td>Pre-defined nodes at which the integral will be accumulated &larr; Array/Vector</td>
     </tr>
     
     <tr>
@@ -130,22 +123,20 @@
 
 
 
-
+<h3>Integrating Data</h3>
 
 <p>
-    Below, notice that both <em>x</em> and <em>y</em> are of type Vector, 
-    therefore function returns a Vector.
+    Both <em>x</em> and <em>y</em> are of type Vector/Array containing the data. 
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;y=x^2 <br />
-    &gt;&gt;y <br />
-    1&emsp; 4&emsp; 9&emsp; 16&emsp; 25&emsp; COL  <br />
+    &gt;&gt;x=std.tovector{1, 2, 3, 4, 5}<br>
+    &gt;&gt;y=std.tovector{1, 4, 9, 16, 25}<br>
 
     <br />
 
     &gt;&gt;std.cumtrapz(x, y) <br />
-    0&emsp; 2.5&emsp; 9&emsp; 21.5&emsp; 42&emsp; COL
+    0 &emsp; 2.5 &emsp; 9 &emsp; 21.5 &emsp; 42 &emsp; COL
 </p>
 
 
@@ -160,12 +151,12 @@
 
 <p class="CodeCommand">
     &gt;&gt;arr_x=std.toarray{1, 2, 3, 4, 5} <br>
-    &gt;&gt;arr_y=arr_x^2 <br>
+    &gt;&gt;arr_y=std.tovector{1, 4, 9, 16, 25}<br>
     
     <br>
     
     &gt;&gt;std.cumtrapz(arr_x, arr_y) <br>
-    0&emsp; 2.5&emsp; 9&emsp; 21.5&emsp; 4
+    0 &emsp; 2.5 &emsp; 9 &emsp; 21.5 &emsp; 4
 </p>
 
 
@@ -179,7 +170,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;arr=std.toarray{1, 2, 3, 4, 5} <br>
-    &gt;&gt;vec=std.tovector(arr^2) <br>
+    &gt;&gt;vec=std.tovector{1, 4, 9, 16, 25}<br>
     
     <br>
 
@@ -190,35 +181,43 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
+
+
+<h3>Integrand and nodes are known</h3>
 
 <p>
-    In the below example, first parameter is function and the second is first an Array 
-    and secondly a Vector. Notice that the return type is as same as the second parameter.
+    The function itself and the nodes are already known. 
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;arr=std.toarray{1, 2, 3, 4, 5} <br>
+    &gt;&gt;node=std.toarray{1, 2, 3, 4, 5} <br>
     
     <br>
     
-    <span class="LuaComment">--return type is Array</span><br>
+    <span class="LuaComment">--returns Array</span><br>
     &gt;&gt;std.cumtrapz(<span class="LuaKeyword">function</span>(x) 
-    <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>, arr) <br>
+    <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>, node) <br>
+    
     0&emsp; 2.5&emsp; 9&emsp; 21.5&emsp; 42   <br>
 
     <br>
     <br>
     
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5} <br>
+    &gt;&gt;node=std.tovector{1, 2, 3, 4, 5} <br>
     
     <br>
     
-    <span class="LuaComment">--return type is Vector</span><br>
+    <span class="LuaComment">--returns Vector</span><br>
     &gt;&gt;std.cumtrapz(<span class="LuaKeyword">function</span>(x) 
-    <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>, v) <br>
+    <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>, node) <br>
     0 &emsp; 2.5 &emsp; 9 &emsp; 21.5 &emsp; 42 &emsp; COL   <br>
     
 </p>
@@ -231,15 +230,16 @@
 
 
 
+
+
+<h3>Integrand and limits known</h3>
 <p>
-    The below form of input uses neither an Array nor a Vector. It is 
-    a function with its bounds and number of intervals. The function returns 
-    a Vector.
+    The function itself and the upper and lower limits of the integral is known.
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.cumtrapz{f=<span class="auto-style1">function</span>(x) 
-    <span class="auto-style1">return</span> x^2 <span class="auto-style1">end</span>, a=1, b=5, inter=4} <br />
+    &gt;&gt;std.cumtrapz{f=<span class="LuaKeyword">function</span>(x) 
+    <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>, a=1, b=5, inter=4} <br />
     0&emsp; 2.5&emsp; 9&emsp; 21.5&emsp; 42&emsp; COL 
 </p>
 
