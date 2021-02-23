@@ -3,21 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>eig</title>
+    <title>eig values/vectors</title>
 
     
     <link href="../../../css/common.css" rel="stylesheet" type="text/css" />
-
-    <style>
-      
-        ul.spaced li{
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        
-    </style>
-    
-    
     
     <script src="/jsscripts/siteanalytics.js"></script>
 
@@ -41,19 +30,20 @@
     
 <h1>eig</h1>
 <p>
-    Computes the eigenvalues and eigenvectors.
+    Computes eigenvalues and optionally eigenvectors.
 </p>
 
 
 
 <p class="funcsignature"> 
-    eig(m=, ComputeEigenVectors=<span class="LuaKeyword">false</span>) &rarr; Matrix/Vector   
+    eig(m=, ComputeEigenVectors=<span class="LuaKeyword">false</span>) &rarr; Array[/Lua table]  
 </p>
 
 <p>
-    Argument <em>m</em> must be a square matrix. The function also carries out an internal test on <em>m</em> 
-    to see whether <em>m</em> is symmetric or not, and in the case of symmetric matrix, 
-    very high performance computation can be performed. 
+    where parameter <em>m</em> must be a square matrix. The function returns an array of eigenvalues 
+    and if parameter <em>ComputeEigenVectors</em> is<span class="LuaKeyword">true</span> then 
+    a table containing arrays where the i<sup>th</sup> array of the table corresponds to 
+    i<sup>th</sup> eigenvalue.
 </p>
 
 
@@ -64,43 +54,19 @@
 
 <h3>Notes</h3>
 
-
-<p>If m is symmetric:</p>
-<ul class="linespaced" style="margin-top: -12px;">
+<ul class="linespaced">
     <li>
-        The function returns a Vector of eigenvalues.
+        Before computing eigenvalues or vectors, the function carries out an 
+        internal test on <em>m</em> to see whether <em>m</em> is symmetric or not, 
+        and in the case of symmetric matrix, very high performance computation 
+        can be performed.
     </li>
     
     <li>
-        if <em>ComputeEigenVectors=</em><span class="LuaKeyword">true</span>, the function returns 
-        a Vector and a Matrix: eigenvalues and eigenvectors.
+        If parameter <em>m</em> is symmetric, then the eigenvalues and eigenvectors 
+        contain only real numbers, otherwise only in the format of complex numbers.
     </li>
 </ul>
-
-
-
-<p>If m is NOT symmetric:</p>
-<ul class="linespaced" style="margin-top: -12px;">
-    
-    <li>
-        The function returns a matrix of eigenvalues.The eigenvalues matrix is n by 2, 
-        where the first column is the real and second column is the imaginary part of the eigenvalues.
-    </li>
-    
-    <li>
-        if <em>ComputeEigenVectors=</em><span class="LuaKeyword">true</span>, the function returns 2 matrices: 
-        eigenvalues and eigenvectors. 
-        
-        <br>
-        
-        The eigenvalues matrix  is n by 2, where the first column is the real and second column is the imaginary part of the eigenvalues. <br> 
-        The eigenvectors matrix is n by 2n, where m(n,1) and m(n,2) is the real and the imaginary part of the 
-        eigenvector for the first eigenvalue and so on .
-    </li>
-       
-</ul>
-
-
 
 
 
