@@ -73,19 +73,31 @@
 <p>&nbsp;</p>
 
 
-<p>Initially, only the <em>eigenvalues </em>are found:</p>
+<p>
+    Let's find both eigenvalues and eigenvectors.
+</p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1,3}, {2,4}} <br />
-    &gt;&gt;m       <br />
-    1&nbsp;&nbsp;&nbsp; 3   <br />
-    2&nbsp;&nbsp;&nbsp; 4   <br />
-
-    <br />
-    &gt;&gt;std.eig(m) <br />
-    -0.372281&nbsp;&nbsp;&nbsp; 0       <br />
-    5.37228&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
-
+    &gt;&gt;A=std.tomatrix{ {1,3}, {2,4}} <br>
+    
+    <br>
+    
+    &gt;&gt;eval, evec=std.eig(A, <span class="LuaKeyword">true</span>)<br>
+    
+    <br>
+    
+    &gt;&gt;eval <br>
+    -0.372281 + 0i &emsp;  5.37228 + 0i   <br>
+    
+    <br>
+    
+    &gt;&gt;evec <br>
+    Array &emsp;  Array <br>
+    
+    <br>
+    
+    &gt;&gt;evec[1]<br>
+    -0.909377 + 0i   0.415974 + 0i   
 </p>
 
 
@@ -100,51 +112,20 @@
 
 
 
-
-<p>Now, let's find <em>eigenvectors</em>:</p>
-
-<p class="CodeCommand">
-
-    &gt;&gt;m1,m2=std.eig(m, <span class="LuaKeyword">true</span>) <br />
-    &gt;&gt;m1  <br />
-    -0.372281&nbsp;&nbsp;&nbsp; 0  <br />
-    5.37228&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      0  <br />
-
-    <br />
-
-    &gt;&gt;m2 <br />
-    -0.909377&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.565767&nbsp;&nbsp;&nbsp; 0  <br />
-    0.415974&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.824565&nbsp;&nbsp;&nbsp; 0  <br />
-
-</p>
-
-
-
-<p>&nbsp;</p>
-
-
 <p>
-    Now that we know how to interpret the results of <em>m1</em>, how are we going to interpret the result, 
-    especially <em>m2 </em>? Remember: Ax=&lambda;x
+    Let's take our knowledge further to test whether the results confirm the equation: Ax=&lambda;x
 </p>
 
 <p class="CodeCommand">
+    <span class="LuaComment">--x=evec[1]</span><br />
+    &gt;&gt;A*evec[1] <br>
+    0.338544 + 0i &emsp;  -0.154859 + 0i   <br>
     
-    <span class="LuaComment">--eigenvector corresponding to &lambda;<sub>1</sub>=-0.372281</span><br />
-    &gt;&gt;v=std.tovector{-0.909377, 0.415974} <br>
+    <br>
     
-    
-    <br />
-    
-    
-    &gt;&gt;m*v <span class="LuaComment">&nbsp;-Ax</span><br />
-    0.33854&nbsp;&nbsp;&nbsp; -0.15485&nbsp;&nbsp;&nbsp; COL  <br />
-
-    <br />
-
-    &gt;&gt;v*-0.372281  <span class="LuaComment">-- &lambda;x </span>  <br />
-    0.33854&nbsp;&nbsp;&nbsp; -0.15485&nbsp;&nbsp;&nbsp; COL
-
+    <span class="LuaComment">--&lambda;=eval[1], x=evec[1]</span><br />
+    &gt;&gt;eval[1]*evec[1] <br>
+    0.338544 + 0i &emsp;  -0.154859 + 0i
 </p>
 
 
@@ -162,6 +143,7 @@
 <div class="RelatedLinks">
     <a href="../classes/matrix.php">Matrix</a>
     <a href="../classes/vector.php">Vector</a>
+    <a href="../classes/array.php">Array</a>
     <a href="lu.php">lu</a>
     <a href="qr.php">qr</a>
     <a href="svd.php">svd</a>
