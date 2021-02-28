@@ -96,20 +96,49 @@ function ShowFuncClass(StdLibURL, Dir, DivID, RowDivisor)
         for(i=0; i<nfunctions; i++)
         {
             var FuncName = StdLibURL[i][0];
-            var linkName = StdLibURL[i][2];
+            var SecondEntry = StdLibURL[i][1];
 
-            if(linkName == null) 
-                linkName = FuncName.toLowerCase() + ".php"; 
+            //second entry in main array in null
+            if(SecondEntry == null) 
+            {
+                                
+                var FileURL = Dir + FuncName.toLowerCase() + ".php"; 
+                
+                HTMLText = HTMLText + "<a href="+ FileURL + ">"+ FuncName + "</a><br>";
+
+                count++;
+            }
+            
+            //second entry is an Array, so it is a library under std
+            else if(Array.isArray(SecondEntry))
+            {
+                var Library = SecondEntry;
+                
+                for(j=0; j<Library.length; ++j)
+                {
+                    
+                    var FileURL = Dir + FuncName.toLowerCase()+ "." + Library[j] + ".php"; 
+                    
+                    var URLName=FuncName.toLowerCase()+ "." + Library[j];
+
+                    HTMLText = HTMLText + "<a href="+ FileURL + ">"+ URLName + "</a><br>";
+
+                    count++;
+                }
+            }
+            
+            //link is explicity specified
+            else if(typeof SecondEntry =='string')
+            {
+                var FileURL = Dir + SecondEntry;
+                
+                HTMLText = HTMLText + "<a href="+ FileURL+ ">"+ FuncName + "</a><br>";
+
+                count++;
+            }
 
             
         
-            HTMLText = HTMLText + "<a href="+ Dir + linkName+ ">"+ FuncName + "</a><br>";
-
-
-
-            count++;
-
-
             if(count === NROWS)
             { 
                 HTMLText=HTMLText + "</td><td>";

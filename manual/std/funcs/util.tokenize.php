@@ -67,7 +67,7 @@
 ?>
 
 
-<h1>tokenize</h1>
+<h1>util.tokenize</h1>
 <p>
     A powerful function to perform lexical analysis on a given piece of Lua code or some string literal.
 </p>
@@ -157,11 +157,11 @@
 
 <h3>Examples</h3>
 <p class="CodeCommand">
-    &gt;&gt;std.tokenize("pi=3.14") 
+    &gt;&gt;std.util.tokenize("pi=3.14") 
     <br />
-    pi&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; 3.14	<br />
-    1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4	<br />
-    name&nbsp;&nbsp;&nbsp; asgnt&nbsp;&nbsp;&nbsp; num <br />	
+    pi&emsp; =&emsp; 3.14	<br />
+    1&emsp; 3&emsp; 4	<br />
+    name&emsp; asgnt&emsp; num <br />	
 </p>
 
 <p>
@@ -186,15 +186,15 @@
     &gt;&gt;str="<span class="LuaKeyword">if</span>(a==3) <span class="auto-style1">then</span> b=5E-3 <span class="auto-style1">end</span>" <br />
     <br />
     &gt;&gt;std.tokenize(str) <br />
-    <span class="LuaKeyword">if</span>&nbsp;&nbsp;&nbsp; (&nbsp;&nbsp;&nbsp; a&nbsp;&nbsp;&nbsp; ==&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; )&nbsp;&nbsp;&nbsp; <span class="auto-style1">then</span>&nbsp;&nbsp;&nbsp; b&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; 5E-3&nbsp;&nbsp;&nbsp; <span class="auto-style1">end</span>    <br />	
+    <span class="LuaKeyword">if</span>&emsp; (&emsp; a&emsp; ==&emsp; 3&emsp; )&emsp; <span class="auto-style1">then</span>&emsp; b&emsp; =&emsp; 5E-3&emsp; <span class="auto-style1">end</span>    <br />	
 
     <br />
 
-    1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp; 22	 <br />
+    1&emsp; 3&emsp; 4&emsp; 5&emsp; 7&emsp; 8&emsp; 9&emsp; 10&emsp; 14&emsp; 15&emsp; 16&emsp; 17&emsp; 21&emsp; 22	 <br />
 
     <br />
 
-    rword&nbsp;&nbsp;&nbsp; brkt&nbsp;&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp; binop&nbsp;&nbsp;&nbsp; num&nbsp;&nbsp;&nbsp; brkt&nbsp;&nbsp;&nbsp; wspc&nbsp;&nbsp;&nbsp; rword&nbsp;&nbsp;&nbsp; wspc&nbsp;&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp; asgnt&nbsp;&nbsp;&nbsp; num&nbsp;&nbsp;&nbsp; wspc&nbsp;&nbsp;&nbsp; rword	<br />
+    rword&emsp; brkt&emsp; name&emsp; binop&emsp; num&emsp; brkt&emsp; wspc&emsp; rword&emsp; wspc&emsp; name&emsp; asgnt&emsp; num&emsp; wspc&emsp; rword	<br />
 </p>
 
 <p>&nbsp;</p>
@@ -206,16 +206,16 @@
 
     <br />
 
-    &gt;&gt;std.tokenize(str, <span class="auto-style1">false</span>) <br />
-    <span class="LuaKeyword">if</span>&nbsp;&nbsp;&nbsp; (&nbsp;&nbsp;&nbsp; a&nbsp;&nbsp;&nbsp; ==&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; )&nbsp;&nbsp;&nbsp; <span class="auto-style1">then</span>&nbsp;&nbsp;&nbsp; b&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; 5E-3&nbsp;&nbsp;&nbsp; <span class="auto-style1">end</span>&nbsp;	<br />
+    &gt;&gt;std.util.tokenize(str, <span class="auto-style1">false</span>) <br />
+    <span class="LuaKeyword">if</span>&emsp; (&emsp; a&emsp; ==&emsp; 3&emsp; )&emsp; <span class="auto-style1">then</span>&emsp; b&emsp; =&emsp; 5E-3&emsp; <span class="auto-style1">end</span>&nbsp;	<br />
 
     <br />
 
-    1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; 22	<br />
+    1&emsp; 3&emsp; 4&emsp; 5&emsp; 7&emsp; 8&emsp; 10&emsp; 15&emsp; 16&emsp; 17&emsp; 22	<br />
 
     <br />
 
-    rword&nbsp;&nbsp;&nbsp; brkt&nbsp;&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp; binop&nbsp;&nbsp;&nbsp; num&nbsp;&nbsp;&nbsp; brkt&nbsp;&nbsp;&nbsp; rword&nbsp;&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp; asgnt&nbsp;&nbsp;&nbsp; num&nbsp;&nbsp;&nbsp; rword
+    rword&emsp; brkt&emsp; name&nbs&p;&nbsp;&nbsp; binop&emsp; num&emsp; brkt&emsp; rword&emsp; name&emsp; asgnt&emsp; num&emsp; rword
 
 </p>
     
