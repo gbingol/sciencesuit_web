@@ -51,6 +51,9 @@
 ?>
 
 
+    
+<script src="/jsscripts/createoutline.js"></script>
+    
 
 <h1>Range Class</h1>
 <p>
@@ -59,6 +62,15 @@
 </p>
 
 <p> &nbsp;</p>
+
+
+
+
+
+<h2 id="create_access">Create and Access</h2>
+
+
+
 
 <h3 id="createrange">Creating Range</h3>
 
@@ -80,6 +92,8 @@
 
 
 <p>&nbsp;</p>
+
+
 <p>
     <span class="auto-style4"><em>Important note:</em></span> If the Worksheet owning the range(s) is closed, 
     the range(s) becomes invalid.
@@ -105,13 +119,23 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
     
+
+
+
     
 <h3 id="accesscells">Accessing cells</h3>
-<p>You can read from and write to the region specified by the range inside the Worksheet.</p>
+
+<p>
+    You can read from and write to the region specified by the range inside the Worksheet.
+</p>
+
 <p class="CodeCommand">
     <span class="LuaComment">--create a range [region is 2x2, from B2 to C3]</span><br />
     &gt;&gt;r=Range.new("Sheet 1!B2:C3") <br />
@@ -149,15 +173,29 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
     
 
-<!-- **************************************************************** -->
+
+
+
+
+
+
+
     
-<h2>Member functions</h2>
+<h2 id="memberfuncs">Member functions</h2>
+
+
 <p>&nbsp;</p>
+
+
+
 
 <h3 id="col">col</h3>
 <p class="funcsignature">

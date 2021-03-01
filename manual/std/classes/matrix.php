@@ -61,17 +61,14 @@
             color: red;
         }
         
-        #selectsection
-        {
-            border: 1px blue solid;
-            border-radius: 20px;
-        }
+     
 
     </style>
     
     
     
     <script src="/jsscripts/siteanalytics.js"></script>
+    
 
 </head>
 
@@ -85,33 +82,7 @@
 
 <h1 >Matrix</h1>
 
-
-
-<div>
-    <span>Jump to:</span>
-    <select id="selectsection" onchange="GotoSection();">
-        <option selected disabled>Section</option>
-        <option value="#linear_indexing">Linear Indexing</option>
-        <option value="#Link_Vectors">Link Vectors</option>
-        <option value="#Mathematical_Operations">Mathematical Operations</option>
-        <option value="#Member_Functions">Member Functions</option>
-    </select>
-    
-    
-    <script>
-        function GotoSection()
-        {
-            var Elem=document.getElementById("selectsection");
-
-            var SelIndex=Elem.selectedIndex;
-
-
-
-            location.href=Elem.options[SelIndex].value;
-        }
-    
-    </script> 
-</div>
+<script src="/jsscripts/createoutline.js"></script>
 
 
 
@@ -135,7 +106,7 @@
 <p>&nbsp;</p>
 
 
-
+<h2 id="access_elements">Access Elements</h2>
 
 <h3>Accessing to single values</h3>
 
@@ -490,7 +461,7 @@
 
 <p>&nbsp;</p>
 
-<h3>append</h3>
+<h3 id="append">append</h3>
 <p class="funcsignature">
     append (elem, align)
 </p>
@@ -573,7 +544,7 @@
 
 
 
-<h3>clone</h3>
+<h3 id="clone">clone</h3>
 <p class="funcsignature">
     clone() &rarr; Matrix
 </p>
@@ -622,7 +593,7 @@
 
 
 
-<h3>delc</h3>
+<h3 id="delc">delc</h3>
 <p class="funcsignature">
     delc(pos=)
 </p>
@@ -653,7 +624,7 @@
 
 
 
-<h3>delr</h3>
+<h3 id="delr">delr</h3>
 <p class="funcsignature">
     delr(pos=)
 </p>
@@ -687,7 +658,7 @@
 
 
 
-<h3>equal</h3>
+<h3 id="equal">equal</h3>
 <p class="funcsignature">
     equal(arg, [tol=1E-5]) &rarr; Matrix
 </p>
@@ -738,7 +709,7 @@
 
 
 
-<h3>greater</h3>
+<h3 id="greater">greater</h3>
 <p class="funcsignature">
     greater(arg) &rarr; Matrix
 </p>
@@ -752,7 +723,7 @@
 
 
 
-<h3>greater_equal</h3>
+<h3 id="greater_equal">greater_equal</h3>
 <p class="funcsignature">
     greater_equal(arg, tol=1E-5) &rarr; Matrix
 </p>
@@ -767,7 +738,7 @@
 
 
 
-<h3>insert</h3>
+<h3 id="insert">insert</h3>
 <p class="funcsignature">
     insert (elem, pos, align)
 </p>
@@ -837,7 +808,7 @@
 
 
 
-<h3>less</h3>
+<h3 id="less">less</h3>
 <p class="funcsignature">
     less(arg) &rarr; Matrix
 </p>
@@ -855,7 +826,7 @@
 
 
 
-<h3>less_equal</h3>
+<h3 id="less_equal">less_equal</h3>
 <p class="funcsignature">
     less_equal(arg, tol=1E-5) &rarr; Matrix
 </p>
@@ -874,7 +845,7 @@
 
 
 
-<h3>ncols</h3>
+<h3 id="ncols">ncols</h3>
 <p class="funcsignature">
     ncols() &rarr; integer
 </p>
@@ -892,7 +863,7 @@
 
 
 
-<h3>nrows</h3>
+<h3 id="nrows">nrows</h3>
 <p class="funcsignature">
     nrows() &rarr; integer
 </p>
@@ -912,7 +883,7 @@
 
 
 
-<h3>sort</h3>
+<h3 id="sort">sort</h3>
 <p class="funcsignature">
     sort(pos, order)
 </p>

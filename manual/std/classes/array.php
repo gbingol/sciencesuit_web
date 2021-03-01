@@ -70,12 +70,16 @@
 ?>
 
 
-
+<script src="/jsscripts/createoutline.js"></script>
     
     
     
     
 <h1>Array</h1>
+
+
+
+
 <p class="rightmargin">
     Array is a 1D data structure and has the following properties:
 </p>
@@ -598,7 +602,7 @@
 
 
 
-<h2>Array Manipulation</h2>
+<h2 id="array_manipulation">Array Manipulation</h2>
 
 
 <p>

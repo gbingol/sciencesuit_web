@@ -40,13 +40,26 @@
 ?>
 
 <h1>Database Class</h1>
-<p>It is used for connecting to databases (currently only SQLite) and running SQL queries. </p>
+
+<script src="/jsscripts/createoutline.js"></script>
+
+<p>
+    It is used for connecting to databases (currently only SQLite) and running SQL queries. 
+</p>
+
+
+
 
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 
-<h2>Create &rarr; Connect &rarr; Query</h2>
-<p>In order to create a database class, run the following command:</p>
+
+
+<h2 id="create_connect_query">Create &rarr; Connect &rarr; Query</h2>
+<p>
+    In order to create a database class, run the following command:
+</p>
 
 <p class="CodeCommand">
     &gt;&gt;db=Database.new() <br />
@@ -54,14 +67,20 @@
     You are not connected to a database.
 </p>
 
-<p>At this stage, an empty database structure is created; however, in order to run SQL queries, a connection must be opened:</p>
+<p>
+    At this stage, an empty database structure is created; however, in order to run SQL queries, a connection must be opened:
+</p>
+
 <p class="CodeCommand">
     &gt;&gt;db:open()
 </p>
     
 <img src="../images/classes/database_open_noargs.png" alt="" />
     
-<p>After the selection of a database file, if we query the state of the database object:</p>
+<p>
+    After the selection of a database file, if we query the state of the database object:
+</p>
+
 <p class="CodeCommand">
      &gt;&gt;db <br />
     Connected to: C:\Users\gbingol\sciencesuit\_runtime\databases\ThermoFluids.db
@@ -69,21 +88,27 @@
    
 <p>&nbsp;</p>
 
-<p>Now that, a connection has been established, queries can be run. Let's query, which tables are available in the connected SQLite database:</p>
+<p>
+    Now that, a connection has been established, queries can be run. 
+    Let's query, which tables are available in the connected SQLite database:
+</p>
 <p class="CodeCommand">
     &gt;&gt;db:tables() <br />
-    MainTable&nbsp;&nbsp;&nbsp; S_R12&nbsp;&nbsp;&nbsp; SH_R12&nbsp;&nbsp;&nbsp; S_R718&nbsp;&nbsp;&nbsp; S_R22&nbsp;&nbsp;&nbsp; S_R23&nbsp;&nbsp;&nbsp; S_R32&nbsp;&nbsp;&nbsp; S_R125&nbsp;&nbsp;&nbsp; S_R134A&nbsp;&nbsp;&nbsp; S_R143A&nbsp;&nbsp;&nbsp; SH_R718&nbsp;&nbsp;&nbsp; SH_R22&nbsp;&nbsp;&nbsp; SH_R23&nbsp;&nbsp;&nbsp; SH_R134A&nbsp;&nbsp;&nbsp; S_R717&nbsp;&nbsp;&nbsp; SH_R32&nbsp;&nbsp;&nbsp; SH_R125&nbsp;&nbsp;&nbsp; SH_R143A&nbsp;&nbsp;&nbsp; SH_R717	
+    MainTable&emsp; S_R12&emsp; SH_R12&emsp; S_R718&emsp; S_R22&emsp; S_R23&emsp; S_R32&emsp; S_R125&emsp; S_R134A&emsp; S_R143A&emsp; SH_R718&emsp; SH_R22&emsp; SH_R23&emsp; SH_R134A&emsp; S_R717&emsp; SH_R32&emsp; SH_R125&emsp; SH_R143A&emsp; SH_R717	
 </p>
 
 <p>&nbsp;</p>
     
     
     
-<p>Since the available table names are already known, we are ready to query the fields in a table:</p>
+<p>
+    Since the available table names are already known, we are ready to query the fields in a table:
+</p>
 <p class="CodeCommand">
     &gt;&gt;db:fields("S_R12") <br />
-    T&nbsp;&nbsp;&nbsp; P&nbsp;&nbsp;&nbsp; vf&nbsp;&nbsp;&nbsp; vg&nbsp;&nbsp;&nbsp; hf&nbsp;&nbsp;&nbsp; hg&nbsp;&nbsp;&nbsp; sf&nbsp;&nbsp;&nbsp; sg
+    T&emsp; P&emsp; vf&emsp; vg&emsp; hf&emsp; hg&emsp; sf&emsp; sg
 </p>
+
 
 <p>&nbsp;</p>
     
@@ -92,9 +117,18 @@
 <p class="CodeCommand">
     &gt;&gt;tbl,nrow=db:sql("Select <span class="auto-style1">hf</span> from <span class="auto-style1">S_R12</span> where hf>140") <br />
     &gt;&gt;tbl <br />
-    140.068&nbsp;&nbsp;&nbsp; 148.076&nbsp;&nbsp;&nbsp; 157.085&nbsp;&nbsp;&nbsp; 168.059&nbsp;&nbsp;&nbsp; 174.92	
+    140.068&emsp; 148.076&emsp; 157.085&emsp; 168.059&emsp; 174.92	
 
 </p>
+
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
@@ -102,16 +136,20 @@
     
     
     
-<h2>Member functions</h2>
+<h2 id="memberfuncs">Member functions</h2>
 
 
 
 
 <h3 id="close">close</h3>
+
 <p class="funcsignature">
     close()
 </p>
-<p>Closes the existing connection to the database.</p>
+
+<p>
+    Closes the existing connection to the database.
+</p>
 
 <p class="CodeCommand">
     &gt;&gt;db:open()   <br />
@@ -131,6 +169,9 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 <h3 id="columns">columns</h3>
 <p class="funcsignature">
@@ -164,6 +205,9 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
+
+
+
     
 <h3 id="open">open</h3>
 <p class="funcsignature">
@@ -175,10 +219,16 @@
 </p>
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
     
+
+
 
 
 <h3 id="sql">sql</h3>
@@ -198,16 +248,18 @@
 <p class="CodeCommand">
     &gt;&gt;tbl,nrow, ncol=db:sql("Select <span class="auto-style1">hf</span> from <span class="auto-style1">S_R12</span> where <span class="auto-style1">hf</span>>140") <br />
     &gt;&gt;tbl <br />
-    140.068&nbsp;&nbsp;&nbsp; 148.076&nbsp;&nbsp;&nbsp; 157.085&nbsp;&nbsp;&nbsp; 168.059&nbsp;&nbsp;&nbsp; 174.92	<br />
+    140.068&emsp; 148.076&emsp; 157.085&emsp; 168.059&emsp; 174.92	<br />
     &gt;&gt;nrow <br />
     5 <br />
     &gt;&gt;ncol <br />
     1
 </p>
-    
+   
+
 <p>&nbsp;</p>
 
 <h4>A query that returns 2D Lua table:</h4>
+
 
 <p class="CodeCommand">
    &gt;&gt;tbl,nrow, ncol=db:sql("Select <span class="auto-style2">*</span> from S_R12")
@@ -224,16 +276,26 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
-    
+   
+
+
+
 <h3 id="tables">tables</h3>
 <p class="funcsignature">
     tables() &rarr; table
 </p>
 
-<p>Returns a Lua table containing the names of the existing tables in the database.</p>
+<p>
+    Returns a Lua table containing the names of the existing tables in the database.
+</p>
+
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>

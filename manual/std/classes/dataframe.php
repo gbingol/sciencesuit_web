@@ -67,6 +67,10 @@
 ?>
     
     
+<script src="/jsscripts/createoutline.js"></script>
+
+
+    
 <script>
     function PrintOrigTable()
     {
@@ -458,7 +462,8 @@
 
 <p>&nbsp;</p>
 
-<h3 id="columnaccess">1) Column Access</h3>
+
+<h3 id="columnaccess">Column Access</h3>
 
 <p class="CodeCommand">
     &gt;&gt;df("C") <br>
@@ -706,7 +711,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h3 id="rowaccess">2) Reading a Row</h3>
+<h3 id="rowaccess">Reading a Row</h3>
 
 <p>
     Unlike column access, row access is read-only as a <em>copy</em> of the row is returned as an array. 
@@ -755,7 +760,13 @@
 <p>&nbsp;</p>
 
 
+
+
+
 <!-- ********************************************************************* -->
+
+
+
 
 <h2 id="memberfunc">Member Functions</h2>
 
