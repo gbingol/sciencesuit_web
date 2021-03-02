@@ -1,10 +1,10 @@
-function MakeElement_Select_OutlineFromH2H3Tags()
+function MakeElement_Select_OutlineFromH3Tags()
 {
     var MainBody = document.body;
 
     var H1Node=document.getElementsByTagName("h1")[0];
 
-    var h2NodeList = document.getElementsByTagName("h2");
+    var h3NodeList = document.getElementsByTagName("h3");
 
 
     //Create and append select list
@@ -34,67 +34,21 @@ function MakeElement_Select_OutlineFromH2H3Tags()
    selectList.appendChild(option);
 
 
-    for(var i=0; i<h2NodeList.length; ++i)
+    for(var i=0; i<h3NodeList.length; ++i)
     {
-        var H2HeadingLetter = String.fromCharCode(65 + i);
-        
-        var h2Node = h2NodeList[i];
+            
+        var h3Node = h3NodeList[i];
 
         var option = document.createElement("option");
 
-        var ElemId = h2Node.id;
+        var ElemId = h3Node.id;
 
-        if(ElemId!="")
+        if(ElemId!=="")
         {
             option.value = "#"+ ElemId;
-            option.text = H2HeadingLetter + ") " + h2Node.innerHTML;
-            option.style.setProperty("background", "lightgreen");
+            option.text = h3Node.innerHTML;
 
             selectList.appendChild(option);
-        }
-
-
-        var NextSibling=h2Node.nextElementSibling;
-
-        var k=1;
-        while(NextSibling)
-        {
-            var H3HeadingNumber=""+ k;
-            var TagName=NextSibling.nodeName.toUpperCase();
-
-            if(TagName==="H2")
-                break;
-
-            if(TagName!=="H3")
-            {
-                NextSibling=NextSibling.nextElementSibling;
-
-                continue;
-            }
-
-
-
-
-            var option = document.createElement("option");
-
-            var ElemId= NextSibling.id;
-
-            if(ElemId==="")
-            {
-                NextSibling=NextSibling.nextElementSibling;
-
-                continue;
-            }
-
-            option.value = "#"+ ElemId;
-            option.text = H3HeadingNumber + ". " + NextSibling.innerHTML;
-
-
-            selectList.appendChild(option);
-
-            NextSibling=NextSibling.nextElementSibling;
-            
-            k++;
         }
      }
 
@@ -230,8 +184,5 @@ function MakeElement_Details_OutlineFromH2H3Tags()
 
 }
 
-
-
-window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
 
 
