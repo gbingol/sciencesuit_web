@@ -68,6 +68,9 @@
     
     
 <script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+</script>
 
 
     
@@ -132,8 +135,8 @@
 <p>&nbsp;</p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{"a", 2, 3}, 
-    std.toarray{"abc", 12, "b", 4}, std.toarray{10, 20, 30} } <br>
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{"a", 2, 3}, 
+    std.util.toarray{"abc", 12, "b", 4}, std.util.toarray{10, 20, 30} } <br>
     
     &gt;&gt;df
     
@@ -189,8 +192,8 @@
 <p>&nbsp;</p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{"a", 2, 3}, 
-    A=std.toarray{"abc", 12, "b", 4}, std.toarray{10, 20, 30} }
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{"a", 2, 3}, 
+    A=std.util.toarray{"abc", 12, "b", 4}, std.util.toarray{10, 20, 30} }
     
     <br>
     
@@ -255,8 +258,8 @@
 
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{B=std.toarray{"a", 2, 3}, 
-    A=std.toarray{"abc", 12, "b", 4}, C=std.toarray{10, 20, 30} }
+    &gt;&gt;df = std.DataFrame.new{B=std.util.toarray{"a", 2, 3}, 
+    A=std.util.toarray{"abc", 12, "b", 4}, C=std.util.toarray{10, 20, 30} }
     
     <br>
     &gt;&gt;df 
@@ -303,8 +306,8 @@
 </p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{"a", 2, 3}, std.toarray{"abc", 12, "b", 4}, 
-    std.toarray{10,20,30}, cols={"A","B","C"} } <br>
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{"a", 2, 3}, std.util.toarray{"abc", 12, "b", 4}, 
+    std.util.toarray{10,20,30}, cols={"A","B","C"} } <br>
     
     &gt;&gt;df
     <table class="dataframe">
@@ -357,8 +360,8 @@
 </p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{A=std.toarray{"a", 2, 3}, B=std.toarray{"abc", 12, "b", 4}, 
-    std.toarray{10, 20, 30}, cols={"C"}, rows={"a", "b"} } <br>
+    &gt;&gt;df = std.DataFrame.new{A=std.util.toarray{"a", 2, 3}, B=std.util.toarray{"abc", 12, "b", 4}, 
+    std.util.toarray{10, 20, 30}, cols={"C"}, rows={"a", "b"} } <br>
     
     &gt;&gt;df
     <table class="dataframe">
@@ -846,7 +849,7 @@
     
     
     <span class="LuaComment">--Adding an Array</span><br>
-    &gt;&gt;arr=std.toarray{"A", "B", 1, 2} <br>
+    &gt;&gt;arr=std.util.toarray{"A", "B", 1, 2} <br>
     &gt;&gt;df:cbind(arr, "ARRAY") <br>
     &gt;&gt;df 
     
@@ -1230,8 +1233,8 @@
 </p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{10, 20, 30}, std.toarray{"a", 2, 3}, 
-     std.toarray{"abc", 12, "b", 4},  cols={"C","A","B"}, rows={"a", "b"} } <br>
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{10, 20, 30}, std.util.toarray{"a", 2, 3}, 
+     std.util.toarray{"abc", 12, "b", 4},  cols={"C","A","B"}, rows={"a", "b"} } <br>
     &gt;&gt;df <br> 
     
     <script>PrintOrigTable();</script>

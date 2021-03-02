@@ -51,6 +51,9 @@
 
     
 <script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+</script>
 
 
 
@@ -469,7 +472,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3.1, 3, 5, 5}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3.1, 3, 5, 5}<br>
     &gt;&gt;v<br>
     1&emsp; 2&emsp; 3.1&emsp; 3&emsp; 5&emsp; 5&emsp; COL
 </p>
@@ -509,8 +512,8 @@
 <p>If we want to test whether elements of the two vectors are equal with default tolerance level:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;v1=std.tovector{1, 2, 3.1, 3, 5, 5}<br>
-    &gt;&gt;v2=std.tovector{1, 2, 3, 3, 4, 5}<br>
+    &gt;&gt;v1=std.util.tovector{1, 2, 3.1, 3, 5, 5}<br>
+    &gt;&gt;v2=std.util.tovector{1, 2, 3, 3, 4, 5}<br>
     <br>
     &gt;&gt;v1:equal(v2)<br>
     1&emsp; 1&emsp; 0&emsp; 
@@ -604,7 +607,7 @@
 <p>To insert <em>number</em> 10 to the 1<sup>st</sup> position in the vector:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3}<br>
     &gt;&gt;v:insert(1, 10)<br>
     &gt;&gt;v<br>
     
@@ -616,8 +619,8 @@
 <p>To be able to insert another <em>vector</em> in to a specified position:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3}<br>
-    &gt;&gt;v2=std.tovector{10, 20, 30}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3}<br>
+    &gt;&gt;v2=std.util.tovector{10, 20, 30}<br>
     
     <br>
     
@@ -889,7 +892,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4, 5}<br>
     &gt;&gt;v:reverse()<br>&gt;&gt;
     v<br>5&emsp; 4&emsp; 3&emsp; 2&emsp; 1&emsp; COL
 </p>
@@ -925,7 +928,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3}<br>
     &gt;&gt;v:shape()<br> 
     col
 </p>
@@ -974,7 +977,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5} <br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4, 5} <br>
     &gt;&gt;v:shuffle()<br>
     4&emsp; 1&emsp; 5&emsp; 2&emsp; 3 
 </p>
@@ -1011,7 +1014,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4, 5}<br>
     &gt;&gt;v1,v2=v:slice(3)<br>
     
     <br>
@@ -1056,7 +1059,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1,5,2,7,4}<br>
+    &gt;&gt;v=std.util.tovector{1,5,2,7,4}<br>
     &gt;&gt;v<br>
     1&emsp; 5&emsp; 2&emsp; 7&emsp; 4&emsp; COL
 </p>

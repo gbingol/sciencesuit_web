@@ -65,18 +65,27 @@
     include $mainmenuloc;
 ?>
 
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+</script>
 
 
 <h1>Worksheet Class</h1>
+
 <p>
     A worksheet is a container for data and also hosts <a href="range.php">Range</a> objects. 
 </p>
 
 <p>&nbsp;</p>
 
-<h2 id="creating_closing">1) Creating &amp; Closing</h2>
+<h2 id="creating_closing">Creating and Closing</h2>
 
-<p>A worksheet is part of the workbook, therefore a statement like the following is <span class="auto-style4">not valid</span>:</p>
+<p>
+    A worksheet is part of the workbook, therefore a statement like the following is <span class="auto-style4">not valid</span>:
+</p>
 
 <p class="CodeCommand">
     &gt;&gt; ws=Worksheet.new()
@@ -120,27 +129,41 @@
 
 
 
-<h2 id="accessing_data">2) Accessing Data</h2>
+<h2 id="accessing_data">Accessing Data</h2>
 <p>
-    Understanding the location of the cells is important when accessing the cell in a worksheet . The <em>topleft</em> cell of the worksheet,<em> A1,</em> 
+    Understanding the location of the cells is important when accessing the cell in a worksheet . 
+    The <em>topleft</em> cell of the worksheet,<em> A1,</em> 
     is (<em>1,1</em>). Similarly, A2 and B2 are (1,2) and (2,2), respectively. 
 </p>
 
-<h3>2.1) Reading from Cells </h3>
-<p>There are two ways the content of a cell can be read: </p>
+
+
+<p>&nbsp;</p>
+
+
+<h3 id="readfromcells">Reading from Cells </h3>
+<p>
+    There are two ways the content of a cell can be read: 
+</p>
+
 <ol>
     <li>
-        <em>Array Access[][]:</em>&nbsp;&nbsp;&nbsp; <mark>ws[1][1]</mark> will access the content of A1, 
+        <em>Array Access[][]:</em>&emsp; <mark>ws[1][1]</mark> will access the content of A1, 
         where <em>ws</em> is of type worksheet.
     </li>
-    <li><em>Function call ():</em>&nbsp;&nbsp;&nbsp;&nbsp; <mark>ws(2,2)</mark> will read the content of B2, 
+    <li><em>Function call ():</em>&emsp;&nbsp; <mark>ws(2,2)</mark> will read the content of B2, 
         where <em>ws</em> is of type worksheet.
     </li>
 
 </ol>
 
 
+
+
 <p>&nbsp;</p>
+
+
+
 <h4>Example</h4>
 <p>Consider the worksheet in the following image:</p>
 
@@ -172,9 +195,21 @@
 </p>
 
 
+
+
+
+
+
+
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h3>2.2) Writing to Cells</h3>
+
+
+
+
+
+<h3 id="writingtocells">Writing to Cells</h3>
 <p>
     Using the <em>array access</em> we can easily write to a cell. Let's work on the worksheet containing the data from A1 to B2 shown above. 
     After executing the following commands, observe the difference:
@@ -208,17 +243,21 @@
 <p>&nbsp;</p>
 
 
-<h3>2.3) Formatted Output</h3>
+<h3 id="formattedoutput">Formatted Output</h3>
 <p>
-    Although in section 2.3 it was shown how to write to cells, using this style will use the 
-    formatting available in that particular cell. Therefore, when writing to the cells using the 
+    Although it was already shown how to write to cells, using this style will use the 
+    default formatting available in that particular cell. Therefore, when writing to the cells using the 
     following style gives no control over format if you wish to have.
 </p>
 
 <p class="CodeCommand">
     &gt;&gt;ws[1][1]="A1"
 </p>
-<p>In order to use formatted output, instead of string or number, we use a Lua table on the right-hand side. The keys and values are as follows:</p>
+
+<p>
+    In order to use formatted output, instead of string or number, we use a Lua table on the right-hand side. 
+    The keys and values are as follows:
+</p>
 
 
 <table class="keyvalue">
@@ -295,14 +334,23 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-    
-    
- <!-- ************************************************************************ -->   
 
-<h2>3) Member functions</h2>
+
+
+
+
+    
+    
+ 
+
+<h2 id="memberfuncs">3) Member functions</h2>
 <p>&nbsp;</p>
 
 
@@ -326,44 +374,44 @@
 
 <p class="CodeCommand">
     <span class="LuaKeyword">local function</span> GetVariable(txt) <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">local</span> ws=std.activeworkbook():cur() <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">local</span> range=ws:selection() <br />
                     <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">if</span> (range==nil)  <span class="LuaKeyword">then</span> <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &emsp;&emsp;&nbsp;
                         <span class="LuaKeyword">return</span> <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">end</span><br />
                 <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 txt.value=tostring(range)<br />
                 <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">if</span>(OwnerDialog~=nil) <span class="LuaKeyword">then</span><br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &emsp;&emsp;&nbsp;
                         OwnerDialog.topmost="no"<br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">end</span><br />
             <br />
-        &nbsp;&nbsp;&nbsp;
+        &emsp;
         <span class="LuaKeyword">end</span><br />
     <br />
     <span class="LuaKeyword">function</span> txt:button_cb()<br />
         <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">if</span>(OwnerDialog~=nil) <span class="LuaKeyword">then</span><br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &emsp;&emsp;&nbsp;
                         OwnerDialog.topmost="yes"<br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">end</span><br />
             <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 <span class="LuaKeyword">local</span> ws=std.activeworkbook():cur()<br />
                             <br />
-                &nbsp;&nbsp;&nbsp;
+                &emsp;
                 ws:<mark>connect</mark>(GetVariable, txt)<br />
         <span class="LuaKeyword">end</span>
 

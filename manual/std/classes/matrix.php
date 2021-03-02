@@ -80,11 +80,14 @@
 ?>
 
 
-<h1 >Matrix</h1>
-
 <script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+</script>    
+    
 
 
+<h1 >Matrix</h1>
 
 <p>&nbsp;</p>
 
@@ -111,11 +114,11 @@
 <h3>Accessing to single values</h3>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {3, 4, 5} , {6 , 7, 8} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {3, 4, 5} , {6 , 7, 8} }<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3<br>
-    3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5<br>
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;8<br>
+    1&emsp; 2&emsp; 3<br>
+    3&emsp; 4&emsp; 5<br>
+    6&emsp; 7&emsp;8<br>
 
     <br>
 
@@ -125,8 +128,8 @@
     <br />
 
     &gt;&gt;m<br>
-    10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;3<br>
-    3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8
+    10&emsp; 20&emsp;3<br>
+    3&emsp;&nbsp;&nbsp; 4&emsp;&nbsp;&nbsp; 5<br>6&emsp;&nbsp;&nbsp; 7&emsp;&nbsp;&nbsp; 8
 </p>
 
 <p>
@@ -169,19 +172,19 @@
 <h3>Accessing to multiple values</h3>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9<br>
+    1&emsp; 2&emsp; 3<br>
+    4&emsp; 5&emsp; 6<br>
+    7&emsp; 8&emsp; 9<br>
 
     <br>
     &gt;&gt;m[{1, 3, 5}]<br>
-    1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; COL<br>
+    1&emsp; 3&emsp; 5&emsp; COL<br>
 
     <br>
     &gt;&gt;m({1, 3, 5})<br>
-    1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; COL
+    1&emsp; 3&emsp; 5&emsp; COL
 </p>
 
 <p >&nbsp;</p>
@@ -193,9 +196,9 @@
 <p class="CodeCommand">
     &gt;&gt;m[ {from=3, to=5} ] = {30, 40, 50, 60}<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp; 30<br>
-    40&nbsp;&nbsp;&nbsp; 50 &nbsp;&nbsp;&nbsp; 6<br>
-    7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 &nbsp;&nbsp;&nbsp; 9
+    1&emsp;&emsp;&nbsp;2&emsp; 30<br>
+    40&emsp; 50 &emsp; 6<br>
+    7 &emsp;&emsp; 8 &emsp; 9
 </p>
 
 
@@ -208,7 +211,7 @@
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
 
     <br />
 
@@ -217,9 +220,9 @@
     <br>
 
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp; <mark>30</mark><br>
-    <mark>40</mark>&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9
+    1&emsp;&nbsp; 2 &emsp; <mark>30</mark><br>
+    <mark>40</mark>&nbsp;&nbsp; 5&emsp;&nbsp; 6<br>
+    7&emsp;&nbsp; 8&emsp;&nbsp; 9
 </p>
 
 <p>
@@ -236,12 +239,12 @@
     In the following example, notice the use of keyword <i>by</i>:
 </p>
 
-<p class="CodeCommand">&gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+<p class="CodeCommand">&gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     <br>&gt;&gt;m[ {from=3, to=9, by=4} ] = {30, 70, 90}<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; <mark>30</mark><br>
-    4&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6<br>
-    <mark>70</mark>&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9</p>
+    1&emsp;&nbsp; 2&emsp; <mark>30</mark><br>
+    4&emsp;&nbsp; 5&emsp; 6<br>
+    <mark>70</mark>&nbsp;&nbsp; 8&emsp; 9</p>
 
 
 
@@ -250,13 +253,13 @@
 
 <p>The following is doable as well:</p>
 
-<p class="CodeCommand">&gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+<p class="CodeCommand">&gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     <br>
     &gt;&gt;m[ {} ]={10, 20, 30, 40}<br>
     &gt;&gt;m<br>
-    <span style="background-color: yellow"> 10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;30</span><br>
-    <mark>40</mark>&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9
+    <span style="background-color: yellow"> 10&emsp; 20&emsp;30</span><br>
+    <mark>40</mark>&emsp; 5&emsp;&emsp; 6<br>
+    7&emsp;&nbsp;&nbsp; 8&emsp;&emsp; 9
 </p>
 
 
@@ -268,16 +271,16 @@
     On the right-hand side we can also use a Vector. The following example demonstrates this:
 </p>
 
-<p class="CodeCommand">&gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
-    &gt;&gt;v=std.tovector{10, 20, 30}<br>
+<p class="CodeCommand">&gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;v=std.util.tovector{10, 20, 30}<br>
     
     <br>
     
     &gt;&gt;m[{}] = v<br>
     &gt;&gt;m<br>
-    <span style="background-color: yellow">10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 30 </span><br>
-    4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9
+    <span style="background-color: yellow">10&emsp; 20&emsp; 30 </span><br>
+    4&emsp;&nbsp;&nbsp; 5&emsp;&emsp; 6<br>
+    7&emsp;&nbsp;&nbsp; 8&emsp;&emsp; 9
 </p>
 
 
@@ -288,15 +291,15 @@
         
         
         
-<p class="CodeCommand">&gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+<p class="CodeCommand">&gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     
     <br>
     
     &gt;&gt;m[{}] = 10<br>
     &gt;&gt;m<br>
-    10 &nbsp;&nbsp;&nbsp;10 &nbsp;&nbsp;&nbsp;10<br>
-    10 &nbsp;&nbsp;&nbsp;10 &nbsp;&nbsp;&nbsp;10<br>
-    10&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 10
+    10 &emsp;10 &emsp;10<br>
+    10 &emsp;10 &emsp;10<br>
+    10&emsp; 10&emsp; 10
 </p>
 
 
@@ -310,19 +313,19 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     
     <br>
     
     &gt;&gt;m({}, 1) <br>
     <span class="LuaComment">- read the first column</span><br>
-    1&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; COL<br>
+    1&emsp; 4&emsp; 7&emsp; COL<br>
     
     <br>
     
     <span class="LuaComment">- read the first row</span><br>
     &gt;&gt;m(1, {})<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; ROW
+    1&emsp; 2&emsp; 3&emsp; ROW
 </p>
 
 
@@ -339,12 +342,12 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     
     <br>
     
     &gt;&gt;m[1]<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; LINK
+    1&emsp; 2&emsp; 3&emsp; LINK
 </p>
 
 
@@ -364,7 +367,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
 
     <br>
 
@@ -374,9 +377,9 @@
     <br />
 
     &gt;&gt;m<br>
-    <mark>10</mark>&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9
+    <mark>10</mark>&emsp; 2&emsp;&nbsp; 3<br>
+    4&emsp;&nbsp;&nbsp; 5&emsp;&nbsp; 6<br>
+    7&emsp;&nbsp;&nbsp; 8&emsp;&nbsp; 9
 </p>
 
 <p>In the above example:</p>
@@ -404,9 +407,9 @@
    <br>
    
     &gt;&gt;m<br>
-    10&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9
+    10&emsp; 2&emsp; 3<br>
+    4&emsp;&nbsp;&nbsp; 5&emsp; 6<br>
+    7&emsp;&nbsp;&nbsp; 8&emsp; 9
 </p>
 
 <p>
@@ -474,11 +477,11 @@
 </p>
 
 <div class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9<br>
+    1&emsp; 2&emsp; 3<br>
+    4&emsp; 5&emsp; 6<br>
+    7&emsp; 8&emsp; 9<br>
     
     <br>
     &gt;&gt;m:append( {10, 20, 30}, "row") <br>
@@ -521,17 +524,17 @@
  </p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
-    &gt;&gt;v=std.tovector{10, 20, 30}<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;v=std.util.tovector{10, 20, 30}<br>
     
     <br>
     
     &gt;&gt;m:append(v, "row")<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9 <br>
-    <span style="color: red;">10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 30
+    1&emsp;&emsp; 2&emsp;&nbsp; 3<br>
+    4&emsp;&emsp; 5&emsp;&nbsp; 6<br>
+    7&emsp;&emsp; 8&emsp;&nbsp; 9 <br>
+    <span style="color: red;">10&emsp; 20&emsp; 30
 </p>
 
 
@@ -554,14 +557,14 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     <br>
     
     <span class="LuaComment">-- array access via linear indexing (return type is vector)</span><br>
     &gt;&gt;m1=m[{}] <br>
     &gt;&gt;m1<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 
-    5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; COL<br>
+    1&emsp; 2&emsp; 3&emsp; 4&emsp; 
+    5&emsp; 6&emsp; 7&emsp; 8&emsp; 9&emsp; COL<br>
     
     <br>
     
@@ -569,18 +572,18 @@
     &gt;&gt;m2=m({},{}) <br>
     
     &gt;&gt;m2<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9<br>
+    1&emsp; 2&emsp; 3<br>
+    4&emsp; 5&emsp; 6<br>
+    7&emsp; 8&emsp; 9<br>
     
     <br>
     
     <span class="LuaComment">-- direct call of the clone member function equivalent to m({},{})</span><br>
     &gt;&gt;m3=m:clone()<br>
     &gt;&gt;m3<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9
+    1&emsp; 2&emsp; 3<br>
+    4&emsp; 5&emsp; 6<br>
+    7&emsp; 8&emsp; 9
 </p>
 
 
@@ -605,15 +608,15 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     
     <br>
     &gt;&gt;m:delc(2)<br>
     &gt;&gt;m<br>
     
-    1&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp; 9
+    1&emsp; 3<br>
+    4&emsp; 6<br>
+    7&emsp; 9
 </p>
 
 
@@ -635,14 +638,14 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
     
     <br>
     
     &gt;&gt;m:delr(2)<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9
+    1&emsp;&nbsp; 2&emsp;&nbsp; 3<br>
+    7&emsp;&nbsp; 8&emsp;&nbsp; 9
 </p>
 
 
@@ -671,36 +674,36 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {1.1, 2.1, 3.1} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {1.1, 2.1, 3.1} , {7, 8, 9} }<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3<br>
-    1.1&nbsp;&nbsp;&nbsp;&nbsp; 2.1&nbsp;&nbsp;&nbsp;&nbsp; 3.1<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
+    1&emsp;&emsp;&nbsp;&nbsp; 2&emsp;&emsp;&nbsp;&nbsp; 3<br>
+    1.1&emsp;&nbsp; 2.1&emsp;&nbsp; 3.1<br>
+    7&emsp;&emsp;&nbsp;&nbsp; 8&emsp;&emsp;&nbsp;&nbsp; 9<br>
 
     <br>
     &gt;&gt;m:equal(3)<font color="#127622">--default tolerance level</font><br />
-    0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1<br>
-    0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
-    0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
+    0&emsp; 0&emsp; 1<br>
+    0&emsp; 0&emsp; 0<br>
+    0&emsp; 0&emsp; 0<br>
 
     <br>
     &gt;&gt;m:equal(3, 0.11)<font color="#127622">--tolerance level is set to 0.11</font><br />
-    0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
-    0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
-    0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0<br>
+    0&emsp;&nbsp; 0&emsp;&nbsp; 1<br>
+    0&emsp;&nbsp; 0&emsp;&nbsp; 1<br>
+    0&emsp;&nbsp; 0&emsp;&nbsp; 0<br>
 
     <br>
 
     <br>
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
-    &gt;&gt;m2=std.tomatrix{ {1, 2, 3} , {1.1, 2.1, 3.1} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m2=std.util.tomatrix{ {1, 2, 3} , {1.1, 2.1, 3.1} , {7, 8, 9} }<br>
 
     <br>
 
     &gt;&gt;m:equal(m2)<br>
-    1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1<br>
-    0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<br>
-    1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1
+    1&emsp; 1&emsp; 1<br>
+    0&emsp; 0&emsp; 0<br>
+    1&emsp; 1&emsp; 1
 </p>
 
 <p>&nbsp;</p>
@@ -765,22 +768,22 @@
 <p>&nbsp;</p>
 
 <div class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
 
     <br>
     &gt;&gt;m:insert( {10, 20, 30}, 2, "col")<br>
     &gt;&gt;m<br>
-    1&nbsp;&nbsp;&nbsp;<red>10</red>&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp;<red>20 </red>&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp;<red>30</red>&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9<br>
+    1&emsp;<red>10</red>&emsp;2&emsp; 3<br>
+    4&emsp;<red>20 </red>&emsp; 5&emsp; 6<br>
+    7&emsp;<red>30</red>&emsp; 8&emsp; 9<br>
 
     <br>
     &gt;&gt;m:insert({11, 12, 13, 14}, 1, "row")<br>
     &gt;&gt;m<br>
-    <red> 11&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 14</red><br>
-    1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3<br>
-    4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6<br>
-    7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+    <red> 11&emsp; 12&emsp; 13&emsp; 14</red><br>
+    1&emsp;&nbsp;&nbsp; 10&emsp; 2&emsp;&emsp;3<br>
+    4&emsp;&nbsp;&nbsp; 20&emsp; 5&emsp;&emsp;6<br>
+    7&emsp;&nbsp;&nbsp; 30&emsp; 8&emsp;&emsp;9
 
 </div>
 
@@ -788,15 +791,15 @@
 <p>The syntax of inserting a Vector to the matrix is same as inserting a Lua table.</p>
 
 <div class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3}, {4, 5, 6} , {7, 8, 9 } }<br>
-    &gt;&gt;v=std.tovector{10, 20, 30}<br>
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3}, {4, 5, 6} , {7, 8, 9 } }<br>
+    &gt;&gt;v=std.util.util.tovector{10, 20, 30}<br>
 
     <br>
 
     &gt;&gt;m:insert(v, 3, "col")<br>
-    &gt;&gt;m<br>1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;<red>10</red>&nbsp;&nbsp;&nbsp; 3<br>
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;<red>20</red>&nbsp;&nbsp;&nbsp; 6<br>
-    7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;<red>30</red>&nbsp;&nbsp;&nbsp; 9
+    &gt;&gt;m<br>1&emsp; 2&emsp;<red>10</red>&emsp; 3<br>
+    4&emsp; 5&emsp;<red>20</red>&emsp; 6<br>
+    7&emsp; 8&emsp;<red>30</red>&emsp; 9
 </div>
 
         
@@ -905,15 +908,15 @@
 <p class="CodeCommand">
     &gt;&gt;m=std.floor( std.rand(3, 3)*10 ) <br>
     &gt;&gt;m<br>
-    6&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
-    5&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9<br>
-    6&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
+    6&emsp;&nbsp; 7&emsp;&nbsp; 2<br>
+    5&emsp;&nbsp; 8&emsp;&nbsp; 9<br>
+    6&emsp;&nbsp; 9&emsp;&nbsp; 6<br>
 
     <br>
     &gt;&gt;m:sort(1, "D")<br>
-    &gt;&gt;m<br>6&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 2<br>
-    6&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; 6<br>
-    5&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9
+    &gt;&gt;m<br>6&emsp;&nbsp; 7&emsp;&nbsp; 2<br>
+    6&emsp;&nbsp; 9&emsp;&nbsp; 6<br>
+    5&emsp;&nbsp; 8&emsp;&nbsp; 9
 </p>
 
 <p >&nbsp;</p>

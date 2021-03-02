@@ -42,9 +42,14 @@
 ?>
 
 
-<h1>Food Class</h1>
-
 <script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+</script>
+    
+    
+
+<h1>Food Class</h1>
 
 
 <p>

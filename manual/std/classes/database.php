@@ -38,10 +38,19 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+</script>
+
+
+
 
 <h1>Database Class</h1>
 
-<script src="/jsscripts/createoutline.js"></script>
+
 
 <p>
     It is used for connecting to databases (currently only SQLite) and running SQL queries. 

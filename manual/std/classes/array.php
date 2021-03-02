@@ -71,6 +71,9 @@
 
 
 <script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+</script>
     
     
     
@@ -577,7 +580,7 @@
     </li>
     
     <li>
-        Vector, Matrix, Lua table: <a href="../funcs/toarray.php">std.toarray</a>
+        Vector, Matrix, Lua table: <a href="../funcs/util.toarray.php">std.util.toarray</a>
     </li>
     
 </ul>
@@ -779,7 +782,7 @@
 <p>Returns the capacity of the array. </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
     &gt;&gt;a <br />
     1&emsp; 2&emsp; 3&emsp; "a"&emsp; "b" <br />
 
@@ -833,7 +836,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
 
     <br />
 
@@ -852,7 +855,7 @@
 <p>However, if we had used clone() function:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
     &gt;&gt;b=a:clone() <br />
 
     <br />
@@ -947,7 +950,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
 
     <br />
 
@@ -957,7 +960,7 @@
 
     <br />
 
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
     &gt;&gt;a:erase(1) <br />
     &gt;&gt;a <br />
     "b"	 <br />
@@ -995,7 +998,7 @@
 <p>Inserts a number, 1D Lua table or an array at <em>i<sup>th</sup> </em>position.</p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
     &gt;&gt;a:insert( 2, {1, <span class="auto-style2">"c"</span>} ) <br />
 
     <br />
@@ -1006,8 +1009,8 @@
     <br />
     <br />
 
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
-    &gt;&gt;a2=std.toarray{<span class="auto-style3">1</span>, "c"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
+    &gt;&gt;a2=std.util.toarray{<span class="auto-style3">1</span>, "c"} <br />
 
     <br />
 
@@ -1187,7 +1190,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
     &gt;&gt;a:insert(3, "c") <br />
     ERROR: Requested position index exceeds array's size. <br />
 
@@ -1352,7 +1355,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;arr=std.toarray{1, 2, "a", "b"} <br />
+    &gt;&gt;arr=std.util.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;arr:capacity() <br />
     4	<br />
 
@@ -1403,7 +1406,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;arr=std.toarray{1, 2, "a", "b"} <br />
+    &gt;&gt;arr=std.util.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;a <br />
     1&emsp; 2&emsp; "a"&emsp; "b"	<br />
     &gt;&gt;#a <br />
@@ -1466,7 +1469,7 @@
 <p>Shuffles the order of the elements in the Array.</p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, "a", "b"} <br />
     <br />
     &gt;&gt;a:shuffle() <br />
     <br />
@@ -1509,7 +1512,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{2, "c", "a", "d", 1} <br />
+    &gt;&gt;a=std.util.toarray{2, "c", "a", "d", 1} <br />
     &gt;&gt;a <br />
     2&emsp; "c"&emsp; "a"&emsp; "d"&emsp; 1 <br />
 
@@ -1556,7 +1559,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>", "a", 
+    &gt;&gt;a=std.util.toarray{1, "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>", "a", 
     "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>"} <br />
     
     &gt;&gt;a <br />
