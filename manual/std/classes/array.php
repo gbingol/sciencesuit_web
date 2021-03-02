@@ -89,7 +89,7 @@
 
 <ol class="linespaced">
     <li>
-        Can contain real numbers (float, integer) and non-numeric 
+        Can contain real (float, integer) and complex numbers and also non-numeric 
         (string, <span class="LuaKeyword">nil</span>) values. 
     </li>
     
@@ -1091,6 +1091,48 @@
 
 
 
+<h3 id="keep_realnumbers">keep_complexnumbers</h3>
+
+<p class="funcsignature">
+    keep_complexnumbers()
+</p>
+
+<p>
+    Only keep complex numbers and discard the others.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
+    
+    <br>
+    
+    &gt;&gt;arr:keep_complexnumbers() <br>
+    
+    <br>
+    &gt;&gt;arr <br>
+    3 + 2i
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
 <h3 id="keep_numbers">keep_numbers</h3>
 
 <p class="funcsignature">
@@ -1098,21 +1140,20 @@
 </p>
 
 <p>
-    Only keep the numbers and discard the others.
+    Only keep numbers (real and complex) and discard the others.
 </p>
 
 <p class="CodeCommand">
     &gt;&gt;arr <br>
-    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 &emsp; <span class="LuaKeyword">nil</span><br>
-
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
+    
     <br>
     
     &gt;&gt;arr:keep_numbers() <br>
     
     <br>
-    
     &gt;&gt;arr <br>
-    1 &emsp; 2 &emsp; 3.5   
+    1  &emsp; 2 &emsp;  3 + 2i   
 </p>
 
 
@@ -1126,6 +1167,42 @@
 <p>&nbsp;</p>
 
 
+
+
+
+
+<h3 id="keep_realnumbers">keep_realnumbers</h3>
+
+<p class="funcsignature">
+    keep_realnumbers()
+</p>
+
+<p>
+    Only keep real numbers and discard the others.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
+    
+    <br>
+    
+    &gt;&gt;arr:keep_realnumbers() <br>
+    
+    <br>
+    &gt;&gt;arr <br>
+    1  &emsp; 2 
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
@@ -1227,18 +1304,18 @@
 </p>
    
 <p>
-    Removes all the elements of type number (float, integer).
+    Removes all the elements of type number (real and complex).
 </p>
 
 <p class="CodeCommand">
     &gt;&gt;arr <br>
-    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5 <br>
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
     
     <br>
     
     &gt;&gt;arr:remove_numbers() <br>
     &gt;&gt;arr <br>
-    "a" &emsp;  "b"  &emsp;  nil
+    "A" &emsp;  "b"  &emsp;  <span class="LuaKeyword">nil</span>
     
 </p>
 
