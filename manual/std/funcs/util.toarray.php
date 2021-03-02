@@ -27,7 +27,7 @@
  
     
     
-<h1>toarray</h1>
+<h1>util.toarray</h1>
 
 <p>
     Converts a given iteratable container to a 
@@ -38,7 +38,7 @@
 
 
 <p class="funcsignature">
-    toarray(container=) &rarr; nil / Array, integer, integer 
+    util.toarray(container=) &rarr; nil / Array, integer, integer 
 </p>
 
 <p>
@@ -60,7 +60,7 @@
     
     <br>
     
-    &gt;&gt;std.toarray(t) <br>
+    &gt;&gt;std.util.toarray(t) <br>
     1 &emsp; 2 &emsp; "a" &emsp; "b" &emsp; 3 <br>	
     3	<br>
     2	
@@ -92,7 +92,7 @@
     
     <br>
     
-    &gt;&gt;std.toarray(v) <br>
+    &gt;&gt;std.util.toarray(v) <br>
     0.0238247 &emsp; 0.656005 &emsp; 0.879824 &emsp; 0.629283 <br>
     4	<br>
     0	
@@ -121,7 +121,7 @@
     
     <br>
 
-    &gt;&gt;std.toarray(m) <br>
+    &gt;&gt;std.util.toarray(m) <br>
     0.77254 &emsp; 0.395152 &emsp; 0.775774 &emsp; 0.243749 <br>	
     4	<br>
     0
@@ -140,8 +140,8 @@
 
 
 <div class="RelatedLinks">
-    <a href="tovector.php">std.tovector</a>
-    <a href="tomatrix.php">std.tomatrix</a>
+    <a href="util.tovector.php">std.util.tovector</a>
+    <a href="util.tomatrix.php">std.util.tomatrix</a>
 </div>
 
 

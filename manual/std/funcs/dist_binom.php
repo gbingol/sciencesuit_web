@@ -121,7 +121,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{7, 8, 9} <br />
+    &gt;&gt;x=std.util.tovector{7, 8, 9} <br />
     &gt;&gt;probs=std.dbinom{x=x, trials=9, prob=0.94} <br />
     &gt;&gt;std.sum(probs) <br />
     0.986

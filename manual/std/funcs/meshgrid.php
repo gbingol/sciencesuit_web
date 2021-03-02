@@ -87,8 +87,8 @@
 
 
 <div class="CodeCommand">
-    &gt;&gt;x=std.tovector{1, 2, 3} <br />
-    &gt;&gt;y=std.tovector{1, 2, 3, 4, 5}  <br />
+    &gt;&gt;x=std.util.tovector{1, 2, 3} <br />
+    &gt;&gt;y=std.util.tovector{1, 2, 3, 4, 5}  <br />
     <br />
 
     &gt;&gt;X,Y=std.meshgrid(x, y) <br />

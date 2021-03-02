@@ -732,7 +732,7 @@
 
 <p><b>1)</b> Obtain a chart first using commands:</p>
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{0, 1, 2, 3} <br />
+    &gt;&gt;x=std.util.tovector{0, 1, 2, 3} <br />
     &gt;&gt;y=x^2 <br />
 
     <br />

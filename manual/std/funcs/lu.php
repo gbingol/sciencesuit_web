@@ -80,7 +80,7 @@
 <p>For a square matrix:</p>
 
 <div class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {10, -7, 0}, {-3, 2, 6} , {5, -1, 5} } <br>
+    &gt;&gt;m=std.util.tomatrix{ {10, -7, 0}, {-3, 2, 6} , {5, -1, 5} } <br>
     &gt;&gt; m  <br>
 
     <table class="spaced">

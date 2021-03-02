@@ -78,7 +78,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;A=std.tomatrix{ {1,3}, {2,4}} <br>
+    &gt;&gt;A=std.util.tomatrix{ {1,3}, {2,4}} <br>
     
     <br>
     

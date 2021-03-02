@@ -60,7 +60,7 @@
 <h3>Example:</h3>
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{1, 2, 3, 4} <br>
+    &gt;&gt;x=std.util.tovector{1, 2, 3, 4} <br>
       &gt;&gt;y=2.1*std.exp(3.4*x) <br>
 
       <br>
@@ -83,7 +83,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{1, 2, 3, 4} <br>
+    &gt;&gt;x=std.util.tovector{1, 2, 3, 4} <br>
      &gt;&gt;y=2.1*std.exp(3.4*x) <br>
 
     <br>

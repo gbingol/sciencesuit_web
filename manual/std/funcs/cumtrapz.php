@@ -130,8 +130,8 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{1, 2, 3, 4, 5}<br>
-    &gt;&gt;y=std.tovector{1, 4, 9, 16, 25}<br>
+    &gt;&gt;x=std.util.tovector{1, 2, 3, 4, 5}<br>
+    &gt;&gt;y=std.util.tovector{1, 4, 9, 16, 25}<br>
 
     <br />
 
@@ -150,8 +150,8 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;arr_x=std.toarray{1, 2, 3, 4, 5} <br>
-    &gt;&gt;arr_y=std.tovector{1, 4, 9, 16, 25}<br>
+    &gt;&gt;arr_x=std.util.toarray{1, 2, 3, 4, 5} <br>
+    &gt;&gt;arr_y=std.util.tovector{1, 4, 9, 16, 25}<br>
     
     <br>
     
@@ -169,8 +169,8 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;arr=std.toarray{1, 2, 3, 4, 5} <br>
-    &gt;&gt;vec=std.tovector{1, 4, 9, 16, 25}<br>
+    &gt;&gt;arr=std.util.toarray{1, 2, 3, 4, 5} <br>
+    &gt;&gt;vec=std.util.tovector{1, 4, 9, 16, 25}<br>
     
     <br>
 
@@ -198,7 +198,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;node=std.toarray{1, 2, 3, 4, 5} <br>
+    &gt;&gt;node=std.util.toarray{1, 2, 3, 4, 5} <br>
     
     <br>
     
@@ -211,7 +211,7 @@
     <br>
     <br>
     
-    &gt;&gt;node=std.tovector{1, 2, 3, 4, 5} <br>
+    &gt;&gt;node=std.util.tovector{1, 2, 3, 4, 5} <br>
     
     <br>
     

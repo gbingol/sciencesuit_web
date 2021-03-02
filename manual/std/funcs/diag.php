@@ -46,7 +46,7 @@
 
 
 <div class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} } <br />
+    &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} } <br />
     &gt;&gt;m <br />
     <table class="matrix">
         <tr>
@@ -68,12 +68,12 @@
     </table>
     <br />
     &gt;&gt;std.diag(m) <br />
-    1&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; COL <br />
+    1&emsp; 5&emsp; 9&emsp; COL <br />
 
    <br />
     <br />
 
-    &gt;&gt;m2=std.tomatrix{ {1, 2} , {4, 5} , {7, 8} } <br />
+    &gt;&gt;m2=std.util.tomatrix{ {1, 2} , {4, 5} , {7, 8} } <br />
     &gt;&gt;m2 <br />
        <table class="matrix">
         <tr>
@@ -95,12 +95,12 @@
     </table>
     <br />
     &gt;&gt;std.diag(m2) <br />
-    1&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; COL <br />
+    1&emsp; 5&emsp; COL <br />
 
     <br />
     <br />
 
-    &gt;&gt;m3=std.tomatrix{ {1, 2, 3} , {4, 5, 6} }
+    &gt;&gt;m3=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} }
     <table class="matrix">
         <tr>
             <td>1</td>
@@ -115,7 +115,7 @@
     </table>
     <br />
     &gt;&gt;std.diag(m3)<br />
-    1&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; COL
+    1&emsp; 5&emsp; COL
 </div>
 
 

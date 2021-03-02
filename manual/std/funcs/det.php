@@ -36,13 +36,13 @@
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 3, 2}, {4, 5, 6}, {7, 8, 9}} <br />
+    &gt;&gt;m=std.util.tomatrix{ {1, 3, 2}, {4, 5, 6}, {7, 8, 9}} <br />
 
     &gt;&gt;m <br />
 
-    1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2 <br />
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6 <br />
-    7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9 <br />
+    1&emsp; 3&emsp; 2 <br />
+    4&emsp; 5&emsp; 6 <br />
+    7&emsp; 8&emsp; 9 <br />
 
     <br />
     &gt;&gt;std.det(m) <br />

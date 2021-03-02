@@ -44,12 +44,12 @@
 <p class="CodeCommand">
     &gt;&gt;v=std.rand(4) <br>
     &gt;&gt;v <br>
-    0.0238247 &nbsp;&nbsp;&nbsp;  0.656005 &nbsp;&nbsp;&nbsp;  0.879824  &nbsp;&nbsp;&nbsp; 0.629283  &nbsp;&nbsp;&nbsp; COL <br>
+    0.0238247&emsp;  0.656005&emsp;  0.879824 &emsp; 0.629283 &emsp; COL <br>
     
     <br>
     
-    &gt;&gt;std.totable(v) <br>
-    0.0238247 &nbsp;&nbsp;&nbsp; 0.656005 &nbsp;&nbsp;&nbsp; 0.879824 &nbsp;&nbsp;&nbsp; 0.629283
+    &gt;&gt;std.util.totable(v) <br>
+    0.0238247&emsp; 0.656005&emsp; 0.879824&emsp; 0.629283
 </p>
 
 
@@ -64,12 +64,12 @@
     &gt;&gt;type(arr) <br>
     Array <br>
     &gt;&gt;arr <br>
-    "Treatment" &nbsp;&nbsp;&nbsp; 24 &nbsp;&nbsp;&nbsp; 43 &nbsp;&nbsp;&nbsp; 58 &nbsp;&nbsp;&nbsp; 71 &nbsp;&nbsp;&nbsp; 43	<br>
+    "Treatment"&emsp; 24&emsp; 43&emsp; 58&emsp; 71&emsp; 43	<br>
     
     <br>
 
-    &gt;&gt;std.totable(arr) <br>
-    Treatment &nbsp;&nbsp;&nbsp; 24 &nbsp;&nbsp;&nbsp; 43 &nbsp;&nbsp;&nbsp; 58 &nbsp;&nbsp;&nbsp; 71 &nbsp;&nbsp;&nbsp;43
+    &gt;&gt;std.util.totable(arr) <br>
+    Treatment&emsp; 24&emsp; 43&emsp; 58&emsp; 71&emsp;43
 </p>
 
 
@@ -84,21 +84,21 @@
 <p class="CodeCommand">
     &gt;&gt;m=std.rand(2, 2) <br>
     &gt;&gt;m <br>
-    0.77254  &nbsp;&nbsp;&nbsp;  0.39515 <br>
-    0.77577  &nbsp;&nbsp;&nbsp;  0.24375 <br>
+    0.77254 &emsp;  0.39515 <br>
+    0.77577 &emsp;  0.24375 <br>
     
     <br>
 
-    &gt;&gt;std.totable(m, <span style="color: blue;">true</span>) <br>
-    0.77254 &nbsp;&nbsp;&nbsp; 0.395152 &nbsp;&nbsp;&nbsp; 0.775774 &nbsp;&nbsp;&nbsp; 0.243749	
+    &gt;&gt;std.util.totable(m, <span style="color: blue;">true</span>) <br>
+    0.77254&emsp; 0.395152&emsp; 0.775774&emsp; 0.243749	
 </p>
 
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
-    &gt;&gt;t=std.totable(m) <br>
+    &gt;&gt;t=std.util.totable(m) <br>
     &gt;&gt;t <br>
-    table &nbsp;&nbsp;&nbsp; table	<br>
+    table&emsp; table	<br>
     <br>
     &gt;&gt;t[1][1] <br>
     0.77254
@@ -119,26 +119,26 @@
     
     <br>
     
-    &gt;&gt;t=std.totable(rng) <br>
+    &gt;&gt;t=std.util.totable(rng) <br>
     &gt;&gt;t <br>
-    table &nbsp;&nbsp;&nbsp; table &nbsp;&nbsp;&nbsp; table &nbsp;&nbsp;&nbsp; table	 <br>
+    table&emsp; table&emsp; table&emsp; table	 <br>
     &gt;&gt;t[2][2] <br>
     42	<br>
     
     <br>
     <br>
     
-    &gt;&gt;std.totable(rng, <span style="color: blue;">true</span>) <br>
-    Treatment &nbsp;&nbsp;&nbsp; Control &nbsp;&nbsp;&nbsp; 24 &nbsp;&nbsp;&nbsp; 42 &nbsp;&nbsp;&nbsp; 43 &nbsp;&nbsp;&nbsp; 
-    43 &nbsp;&nbsp;&nbsp; 58 &nbsp;&nbsp;&nbsp;55
+    &gt;&gt;std.util.totable(rng, <span style="color: blue;">true</span>) <br>
+    Treatment&emsp; Control&emsp; 24&emsp; 42&emsp; 43&emsp; 
+    43&emsp; 58&emsp;55
 </p>
 
 <p>&nbsp;</p>
 
 <div class="RelatedLinks">
-    <a href="toarray.php">std.toarray</a>
-    <a href="tomatrix.php">std.tomatrix</a>
-    <a href="tovector.php">std.tovector</a>
+    <a href="util.toarray.php">std.util.toarray</a>
+    <a href="util.tomatrix.php">std.util.tomatrix</a>
+    <a href="util.tovector.php">std.util.tovector</a>
 </div>
 
 

@@ -109,10 +109,10 @@
     
     <br>
     
-    &gt;&gt;vec=std.tovector{1,2,3} <br>
+    &gt;&gt;vec=std.util.tovector{1,2,3} <br>
     
     &gt;&gt;std.dunif{x=vec, min=1, max=5} <br>
-    0.25&nbsp;&nbsp;&nbsp; 0.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COL
+    0.25&emsp; 0.25&emsp;&emsp;&nbsp; 0.25&emsp;&emsp;&nbsp; COL
 </p>
 
 
@@ -162,13 +162,13 @@
 
     <br />
 
-    &gt;&gt;std.punif{q=std.tovector{0, 1, 2}, min=-1, max=3} <br />
-    0.25&nbsp;&nbsp;&nbsp; 0.5&nbsp;&nbsp;&nbsp; 0.75&nbsp;&nbsp;&nbsp; COL <br />
+    &gt;&gt;std.punif{q=std.util.tovector{0, 1, 2}, min=-1, max=3} <br />
+    0.25&emsp; 0.5&emsp; 0.75&emsp; COL <br />
 
     <br />
 
-    &gt;&gt;std.punif(std.tovector{0,1}, -2, 2) <br />
-    0.5&nbsp;&nbsp;&nbsp; 0.75&nbsp;&nbsp;&nbsp; COL
+    &gt;&gt;std.punif(std.util.tovector{0,1}, -2, 2) <br />
+    0.5&emsp; 0.75&emsp; COL
 </p>
 
 
@@ -217,13 +217,13 @@
     <br />
     <br />
 
-    &gt;&gt;std.qunif{p=std.tovector{0, 0.25, 0.50, 0.75}, min=1, max=5} <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL <br />
+    &gt;&gt;std.qunif{p=std.util.tovector{0, 0.25, 0.50, 0.75}, min=1, max=5} <br />
+    1&emsp; 2&emsp; 3&emsp; 4&emsp; COL <br />
 
     <br />
 
-    &gt;&gt;std.qunif(std.tovector{0, 0.25, 0.50, 0.75}, 1, 5) <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL
+    &gt;&gt;std.qunif(std.util.tovector{0, 0.25, 0.50, 0.75}, 1, 5) <br />
+    1&emsp; 2&emsp; 3&emsp; 4&emsp; COL
 </p>
 
 
@@ -270,7 +270,7 @@
     <br />
 
     &gt;&gt;std.runif(3) <br />
-    0.920477&nbsp;&nbsp;&nbsp; 0.586343&nbsp;&nbsp;&nbsp; 0.109749&nbsp;&nbsp;&nbsp; COL  <br />
+    0.920477&emsp; 0.586343&emsp; 0.109749&emsp; COL  <br />
 
     <br />
     <br />
@@ -281,7 +281,7 @@
     <br />
 
     &gt;&gt;std.runif{n=4, min=0, max=3} <br />
-    2.8323&nbsp;&nbsp;&nbsp; 1.42823&nbsp;&nbsp;&nbsp; 2.77613&nbsp;&nbsp;&nbsp; 1.99111&nbsp;&nbsp;&nbsp; COL
+    2.8323&emsp; 1.42823&emsp; 2.77613&emsp; 1.99111&emsp; COL
 </p>
 
 

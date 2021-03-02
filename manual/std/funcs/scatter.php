@@ -340,8 +340,8 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{1, 2, 3, 4} <br />
-    &gt;&gt;y=std.tovector{1, 3, 7, 14}
+    &gt;&gt;x=std.util.tovector{1, 2, 3, 4} <br />
+    &gt;&gt;y=std.util.tovector{1, 3, 7, 14}
 </p>
 
 

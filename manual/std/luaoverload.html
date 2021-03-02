@@ -18,7 +18,7 @@
 
 <p>Let's do a demo with cos function. The same rationale is applicable to the other above-mentioned functions as well.</p>
 
-<h3>Using Lua's math library:</h3>
+<h3 id="usingluamathlib">Using Lua's math library:</h3>
 
 <p class="CodeCommand">
     &gt;&gt;math.cos(5)<br>
@@ -38,26 +38,32 @@
 <p class="CodeCommand">
     &gt;&gt;t={1,2,3,4}<br>
     &gt;&gt;std.cos(t)<br>
-    0.540302&nbsp;&nbsp;&nbsp; -0.416147&nbsp;&nbsp;&nbsp; -0.989992&nbsp;&nbsp;&nbsp; -0.653644 
+    0.540302&emsp; -0.416147&emsp; -0.989992&emsp; -0.653644 
 </p>
 
 <p>&nbsp;</p>
 
 
-<h3>Vector</h3>
+<h3 id="vector">Vector</h3>
 
-<p class="CodeCommand">&gt;&gt;v=std.tovector{1, 2, 3, 4}<br>
+<p class="CodeCommand">&gt;&gt;v=std.util.tovector{1, 2, 3, 4}<br>
     &gt;&gt;std.cos(v)<br>
-    0.540302&nbsp;&nbsp;&nbsp; -0.416147&nbsp;&nbsp;&nbsp; -0.989992&nbsp;&nbsp;&nbsp; -0.653644&nbsp;&nbsp;&nbsp; COL
+    0.540302&emsp; -0.416147&emsp; -0.989992&emsp; -0.653644&emsp; COL
 </p>
 
 
-<p>&nbsp;</p>
-<h3>Matrix</h3>
 
-<p class="CodeCommand">&gt;&gt;m=std.tomatrix{ {1,2} , {3,4} }<br>
+
+<p>&nbsp;</p>
+
+
+
+
+<h3 id="matrix">Matrix</h3>
+
+<p class="CodeCommand">&gt;&gt;m=std.util.tomatrix{ {1,2} , {3,4} }<br>
     &gt;&gt;std.cos(m)<br>
-    0.540302&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.416147<br>-0.989992&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -0.653644
+    0.540302&emsp;&emsp; -0.416147<br>-0.989992&emsp;&nbsp;&nbsp; -0.653644
 </p>
 
 
@@ -143,7 +149,7 @@
 
 <p class="CodeCommand">
     function Food:__name()<br>
-    &nbsp;&nbsp;&nbsp;return "Food"   <br>
+    &emsp;return "Food"   <br>
     end
 </p>
 
@@ -181,7 +187,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{10,20,30,40}<br>
+    &gt;&gt;v=std.util.tovector{10, 20, 30, 40}<br>
     
     <br>
     <br>

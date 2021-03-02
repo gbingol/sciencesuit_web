@@ -122,7 +122,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{4.8, 4.0, 3.8, 4.3, 3.9, 4.6, 3.1, 3.7} <br />
+    &gt;&gt;v=std.util.tovector{4.8, 4.0, 3.8, 4.3, 3.9, 4.6, 3.1, 3.7} <br />
 
     <br />
 
@@ -136,12 +136,12 @@
     <br>
     
     &gt;&gt;tbl <br />
-    lower=table&nbsp;&nbsp;&nbsp; interpolated=table&nbsp;&nbsp;&nbsp; upper=table&nbsp;&nbsp;&nbsp; ngreater=7&nbsp;&nbsp;&nbsp; nequal=0  <br />
+    lower=table&emsp; interpolated=table&emsp; upper=table&emsp; ngreater=7&emsp; nequal=0  <br />
 
      <br />
 
     &gt;&gt;tbl.interpolated <br />
-    CILow=3.505&nbsp;&nbsp;&nbsp; CIHigh=4.665&nbsp;&nbsp;&nbsp; prob=0.95
+    CILow=3.505&emsp; CIHigh=4.665&emsp; prob=0.95
 </p>
 
 

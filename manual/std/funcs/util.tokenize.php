@@ -180,12 +180,17 @@
 
 
 <p>&nbsp;</p>
-<p>If whitespace characters (&#39; &#39; and &#39;\t&#39;) are of interest:</p>
+
+
+
+<p>
+    If whitespace characters (&#39; &#39; and &#39;\t&#39;) are of interest:
+</p>
 
 <p class="CodeCommand">
     &gt;&gt;str="<span class="LuaKeyword">if</span>(a==3) <span class="auto-style1">then</span> b=5E-3 <span class="auto-style1">end</span>" <br />
     <br />
-    &gt;&gt;std.tokenize(str) <br />
+    &gt;&gt;std.util.tokenize(str) <br />
     <span class="LuaKeyword">if</span>&emsp; (&emsp; a&emsp; ==&emsp; 3&emsp; )&emsp; <span class="auto-style1">then</span>&emsp; b&emsp; =&emsp; 5E-3&emsp; <span class="auto-style1">end</span>    <br />	
 
     <br />
@@ -197,7 +202,12 @@
     rword&emsp; brkt&emsp; name&emsp; binop&emsp; num&emsp; brkt&emsp; wspc&emsp; rword&emsp; wspc&emsp; name&emsp; asgnt&emsp; num&emsp; wspc&emsp; rword	<br />
 </p>
 
+
+
 <p>&nbsp;</p>
+
+
+
 
 <p>If whitespace characters are not of interest:</p>
 
@@ -226,9 +236,12 @@
 
 
 
+
+
+
 <div class="RelatedLinks">
     <a href="activeworksheet.php">activeworksheet</a>
-    <a href="tovector.php">tovector</a>
+    <a href="util.tovector.php">util.tovector</a>
 </div>
 
 

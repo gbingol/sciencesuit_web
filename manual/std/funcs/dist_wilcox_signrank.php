@@ -120,7 +120,7 @@
 
     <br />
 
-    &gt;&gt;v=std.tovector{2, 3} <br />
+    &gt;&gt;v=std.util.tovector{2, 3} <br />
     
     &gt;&gt;std.dsignrank{x=v, n=4} <br />
     0.0625&emsp;&nbsp; 0.125&emsp;&nbsp; COL

@@ -83,7 +83,7 @@
 
     <br />
 
-    &gt;&gt;v=std.tovector{3.5, 4.5} <br />
+    &gt;&gt;v=std.util.tovector{3.5, 4.5} <br />
     &gt;&gt;std.polyval(coef, v) <br />
     81.875 &emsp; 149.125 &emsp; COL
 </p>
@@ -102,7 +102,7 @@
 <div class="RelatedLinks">
     <a href="polyfit.php">polyfit</a>
     <a href="../classes/vector.php">Vector</a>
-    <a href="tovector.php">tovector</a>
+    <a href="util.tovector.php">util.tovector</a>
 </div>
 
 </body>

@@ -70,7 +70,7 @@
     
     <span class="LuaComment">--Vector</span><br>
     
-    &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
+    &gt;&gt;v=std.util.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
     3 &emsp; 5 &emsp; 2 &emsp; 1 &emsp; 7 &emsp; 4 &emsp; COL <br />
     <br />

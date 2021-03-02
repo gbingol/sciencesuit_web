@@ -495,7 +495,7 @@
 
 
 <div class="RelatedLinks">
-    <a href="tokenize.php">tokenize</a>
+    <a href="util.tokenize.php">util.tokenize</a>
     
 </div>
 

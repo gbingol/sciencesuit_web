@@ -208,7 +208,7 @@
         
         <br>
         
-        &gt;&gt;x=std.tovector{2, 1, 3, 6, 4} <br>
+        &gt;&gt;x=std.util.tovector{2, 1, 3, 6, 4} <br>
 
         <br>
 
@@ -217,7 +217,8 @@
     </p>
     
     <p>
-        The above-commands will produce the following chart. For more details, please see <a href="../../std/funcs/boxplot.php">std.boxplot</a> command.
+        The above-commands will produce the following chart. For more details, 
+        please see <a href="../../std/funcs/boxplot.php">std.boxplot</a> command.
     </p>
     
     <img src="images/simplechart_usingcommands.png" alt=""/>
@@ -290,11 +291,30 @@
     
     <img src="images/addseries_chartsingleseriesplotted.png" alt=""/>
         
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-     <p>&nbsp;</p>
     
-    <!-----------------------------------------------Update and Delete Series -------------------------------------------------->
+    
+    
+    
+    
+    
+    
+    
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+   
+     
+     
+     
+     
+     
+     
+    
+    
+     
+     
     
     <h2 id="updatedeleteseries">2) Updating and Deleting Series</h2>
 
@@ -322,8 +342,19 @@
         however, its name can be changed.
     </p>
     
-    <p>  &nbsp;</p>
-    <p> &nbsp;</p>
+    
+    
+    
+    
+    
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    
+    
+    
+    
     
     
     <h3 id="Deleting_Series"> B) Deleting Series</h3>
@@ -340,14 +371,26 @@
 
     <p> <b>2)</b> Simply select the <em>Delete</em> option.</p>
     
-    <p>  &nbsp;</p>
-    <p> &nbsp;</p>
-     <p>&nbsp;</p>
     
     
     
     
-    <!--------------------------------------------------Customize Chart ----------------------------------------------------------->
+    
+    
+    
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
      
 <h2 id="customizechart">3) Customizing the Chart</h2>
 
@@ -372,8 +415,10 @@
         <li><em>Show Mean Line:</em> If the mean line lies in the box, it will be shown.</li>
     </ul>
     
+    
     <p>&nbsp;</p>
 
+    
     <h4>Line Tab</h4>
     
     <p>
@@ -395,215 +440,259 @@
        
     <img src="images/formatseriesdlg_filltab.png" alt=""/>
 
-    <p>&nbsp;</p>
-    <p> &nbsp;</p>
+    
+    
+    
+    
+    
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
   
 
     
-    <h3  id="Axis_Options">B) Axis Options</h3>
-
-    <p>
-        Should you wish to, the chart allows changing the boundaries of its axis.
-    </p>
-
-    <p><b>1)</b> Right-click on the axis and select "<em>Format Axis...</em>"</p>
-
-
-    <p>&nbsp;</p>
-    <p>
-        <b>2)</b> For the the <a href="#updateseriescontextmenu">chart seen</a>, the following dialog will be shown:
-    </p>
-
-    <img src="images/axisproperties_originalbounds.png" alt=""/>
     
-    <p>
-        The bounds (minimum, maximum) are shown. Modifying the bounds, such that <br>
-        <em>Bounds</em> &rarr; Minimum: 1&nbsp;&nbsp;&nbsp; Maximum: 8  <br>
-        will modify the chart as follows:
-    </p>
-
-    <img src="images/axisproperties_chart_boundsmodified.png" alt=""/>
-
-    <p>
-        If you had a large number of data and <em>Show Inner Points</em> option was on, re-scaling the axis would 
-        "filter" the data to contain only the points between the newly chosen scale.
-    </p>
     
-
-    <p>&nbsp;</p>
-    <p>If you right-click on the horizontal axis again and select the "<em>Format Axis...</em>", the dialog will be shown as follows:</p>
-
-    <img src="images/axisproperties_resetbuttonsactive.png" alt=""/>
     
-    <p>
-        It is seen that the "<em>Reset</em>" buttons are active and if any of the "<em>Reset</em>" button is clicked 
-        the bounds will be reset to its value that had been calculated automatically, i.e., 0 for minimum and 9 for maximum.
-    </p>
-        
-        
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-   
+<h3  id="Axis_Options">B) Axis Options</h3>
+
+<p>
+    Should you wish to, the chart allows changing the boundaries of its axis.
+</p>
+
+<p><b>1)</b> Right-click on the axis and select "<em>Format Axis...</em>"</p>
 
 
-    <h3>C) Context-Menu Options</h3>
+<p>&nbsp;</p>
+<p>
+    <b>2)</b> For the the <a href="#updateseriescontextmenu">chart seen</a>, the following dialog will be shown:
+</p>
 
-     <p>
-         Two different context-menu will be shown: <b>i)</b> Series, <b>ii)</b> Chart.
-    </p>
-    
-    <h4>i) Series</h4>
-            
-    <p>
-        To be able to access the series options, just right-click on the particular series and the context-menu 
-        will offer the necessary options as shown below:
-    </p>
-    
-    <img src="images/contextmenu_series.png" alt=""/> 
-    
-    <p>
-        Except <em>Display Name</em> option, in sections <a href="#customizechart">customizing the chart</a> and <a href="#updatedeleteseries">update/delete series</a> 
-        we covered the menu options. Display name is self-explanatory and simply displays the name of the series as shown below:
-    </p>
+<img src="images/axisproperties_originalbounds.png" alt=""/>
 
-    <img src="images/contextmenu_displayname_chartunformattedtext.png" alt=""/>
-    
-    <p id="formattextbox">
-        Right-clicking on the name will show the following options for textbox, which is extensively covered <a href="../chartelements.php#textbox">here</a>.
-    </p>
-    
-    <img src="images/seriesname_format.png" alt=""/>
-    
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    
-    <h4>ii) Chart</h4>
-    
-    <p>
-        To be able to access the chart options, just right-click on any area (not containing any chart element) on the chart and the context-menu 
-        will offer the necessary options as shown below:
-    </p>
-    
-    <img src="images/contextmenu_chart.png" alt=""/>
-    
-    <ul class="space10px">
-        <li><em>Add New Series</em> and <em>Add Visible Selection</em> options are already covered in <a href="#New_Selection">new selection</a> section.</li>
-        <li><em>Flip Orientation</em> option is covered <a href="#fliporientation">here</a></li>
-        <li><em>Add Chart Title:</em> A title on the top part of the chart will be shown.</li>
-        <li><em>Add Legend:</em> A legend will be shown.</li>
-    </ul>
-    
-    
-    <p>&nbsp;</p>
-    
-    <p>
-        If you add a chart title and <em>left-click</em> on the title you will be able to edit the title and if you 
-        <em>right-click</em> on the title, the following options will be displayed:
-    </p>
-    
-    <img src="images/charttitle_contextmenuoptions.png" alt=""/>
-    
-    <p>
-        The "Font..." options displayed are covered in <a href="../chartelements.php#textbox">chart elements page</a>.
-    </p>
-    
-    <p>&nbsp;</p>
-    
-    <p>
-        If you click on <em>"Add Legend"</em> and right-click on the legend, the following options, which are discussed 
-        <a href="../chartelements.php#legend">here</a>, will be shown:
-    </p>
-    
-    <img src="images/legend_contextmenu.png" alt=""/>
+<p>
+    The bounds (minimum, maximum) are shown. Modifying the bounds, such that <br>
+    <em>Bounds</em> &rarr; Minimum: 1&nbsp;&nbsp;&nbsp; Maximum: 8  <br>
+    will modify the chart as follows:
+</p>
 
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-     <p>&nbsp;</p>
-    
-    
-    <!------------------------------------------------------Multiple Series ------------------------------------------------------------>
-    
-    <h2>4) <a id="plotmultipleseries">Plotting Multiple Series</a></h2>
+<img src="images/axisproperties_chart_boundsmodified.png" alt=""/>
 
-    <p>There are different ways to plot multiple series on the same plot window. Here, the most common approaches will be presented.</p>
-    <p>&nbsp;</p>
+<p>
+    If you had a large number of data and <em>Show Inner Points</em> option was on, re-scaling the axis would 
+    "filter" the data to contain only the points between the newly chosen scale.
+</p>
+
+
+<p>&nbsp;</p>
+<p>If you right-click on the horizontal axis again and select the "<em>Format Axis...</em>", the dialog will be shown as follows:</p>
+
+<img src="images/axisproperties_resetbuttonsactive.png" alt=""/>
+
+<p>
+    It is seen that the "<em>Reset</em>" buttons are active and if any of the "<em>Reset</em>" button is clicked 
+    the bounds will be reset to its value that had been calculated automatically, i.e., 0 for minimum and 9 for maximum.
+</p>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
-    <h3>A) Selection</h3>
+<h3 id="contextmenuopts">C) Context-Menu Options</h3>
 
-    <p>
-        This has already been discussed in the <a href="#Existing_Selection">first section</a>. 
-    </p>
+<p>
+    Two different context-menu will be shown: <b>i)</b> Series, <b>ii)</b> Chart.
+</p>
+
+<h4>i) Series</h4>
+
+<p>
+    To be able to access the series options, just right-click on the particular series and the context-menu 
+    will offer the necessary options as shown below:
+</p>
+
+<img src="images/contextmenu_series.png" alt=""/> 
+
+<p>
+    Except <em>Display Name</em> option, in sections <a href="#customizechart">customizing the chart</a> and <a href="#updatedeleteseries">update/delete series</a> 
+    we covered the menu options. Display name is self-explanatory and simply displays the name of the series as shown below:
+</p>
+
+<img src="images/contextmenu_displayname_chartunformattedtext.png" alt=""/>
+
+<p id="formattextbox">
+    Right-clicking on the name will show the following options for textbox, which is extensively covered <a href="../chartelements.php#textbox">here</a>.
+</p>
+
+<img src="images/seriesname_format.png" alt=""/>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+ <h4>ii) Chart</h4>
+    
+<p>
+    To be able to access the chart options, just right-click on any area (not containing any chart element) on the chart and the context-menu 
+    will offer the necessary options as shown below:
+</p>
+
+<img src="images/contextmenu_chart.png" alt=""/>
+
+<ul class="space10px">
+    <li><em>Add New Series</em> and <em>Add Visible Selection</em> options are already covered in <a href="#New_Selection">new selection</a> section.</li>
+    <li><em>Flip Orientation</em> option is covered <a href="#fliporientation">here</a></li>
+    <li><em>Add Chart Title:</em> A title on the top part of the chart will be shown.</li>
+    <li><em>Add Legend:</em> A legend will be shown.</li>
+</ul>
+
+
+<p>&nbsp;</p>
+
+<p>
+    If you add a chart title and <em>left-click</em> on the title you will be able to edit the title and if you 
+    <em>right-click</em> on the title, the following options will be displayed:
+</p>
+
+<img src="images/charttitle_contextmenuoptions.png" alt=""/>
+
+<p>
+    The "Font..." options displayed are covered in <a href="../chartelements.php#textbox">chart elements page</a>.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    If you click on <em>"Add Legend"</em> and right-click on the legend, the following options, which are discussed 
+    <a href="../chartelements.php#legend">here</a>, will be shown:
+</p>
+
+<img src="images/legend_contextmenu.png" alt=""/>
 
 
 
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
 
 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    
+    
   
 
-    <h3>B) Using Only Commands</h3>
-    
-    <p>
-        If there is already a plot window and the handle, <em>hwnd</em>, is known:
-    </p>
-
-    <p class="CodeCommand">
-        &gt;&gt;x=std.tovector{2, 1, 3, 6, 4} <br/>
-        &gt;&gt;y=std.tovector{7, 7, 8, 4, 2} <br/>
-        
-        <br/>
-
-        <span style="color: green">--Creates a plot window, handle <em>hwnd</em>, with series <b>x</b></span> <br/>
-        &gt;&gt;hwnd=std.boxplot{x} <br/>
-        
-        <br/>
-        
-        <span style="color: green">--Adds series <b>y</b> on the plot window with handle <em>hwnd</em></span> <br/>
-        &gt;&gt;std.boxplot{y, hwnd=hwnd}
-    </p>
-
-    <p>&nbsp;</p>
-    
-    <p>
-        Same as above command sequences; however, creates multiple series using a single-command:
-    </p>
-    
-    <p class="CodeCommand">
-        &gt;&gt;x=std.tovector{2, 1, 3, 6, 4} <br/>
-        &gt;&gt;y=std.tovector{7, 7, 8, 4, 2} <br/>
-        
-        <br/>
-        
-        &gt;&gt;std.boxplot{x,y}
-    </p>
-
-    <img src="images/fromexistingselection_simplechart.png" alt=""/>
-
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
 
 
-    <h3>C) Selection & Command</h3>
-    <p>
-        If there is already a plot window with series on it, you can use <a href="../../std/funcs/plothwnd.php">std.plothwnd</a> to 
-        obtain the <em>window handle, hwnd</em> and then use <a href="../../std/funcs/boxplot.php">std.boxplot</a> to add series on 
-        the plot window. 
-    </p>
+
+
+
+
 
     
-    
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-     
-   <div class="RelatedLinks">
-       <a href="../scatter/scatterchart.php">Scatter chart</a>
-       <a href="../../std/funcs/boxplot.php">std.boxplot</a>
-       <a href="../../std/funcs/scatter.php">std.scatter</a>
-   </div>
+<h2 id="plotmultipleseries">4) Plotting Multiple Series</h2>
+
+<p>There are different ways to plot multiple series on the same plot window. Here, the most common approaches will be presented.</p>
+<p>&nbsp;</p>
+
+
+
+<h3 id="plotmultiple_selection">A) Selection</h3>
+
+<p>
+    This has already been discussed in the <a href="#Existing_Selection">first section</a>. 
+</p>
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+<h3 id="plotmultiple_onlycmds">B) Using Only Commands</h3>
+
+<p>
+    If there is already a plot window and the handle, <em>hwnd</em>, is known:
+</p>
+
+
+<p class="CodeCommand">
+    &gt;&gt;x=std.util.tovector{2, 1, 3, 6, 4} <br/>
+    &gt;&gt;y=std.util.tovector{7, 7, 8, 4, 2} <br/>
+
+    <br/>
+
+    <span style="color: green">--Creates a plot window, handle <em>hwnd</em>, with series <b>x</b></span> <br/>
+    &gt;&gt;hwnd=std.boxplot{x} <br/>
+
+    <br/>
+
+    <span style="color: green">--Adds series <b>y</b> on the plot window with handle <em>hwnd</em></span> <br/>
+    &gt;&gt;std.boxplot{y, hwnd=hwnd}
+</p>
+
+
+
+<p>&nbsp;</p>
+
+<p>
+    Same as above command sequences; however, creates multiple series using a single-command:
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;x=std.util.tovector{2, 1, 3, 6, 4} <br/>
+    &gt;&gt;y=std.util.tovector{7, 7, 8, 4, 2} <br/>
+
+    <br/>
+
+    &gt;&gt;std.boxplot{x,y}
+</p>
+
+<img src="images/fromexistingselection_simplechart.png" alt=""/>
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+<h3 id="plotmultiple_selection_cmd">C) Selection & Command</h3>
+<p>
+    If there is already a plot window with series on it, you can use <a href="../../std/funcs/plothwnd.php">std.plothwnd</a> to 
+    obtain the <em>window handle, hwnd</em> and then use <a href="../../std/funcs/boxplot.php">std.boxplot</a> to add series on 
+    the plot window. 
+</p>
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+<div class="RelatedLinks">
+   <a href="../scatter/scatterchart.php">Scatter chart</a>
+   <a href="../../std/funcs/boxplot.php">std.boxplot</a>
+   <a href="../../std/funcs/scatter.php">std.scatter</a>
+</div>
 
   
 

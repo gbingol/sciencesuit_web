@@ -111,7 +111,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 1, 3, 2, 5, 7, 9} <br />
+    &gt;&gt;v=std.util.tovector{1, 1, 3, 2, 5, 7, 9} <br />
     
     &gt;&gt;std.diff(v) <br />
     0 &emsp; 2 &emsp; -1 &emsp; 3 &emsp; 2 &emsp; 2 &emsp; COL <br>
@@ -119,7 +119,7 @@
     <br>
     <br>
     
-    &gt;&gt;arr=std.toarray(v) <br>
+    &gt;&gt;arr=std.util.toarray(v) <br>
     
     &gt;&gt;std.diff(arr) <br>
     0&emsp; 2&emsp; -1&emsp; 3&emsp; 2&emsp; 2   

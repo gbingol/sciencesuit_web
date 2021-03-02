@@ -53,8 +53,8 @@
 
     <br />
 
-    &gt;&gt;std.tovector(t) <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; COL <br />
+    &gt;&gt;std.util.tovector(t) <br />
+    1&emsp; 2&emsp; 3&emsp; COL <br />
     2	
 </p>
 
@@ -68,15 +68,15 @@
 
 <h3><a href="../classes/matrix.php">Matrix</a></h3>
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2} , {3, 4} } <br />
+    &gt;&gt;m=std.util.tomatrix{ {1, 2} , {3, 4} } <br />
     &gt;&gt;m <br />
-       1&nbsp;&nbsp;&nbsp; 2 <br />
-       3&nbsp;&nbsp;&nbsp; 4 <br />
+       1&emsp; 2 <br />
+       3&emsp; 4 <br />
 
     <br />
 
-    &gt;&gt;std.tovector(m) <br />
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL <br />
+    &gt;&gt;std.util.tovector(m) <br />
+    1&emsp; 2&emsp; 3&emsp; 4&emsp; COL <br />
     0	
 </p>
 
@@ -91,17 +91,24 @@
 <img src="../images/tovector_range.png" alt=""/>
 
 <p class="CodeCommand">
-    &gt;&gt;std.tovector(rng) <br>
-    1 &nbsp;&nbsp;&nbsp;  2 &nbsp;&nbsp;&nbsp;  3 &nbsp;&nbsp;&nbsp;  COL <br>
+    &gt;&gt;std.util.tovector(rng) <br>
+    1 &emsp;  2 &emsp;  3 &emsp;  COL <br>
     3	
 </p>
 
 
+
+
+
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
 <div class="RelatedLinks">
-    <a href="toarray.php">std.toarray</a>
-    <a href="tomatrix.php">std.tomatrix</a>
+    <a href="util.toarray.php">std.util.toarray</a>
+    <a href="util.tomatrix.php">std.util.tomatrix</a>
 </div>
 
 

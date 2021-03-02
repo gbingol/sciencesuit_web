@@ -191,8 +191,8 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{2, 1, 3, 6, 4} <br />
-    &gt;&gt;y=std.toarray{7, 7, 8, 4, 2}
+    &gt;&gt;x=std.util.tovector{2, 1, 3, 6, 4} <br />
+    &gt;&gt;y=std.util.toarray{7, 7, 8, 4, 2}
 </p>
 
 
