@@ -75,6 +75,19 @@
 	$mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
 	include $mainmenuloc;
 ?>
+    
+  
+    
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H3"), false);
+</script>
+
+
+
+
 
 
 <h1>anova</h1>
@@ -95,7 +108,7 @@
 
 
 
-<h3>Arguments:</h3>
+<h3 id="arguments">Arguments:</h3>
 <table class="funcarguments">
     <tr>
         <td>v1, v2...</td> <td>Responses &larr; Vector/Array</td>
@@ -107,7 +120,7 @@
 
 
 
-<h3>Example:</h3>
+<h3 id="example">Example:</h3>
 <p>
     The following data is obtained for relative attractiveness of various luminescent colors 
     to the cereal leaf beetle*. The data shows the colors and the numbers of insects trapped.
