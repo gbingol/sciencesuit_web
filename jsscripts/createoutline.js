@@ -1,12 +1,10 @@
-function MakeElement_Select_OutlineFromH3Tags()
+function MakeElement_Select_OutlineFromTagName(TagName)
 {
+       
     var MainBody = document.body;
 
     var H1Node=document.getElementsByTagName("h1")[0];
-
-    var h3NodeList = document.getElementsByTagName("h3");
-
-
+    
     //Create and append select list
     var selectList = document.createElement("select");
     selectList.style.setProperty("border", "1px blue solid");
@@ -32,25 +30,34 @@ function MakeElement_Select_OutlineFromH3Tags()
     option.disabled=true;
 
    selectList.appendChild(option);
-
-
-    for(var i=0; i<h3NodeList.length; ++i)
+    
+    
+    var NextSibling=H1Node.nextElementSibling;
+    
+    while(NextSibling)
     {
-            
-        var h3Node = h3NodeList[i];
+       if(NextSibling.nodeName.toUpperCase() !== TagName.toUpperCase())
+       {
+           NextSibling = NextSibling.nextElementSibling;
+           
+           continue;
+       }
 
         var option = document.createElement("option");
 
-        var ElemId = h3Node.id;
+        var ElemId = NextSibling.id;
 
         if(ElemId!=="")
         {
             option.value = "#"+ ElemId;
-            option.text = h3Node.innerHTML;
+            option.text = NextSibling.innerHTML;
 
             selectList.appendChild(option);
         }
-     }
+        
+        
+        NextSibling = NextSibling.nextElementSibling;
+    }
 
 
 
@@ -65,15 +72,13 @@ function MakeElement_Select_OutlineFromH3Tags()
 
 
 
-function MakeElement_Details_OutlineFromH2H3Tags()
+function MakeElement_Details_FromOutline(TagNames)
 {
     var MainBody = document.body;
 
     var H1Node=document.getElementsByTagName("h1")[0];
 
-    var h2NodeList = document.getElementsByTagName("h2");
-
-
+    
     //Create and append select list
     var ElemDetails = document.createElement("details");
     
@@ -94,93 +99,102 @@ function MakeElement_Details_OutlineFromH2H3Tags()
     ElemSummary.innerHTML="Show document outline";
 
    ElemDetails.appendChild(ElemSummary);
+   
+   
+   var Occurences= new Array(TagNames.length);
+   Occurences.fill(0);
 
+    var NextSibling=H1Node.nextElementSibling;
+    
+    var PreviousIndex = -1;
+   
 
-
-    var H2Counter=0;
-    for(var i=0; i<h2NodeList.length; ++i)
+    while(NextSibling)
     {
-        var H2HeadingLetter = String.fromCharCode(65 + H2Counter);
         
-        var h2Node = h2NodeList[i];
-
         
-        var ElemId = h2Node.id;
-
-        if(ElemId!=="")
+                
+        var ElemId = NextSibling.id;
+        
+        if(ElemId.trim() === "")
         {
-            var anchor = document.createElement("a");
+            NextSibling = NextSibling.nextElementSibling;
             
-            anchor.href= "#"+ ElemId;
-            anchor.innerText = H2HeadingLetter + ") " + h2Node.innerHTML;
-            
-            ElemDetails.appendChild(anchor);
-        
-            var BreakElem=document.createElement("br");
-        
-            ElemDetails.appendChild(BreakElem);
-            
-            H2Counter++;
+            continue;
         }
-
         
-
-        var NextSibling=h2Node.nextElementSibling;
-
-        var H3Counter=1;
         
-        while(NextSibling)
+        
+        var NodeName = NextSibling.nodeName.toUpperCase();
+        
+        const CurIndex = TagNames.findIndex(element => element.toUpperCase() === NodeName);
+        
+        
+        if(CurIndex === -1)
         {
-            var H3HeadingNumber=""+ H3Counter;
+            NextSibling = NextSibling.nextElementSibling;
             
-            var TagName=NextSibling.nodeName.toUpperCase();
-
-            if(TagName==="H2")
-                break;
-
-            if(TagName!=="H3")
-            {
-                NextSibling=NextSibling.nextElementSibling;
-
-                continue;
-            }
-
-
-
-
-            var anchor = document.createElement("a");
-
-            var ElemId= NextSibling.id;
-
-            if(ElemId==="")
-            {
-                NextSibling=NextSibling.nextElementSibling;
-
-                continue;
-            }
-            
+            continue;
+        }
          
-            anchor.href = "#"+ ElemId;
-            anchor.innerText = H3HeadingNumber + ". " + NextSibling.innerHTML;
-            anchor.style.setProperty("margin-left", "20px");
-            
-
-            ElemDetails.appendChild(anchor);
-
-            var BreakElem=document.createElement("br");
         
-            ElemDetails.appendChild(BreakElem);
+        Occurences[CurIndex] = Occurences[CurIndex] + 1;
+        
+        
+        
+        var HeadingNumber = " " + Occurences[CurIndex];
+        
+        var MarginLeft = "" + (CurIndex*20)+"px";
+
+        
+        var anchor = document.createElement("a");
+
+        anchor.href = "#"+ ElemId;
+        anchor.innerText = HeadingNumber + ". " + NextSibling.innerHTML;
+        anchor.style.setProperty("margin-left", MarginLeft);
+        
+        
+        if(CurIndex === 0 && PreviousIndex>=0)
+        {
+            var ParagraphElement = document.createElement("p");
+            
+            ElemDetails.appendChild(ParagraphElement);
+        }
             
 
-            NextSibling=NextSibling.nextElementSibling;
+        ElemDetails.appendChild(anchor);
+
+        var BreakElem=document.createElement("br");
+        
+        ElemDetails.appendChild(BreakElem);
             
-            H3Counter++;
+        
+        
+        NextSibling = NextSibling.nextElementSibling;
+        
+        
+        
+        
+        /*
+         * if not last index, set lower headings (i.e., h2>h3) to zero
+         * if we find h2, we want h3 and h4 to restart indexing
+         * similarly if we find h3, h4 must restart
+         */
+        
+        var LastIndex = Occurences.length - 1;
+        
+        if(LastIndex - CurIndex > 0)
+        {
+            for(var i=CurIndex+1; i<Occurences.length; ++i)
+                Occurences[i]=0;
         }
         
-         var ParagraphElem=document.createElement("p");
+        PreviousIndex = CurIndex;
         
-        ElemDetails.appendChild(ParagraphElem);
-     }
+    }
+        
+        
+     
 
 }
 
