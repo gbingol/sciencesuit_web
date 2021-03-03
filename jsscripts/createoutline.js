@@ -77,6 +77,11 @@ function MakeElement_Details_FromOutline(TagNames)
     var MainBody = document.body;
 
     var H1Node=document.getElementsByTagName("h1")[0];
+    
+    /*
+        Paragraph element right after outline <details> </details>
+     */
+    var PElement = null;
 
     
     //Create and append select list
@@ -85,12 +90,27 @@ function MakeElement_Details_FromOutline(TagNames)
     ElemDetails.addEventListener("toggle",function()
     {
         if(ElemDetails.hasAttribute("open"))
+        {
             ElemSummary.innerHTML="Close document outline";
+            
+            //leave a clear separation with the next following element by inserting an empty paragraph after </details>
+
+            PElement = document.createElement("p");
+            PElement.innerHTML="&nbsp;";
+
+            ElemDetails.parentNode.insertBefore(PElement, ElemDetails.nextSibling);
+        }
         else
+        {
             ElemSummary.innerHTML="Show document outline";
+            
+            ElemDetails.parentNode.removeChild(PElement);
+        }
     });
     
     
+    ElemDetails.style.setProperty("margin-bottom", "20px");
+    ElemDetails.style.setProperty("margin-top", "10px");
 
     MainBody.insertBefore(ElemDetails, H1Node.nextSibling);
 
@@ -106,9 +126,6 @@ function MakeElement_Details_FromOutline(TagNames)
 
     var NextSibling=H1Node.nextElementSibling;
     
-    var PreviousIndex = -1;
-   
-
     while(NextSibling)
     {
         
@@ -154,7 +171,16 @@ function MakeElement_Details_FromOutline(TagNames)
         anchor.style.setProperty("margin-left", MarginLeft);
         
         
-        if(CurIndex === 0 && PreviousIndex>=0)
+        var CanAddEmptyParagraph = CurIndex === 0; //new <h2> so leave a empty paragraph
+        
+        /*
+            If the page is not following a hierarchy, 
+            say we hit <h3> before <h2> -> Occurences[0]=0 whereas Occurences[1]>0
+            still leave a gap by adding empty paragraph
+         */
+        CanAddEmptyParagraph = CanAddEmptyParagraph || (CurIndex > 0 && Occurences[CurIndex - 1] === 0);
+        
+        if( CanAddEmptyParagraph )
         {
             var ParagraphElement = document.createElement("p");
             
@@ -168,11 +194,6 @@ function MakeElement_Details_FromOutline(TagNames)
         
         ElemDetails.appendChild(BreakElem);
             
-        
-        
-        NextSibling = NextSibling.nextElementSibling;
-        
-        
         
         
         /*
@@ -189,12 +210,11 @@ function MakeElement_Details_FromOutline(TagNames)
                 Occurences[i]=0;
         }
         
-        PreviousIndex = CurIndex;
         
-    }
+         NextSibling = NextSibling.nextElementSibling;
         
-        
-     
+    }//while(NextSibling)
+    
 
 }
 
