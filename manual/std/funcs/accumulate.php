@@ -26,6 +26,15 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+    
+
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H3"), false);
+</script>
+    
 
 <h1>accumulate</h1>
 
@@ -46,7 +55,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Arguments:</h3>
+<h3 id="arguments">Arguments:</h3>
 
 <table class="funcarguments">
     <tr>
@@ -73,7 +82,7 @@
 <p>&nbsp;</p>
 
 
-
+<h3 id="luatable">Lua table</h3>
     
 <p>By default Lua tables are iteratable:</p>
 <p class="CodeCommand">
@@ -107,7 +116,10 @@
 
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 
+
+<h3 id="vector">Vector</h3>
 
 <p>
     Since <a href="../classes/vector.php">Vectors</a> are addable (v<sub>1</sub>+v<sub>2</sub>=v<sub>3</sub>) 
@@ -130,7 +142,9 @@
 
 </p>
 
+
 <p>&nbsp;</p>
+
 
 <p>
     Note that since addition of a Vector with a number is also defined (<em>v<sub>1</sub>+number=v<sub>2</sub></em>), 

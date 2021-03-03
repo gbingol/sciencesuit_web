@@ -69,6 +69,12 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H3"), false);
+</script>
 
 
 <h1>bisection</h1>
@@ -90,7 +96,7 @@
 <p>&nbsp;</p>
     
    
-<h3>Arguments:</h3>
+<h3 id="arguments">Arguments:</h3>
 
 
 <table class="funcarguments">
@@ -147,7 +153,7 @@
 <p>&nbsp;</p>
 
 
-
+<h3 id="example1">Example 1</h3>
 
 
 <p>
@@ -177,6 +183,8 @@
 
 <p>&nbsp;</p>
 
+
+<h3 id="example2">Example 2</h3>
 
 <p>However, for the function: <em>f(x) = x<sup>10</sup> -1 = 0</em></p>
 
@@ -212,7 +220,7 @@
 
 
 
-<h3>Definition of Error</h3>
+<h3 id="errordefinition">Definition of Error</h3>
 
 <p>The error is defined in  the following way:</p>
 
@@ -248,7 +256,7 @@
 
 
     
-<h3>Modified False Position</h3>
+<h3 id="regulafalsi_uses">More on Modified False Position</h3>
 <p>
     During the iteration, when either of the bound is used more than twice, the value of the function at 
     that bound is halved and the iteration continues. 

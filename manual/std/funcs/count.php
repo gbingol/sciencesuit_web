@@ -36,6 +36,14 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+   
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>
+    
 
 <h1>count</h1>
 <p>
@@ -62,7 +70,7 @@
 <p>&nbsp;</p>
 
 
-<p><b>Arguments:</b></p>
+<h3 id="arguments">Arguments:</h3>
 <table border="1" class="funcarguments">
     <tr>
         <td>Container:</td>

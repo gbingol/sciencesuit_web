@@ -47,6 +47,14 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>    
+    
+
 
 <h1>boxplot</h1>
 
@@ -183,7 +191,7 @@
 
 
 
-<h2>EXAMPLES</h2>
+<h2 id="examples">EXAMPLES</h2>
 <p>
     Let's start from simple to advanced use of the boxplot command and let's stick to 
     the same <b>x</b> and <b>y</b> vectors (arbitrarily chosen) and 
@@ -206,7 +214,7 @@
 
 <!-- *************************************************************************************** -->
     
-<h3 id="onlydata">A) Only data is provided</h3> 
+<h3 id="onlydata">Only data is provided</h3> 
 
 <p>
     This is the simplest use of the command. Two vectors, namely <b>x</b> and <b>y</b> are provided.
@@ -239,7 +247,7 @@
 
 <!-- *************************************************************************************** -->
     
-<h3 id="fillprops">B) Defining fill properties</h3> 
+<h3 id="fillprops">Defining fill properties</h3> 
 <p>
     If we define the fill properties, they will be applied to the any number of vectors we define. For example:
 </p>
@@ -309,7 +317,7 @@
 
 <!-- *************************************************************************************** -->
     
-<h3 id="lineprops">C) Defining line properties</h3> 
+<h3 id="lineprops">Defining line properties</h3> 
 <p>
    Similar to fill properties, if we define the line properties, they will be 
    applied to the any number of vectors we define. For example,

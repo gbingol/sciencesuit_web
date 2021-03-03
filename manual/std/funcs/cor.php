@@ -63,7 +63,7 @@
 
 
 
-<h3>Example</h3>
+<h3 id="example">Example</h3>
 <p>
     We are going to test whether it is a good idea <em> just to rely on r<sup>2</sup></em> 
     to test quality of fitting. In order to do that we will generate numbers y1 on the line 
