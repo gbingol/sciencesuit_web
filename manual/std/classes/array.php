@@ -72,7 +72,7 @@
 
 <script src="/jsscripts/createoutline.js"></script>
 <script>
-    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
 </script>
     
     
@@ -569,7 +569,7 @@
 
 
 
-<h3>From Existing Data</h3>
+<h3 id="fromExistingData">From Existing Data</h3>
 
 <p>
     In order to create an array from:

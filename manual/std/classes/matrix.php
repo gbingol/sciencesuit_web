@@ -80,10 +80,11 @@
 ?>
 
 
+    
 <script src="/jsscripts/createoutline.js"></script>
 <script>
-    window.addEventListener("load", MakeElement_Details_OutlineFromH2H3Tags);
-</script>    
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script> 
     
 
 
