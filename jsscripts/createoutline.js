@@ -111,6 +111,14 @@ function MakeElement_Details_FromOutline(TagNames)
     
     ElemDetails.style.setProperty("margin-bottom", "20px");
     ElemDetails.style.setProperty("margin-top", "10px");
+    ElemDetails.style.setProperty("background-color", "lightcyan");
+
+    var  ScreenWidth= screen.width;
+
+    if(ScreenWidth<=900)
+        ElemDetails.style.setProperty("width", "auto");
+    else
+        ElemDetails.style.setProperty("width", "fit-content");
 
     MainBody.insertBefore(ElemDetails, H1Node);
 
