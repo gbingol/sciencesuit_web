@@ -175,7 +175,7 @@ function MakeElement_Details_FromOutline(TagNames)
         var anchor = document.createElement("a");
 
         anchor.href = "#"+ ElemId;
-        anchor.innerText = HeadingNumber + ". " + NextSibling.innerHTML;
+        anchor.innerHTML = HeadingNumber + ". " + NextSibling.innerHTML;
         anchor.style.setProperty("margin-left", MarginLeft);
         
         
