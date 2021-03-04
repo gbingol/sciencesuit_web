@@ -112,7 +112,7 @@ function MakeElement_Details_FromOutline(TagNames)
     ElemDetails.style.setProperty("margin-bottom", "20px");
     ElemDetails.style.setProperty("margin-top", "10px");
 
-    MainBody.insertBefore(ElemDetails, H1Node.nextSibling);
+    MainBody.insertBefore(ElemDetails, H1Node);
 
 
     var ElemSummary = document.createElement("summary");
