@@ -148,8 +148,14 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -207,6 +213,158 @@
     &gt;&gt;c1^c2 <br>
     -0.204553 + 0.896623i
 </p>
+
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+<h2 id="memberfuncs">Member Functions</h2>
+
+<h3 id="arg">arg</h3>
+
+<p>
+    Calculates the phase angle in radians. The returned value is in [-&pi; , &pi;].
+</p>
+
+<p class="funcsignature">
+    arg() &rarr; real number
+</p>
+
+<p class="CodeCommand">    
+    &gt;&gt;c1=std.Complex.new(1, 1) <br>
+    &gt;&gt;c1:arg() <br>
+    0.785398 <br>
+    
+    <br>
+    
+    &gt;&gt;c2=std.Complex.new(-1, 0) <br>
+    &gt;&gt;c2:arg() <br>
+    3.14159
+</p>
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<h3 id="conj">conj</h3>
+<p>
+    Calculates the complex conjugate.
+</p>
+
+<p class="funcsignature">
+    conj() &rarr; Complex
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;c=std.Complex.new(1, 1) <br>
+    &gt;&gt;c:conj() <br>
+    1 - i
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+<h3 id="imag">imag</h3>
+
+<p>
+    Returns the imaginary part of the complex number.
+</p>
+
+<p class="funcsignature">
+    imag() &rarr; real number
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;c1=std.Complex.new(3, 4) <br>
+    &gt;&gt;c1:imag() <br>
+    4 <br>
+
+    <br>
+    
+    &gt;&gt;c2=std.Complex.polar(1, math.pi/4) <br>
+    &gt;&gt;c2:imag() <br>
+    0.707107
+</p>
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+<h3 id="norm">norm</h3>
+
+<p>
+    Returns the squared magnitude 
+    (also known as <a href="https://mathworld.wolfram.com/AbsoluteSquare.html" target="_blank">absolute square</a>.
+    Compare with <a href="../funcs/abs.php">std.abs</a>.
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<div class="RelatedLinks">
+    <a href="array.php">Array</a>
+    <a href="../funcs/polyroots.php">polyroots</a>
+</div>
+
 
 </body>
 </html>
