@@ -31,7 +31,7 @@
 <h1>abs</h1>
     
 <p>
-      returns the absolute value for real numbers and the magnitude for the complex number.
+      Calculates the absolute value for real numbers and the magnitude for the complex number.
 </p>
     
 <h3 id="syntax">Syntax</h3> 
@@ -40,7 +40,7 @@
 </p>
 
 <p>
-      <em>param</em> can be real or complex number, or an iteratable container.
+      where <em>param</em> can be real or complex number, or an iteratable container.
 </p>
 
 
