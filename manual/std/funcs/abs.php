@@ -11,6 +11,8 @@
     
     
     <script src="/jsscripts/siteanalytics.js"></script>
+
+    <script src="/jsscripts/matrixtotable.js"></script>
   
 </head>
     
@@ -24,13 +26,12 @@
     include $mainmenuloc;
 ?>
     
-    
 
 
 <h1>abs</h1>
     
 <p>
-      Finds the absolute value.
+      returns the absolute value for real numbers and the magnitude for the complex number.
 </p>
     
 <h3 id="syntax">Syntax</h3> 
@@ -43,7 +44,79 @@
 </p>
 
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
+
+
+
+<h3 id="complex">Complex number</h3>
+
+<p class="CodeCommand">
+      &gt;&gt;c=std.Complex.new(1, 1) <br>
+      &gt;&gt;std.abs(c) <br>
+      1.41421
+</p>
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+<h3 id="containers">Containers</h3>
+
+<p>
+      The container must be an iteratable container.
+</p>
+
+<div class="CodeCommand">
+      &gt;&gt;t={1, -2, 3, -4} <br>
+      &gt;&gt;std.abs(t)  <br>
+      1 &emsp;  2 &emsp;  3 &emsp;  4   <br>
+
+      <br>
+      <br>
+
+      &gt;&gt;arr <br>
+      -1 &emsp;  2  &emsp; 3 + 2i &emsp;  "A"   <br>
+
+      <br>
+
+      &gt;&gt;std.abs(arr) <br>
+      1  &emsp; 2  &emsp; 3.60555 &emsp; <span class="LuaKeyword">nil</span>  <br>
+
+      <br>
+
+      &gt;&gt;m=std.util.tomatrix{{-1,2}, {-3, 4}} <br>
+      &gt;&gt;m <br>
+      <script>
+            matrixtotable([[-1,2], [-3, 4]]);
+
+            document.write("<br>");
+
+            document.write("&gt;&gt;std.abs(m)");
+
+            matrixtotable([[1, 2],[3,4]]);
+
+      </script>   
+</div>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<div class="RelatedLinks">
+      <a href="../classes/complex.php">Complex</a>
+</div>
 
 </body>
 
