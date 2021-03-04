@@ -348,11 +348,53 @@
     Compare with <a href="../funcs/abs.php">std.abs</a>.
 </p>
 
+<p class="funcsignature">
+    norm() &rarr; real number
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;c=std.Complex.new(3, 4) <br>
+
+    <br>
+
+    &gt;&gt;c:norm() <br>
+    25 <br>
+
+    <br>
+
+    &gt;&gt;std.abs(c) <br>
+    5
+</p>
 
 
 
 
 
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+<h3 id="real">real</h3>
+
+<p>
+    Returns the real part of the complex number.
+</p>
+
+<p class="funcsignature">
+    real() &rarr; real number
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;c=std.Complex.new(3, 4) <br>
+    &gt;&gt;c:real() <br>
+    3
+</p>
 
 
 <p>&nbsp;</p>
