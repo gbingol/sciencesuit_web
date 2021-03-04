@@ -124,6 +124,14 @@ function ShowFuncClass(StdLibURL, Dir, DivID, RowDivisor)
                     HTMLText = HTMLText + "<a href="+ FileURL + ">"+ URLName + "</a><br>";
 
                     count++;
+                    
+                    
+                    if(count === NROWS)
+                    { 
+                        HTMLText=HTMLText + "</td><td>";
+
+                        count=0;
+                    }
                 }
             }
             

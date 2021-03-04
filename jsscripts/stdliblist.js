@@ -14,9 +14,17 @@ var StdUtilLib = [
   ];
 
 
-
+    StdUtilLib.sort();
 
 var StdLibFunctions = [
+        ["abs"], ["acos"], ["asin"], ["atan"], ["ceil"], ["cos"], ["cosh"],
+        
+        ["cosh"], ["exp"], ["floor"], ["ln"], ["log10"], ["pow"], ["sin"], 
+        
+        ["sinh"], ["tan"], ["tanh"],
+        
+        //
+        
         ["accumulate"], ["activeworksheet"], ["anova"], ["anova2"], 
 
         ["appendworksheet"], ["besselj", "specialfuncs.php#besselj"], ["beta", "specialfuncs.php#beta"],
@@ -88,6 +96,7 @@ var StdLibFunctions = [
     ];
     
     
+    StdLibFunctions.sort();
   
   var StdLibClasses=[
       ["Array"], ["Complex"], ["Food"], ["Database"], ["DataFrame"], ["Matrix"], ["Range"], ["Vector"], ["Worksheet"]];
