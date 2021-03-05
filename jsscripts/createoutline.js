@@ -91,7 +91,7 @@ function MakeElement_Details_FromOutline(TagNames)
     {
         if(ElemDetails.hasAttribute("open"))
         {
-            ElemSummary.innerHTML="Close document outline";
+            ElemSummary.innerHTML="<em>Close outline</em>";
             
             //leave a clear separation with the next following element by inserting an empty paragraph after </details>
 
@@ -102,7 +102,7 @@ function MakeElement_Details_FromOutline(TagNames)
         }
         else
         {
-            ElemSummary.innerHTML="Show document outline";
+            ElemSummary.innerHTML="<em>Show outline</em>";
             
             ElemDetails.parentNode.removeChild(PElement);
         }
@@ -124,7 +124,7 @@ function MakeElement_Details_FromOutline(TagNames)
 
 
     var ElemSummary = document.createElement("summary");
-    ElemSummary.innerHTML="Show document outline";
+    ElemSummary.innerHTML="<em>Show outline</em>";
 
    ElemDetails.appendChild(ElemSummary);
    
