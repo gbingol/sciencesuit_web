@@ -21,6 +21,54 @@ h4
 }
 
 
+
+
+/*provides headings such as 1) 1.1).. */
+h2.head_l2 
+{
+    counter-increment: counter_h2;
+    counter-reset: counter_h3;
+    
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+h3.head_l3 
+{
+    counter-increment: counter_h3;
+    counter-reset: counter_h4;
+}
+
+h4.head_l4 
+{
+    counter-increment: counter_h4;
+}
+
+h2.head_l2::before 
+{
+    content: counter(counter_h2)") ";
+}
+
+h3.head_l3::before 
+{
+    content: counter(counter_h2)"."counter(counter_h3)") ";
+}
+
+h4.head_l4::before 
+{
+    content: counter(counter_h2)"."counter(counter_h3)"."counter(counter_h4)") ";
+}
+
+h2.head_l2_reset
+{
+    counter-reset:level1;
+}
+
+
+
+
+
+
 .CodeCommand 
 {
     background-color: #f9f9f9;
@@ -208,6 +256,14 @@ p.reset
 {
     counter-reset:level1;
 }
+
+
+
+
+
+
+
+
         
 
 div.youtube
