@@ -87,7 +87,7 @@ function MakeElement_Details_FromOutline(TagNames)
     //Create and append select list
     var ElemDetails = document.createElement("details");
     
-    ElemDetails.addEventListener("toggle",function()
+    ElemDetails.addEventListener("toggle",function(e)
     {
         if(ElemDetails.hasAttribute("open"))
         {
@@ -107,6 +107,9 @@ function MakeElement_Details_FromOutline(TagNames)
             ElemDetails.parentNode.removeChild(PElement);
         }
     });
+
+
+   
     
     
     ElemDetails.style.setProperty("margin-bottom", "20px");
@@ -127,6 +130,12 @@ function MakeElement_Details_FromOutline(TagNames)
     ElemSummary.innerHTML="<em>Show outline</em>";
 
    ElemDetails.appendChild(ElemSummary);
+
+
+   ElemSummary.addEventListener("mouseover", function(e)
+   {
+       e.target.style.cursor="pointer";
+   });
    
    
    var Occurences= new Array(TagNames.length);
