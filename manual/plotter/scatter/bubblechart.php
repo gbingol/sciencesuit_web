@@ -80,11 +80,29 @@
    
 </head>
 
+
+
+
+
+
+
 <body>
+
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>
+
+
 
     
 <h1>Bubble Chart</h1>
@@ -97,50 +115,34 @@
 
 
 
-<div>
-    <span>Jump to:</span>
-    <select id="selectsection" onchange="GotoSection();">
-        <option selected disabled>Section</option>
-        <option value="#updatedeleteseries">Update / Delete</option>
-        <option value="#customizechart">Customizations</option>
-        <option value="#plotmultipleseries">Multiple Series</option>
-        <option value="#trendlines">Trendlines</option>
-    </select>
-    
-    
-    <script>
-        function GotoSection()
-        {
-            var Elem=document.getElementById("selectsection");
-
-            var SelIndex=Elem.selectedIndex;
-
-
-
-            location.href=Elem.options[SelIndex].value;
-        }
-    
-    </script> 
-</div>
 
 
 
 
-<!-- *********************** Plot Simple Chart ******************************* -->
 
-<h2 id="plottingsimplechart">
-    1) Plotting Simple Chart
-</h2>
+
+
+
+
+<h2 id="plottingsimplechart">Plotting Simple Chart</h2>
 
   
-<p>There are different strategies that can be followed to plot a chart. Here, a few possible strategies will be presented.</p>
+<p>
+    There are different strategies that can be followed to plot a chart. 
+    Here, a few possible strategies will be presented.
+</p>
 
 
 
 
-<h3 id="Existing_Selection">A) Existing Selection</h3>
 
-<p>Let's assume you have the following data in a worksheet:</p>
+
+
+<h3 id="Existing_Selection">Existing Selection</h3>
+
+<p>
+    Let's assume you have the following data in a worksheet:
+</p>
 
 <img src="images/bubble/life_fertil_population_data.png" alt=""/>
 
@@ -176,7 +178,7 @@
 
 
 
-<h3 id="Using_Commands">B) Using Commands</h3>
+<h3 id="Using_Commands">Using Commands</h3>
 <p>
     Bubble charts can also be created using scripting. For detailed information 
     please see <a href="../../std/funcs/scatter.php">std.scatter</a> function.
@@ -194,7 +196,10 @@
 
 
 
-<h3 id="New_Selection">C) Add Selection as New Series</h3>
+
+
+
+<h3 id="New_Selection">Add Selection as New Series</h3>
 
 
 
@@ -219,7 +224,8 @@
 
     <li>
         <em>Horizontal, Vertical and Size Data:</em>
-        The range where data for horizontal and vertical axes are located as well as the data for the bubble size. 
+        The range where data for horizontal and vertical axes are located 
+        as well as the data for the bubble size. 
     </li>
 </ul>
 
@@ -262,18 +268,29 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<!-- ************************ Update and Delete Series **************************** -->
-
-<h2 id="updatedeleteseries">2)Updating and Deleting Series</h2>
 
 
-<h3 id="Updating_Series">A) Updating Series</h3>
+
+
+
+
+
+
+
+<h2 id="updatedeleteseries">Updating and Deleting Series</h2>
+
+
+<h3 id="Updating_Series">Updating Series</h3>
 
 <p>
     Similar to scatter chart, updating a series simply means that changing its name and its data. 
@@ -292,6 +309,9 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -299,10 +319,14 @@
 
 
 
-<h3 id="Deleting_Series"> B) Deleting Series</h3>
+
+
+
+<h3 id="Deleting_Series">Deleting Series</h3>
 
 <p>
-    When there are more than one series on the same plot window you will have the option to delete any of them should you wish to do so.
+    When there are more than one series on the same plot window you will have the 
+    option to delete any of them should you wish to do so.
 </p>
 
 <p>
@@ -329,12 +353,18 @@
 
 
 
-<!-- ******************* Customize Chart *********************** -->
+
+
+
+
+
+
+
      
-<h2 id="customizechart">3) Customizing the Chart</h2>
+<h2 id="customizechart">Customizing the Chart</h2>
 
 
-<h3 id="Formatting_Series"> A) Formatting Series</h3>
+<h3 id="Formatting_Series">Formatting Series</h3>
 
 
 <p><b>1)</b> Right-click on the series to be formatted (this will also select the series).</p>
@@ -397,12 +427,18 @@
 
 
 
-<h3 id="Axis_Options">B) Axis Options</h3>
+
+
+
+
+<h3 id="Axis_Options">Axis Options</h3>
 
 <p>
     The plotter allows changing axis options (horizontal or vertical). For detailed information 
     please see <a href="scatterchart.php#Axis_Options">scatter chart axis options</a>.
 </p>
+
+
 
 
 
@@ -415,7 +451,7 @@
 
 
 
-<h3 id="Menu_Options">C) Context-Menu Options</h3>
+<h3 id="Menu_Options">Context-Menu Options</h3>
 
  <p>
     For detailed information please see <a href="scatterchart.php#Menu_Options">scatter chart menu options</a>.
@@ -427,14 +463,23 @@
 
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-    
-    
-<!-- ************************** Multiple Series ************************************ -->
 
-<h2 id="plotmultipleseries">4) Plotting Multiple Series</h2>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    
+
+
+
+
+
+
+
+    
+
+
+<h2 id="plotmultipleseries">Plotting Multiple Series</h2>
 
 <p>
     The rationale to plot multiple series is the same with the scatter chart. Please read
@@ -446,14 +491,24 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<!--******************** Trendlines ****************************************** -->
-<h2 id="trendlines">5) Trendlines</h2>
+
+
+
+
+
+
+
+<h2 id="trendlines">Trendlines</h2>
 <p>
     The method of adding trendlines is the same with the scatter chart. Please read
     the section on how to <a href="scatterchart.php#trendlines">add trendlines</a>.
