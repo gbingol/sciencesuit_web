@@ -112,7 +112,7 @@
 
 <!-- #region -->
 
-<h2 id="plottingsimplechart">Plotting Simple Chart</h2>
+<h2 class="head_l2"  id="plottingsimplechart">Plotting Simple Chart</h2>
 
 
 <p>
@@ -125,7 +125,7 @@
 <p>&nbsp;</p>
 
 
-<h3 id="Existing_Selection">Existing Selection</h3>
+<h3 class="head_l3"  id="Existing_Selection">Existing Selection</h3>
 
 <p>
     Let's assume you have the following time and temperature data:
@@ -192,7 +192,7 @@
 
 
 
-<h3 id="Using_Commands">Using Commands</h3>
+<h3 class="head_l3"  id="Using_Commands">Using Commands</h3>
 
 <p>
     Depending on the nature of the process, it can be significantly more convenient to generate
@@ -231,7 +231,7 @@
 
 
 
-<h3 id="New_Selection">Add Selection as New Series</h3>
+<h3 class="head_l3"  id="New_Selection">Add Selection as New Series</h3>
 
 <p id="addnewseries">
     The steps described for <a href="#Existing_Selection">existing selection</a>
@@ -323,10 +323,10 @@
 
 
 
-<h2 id="updatedeleteseries">Updating and Deleting Series</h2>
+<h2 class="head_l2"  id="updatedeleteseries">Updating and Deleting Series</h2>
 
 
-<h3 id="Updating_Series">Updating Series</h3>
+<h3 class="head_l3"  id="Updating_Series">Updating Series</h3>
 
 <p>
    Updating a series simply means that changing its name and its data. However, in order to change the data,
@@ -345,7 +345,7 @@
 <p> &nbsp;</p>
 
 
-<h3 id="Deleting_Series">Deleting Series</h3>
+<h3 class="head_l3"  id="Deleting_Series">Deleting Series</h3>
 
 <p>
     When there are more than one series on the same plot window you will have the option to delete any of them should you wish to do so.
@@ -376,10 +376,10 @@
 
 
 
-<h2 id="customizechart">Customizing the Chart</h2>
+<h2 class="head_l2"  id="customizechart">Customizing the Chart</h2>
 
 
-<h3 id="Formatting_Series">Formatting Series</h3>
+<h3 class="head_l3"  id="Formatting_Series">Formatting Series</h3>
 
 
 <p><b>1)</b> Right-click on the series to be formatted (this will also select the series).</p>
@@ -467,7 +467,7 @@
 
 
 
-<h3 id="Changing_Chart_Type">Changing Chart Type</h3>
+<h3 class="head_l3"  id="Changing_Chart_Type">Changing Chart Type</h3>
 
 <p>Switching between different scatter chart types is rather convenient too:</p>
 
@@ -498,7 +498,7 @@
 
 
 
-<h3 id="Axis_Options">Axis Options</h3>
+<h3 class="head_l3"  id="Axis_Options">Axis Options</h3>
 
 <p>
     The plotter allows changing axis options (horizontal or vertical). Here,
@@ -560,13 +560,13 @@
 
 
 
-<h3 id="Menu_Options">Context-Menu Options</h3>
+<h3 class="head_l3"  id="Menu_Options">Context-Menu Options</h3>
 
  <p>
      Two different context-menu will be shown: <b>i)</b> Series, <b>ii)</b> Chart.
 </p>
 
-<h4 id="menuoptions_series">Series</h4>
+<h4 class="head_l4"  id="menuoptions_series">Series</h4>
 
 <p>
     To be able to access the series options, just right-click on the particular series and the context-menu
@@ -590,7 +590,7 @@
 
 
 
-<h4 id="menuoptions_chart">Chart</h4>
+<h4 class="head_l4"  id="menuoptions_chart">Chart</h4>
 
 <p>
     To be able to access the rest of the options, just right-click on the chart and the context-menu
@@ -715,7 +715,7 @@
 
 
 
-<h2 id="plotmultipleseries">Plotting Multiple Series</h2>
+<h2 class="head_l2"  id="plotmultipleseries">Plotting Multiple Series</h2>
 
 <p>
     There are different ways to plot multiple series on the same plot window.
@@ -727,7 +727,7 @@
 
 
 
-<h3 id="Selection">Selection</h3>
+<h3 class="head_l3"  id="Selection">Selection</h3>
 
 <p>Assume you have made the following selection in a worksheet: </p>
 
@@ -766,7 +766,7 @@
 
 
 
-<h3 id="Using_Only_Commands">Using Only Commands</h3>
+<h3 class="head_l3"  id="Using_Only_Commands">Using Only Commands</h3>
 
 <p>
     In order to plot multiple series using only commands, you can use <em>hwnd</em>
@@ -809,7 +809,7 @@
 
 
 
-<h3 id="Selection_Command">Selection & Command</h3>
+<h3 class="head_l3"  id="Selection_Command">Selection & Command</h3>
 <p>
     Whether the chart window is generated via a selection or through a command,
     after then either selection or command can be used to add another series on the generated chart window.
@@ -878,7 +878,7 @@
 
 
 
-<h2 id="trendlines">Trendlines</h2>
+<h2 class="head_l2"  id="trendlines">Trendlines</h2>
 
 <p>
     A trendline is a line of best fit to the data. It can be very helpful when analyzing data as
@@ -911,7 +911,7 @@
 
 
 
-<h3 id="Adding_Trendlines">Adding Trendlines</h3>
+<h3 class="head_l3"  id="Adding_Trendlines">Adding Trendlines</h3>
 
 <p><b>1)</b> Right-click on a series and select the "<em>Add Trendline...</em>" menu item.</p>
 
@@ -943,7 +943,7 @@
 
 
 
-<h3 id="Changing_Trendline_Type">Changing Trendline Type</h3>
+<h3 class="head_l3"  id="Changing_Trendline_Type">Changing Trendline Type</h3>
 
 <p>
     <b>1)</b> Right click on the trendline (or on the series) and select "Format trendline..." as shown below.</p>
@@ -996,7 +996,7 @@
 
 
 
-<h3 id="Changing_Line_Properties">Changing Line Properties</h3>
+<h3 class="head_l3"  id="Changing_Line_Properties">Changing Line Properties</h3>
 
 <p><b>1)</b> Right click on the trendline and select "<em>Format trendline...</em>".</p>
 
@@ -1018,7 +1018,7 @@
 
 
 
-<h3 id="Displaying_R2_and_Equation">Displaying R2 and Equation</h3>
+<h3 class="head_l3"  id="Displaying_R2_and_Equation">Displaying R2 and Equation</h3>
 
 <p>
     <b>1)</b> Right click on the trendline and select "<em>Format trendline...</em>".
@@ -1041,7 +1041,7 @@
 
 
 
-<h3>Changing the format of the displayed info</h3>
+<h3 class="head_l3" >Changing the format of the displayed info</h3>
 
 <p><b>1)</b> Right click on the textbox and select "Font..." menu item.</p>
 
@@ -1065,7 +1065,7 @@
 
 
 
-<h3 id="Changing_Intercept">Changing Intercept</h3>
+<h3 class="head_l3"  id="Changing_Intercept">Changing Intercept</h3>
 
 <p>
     A trendline equation is the best fit for the data set under consideration. However, every now and then,
@@ -1089,7 +1089,7 @@
 
 
 
-<h3 id="Exporting_the_Equation"> Exporting the Equation</h3>
+<h3 class="head_l3"  id="Exporting_the_Equation"> Exporting the Equation</h3>
 
 <p>
     In the previous sections, the equation was just shown on the chart. However, we did not use the equation as a function,

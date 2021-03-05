@@ -124,7 +124,7 @@
 
 
 
-<h2 id="plottingsimplechart">Plotting Simple Chart</h2>
+<h2 class="head_l2"  id="plottingsimplechart">Plotting Simple Chart</h2>
 
   
 <p>
@@ -138,7 +138,7 @@
 
 
 
-<h3 id="Existing_Selection">Existing Selection</h3>
+<h3 class="head_l3"  id="Existing_Selection">Existing Selection</h3>
 
 <p>
     Let's assume you have the following data in a worksheet:
@@ -178,7 +178,7 @@
 
 
 
-<h3 id="Using_Commands">Using Commands</h3>
+<h3 class="head_l3"  id="Using_Commands">Using Commands</h3>
 <p>
     Bubble charts can also be created using scripting. For detailed information 
     please see <a href="../../std/funcs/scatter.php">std.scatter</a> function.
@@ -199,7 +199,7 @@
 
 
 
-<h3 id="New_Selection">Add Selection as New Series</h3>
+<h3 class="head_l3"  id="New_Selection">Add Selection as New Series</h3>
 
 
 
@@ -287,10 +287,10 @@
 
 
 
-<h2 id="updatedeleteseries">Updating and Deleting Series</h2>
+<h2 class="head_l2"  id="updatedeleteseries">Updating and Deleting Series</h2>
 
 
-<h3 id="Updating_Series">Updating Series</h3>
+<h3 class="head_l3"  id="Updating_Series">Updating Series</h3>
 
 <p>
     Similar to scatter chart, updating a series simply means that changing its name and its data. 
@@ -322,7 +322,7 @@
 
 
 
-<h3 id="Deleting_Series">Deleting Series</h3>
+<h3 class="head_l3"  id="Deleting_Series">Deleting Series</h3>
 
 <p>
     When there are more than one series on the same plot window you will have the 
@@ -361,10 +361,10 @@
 
 
      
-<h2 id="customizechart">Customizing the Chart</h2>
+<h2 class="head_l2"  id="customizechart">Customizing the Chart</h2>
 
 
-<h3 id="Formatting_Series">Formatting Series</h3>
+<h3 class="head_l3"  id="Formatting_Series">Formatting Series</h3>
 
 
 <p><b>1)</b> Right-click on the series to be formatted (this will also select the series).</p>
@@ -431,7 +431,7 @@
 
 
 
-<h3 id="Axis_Options">Axis Options</h3>
+<h3 class="head_l3"  id="Axis_Options">Axis Options</h3>
 
 <p>
     The plotter allows changing axis options (horizontal or vertical). For detailed information 
@@ -451,7 +451,7 @@
 
 
 
-<h3 id="Menu_Options">Context-Menu Options</h3>
+<h3 class="head_l3"  id="Menu_Options">Context-Menu Options</h3>
 
  <p>
     For detailed information please see <a href="scatterchart.php#Menu_Options">scatter chart menu options</a>.
@@ -479,7 +479,7 @@
     
 
 
-<h2 id="plotmultipleseries">Plotting Multiple Series</h2>
+<h2 class="head_l2"  id="plotmultipleseries">Plotting Multiple Series</h2>
 
 <p>
     The rationale to plot multiple series is the same with the scatter chart. Please read
@@ -508,7 +508,7 @@
 
 
 
-<h2 id="trendlines">Trendlines</h2>
+<h2 class="head_l2"  id="trendlines">Trendlines</h2>
 <p>
     The method of adding trendlines is the same with the scatter chart. Please read
     the section on how to <a href="scatterchart.php#trendlines">add trendlines</a>.

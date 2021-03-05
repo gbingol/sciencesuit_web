@@ -151,7 +151,7 @@
 
 <!-- ---------------------------------- Plot Simple Chart ---------------------------------  -->
 
-<h2 id="plottingsimplechart">Plotting Simple Chart</h2>
+<h2 class="head_l2"  id="plottingsimplechart">Plotting Simple Chart</h2>
 
   
 <p>
@@ -164,7 +164,7 @@
 
 
 
-<h3 id="Existing_Selection">Existing Selection</h3>
+<h3 class="head_l3"  id="Existing_Selection">Existing Selection</h3>
 <p>
     Let's assume you have the following two data sets, namely 
     <b>A</b> and <b>B</b>, where A=[ 2, 1, 3, 6, 4] and B=[7, 7, 8, 4, 2]
@@ -225,7 +225,7 @@
 
 
 
-<h3 id="Using_Commands">Using Commands</h3>
+<h3 class="head_l3"  id="Using_Commands">Using Commands</h3>
 
 <p>
     Depending on the nature of the process, it can be significantly more convenient to generate 
@@ -268,7 +268,7 @@
 
 
 
-<h3 id="New_Selection">Add Selection as New Series</h3>
+<h3 class="head_l3"  id="New_Selection">Add Selection as New Series</h3>
 
 <p>
     The steps described for <a href="#Existing_Selection">existing selection</a> immediately plots the chart on a new plot window.  
@@ -294,7 +294,7 @@
 
     <p>&nbsp;</p>
     
-    <h4 id="addvisibleselection">Add Visible Selection</h4>
+    <h4 class="head_l4"  id="addvisibleselection">Add Visible Selection</h4>
 <p>
     Let's demonstrate the second case, which is the simplest and fastest way to add series to the existing chart window. 
     Just select the <em>"Add Visible Selection"</em> option, and as shown below the chart will be plotted with the selected data series.
@@ -304,7 +304,7 @@
 
 <p>&nbsp;</p>
 
-<h4>Add New Series</h4>
+<h4 class="head_l4" >Add New Series</h4>
 <p>
     If "<em>Add New Series</em>" option is used, a dialog box, shown below, will be shown to make selection:
 </p>
@@ -355,10 +355,10 @@
      
      
     
-<h2 id="updatedeleteseries">Updating and Deleting Series</h2>
+<h2 class="head_l2" id="updatedeleteseries">Updating and Deleting Series</h2>
 
 
-<h3 id="Updating_Series">Updating Series</h3>
+<h3 class="head_l3"  id="Updating_Series">Updating Series</h3>
 
     
 <p>
@@ -392,7 +392,7 @@
 
 
 
-<h3 id="Deleting_Series">Deleting Series</h3>
+<h3 class="head_l3"  id="Deleting_Series">Deleting Series</h3>
 
 <p>
 When there are more than one series on the same plot window you will have 
@@ -429,15 +429,15 @@ delete option.
 
 
     
-<h2 id="customizechart">Customizing the Chart</h2>
+<h2 class="head_l2"  id="customizechart">Customizing the Chart</h2>
 
 
-<h3 id="Formatting_Series">Formatting Series</h3>
+<h3 class="head_l3"  id="Formatting_Series">Formatting Series</h3>
 
 
 <p>Right-clicking on the series to be formatted will show the following dialog :</p>
 
-<h4 id="optionstab">Options Tab</h4>
+<h4 class="head_l4"  id="optionstab">Options Tab</h4>
 
 <img src="images/formatseriesdlg_optionstab.png" alt=""/>
 
@@ -456,7 +456,7 @@ delete option.
 <p>&nbsp;</p>
 
 
-<h4 id="linetab">Line Tab</h4>
+<h4 class="head_l4"  id="linetab">Line Tab</h4>
 
 <p>
     Lines make up the whiskers and the boundaries of the box. Its style, color and width can be changed. 
@@ -468,7 +468,7 @@ delete option.
 
 <p>&nbsp;</p>
 
-    <h4 id="filltab">Fill Tab</h4>
+    <h4 class="head_l4"  id="filltab">Fill Tab</h4>
 
 <p>
     By fill it is meant the area within the box, excluding the boundaries. Its style and color can be changed. 
@@ -491,7 +491,7 @@ delete option.
     
     
     
-<h3  id="Axis_Options">Axis Options</h3>
+<h3 class="head_l3"   id="Axis_Options">Axis Options</h3>
 
 <p>
     Should you wish to, the chart allows changing the boundaries of its axis.
@@ -537,13 +537,13 @@ delete option.
 
 
 
-<h3 id="contextmenuopts">Context-Menu Options</h3>
+<h3 class="head_l3"  id="contextmenuopts">Context-Menu Options</h3>
 
 <p>
     Two different context-menu will be shown: <b>i)</b> Series, <b>ii)</b> Chart.
 </p>
 
-<h4 id="contextmenu_series">Series</h4>
+<h4 class="head_l4"  id="contextmenu_series">Series</h4>
 
 <p>
     To be able to access the series options, just right-click on the particular series and the context-menu 
@@ -568,7 +568,7 @@ delete option.
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
- <h4 id="contextmenu_chart">Chart</h4>
+ <h4 class="head_l4"  id="contextmenu_chart">Chart</h4>
     
 <p>
     To be able to access the chart options, just right-click on any area (not containing any chart element) on the chart and the context-menu 
@@ -627,14 +627,14 @@ delete option.
 
 
     
-<h2 id="plotmultipleseries">Plotting Multiple Series</h2>
+<h2 class="head_l2"  id="plotmultipleseries">Plotting Multiple Series</h2>
 
 <p>There are different ways to plot multiple series on the same plot window. Here, the most common approaches will be presented.</p>
 <p>&nbsp;</p>
 
 
 
-<h3 id="plotmultiple_selection">Selection</h3>
+<h3 class="head_l3"  id="plotmultiple_selection">Selection</h3>
 
 <p>
     This has already been discussed in the <a href="#Existing_Selection">first section</a>. 
@@ -653,7 +653,7 @@ delete option.
 
 
 
-<h3 id="plotmultiple_onlycmds">Using Only Commands</h3>
+<h3 class="head_l3"  id="plotmultiple_onlycmds">Using Only Commands</h3>
 
 <p>
     If there is already a plot window and the handle, <em>hwnd</em>, is known:
@@ -706,7 +706,7 @@ delete option.
 
 
 
-<h3 id="plotmultiple_selection_cmd">Selection & Command</h3>
+<h3 class="head_l3"  id="plotmultiple_selection_cmd">Selection & Command</h3>
 <p>
     If there is already a plot window with series on it, 
     you can use <a href="../../std/funcs/plothwnd.php">std.plothwnd</a> to 
