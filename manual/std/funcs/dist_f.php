@@ -22,10 +22,19 @@
 
 
 <body>
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
 
     
     
@@ -64,16 +73,21 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
 
-<!-- **************************************************************** -->
 
 
-<h2 id="df">df</h2>
+
+
+<h2 class="head_l2" id="df">df</h2>
 
 <p>Computes the height of the probability density function. </p>
 
@@ -122,6 +136,9 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -129,9 +146,9 @@
 
 
 
-<!-- *********************************************************************** -->
 
-<h2 id="pf">pf</h2>
+
+<h2 class="head_l2" id="pf">pf</h2>
 
 <p>Computes the cumulative probability .</p>
 
@@ -169,16 +186,21 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
 
-<!-- *********************************************************************** -->
 
 
-<h2 id="qf">qf</h2>
+
+
+
+
+<h2 class="head_l2" id="qf">qf</h2>
 
 <p>Computes the lower tail quantile.</p>
 
@@ -219,11 +241,13 @@
 
 
 
-<!-- *********************************************************************** -->
 
 
 
-<h2 id="rf">rf</h2>
+
+
+
+<h2 class="head_l2" id="rf">rf</h2>
 
 <p>Generates random sample for the F distribution</p>
 
@@ -241,7 +265,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;std.rf{n=5, df1=3, df2=5} <br />
-    1.62134&nbsp;&nbsp;&nbsp; 1.76374&nbsp;&nbsp;&nbsp; 3.38552&nbsp;&nbsp;&nbsp; 0.771544&nbsp;&nbsp;&nbsp; 1.32867&nbsp;&nbsp;&nbsp; COL
+    1.62134 &emsp; 1.76374&emsp; 3.38552&emsp; 0.771544&emsp; 1.32867&emsp; COL
 </p>
 
 

@@ -24,11 +24,24 @@
 
 
 <body>
-        
+ 
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"] . "/mainmenu.php";
     include $mainmenuloc;
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
+
+
 
 
 <h1>Uniform Dist</h1>
@@ -38,7 +51,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Arguments</h3>
+<h3 id="arguments">Arguments</h3>
 
 <table class="funcarguments">
     <tr>
@@ -79,10 +92,10 @@
 
 
 
-<!-- ********************************************************************* -->
 
 
-<h2 id="dunif">dunif</h2>
+
+<h2 class="head_l2" id="dunif">dunif</h2>
 
 <p>Computes the density. </p>
 
@@ -97,6 +110,8 @@
 
 
 <p>&nbsp;</p>
+
+
 
 <p class="CodeCommand">
     &gt;&gt;std.dunif{x=0.3} <br>
@@ -122,6 +137,7 @@
 
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -133,10 +149,12 @@
 
 
 
-<!-- ********************************************************************* -->
 
 
-<h2 id="punif">punif</h2>
+
+
+
+<h2 class="head_l2" id="punif">punif</h2>
 <p>Computes the lower tail area (probability). </p>
 
 <p class="funcsignature">
@@ -149,7 +167,9 @@
     
 </p>
 
+
 <p>&nbsp;</p>
+
 
 <p class="CodeCommand">
     &gt;&gt;std.punif{q=0.4} <br />
@@ -177,6 +197,10 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -187,10 +211,11 @@
 
 
 
-<!-- ********************************************************************* -->
 
 
-<h2 id="qunif">qunif</h2>
+
+
+<h2 class="head_l2" id="qunif">qunif</h2>
 <p>Computes the lower tail quantile </p>
 
 <p class="funcsignature">
@@ -234,6 +259,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -243,11 +270,14 @@
 
 
 
-<!-- ********************************************************************* -->
 
 
 
-<h2 id="runif">runif</h2>
+
+
+
+
+<h2 class="head_l2" id="runif">runif</h2>
 
 <p>Generates uniformly distributed random numbers.</p>
 
@@ -283,6 +313,7 @@
     &gt;&gt;std.runif{n=4, min=0, max=3} <br />
     2.8323&emsp; 1.42823&emsp; 2.77613&emsp; 1.99111&emsp; COL
 </p>
+
 
 
 

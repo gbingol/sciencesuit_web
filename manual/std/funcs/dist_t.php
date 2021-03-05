@@ -24,10 +24,25 @@
 
 
 <body>
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
+
+
 
 <h1>Student t Distribution</h1>
 
@@ -37,7 +52,7 @@
 
 
 
-<h3>Arguments</h3>
+<h3 id="arguments">Arguments</h3>
 
 <table class="funcarguments">
     <tr>
@@ -82,10 +97,10 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="dt">dt</h2>
+
+<h2 class="head_l2" id="dt">dt</h2>
 
 <p>Computes the height of the probability density function. </p>
 
@@ -134,10 +149,10 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="pt">pt</h2>
+
+<h2 class="head_l2" id="pt">pt</h2>
 <p>Computes the cumulative probability .</p>
 
 <p class="funcsignature">
@@ -189,10 +204,10 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="qt">qt</h2>
+
+<h2 class="head_l2" id="qt">qt</h2>
 
 
 <p>Computes the lower tail quantile.</p>
@@ -238,10 +253,10 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="rt">rt</h2>
+
+<h2 class="head_l2" id="rt">rt</h2>
 
 <p>Generates random sample for the Student t distribution</p>
 <p class="funcsignature">

@@ -24,11 +24,20 @@
 
 
 <body>
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
 
 
 <h1>Binomial Dist</h1>
@@ -66,14 +75,23 @@
 
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
 <!-- ********************************************************************** -->
     
-<h2 id="dbinom">dbinom</h2>
+<h2 class="head_l2"  id="dbinom">dbinom</h2>
 <p>Computes the probability value for Binomial distribution. </p>
 
 <p class="funcsignature">
@@ -142,7 +160,7 @@
     
 <!-- ********************************************************************* -->
     
-<h2 id="pbinom">pbinom</h2>
+<h2 class="head_l2"  id="pbinom">pbinom</h2>
 <p>Computes the cumulative probability values. </p>
 
 <p class="funcsignature">
@@ -204,7 +222,7 @@
 <!-- ********************************************************************* -->
 
 
-<h2 id="qbinom">qbinom</h2>
+<h2 class="head_l2"  id="qbinom">qbinom</h2>
 <p>Computes the lower tail quantile (inverse of <a href="#pbinom">pbinom</a>). </p>
 
 <p class="funcsignature">
@@ -291,7 +309,7 @@
 <!-- *********************************************************************** -->   
     
     
-<h2 id="rbinom">rbinom</h2>
+<h2 class="head_l2"  id="rbinom">rbinom</h2>
 
 <p>Generates binomiallly distributed random numbers.</p>
 <p class="funcsignature">

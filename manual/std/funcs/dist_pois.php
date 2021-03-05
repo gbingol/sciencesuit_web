@@ -23,10 +23,23 @@
 
 <body>
 
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
+
+
 
 <h1>Poisson Dist</h1>
 
@@ -85,9 +98,9 @@
 
 
 
-<!-- ********************************************************************** -->
 
-<h2 id="dpois">dpois</h2>
+
+<h2 class="head_l2" id="dpois">dpois</h2>
 
 <p>Computes the probability. </p>
 
@@ -117,7 +130,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Example</h3>
+<h3 class="head_l3" id="dpois_example">Example</h3>
 <p>
     If on the average, 2 cars enter a certain parking lot per 
     minute, what is the probability that during any given minute 4 or more cars will 
@@ -137,7 +150,7 @@
 
 
 
-<h4>The code:</h4>
+<h4>The code</h4>
     
 <p class="CodeCommand">
     <span class="LuaComment">-- 4, 5, 6, .... 100 </span> <br>
@@ -177,11 +190,13 @@
 
 
 
-<!-- ********************************************************************** -->
 
 
-<h2 id="ppois">ppois</h2>
+
+<h2 class="head_l2" id="ppois">ppois</h2>
+
 <p>Computes the cumulative probability .</p>
+
 <h3>Syntax</h3>
 
 <p class="funcsignature">
@@ -208,7 +223,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Example</h3>
+<h3 class="head_l3" id="ppois_example">Example</h3>
 <p>
     If on the average, 2 cars enter a certain parking lot per 
     minute, what is the probability that during any given minute 4 or more cars will 
@@ -254,9 +269,9 @@
 
 
 
-<!-- ********************************************************************** -->
 
-<h2 id="qpois">qpois</h2>
+
+<h2 class="head_l2" id="qpois">qpois</h2>
 
 
 <p>
@@ -335,10 +350,10 @@
 
 
 
-<!-- ********************************************************************** -->
 
 
-<h2 id="rpois">rpois</h2>
+
+<h2 class="head_l2" id="rpois">rpois</h2>
 
 <p>Generates random sample for the Poisson distribution</p>
 

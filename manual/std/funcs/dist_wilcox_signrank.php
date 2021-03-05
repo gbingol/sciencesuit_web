@@ -24,10 +24,24 @@
 
 
 <body>
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
+
+
 
 
 <h1>Wilcoxon Signed Rank Statistic</h1>
@@ -40,7 +54,7 @@
 
 
 
-<h3>Arguments</h3>
+<h3 id="arguments">Arguments</h3>
 
 <table class="funcarguments">
     <tr>
@@ -69,6 +83,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -81,10 +97,10 @@
 
 
 
-<!-- ***************************************************************** -->
 
 
-<h2 id="dsignrank">dsignrank</h2>
+
+<h2 class="head_l2" id="dsignrank">dsignrank</h2>
 <p>Computes the probability. </p>
 
 <p class="funcsignature">
@@ -152,6 +168,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -164,9 +182,11 @@
 
 
 
-<!-- ***************************************************************** -->
 
-<h2 id="psignrank">psignrank</h2>
+
+
+
+<h2 class="head_l2" id="psignrank">psignrank</h2>
 <p>Computes the cumulative probability. </p>
 
 <p class="funcsignature">
@@ -215,6 +235,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -226,9 +248,11 @@
 
 
 
-<!-- ***************************************************************** -->
 
-<h2 id="qsignrank">qsignrank</h2>
+
+
+
+<h2 class="head_l2" id="qsignrank">qsignrank</h2>
 
 <p>Computes the quantile. </p>
 
@@ -263,6 +287,9 @@
     &gt;&gt;std.qsignrank{p=0.1876, n=4} <br />
     3	
 </p>
+
+
+
 
 
 

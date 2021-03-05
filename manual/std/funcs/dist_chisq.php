@@ -30,6 +30,12 @@
 ?>
 
 
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
 <h1>Chi-Square Dist</h1>
 <img src="../images/distchisquare_mainequation.png" alt=""/>
 
@@ -76,10 +82,9 @@
 
 
 
-<!-- ********************************************************************** -->
         
         
-<h2 id="dchisq">dchisq</h2>
+<h2 class="head_l2" id="dchisq">dchisq</h2>
 
 <p>Computes the density. </p>
 
@@ -146,7 +151,7 @@
 <!-- **************************************************************** -->
         
         
-<h2 id="pchisq">pchisq</h2>
+<h2 class="head_l2" id="pchisq">pchisq</h2>
 <p>Computes the lower tail area (probability). </p>
 
 <p class="funcsignature">
@@ -218,7 +223,7 @@
 <!-- **************************************************************** -->
         
         
-<h2 id="qchisq">qchisq</h2>
+<h2 class="head_l2" id="qchisq">qchisq</h2>
 <p>Computes the lower tail quantile. </p>
 
 <p class="funcsignature">
@@ -272,7 +277,7 @@
 
         
         
-<h2 id="rchisq">rchisq</h2>
+<h2 class="head_l2" id="rchisq">rchisq</h2>
 <p>Generates n &ge;1 random numbers from the chi-square distribution.</p>
 
 <p class="funcsignature">
