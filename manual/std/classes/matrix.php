@@ -110,9 +110,9 @@
 <p>&nbsp;</p>
 
 
-<h2 id="access_elements">Access Elements</h2>
+<h2 class="head_l2"  id="access_elements">Access Elements</h2>
 
-<h3>Accessing to single values</h3>
+<h3 class="head_l3" >Accessing to single values</h3>
 
 <p class="CodeCommand">
     &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {3, 4, 5} , {6 , 7, 8} }<br>
@@ -170,7 +170,7 @@
 
 
 
-<h3>Accessing to multiple values</h3>
+<h3 class="head_l3" >Accessing to multiple values</h3>
 
 <p class="CodeCommand">
     &gt;&gt;m=std.util.tomatrix{ {1, 2, 3} , {4, 5, 6} , {7, 8, 9} }<br>
@@ -337,7 +337,7 @@
 
 
 
-<h3 id="Link_Vectors">Link Vectors</h3>
+<h3 class="head_l3"  id="Link_Vectors">Link Vectors</h3>
 <p>
     Internally a matrix is composed of vectors. Therefore, it is highly efficient to read a row in the following way:
 </p>
@@ -422,7 +422,7 @@
 
 <p>&nbsp;</p>
 
-<h2 id="Mathematical_Operations">Mathematical Operations</h2>
+<h2 class="head_l2"  id="Mathematical_Operations">Mathematical Operations</h2>
 
 <p>
     Matrix structure supports essential arithmetic operations: Let <i>m<sub>1</sub>, m<sub>2</sub></i> and 
@@ -461,11 +461,11 @@
 
 
 
-<h2 id="Member_Functions">Member Functions</h2>
+<h2 class="head_l2"  id="Member_Functions">Member Functions</h2>
 
 <p>&nbsp;</p>
 
-<h3 id="append">append</h3>
+<h3 class="head_l3"  id="append">append</h3>
 <p class="funcsignature">
     append (elem, align)
 </p>
@@ -548,7 +548,7 @@
 
 
 
-<h3 id="clone">clone</h3>
+<h3 class="head_l3"  id="clone">clone</h3>
 <p class="funcsignature">
     clone() &rarr; Matrix
 </p>
@@ -597,7 +597,7 @@
 
 
 
-<h3 id="delc">delc</h3>
+<h3 class="head_l3"  id="delc">delc</h3>
 <p class="funcsignature">
     delc(pos=)
 </p>
@@ -628,7 +628,7 @@
 
 
 
-<h3 id="delr">delr</h3>
+<h3 class="head_l3"  id="delr">delr</h3>
 <p class="funcsignature">
     delr(pos=)
 </p>
@@ -662,7 +662,7 @@
 
 
 
-<h3 id="equal">equal</h3>
+<h3 class="head_l3"  id="equal">equal</h3>
 <p class="funcsignature">
     equal(arg, [tol=1E-5]) &rarr; Matrix
 </p>
@@ -713,7 +713,7 @@
 
 
 
-<h3 id="greater">greater</h3>
+<h3 class="head_l3"  id="greater">greater</h3>
 <p class="funcsignature">
     greater(arg) &rarr; Matrix
 </p>
@@ -727,7 +727,7 @@
 
 
 
-<h3 id="greater_equal">greater_equal</h3>
+<h3 class="head_l3"  id="greater_equal">greater_equal</h3>
 <p class="funcsignature">
     greater_equal(arg, tol=1E-5) &rarr; Matrix
 </p>
@@ -742,7 +742,7 @@
 
 
 
-<h3 id="insert">insert</h3>
+<h3 class="head_l3"  id="insert">insert</h3>
 <p class="funcsignature">
     insert (elem, pos, align)
 </p>
@@ -812,7 +812,7 @@
 
 
 
-<h3 id="less">less</h3>
+<h3 class="head_l3"  id="less">less</h3>
 <p class="funcsignature">
     less(arg) &rarr; Matrix
 </p>
@@ -830,7 +830,7 @@
 
 
 
-<h3 id="less_equal">less_equal</h3>
+<h3 class="head_l3"  id="less_equal">less_equal</h3>
 <p class="funcsignature">
     less_equal(arg, tol=1E-5) &rarr; Matrix
 </p>
@@ -849,7 +849,7 @@
 
 
 
-<h3 id="ncols">ncols</h3>
+<h3 class="head_l3"  id="ncols">ncols</h3>
 <p class="funcsignature">
     ncols() &rarr; integer
 </p>
@@ -867,7 +867,7 @@
 
 
 
-<h3 id="nrows">nrows</h3>
+<h3 class="head_l3"  id="nrows">nrows</h3>
 <p class="funcsignature">
     nrows() &rarr; integer
 </p>
@@ -887,7 +887,7 @@
 
 
 
-<h3 id="sort">sort</h3>
+<h3 class="head_l3"  id="sort">sort</h3>
 <p class="funcsignature">
     sort(pos, order)
 </p>

@@ -82,7 +82,7 @@
 
 <p>&nbsp;</p>
 
-<h2 id="creating_closing">Creating and Closing</h2>
+<h2 class="head_l2"  id="creating_closing">Creating and Closing</h2>
 
 <p>
     A worksheet is part of the workbook, therefore a statement like the following is <span class="auto-style4">not valid</span>:
@@ -130,7 +130,7 @@
 
 
 
-<h2 id="accessing_data">Accessing Data</h2>
+<h2 class="head_l2"  id="accessing_data">Accessing Data</h2>
 <p>
     Understanding the location of the cells is important when accessing the cell in a worksheet . 
     The <em>topleft</em> cell of the worksheet,<em> A1,</em> 
@@ -142,7 +142,7 @@
 <p>&nbsp;</p>
 
 
-<h3 id="readfromcells">Reading from Cells </h3>
+<h3 class="head_l3"  id="readfromcells">Reading from Cells </h3>
 <p>
     There are two ways the content of a cell can be read: 
 </p>
@@ -210,7 +210,7 @@
 
 
 
-<h3 id="writingtocells">Writing to Cells</h3>
+<h3 class="head_l3"  id="writingtocells">Writing to Cells</h3>
 <p>
     Using the <em>array access</em> we can easily write to a cell. Let's work on the worksheet containing the data from A1 to B2 shown above. 
     After executing the following commands, observe the difference:
@@ -244,7 +244,7 @@
 <p>&nbsp;</p>
 
 
-<h3 id="formattedoutput">Formatted Output</h3>
+<h3 class="head_l3"  id="formattedoutput">Formatted Output</h3>
 <p>
     Although it was already shown how to write to cells, using this style will use the 
     default formatting available in that particular cell. Therefore, when writing to the cells using the 
@@ -351,11 +351,11 @@
     
  
 
-<h2 id="memberfuncs">3) Member functions</h2>
+<h2 class="head_l2"  id="memberfuncs">Member functions</h2>
 <p>&nbsp;</p>
 
 
-<h3 id="connect">connect</h3>
+<h3 class="head_l3"  id="connect">connect</h3>
 
 <p class="funcsignature">
     connect( func, func_param1, ... ) 
@@ -436,7 +436,7 @@
 
 
 
-<h3 id="name">name</h3>
+<h3 class="head_l3"  id="name">name</h3>
 <p class="funcsignature"> 
     name() &rarr; string
 </p>
@@ -462,7 +462,7 @@
 
 
 
-<h3 id="selection">selection</h3>
+<h3 class="head_l3"  id="selection">selection</h3>
 <p class="funcsignature">
     selection() &rarr; Range  
 </p>

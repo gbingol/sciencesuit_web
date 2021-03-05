@@ -21,10 +21,6 @@
             background-color: #FFFF00;
         }
 
-        h3{
-            color:red;
-        }
-
     </style>
 
     
@@ -65,7 +61,7 @@
 
 
 
-<h2 id="create_connect_query">Create &rarr; Connect &rarr; Query</h2>
+<h2 class="head_l2"  id="create_connect_query">Create &rarr; Connect &rarr; Query</h2>
 <p>
     In order to create a database class, run the following command:
 </p>
@@ -145,12 +141,12 @@
     
     
     
-<h2 id="memberfuncs">Member functions</h2>
+<h2 class="head_l2"  id="memberfuncs">Member functions</h2>
 
 
 
 
-<h3 id="close">close</h3>
+<h3 class="head_l3"  id="close">close</h3>
 
 <p class="funcsignature">
     close()
@@ -182,7 +178,7 @@
 
 
 
-<h3 id="columns">columns</h3>
+<h3 class="head_l3"  id="columns">columns</h3>
 <p class="funcsignature">
     columns(str=)
 </p>
@@ -198,7 +194,7 @@
 
 
 
-<h3 id="fields">fields</h3>
+<h3 class="head_l3"  id="fields">fields</h3>
 <p class="funcsignature">
     fields(str=) &rarr; table
 </p>
@@ -218,7 +214,7 @@
 
 
     
-<h3 id="open">open</h3>
+<h3 class="head_l3"  id="open">open</h3>
 <p class="funcsignature">
     open([path=])
 </p>
@@ -240,7 +236,7 @@
 
 
 
-<h3 id="sql">sql</h3>
+<h3 class="head_l3"  id="sql">sql</h3>
 <p class="funcsignature">
     sql(query=) &rarr; Table, integer, integer
 </p>
@@ -294,7 +290,7 @@
 
 
 
-<h3 id="tables">tables</h3>
+<h3 class="head_l3"  id="tables">tables</h3>
 <p class="funcsignature">
     tables() &rarr; table
 </p>

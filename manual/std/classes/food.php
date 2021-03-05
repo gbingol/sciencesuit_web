@@ -67,7 +67,7 @@
 </ul>
 
 
-<h2 id="create">Create Food variable</h2>
+<h2 class="head_l2"  id="create">Create Food variable</h2>
 
 <p>In order to create a variable of type Food, we run the following command:</p>
 
@@ -138,7 +138,7 @@
 
 
 
-<h2 id="mathops">Mathematical Operations</h2>
+<h2 class="head_l2"  id="mathops">Mathematical Operations</h2>
 
 <p>
     Food data structure supports some arithmetic operations: 
@@ -185,7 +185,7 @@
 <p>&nbsp;</p>
 
 
-<h3 id="addition">Addition</h3>
+<h3 class="head_l3"  id="addition">Addition</h3>
 
 <p>Let's create two food materials:</p>
 
@@ -252,7 +252,7 @@
 
 
 
-<h3 id="subtraction">Subtraction</h3>
+<h3 class="head_l3"  id="subtraction">Subtraction</h3>
 <p>
     Subtraction can be considered as the unit operation evaporation or extraction. 
     Therefore, it is only allowed to subtract <em>f</em><sub>2</sub> from <em>f</em><sub>1</sub>, if and only if, 
@@ -317,7 +317,7 @@
 
 <p>&nbsp;</p>
 
-<h3 id="multiplication">Multiplication</h3>
+<h3 class="head_l3"  id="multiplication">Multiplication</h3>
 
 <p>
     Unlike addition or subtraction, which yielded new food materials, multiplication 
@@ -355,11 +355,11 @@
 
 
 
-<h2 id="memberfuncs">Member Functions</h2>
+<h2 class="head_l2"  id="memberfuncs">Member Functions</h2>
 
 <p>&nbsp;</p>
 
-<h3 id="aw">aw (Water Activity)</h3>
+<h3 class="head_l3"  id="aw">aw (Water Activity)</h3>
 <p class="funcsignature">
     aw() &rarr; number <br>
     
@@ -503,7 +503,7 @@
 
 
 
-<h3 id="cp">cp (Specific Heat Capacity)</h3>
+<h3 class="head_l3"  id="cp">cp (Specific Heat Capacity)</h3>
 <p class="funcsignature">
     cp() &rarr; number <br>
     
@@ -543,7 +543,7 @@
 
 
 
-<h3 id="get">get</h3>
+<h3 class="head_l3"  id="get">get</h3>
 <p class="funcsignature">
     get() &rarr; Lua Table
 </p>
@@ -582,7 +582,7 @@
 
 
 
-<h3 id="k">k (Thermal Conductivity)</h3>
+<h3 class="head_l3"  id="k">k (Thermal Conductivity)</h3>
 <p class="funcsignature">
     k() &rarr; number <br>
     
@@ -621,7 +621,7 @@
 
 
 
-<h3 id="normalize">normalize</h3>
+<h3 class="head_l3"  id="normalize">normalize</h3>
 <p class="funcsignature">
     normalize()
 </p>
@@ -676,7 +676,7 @@
 
 
 
-<h3 id="ph">ph</h3>
+<h3 class="head_l3"  id="ph">ph</h3>
 <p class="funcsignature">
     ph() &rarr; number <br>
     
@@ -718,7 +718,7 @@
 
 
 
-<h3 id="rho">rho (Density)</h3>
+<h3 class="head_l3"  id="rho">rho (Density)</h3>
 <p class="funcsignature">
     rho() &rarr; number <br>
     
@@ -756,7 +756,7 @@
 
 
 
-<h3 id="T">T (Temperature)</h3>
+<h3 class="head_l3"  id="T">T (Temperature)</h3>
 <p class="funcsignature">
     T() &rarr; number <br>
     

@@ -122,10 +122,10 @@
 
 
 
-<h2 id="createarray">Creating Array</h2>
+<h2 class="head_l2" id="createarray">Creating Array</h2>
     
     
-<h3 id="array_new">Array.new</h3>
+<h3 class="head_l3"  id="array_new">Array.new</h3>
 
 <p class="funcsignature">
     Array.new(n=, [value=]) &rarr; Array 
@@ -176,7 +176,7 @@
 
 
 
-<h3 id="array_rbinom">Array.rbinom</h3>
+<h3 class="head_l3"  id="array_rbinom">Array.rbinom</h3>
 
 <p>
     Generates random sample for the binomial distribution. 
@@ -234,7 +234,7 @@
 
 
 
-<h3 id="array_rchisq">Array.rchisq</h3>
+<h3 class="head_l3"  id="array_rchisq">Array.rchisq</h3>
 
 <p>
     Generates random sample for the chisq distribution. 
@@ -288,7 +288,7 @@
 
 
 
-<h3 id="array_rf">Array.rf</h3>
+<h3 class="head_l3"  id="array_rf">Array.rf</h3>
 
 <p>
     Generates random sample for the F distribution. 
@@ -340,7 +340,7 @@
 
 
 
-<h3 id="array_rnorm">Array.rnorm</h3>
+<h3 class="head_l3"  id="array_rnorm">Array.rnorm</h3>
 
 <p>
     Generates random sample for the normal distribution. 
@@ -394,7 +394,7 @@
 
 
 
-<h3 id="array_rpois">Array.rpois</h3>
+<h3 class="head_l3"  id="array_rpois">Array.rpois</h3>
 
 <p>
     Generates random sample for the Poisson distribution. 
@@ -447,7 +447,7 @@
 
 
 
-<h3 id="array_rt">Array.rt</h3>
+<h3 class="head_l3"  id="array_rt">Array.rt</h3>
 
 <p>
     Generates random sample for the Student t distribution. 
@@ -501,7 +501,7 @@
 
 
 
-<h3 id="array_runif">Array.runif</h3>
+<h3 class="head_l3"  id="array_runif">Array.runif</h3>
 
 <p>
     Generates random sample for uniform distribution. 
@@ -569,7 +569,7 @@
 
 
 
-<h3 id="fromExistingData">From Existing Data</h3>
+<h3 class="head_l3"  id="fromExistingData">From Existing Data</h3>
 
 <p>
     In order to create an array from:
@@ -605,7 +605,7 @@
 
 
 
-<h2 id="array_manipulation">Array Manipulation</h2>
+<h2 class="head_l2" id="array_manipulation">Array Manipulation</h2>
 
 
 <p>
@@ -690,7 +690,7 @@
 
 <!-- ************************Arithmetic Operations ********************************* -->
 
-<h2 id="arithmeticops">Arithmetic Operations</h2>
+<h2 class="head_l2" id="arithmeticops">Arithmetic Operations</h2>
 
 <p>
     It has already been mentioned that an array can contain numbers (float, integer) 
@@ -770,10 +770,10 @@
 
 <!-- ************************Member Functions********************************* -->
 
-<h2 id="memberfuncs">Member functions</h2>
+<h2 class="head_l2" id="memberfuncs">Member functions</h2>
     
 
-<h3 id="capacity">capacity</h3>
+<h3 class="head_l3"  id="capacity">capacity</h3>
 
 <p class="funcsignature">
     capacity() &rarr; integer
@@ -825,7 +825,7 @@
 
 
     
-<h3 id="clone">clone</h3>
+<h3 class="head_l3"  id="clone">clone</h3>
 
 <p class="funcsignature">
     clone() &rarr; Array
@@ -894,7 +894,7 @@
 
 
 
-<h3 id="dtypes">dtypes</h3>
+<h3 class="head_l3"  id="dtypes">dtypes</h3>
 
 <p class="funcsignature">
     dtypes() &rarr; Lua table
@@ -938,7 +938,7 @@
 
 
 
-<h3 id="erase">erase</h3>
+<h3 class="head_l3"  id="erase">erase</h3>
 
 <p class="funcsignature">
     erase(pos)
@@ -989,7 +989,7 @@
 
 
 
-<h3 id="insert">insert</h3>
+<h3 class="head_l3"  id="insert">insert</h3>
 
 <p class="funcsignature">
     insert(i, elem)
@@ -1046,7 +1046,7 @@
 
 
 
-<h3 id="is_linked">is_linked</h3>
+<h3 class="head_l3"  id="is_linked">is_linked</h3>
 
 <p class="funcsignature">
     is_linked() &rarr; boolean
@@ -1091,7 +1091,7 @@
 
 
 
-<h3 id="keep_realnumbers">keep_complexnumbers</h3>
+<h3 class="head_l3"  id="keep_realnumbers">keep_complexnumbers</h3>
 
 <p class="funcsignature">
     keep_complexnumbers()
@@ -1133,7 +1133,7 @@
 
 
 
-<h3 id="keep_numbers">keep_numbers</h3>
+<h3 class="head_l3"  id="keep_numbers">keep_numbers</h3>
 
 <p class="funcsignature">
     keep_numbers()
@@ -1171,7 +1171,7 @@
 
 
 
-<h3 id="keep_realnumbers">keep_realnumbers</h3>
+<h3 class="head_l3"  id="keep_realnumbers">keep_realnumbers</h3>
 
 <p class="funcsignature">
     keep_realnumbers()
@@ -1212,7 +1212,7 @@
 
 
 
-<h3 id="keep_strings">keep_strings</h3>
+<h3 class="head_l3"  id="keep_strings">keep_strings</h3>
 
 <p class="funcsignature">
     keep_strings()
@@ -1255,7 +1255,7 @@
 
 
 
-<h3 id="push_back">push_back</h3>
+<h3 class="head_l3"  id="push_back">push_back</h3>
 
 <p class="funcsignature">
     push_back(elem)
@@ -1297,7 +1297,7 @@
 
 
 
-<h3 id="remove_numbers">remove_numbers</h3>
+<h3 class="head_l3"  id="remove_numbers">remove_numbers</h3>
 
 <p class="funcsignature">
     remove_numbers()
@@ -1338,7 +1338,7 @@
 
 
 
-<h3 id="remove_nils">remove_nils</h3>
+<h3 class="head_l3"  id="remove_nils">remove_nils</h3>
 
 <p class="funcsignature">
     remove_nils()
@@ -1378,7 +1378,7 @@
 
 
 
-<h3 id="remove_strings">remove_strings</h3>
+<h3 class="head_l3"  id="remove_strings">remove_strings</h3>
 
 <p class="funcsignature">
     remove_strings()
@@ -1419,7 +1419,7 @@
 
 
     
-<h3 id="reserve">reserve</h3>
+<h3 class="head_l3"  id="reserve">reserve</h3>
 
 <p class="funcsignature">
     reserve(n)
@@ -1470,7 +1470,7 @@
 
 
 
-<h3 id="resize">resize</h3>
+<h3 class="head_l3"  id="resize">resize</h3>
 
 <p class="funcsignature">
     resize(n) &rarr; Array
@@ -1539,7 +1539,7 @@
 
 
     
-<h3 id="shuffle">shuffle </h3>
+<h3 class="head_l3"  id="shuffle">shuffle </h3>
 <p class="funcsignature">
     shuffle()
 </p>
@@ -1574,7 +1574,7 @@
 
     
     
-<h3 id="sort">sort</h3>
+<h3 class="head_l3"  id="sort">sort</h3>
 
 <p class="funcsignature">
     sort(order=, caseSensitive=<span class="LuaKeyword">true</span>)
@@ -1624,7 +1624,7 @@
 
 
 
-<h3 id="unique">unique</h3>
+<h3 class="head_l3"  id="unique">unique</h3>
 
 <p class="funcsignature">
     unique()

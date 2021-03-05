@@ -67,7 +67,7 @@
 
 
 
-<h2 id="elemaccess">Accessing Elements</h2>
+<h2 class="head_l2"  id="elemaccess">Accessing Elements</h2>
 
 <ol class="linespaced">
     <li>Accessing to single values</li>
@@ -90,7 +90,7 @@
 </p>
 
 
-<h3 id="access_singlevalues">Case 1: Accessing to single values</h3>
+<h3 class="head_l3"  id="access_singlevalues">Accessing to single values</h3>
 
 
 <p>To change a single entry in the vector:</p>
@@ -113,7 +113,7 @@
 <p>&nbsp;</p>
 
 
-<h3 id="access_multiplevalues">Case 2: Accessing to multiple values</h3>
+<h3 class="head_l3"  id="access_multiplevalues">Accessing to multiple values</h3>
 
 <p>Changing the 2<sup>nd</sup> and the 3<sup>rd</sup> entries in the vector to number 20:</p>
 
@@ -327,7 +327,7 @@
 
 
 
-<h2 id="arithmeticops">Arithmetic Operations</h2>
+<h2 class="head_l2"  id="arithmeticops">Arithmetic Operations</h2>
 <p>
     Vector class supports essential arithmetic operations: Let <em>v<sub>1</sub></em>,<em>v<sub>2</sub></em>
     and <em>v<sub>3</sub></em> denote vectors of same size, <em>m</em> a matrix and <em>a</em> an arbitrary number.
@@ -396,13 +396,13 @@
 
 
 
-<h2 id="Member_Functions">Member Functions</h2>
+<h2 class="head_l2"  id="Member_Functions">Member Functions</h2>
 
 <p>&nbsp;</p>
 
 
 
-<h3 id="clone">clone</h3>
+<h3 class="head_l3"  id="clone">clone</h3>
 <p class="funcsignature">
     clone() &rarr; Vector
 </p>
@@ -437,7 +437,7 @@
 
 
 
-<h3 id="capacity">capacity</h3>
+<h3 class="head_l3"  id="capacity">capacity</h3>
 <p class="funcsignature">
     capacity() &rarr; integer
 </p>
@@ -459,7 +459,7 @@
 
 
 
-<h3 id="equal">equal</h3>
+<h3 class="head_l3"  id="equal">equal</h3>
 <p class="funcsignature">
     equal(arg, tol=1E-5) &rarr; Vector
 </p>
@@ -549,7 +549,7 @@
 
 
 
-<h3 id="greater">greater</h3>
+<h3 class="head_l3"  id="greater">greater</h3>
 <p class="funcsignature">
     greater(arg=) &rarr; Vector
 </p>
@@ -573,7 +573,7 @@
 
 
 
-<h3 id="greater_equal">greater_equal</h3>
+<h3 class="head_l3"  id="greater_equal">greater_equal</h3>
 <p class="funcsignature">
     greater_equal(arg=) &rarr; Vector
 </p>
@@ -597,7 +597,7 @@
 
 
 
-<h3 id="insert">insert</h3>
+<h3 class="head_l3"  id="insert">insert</h3>
 <p class="funcsignature">
     insert(pos, elem)
 </p>
@@ -647,7 +647,7 @@
 
 
 
-<h3 id="less">less</h3>
+<h3 class="head_l3"  id="less">less</h3>
 <p class="funcsignature">
     less(arg=) &rarr; Vector
 <p>
@@ -671,7 +671,7 @@
 
 
 
-<h3 id="less_equal">less_equal</h3>
+<h3 class="head_l3"  id="less_equal">less_equal</h3>
 <p class="funcsignature">
     less_equal(arg=) &rarr; Vector
 <p>
@@ -694,7 +694,7 @@
 
 
 
-<h3 id="push_back">push_back</h3>
+<h3 class="head_l3"  id="push_back">push_back</h3>
 <p class="funcsignature">
     push_back(arg=)
 </p>
@@ -764,7 +764,7 @@
 
 
 
-<h3 id="reserve">reserve</h3>
+<h3 class="head_l3"  id="reserve">reserve</h3>
 <p class="funcsignature">
     reserve(num=)
 </p>
@@ -827,7 +827,7 @@
 
 
 
-<h3 id="resize">resize</h3>
+<h3 class="head_l3"  id="resize">resize</h3>
 <p class="funcsignature">
     resize(num=)
 </p>
@@ -883,7 +883,7 @@
 
 
 
-<h3 id="reverse">reverse</h3>
+<h3 class="head_l3"  id="reverse">reverse</h3>
 <p class="funcsignature">
     reverse()
 </p>
@@ -916,7 +916,7 @@
 
 
 
-<h3 id="shape">shape</h3>
+<h3 class="head_l3"  id="shape">shape</h3>
 <p class="funcsignature">
     shape() &rarr; string
 </p>
@@ -968,7 +968,7 @@
 
 
 
-<h3 id="shuffle">shuffle</h3>
+<h3 class="head_l3"  id="shuffle">shuffle</h3>
 <p class="funcsignature">
     shuffle()
 <p>
@@ -1004,7 +1004,7 @@
 
 
 
-<h3 id="slice">slice</h3>
+<h3 class="head_l3"  id="slice">slice</h3>
 <p class="funcsignature">
     slice(pos=) &rarr; Vector, Vector
 </p>
@@ -1049,7 +1049,7 @@
 
 
 
-<h3 id="sort">sort</h3>
+<h3 class="head_l3"  id="sort">sort</h3>
 <p class="funcsignature">
     sort(order=)
 </p>

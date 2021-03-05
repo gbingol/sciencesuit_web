@@ -38,9 +38,9 @@
 <p>&nbsp;</p>
 
 
-<h2 id="constructing">Construction</h2>
+<h2 class="head_l2" id="constructing">Construction</h2>
 
-<h3 id="rectangular">Rectangular form</h3>
+<h3 class="head_l3" id="rectangular">Rectangular form</h3>
 
 <p class="funcsignature">
     std.Complex.new(real=, imag=)
@@ -65,7 +65,7 @@
 
 
 
-<h3 id="polarform">Polar form</h3>
+<h3 class="head_l3" id="polarform">Polar form</h3>
 <p class="funcsignature">
     std.Complex.new(mag=, theta=)
 </p>
@@ -98,7 +98,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h3 id="fromstring">From string</h3>
+<h3 class="head_l3" id="fromstring">From string</h3>
 <p>
     Complex numbers can also be constructed from a string. 
 </p>
@@ -163,7 +163,7 @@
 
 
 
-<h2 id="arithmeticops">Arithmetic Operations</h2>
+<h2 class="head_l2" id="arithmeticops">Arithmetic Operations</h2>
 
 <p>
     Following rules are defined:
@@ -232,9 +232,9 @@
 
 
 
-<h2 id="memberfuncs">Member Functions</h2>
+<h2 class="head_l2" id="memberfuncs">Member Functions</h2>
 
-<h3 id="arg">arg</h3>
+<h3 class="head_l3" id="arg">arg</h3>
 
 <p>
     Calculates the phase angle in radians. The returned value is in [-&pi; , &pi;].
@@ -274,7 +274,7 @@
 
 
 
-<h3 id="conj">conj</h3>
+<h3 class="head_l3" id="conj">conj</h3>
 <p>
     Calculates the complex conjugate.
 </p>
@@ -305,7 +305,7 @@
 
 
 
-<h3 id="imag">imag</h3>
+<h3 class="head_l3" id="imag">imag</h3>
 
 <p>
     Returns the imaginary part of the complex number.
@@ -340,7 +340,7 @@
 
 
 
-<h3 id="norm">norm</h3>
+<h3 class="head_l3" id="norm">norm</h3>
 
 <p>
     Returns the squared magnitude 
@@ -380,7 +380,7 @@
 
 
 
-<h3 id="real">real</h3>
+<h3 class="head_l3" id="real">real</h3>
 
 <p>
     Returns the real part of the complex number.
