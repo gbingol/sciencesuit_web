@@ -10,6 +10,8 @@ function MakeElement_Select_OutlineFromTagName(TagName)
     selectList.style.setProperty("border", "1px blue solid");
     selectList.style.setProperty("border-radius","20px");
 
+    selectList.style.setProperty("margin-top", "2em");
+
     selectList.id = "selectsection";
 
     selectList.addEventListener("change", function()
@@ -21,15 +23,15 @@ function MakeElement_Select_OutlineFromTagName(TagName)
         location.href=Elem.options[SelIndex].value;
     });
 
-    MainBody.insertBefore(selectList, H1Node.nextSibling);
+    MainBody.insertBefore(selectList, H1Node);
 
 
-    var option = document.createElement("option");
-    option.text = "Section";
-    option.selected = true;
-    option.disabled=true;
+    var SectionOption = document.createElement("option");
+    SectionOption.text = "Section";
+    SectionOption.selected = true;
+    SectionOption.disabled=true;
 
-   selectList.appendChild(option);
+   selectList.appendChild(SectionOption);
     
     
     var NextSibling=H1Node.nextElementSibling;
@@ -62,9 +64,9 @@ function MakeElement_Select_OutlineFromTagName(TagName)
 
 
     var Label=document.createElement("span");
-    Label.innerHTML="Jump to: ";
+    Label.innerHTML="<em>Jump to:</em> ";
 
-    MainBody.insertBefore(Label, H1Node.nextSibling);
+    MainBody.insertBefore(Label, selectList);
 }
 
 
