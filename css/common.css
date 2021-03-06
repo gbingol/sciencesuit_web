@@ -67,6 +67,16 @@ h2.head_l2_reset
 
 
 
+details
+{
+    width: fit-content;
+}
+
+summary:hover
+{
+    cursor: pointer;
+}
+
 
 
 .CodeCommand 
@@ -171,38 +181,38 @@ a[target="_blank"]
 
 
 /*Matrix or Vector borders*/
-    table.matrix 
-    {
-        position: relative;
-    }
+table.matrix 
+{
+    position: relative;
+}
 
-    table.matrix:before, table.matrix:after 
-    {
-        content: "";
-        position: absolute;
-        top: 0;
-        border: 1px solid black;
-        width: 6px;
-        height: 100%;
-    }
+table.matrix:before, table.matrix:after 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    border: 1px solid black;
+    width: 6px;
+    height: 100%;
+}
 
-    table.matrix:before 
-    {
-        left: -2px;
-        border-right: 0px;
-    }
+table.matrix:before 
+{
+    left: -2px;
+    border-right: 0px;
+}
 
-    table.matrix:after 
-    {
-        right: -2px;
-        border-left: 0px;
-    }
+table.matrix:after 
+{
+    right: -2px;
+    border-left: 0px;
+}
 
-    table.matrix td 
-    {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+table.matrix td 
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 
@@ -283,6 +293,12 @@ ol.linespaced li, ul.linespaced li
 }
 
 
+
+
+
+
+
+
 @media only screen and (max-width:900px) 
 {
     img 
@@ -290,6 +306,12 @@ ol.linespaced li, ul.linespaced li
         width: auto;
         height: auto;
         max-width: 100%;
+    }
+
+
+    details
+    {
+        width: 100%;
     }
     
     
@@ -322,6 +344,10 @@ ol.linespaced li, ul.linespaced li
     }
     
 }
+
+
+
+
 
 
 
