@@ -23,12 +23,20 @@
    include $mainmenuloc;
 ?>
 
+
+
 <h1>sinh</h1>
     
-<p>Finds the hyperbolic sine.</p>
+<p>Computes the hyperbolic sine.</p>
     
-<h3 id="syntax">Syntax:</h3> 
-<p>
+
+<p>&nbsp;</p>
+
+
+
+<h3 id="syntax">Syntax</h3> 
+
+<p class="funcsignature">
       sinh(param=) &rarr; param
 </p>
 

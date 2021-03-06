@@ -31,14 +31,24 @@
       Computes the natural logarithm.
 </p>
     
-<h3>Syntax:</h3> 
-<p>
+
+<p>&nbsp;</p>
+
+<h3>Syntax</h3> 
+
+<p class="funcsignature">
       ln(param=) &rarr; param
 </p>
 
 <p>
       <em>param</em> can be real or complex number, or an iteratable container.
 </p>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 
 
 <div class="RelatedLinks">

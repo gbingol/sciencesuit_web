@@ -28,16 +28,35 @@
 
 <h1>ceil</h1>
     
-<p>Finds the integer which is no less than the given parameter.</p>
+<p>Computes the integer which is no less than the given parameter.</p>
+
+   
     
+<p>&nbsp;</p>
+
+
+
 <h3 id="syntax">Syntax</h3> 
-<p>
+
+<p class="funcsignature">
     ceil(param=) &rarr; param
 </p>
 
 <p>
     <em>param</em> can be real number or an iteratable container.
 </p>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<div class="RelatedLinks">
+    <a href="floor.php">std.floor</a>
+</div>
 
 
 </body>

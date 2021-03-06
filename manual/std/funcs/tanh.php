@@ -24,10 +24,15 @@
 
 <h1>tanh</h1>
     
-<p>Finds the hyperbolic tangent.</p>
+<p>Computes the hyperbolic tangent.</p>
+
+
+<p>&nbsp;</p>
     
+
 <h3 id="syntax">Syntax</h3> 
-<p>
+
+<p class="funcsignature">
       tanh(param=) &rarr; param
 </p>
 

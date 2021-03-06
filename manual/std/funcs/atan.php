@@ -29,11 +29,16 @@
 <h1>atan</h1>
     
 <p>
-    Finds the arctan (inverse tangent)
+    Computes the arctan (inverse tangent)
 </p>
     
-<h3>Syntax:</h3> 
-<p>
+
+<p>&nbsp;</p>
+
+
+<h3>Syntax</h3> 
+
+<p class="funcsignature">
     atan(param=) &rarr; param
 </p>
 

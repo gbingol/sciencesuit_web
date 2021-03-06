@@ -27,15 +27,29 @@
 <h1>exp</h1>
     
 <p>Computes the e<sup>x</sup>, where e=2.71828.</p>
+
+<p>&nbsp;</p>
     
 <h3>Syntax</h3> 
-<p>
+
+<p class="funcsignature">
     exp(param=) &rarr; param
 </p>
 
 <p>
     <em>param</em> can be real or complex number, or an iteratable container.
 </p>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<div class="RelatedLinks">
+    <a href="pow.php">std.pow</a>
+</div>
 
 </body>
 

@@ -29,10 +29,16 @@
 
 <h1>asin</h1>
     
-<p>Finds the arcsine (inverse sine)</p>
+<p>Computes the arcsine (inverse sine)</p>
     
-<h3 id="syntax">Syntax:</h3> 
-<p>
+
+<p>&nbsp;</p>
+
+
+
+<h3 id="syntax">Syntax</h3> 
+
+<p class="funcsignature">
     asin(param=) &rarr; param
 </p>
 

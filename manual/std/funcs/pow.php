@@ -24,25 +24,38 @@
 ?>
 
 
+
+
+
 <h1>pow</h1>
 
+<p>
+      Computes x<sup>y</sup>.
+</p>
+    
 
     
+
+<h3>Syntax</h3>
+
+<p class="funcsignature">
+      pow(elem, y) &rarr; elem
+</p>
+
 <p>
-      If <i>arg</i> is a number returns x<sup>y</sup>, equivalent to x^y <br>
-      If <i>arg</i> is an iteratable container, computes x^y on each element.
- </p>
-    
-<h3>Syntax:</h3>
-<p>pow(arg, y) &rarr; arg</p>
+      where <em>elem</em> can be real or complex number or an iteratable container.
+</p>
+
 
 <p>&nbsp;</p>
 
-<h3>Example:</h3>
-<p>
+
+<p class="CodeCommand">
       &gt;&gt;std.pow( {2, 3, 4}, 2) <br>
-      4 &nbsp;&nbsp; 9 &nbsp;&nbsp;	16
+      4 &emsp; 9 &emsp;	16
 </p>
+
+
 
 </body>
 

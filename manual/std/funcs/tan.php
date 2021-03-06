@@ -23,12 +23,19 @@
    include $mainmenuloc;
 ?>
 
+
+
+
 <h1>tan</h1>
     
-<p>Finds the tangent.</p>
+<p>Computes the tangent.</p>
     
-<h3>Syntax:</h3> 
-<p>
+
+<p>&nbsp;</p>
+
+<h3>Syntax</h3> 
+
+<p class="funcsignature">
     tan(param=) &rarr; param
 </p>
 

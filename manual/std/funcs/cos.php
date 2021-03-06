@@ -28,16 +28,36 @@
 
 <h1>cos</h1>
     
-<p>Finds the cosine.</p>
-    
-<h3 id="syntax">Syntax:</h3> 
-<p>
+<p>Computes the cosine.</p>
+
+
+<p>&nbsp;</p>
+
+
+
+<h3 id="syntax">Syntax</h3> 
+
+<p class="funcsignature">
     cos(param=) &rarr; param
 </p>
 
 <p>
     <em>param</em> can be real or complex number, or an iteratable container.
 </p>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<div class="RelatedLinks">
+    <a href="cosh.php">std.cosh</a>
+    <a href="sin.php">std.sin</a>
+</div>
+
 
 </body>
 

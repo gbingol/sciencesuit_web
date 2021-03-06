@@ -30,17 +30,31 @@
 <h1>cosh</h1>
     
 <p>
-      Finds the hyperbolic cosine
+      Computes the hyperbolic cosine
 </p>
-    
-<h3 id="syntax">Syntax:</h3> 
-<p>
+
+
+
+<p>&nbsp;</p>
+
+
+
+<h3 id="syntax">Syntax</h3> 
+
+<p class="funcsignature">
       cosh(param=) &rarr; param
 </p>
 
 <p>
       <em>param</em> can be real or complex number, or an iteratable container.
 </p>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 
 
 <div class="RelatedLinks">

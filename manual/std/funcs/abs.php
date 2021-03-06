@@ -31,17 +31,22 @@
 <h1>abs</h1>
     
 <p>
-      Calculates the absolute value for real numbers and the magnitude for the complex number.
+      Computes the absolute value for real numbers and the magnitude for the complex number.
 </p>
-    
+
+<p>&nbsp;</p>    
+
 <h3 id="syntax">Syntax</h3> 
-<p>
+
+<p class="funcsignature">
       abs(param=) &rarr; number/param
 </p>
 
 <p>
       where <em>param</em> can be real or complex number, or an iteratable container.
 </p>
+
+
 
 
 <p>&nbsp;</p>

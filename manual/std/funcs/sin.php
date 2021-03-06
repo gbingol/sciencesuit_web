@@ -22,18 +22,32 @@
    include $mainmenuloc;
 ?>
 
+
+
+
 <h1>sin</h1>
     
-<p>Finds the sine.</p>
+<p>Computes the sine.</p>
     
-<h3 id="syntax">Syntax:</h3> 
-<p>
+
+<p>&nbsp;</p>
+
+
+
+<h3 id="syntax">Syntax</h3> 
+
+<p class="funcsignature">
     sin(param=) &rarr; param
 </p>
 
 <p>
     <em>param</em> can be real or complex number, or an iteratable container.
 </p>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 
 
 <div class="RelatedLinks">
