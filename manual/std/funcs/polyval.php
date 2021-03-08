@@ -28,29 +28,32 @@
 <h1 >polyval</h1>
 
 <p>
-    Evaluates a polynomial (a<sub>n</sub>x<sup>n</sup> + a<sub>n-1</sub>x<sup>n-1</sup> +..+ a<sub>0</sub>) at a given data or dataset.
+    Evaluates a polynomial 
+    (a<sub>n</sub>x<sup>n</sup> + a<sub>n-1</sub>x<sup>n-1</sup> +..+ a<sub>0</sub>) 
+    at a given data or dataset.
 </p>
 
 <p class="funcsignature">   
-    polyval(v=,arg=) &rarr; number / Vector     
+    polyval(v=, arg=) &rarr; real / Complex / Vector     
 </p>
 
 <p>
-    where parameter <em>v</em> must be of type Vector. If <em>arg</em> is a single data point the function returns a number; 
-    however, if <em>arg</em> is a vector of data points then function returns a vector.
+    where parameter <em>v</em> must be of type Vector and parameter <em>arg</em> must be 
+    either real or Complex number or Vector.
 </p>
 
 
 <p>&nbsp;</p>
 
 
-
-<h4>Note on algorithm:</h4>
-<p>
-    The function uses <a href="https://en.wikipedia.org/wiki/Horner's_method" target="_blank">Horner's method</a> 
-    to evaluate the polynom.
-</p>
-
+<details>
+    <summary>Note on algorithm:</summary>
+    <p>
+        The function uses 
+        <a href="https://en.wikipedia.org/wiki/Horner's_method" target="_blank">Horner's method</a> 
+        to evaluate the polynom.
+    </p>
+</details>
 
 
 
@@ -58,35 +61,50 @@
 
 
 
-
-<h3>Example</h3>
-<p>
-    Assume we are finding the polynom that <em>best</em> fits to the following data and testing the 
-    polynom at different data points:
-    
-    <span style="font-size: 0.9em; background-color: lightgoldenrodyellow;">
-        (0, 4), (1, 10), (2, 26), (3, 58), (4, 112), (5, 194)
-
-    </span>
-</p>
-
-
-<p>&nbsp;</p>
-
-
+<h3 id="realnumber">Real numbers</h3>
 <p class="CodeCommand">
-    &gt;&gt;coef=std.polyfit(x, y, 3)<br>
+    &gt;&gt;coefficients=std.polyfit(x, y, 3)<br>
     <br />
 
-    &gt;&gt;std.polyval(coef, 3.5)<br />
+    <span class="LuaComment">Single data point</span><br>
+    &gt;&gt;std.polyval(coefficients, 3.5)<br />
     81.875 <br />
 
     <br />
+    <br>
 
+    <span class="LuaComment">Multiple data points</span><br>
     &gt;&gt;v=std.util.tovector{3.5, 4.5} <br />
-    &gt;&gt;std.polyval(coef, v) <br />
+    &gt;&gt;std.polyval(coefficients, v) <br />
     81.875 &emsp; 149.125 &emsp; COL
 </p>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h3 id="complexnumber">Complex number</h3>
+<p class="CodeCommand">
+    <span class="LuaComment">x<sup>2</sup> + 1 = 0 has complex roots</span><br>
+    &gt;&gt;poly=std.util.tovector{1, 0, 1} <br>
+    &gt;&gt;roots=std.polyroots(poly) <br>
+    &gt;&gt;roots <br>
+    i &emsp;  -i   <br>
+
+    <br>
+
+    &gt;&gt;std.polyval(poly, roots[1]) <br>
+    0 + 0i <br>
+
+    <br>
+    <span class="LuaComment">Evaluate at x = 1 + i</span><br>
+    &gt;&gt;std.polyval(poly, std.Complex.new(1, 1)) <br>
+    1 + 2i
+
+</p>
+
 
 
 
