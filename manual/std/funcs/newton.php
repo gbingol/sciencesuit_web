@@ -98,7 +98,7 @@
     </tr>
     <tr>
         <td>tol:</td>
-        <td>Minimum tolerance for error &larr; <em> real number</em></td>
+        <td>tolerance for error &larr; <em> real number</em></td>
     </tr>
     <tr>
         <td>maxiter:</td>
