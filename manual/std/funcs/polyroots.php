@@ -211,7 +211,7 @@
 <p>&nbsp;</p>
 
 <p>
-    Polynom containing only complex roots: x<sup>4</sup> + 1 = 0
+    Polynom with only complex roots: x<sup>4</sup> + 1 = 0
 </p>
 
 <p class="CodeCommand">
@@ -224,7 +224,7 @@
 <p>&nbsp;</p>
 
 <p>
-    Polynom containing real and complex roots: 2x<sup>4</sup> + x<sup>2</sup> - 1 = 0
+    Polynom with real and complex roots: 2x<sup>4</sup> + x<sup>2</sup> - 1 = 0
 </p>
 
 <p class="CodeCommand">
