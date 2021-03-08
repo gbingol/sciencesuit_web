@@ -70,7 +70,7 @@
 
 
 <p>
-    The function returns the <em>root,</em> <em>error </em>and<em> number of iterations</em>.
+    returns the <em>root,</em> <em>error </em>and<em> number of iterations</em>.
 </p>
 
 
@@ -78,7 +78,7 @@
 
 
 
-<h3>Arguments:</h3>
+<h3>Arguments</h3>
 <table class="funcarguments">
     <tr>
         <td>f:</td>
@@ -86,16 +86,13 @@
     </tr>
     <tr>
         <td>fprime:</td>
-        <td>A unary function (derivative of f)  &larr; <em>function</em></td>
+        <td>derivative of <em>f</em>  &larr; <em>function</em></td>
     </tr>
     <tr>
-        <td>x0:</td>
-        <td>Initial guess &larr; <em>real number</em></td>
+        <td>x0, x1:</td>
+        <td>Initial guesses &larr; <em>real number</em></td>
     </tr>
-    <tr>
-        <td>x1:</td>
-        <td>Initial guess &larr; <em>real number</em></td>
-    </tr>
+
     <tr>
         <td>tol:</td>
         <td>tolerance for error &larr; <em> real number</em></td>
