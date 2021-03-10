@@ -46,6 +46,65 @@
     <em>param</em> can be real or complex number, or an iteratable container.
 </p>
 
+
+<p>&nbsp;</p>
+
+
+<h3 id="complex">Complex numbers</h3>
+
+<p class="CodeCommand">
+    &gt;&gt;c=std.Complex.new(3, 4) <br>
+    &gt;&gt;std.atan(c) <br>
+    1.44831 + 0.158997i
+</p>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+<h3 id="containers">Containers</h3>
+
+<p>
+      The container must be an iteratable container.
+</p>
+
+<div class="CodeCommand">
+    &gt;&gt;t={1, -1, 0.5, -0.5} <br>
+    &gt;&gt;std.atan(t) <br>
+    0.785398 &emsp;  -0.785398 &emsp;  0.463648 &emsp;  -0.463648   <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;v=std.util.tovector(t) <br>
+    &gt;&gt;std.atan(v) <br>
+    0.785398 &emsp; -0.785398 &emsp; 0.463648 &emsp; -0.463648  &emsp; COL <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;arr=std.util.toarray(t) <br>
+    &gt;&gt;std.atan(arr) <br>
+    0.785398 &emsp; -0.785398 &emsp; 0.463648 &emsp; -0.463648   
+</div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<div class="RelatedLinks">
+    <a href="acos.php">std.acos</a>
+    <a href="asin.php">std.asin</a>
+    <a href="tan.php">std.tan</a>
+</div>
+
 </body>
 
 </html>
