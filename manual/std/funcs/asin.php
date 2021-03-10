@@ -87,6 +87,13 @@
     1.5708 &emsp; -1.5708 &emsp; 0.523599 &emsp; -0.523599 &emsp; COL
 </div>
 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
 <div class="RelatedLinks">
     <a href="acos.php">std.acos</a>
     <a href="atan.php">std.atan</a>
