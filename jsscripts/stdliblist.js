@@ -98,8 +98,11 @@ var StdLibFunctions = [
     
     StdLibFunctions.sort();
   
+
+
+
   var StdLibClasses=[
-      ["Array"], ["Complex"], ["Food"], ["Database"], ["DataFrame"], ["Matrix"], ["Range"], ["Vector"], ["Worksheet"]];
+      ["Array"], ["Complex"], ["Database"], ["DataFrame"], ["Food"], ["Matrix"], ["Range"], ["Vector"], ["Worksheet"]];
   
   
   
