@@ -40,11 +40,23 @@
 </head>
 
 
+
+
+
 <body>
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H3"), false);
+</script>
+
+
 
 <h1>scatter</h1>
 
@@ -73,6 +85,10 @@
         [<key>ylab</key>=""], <br />
 
         <br />
+
+        [<key>smooth=</key>=false], <br />
+
+        <br />
         
         
         [<key>bubble</key>={size=, color=DefaultColor, mode="A", scale=100}], <br />
@@ -82,7 +98,7 @@
         [<key>marker</key>={type="c", size=4,  fill=DefaultColor, linewidth=1, linecolor=DefaultColor}], <br />
         <br />
 
-        [<key>line</key>={ color=DefaultColor, width=1, style="solid", smooth=false}], <br />
+        [<key>line</key>={ color=DefaultColor, width=1, style="solid"}], <br />
         <br />
 
         [<key>trendline</key>={ type="linear", degree=2, intercept=AutoCompute, name=DefaultName, color=DefaultColor, width=1, style="dash"}] <br />
@@ -145,6 +161,11 @@
     <tr>
         <td>ylab:</td>
         <td>Label of y-axis &larr; <em>string</em></td>
+    </tr>
+
+    <tr>
+        <td>smooth:</td>
+        <td>Spline algorithm is applied to smooth the line &larr; boolean</td>
     </tr>
     
      <tr>
@@ -234,10 +255,7 @@
         <td>"<em>solid</em>", "<em>dash</em>" or "<em>dot</em>" &larr; string</td>
     </tr>
 
-    <tr>
-        <td>smooth:</td>
-        <td>Spline algorithm is applied to smooth the line &larr; boolean</td>
-    </tr>
+   
     
     <tr>
         <td colspan="2">&nbsp;</td>
@@ -390,7 +408,7 @@
 
 
 
-<h3>Define name and marker properties</h3>
+<h3 id="name_marker">Define name and marker properties</h3>
 <p>
     The marker properties can be fully customized.
 </p>
