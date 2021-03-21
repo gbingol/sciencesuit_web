@@ -471,7 +471,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.scatter{x=x, y=y, <key>line</key>={color="255 0 0", width=2, <em>smooth</em>=<span class="LuaKeyword">true</span>}}
+    &gt;&gt;std.scatter{x=x, y=y, <key>line</key>={color="255 0 0", width=2}, <em>smooth</em>=<span class="LuaKeyword">true</span>}
 </p>
 
  <img alt="" src="../images/scatter_smoothline.png" />
@@ -552,7 +552,8 @@
 <p>
     In order to add a bubble chart, the <em>size</em> property must be defined.
     Consider the following data set 
-    <span style="font-size: small;"> (data extracted from 
+    <span style="font-size: small;"> 
+    (data extracted from 
     <a href="https://developers.google.com/chart/interactive/docs/gallery/bubblechart" target="_blank"> Google Charts</a>
     )
     </span>
@@ -560,11 +561,9 @@
 </p>
 
 <p style="font-size: small;">
-    Life expectancy=[80.66, 79.84, 78.6, 72.73,80.05, 72.49, 68.09, 81.55, 68.6, 78.09] <br>
-    
-    Fertility rate=[1.67, 1.36,  1.84, 2.78, 2, 1.7, 4.77, 2.96, 1.54, 2.05] <br>
-    
-    Population=[33739900, 81902307, 5523095, 79716203, 61801570, 73137148, 31090763, 7485600, 141850000, 307007000]
+    life = std.util.tovector{80.66, 79.84, 78.6, 72.73,80.05, 72.49, 68.09, 81.55, 68.6, 78.09} <br>
+    fertil = std.util.tovector{1.67, 1.36, 1.84, 2.78, 2, 1.7, 4.77, 2.96, 1.54, 2.05} <br>
+    pop = std.util.tovector{33739900, 81902307, 5523095, 79716203, 61801570, 73137148, 31090763, 7485600, 141850000, 307007000}
     
 </p>
 
