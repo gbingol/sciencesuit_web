@@ -602,27 +602,10 @@
 <p>
     <a href="#addnewseries">Add New Series</a> and
     <a href="#addvisibleselection">Add Visible Selection</a>
-    have already been presented in detail.
+    have already been presented in detail and formatting of the 
+    gridlines are presented in detail 
+    <a href="../chartelements.php#gridlines" >here</a>.
 </p>
-
- <p>&nbsp;</p>
-
-<p>
-    For example, to format the horizontal gridlines, just select
-    <em>"Format Horizontal Gridlines..."</em> option and a dialog will be shown
-</p>
-
-<img src="images/formathorizontalgridlinedialog.png" alt=""/>
-
-<p><em>Color:</em> Color of the gridlines.</p>
-
-<p>
-    <em>Thickness:</em> If thickness if equal to zero, then the gridlines will not be displayed,
-    otherwise, it changes the thickness of the gridline.
-</p>
-
-<p><em>Style:</em> Solid, dotted or long-dashed lines.</p>
-
 
 
 

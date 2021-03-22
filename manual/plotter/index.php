@@ -122,6 +122,7 @@
 
 <p><a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a> </p>
    
+<p><a href="argand/argand.php">Argand Diagram</a> </p>
     
     
 
