@@ -84,7 +84,7 @@
 
 
 
-<h3 id="arguments">Arguments:</h3>
+<h3 id="arguments">Arguments</h3>
 <table class="funcarguments">
     <tr>
         <td>f:</td>
@@ -156,8 +156,6 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-
-
 
 
 

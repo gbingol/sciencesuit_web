@@ -132,9 +132,15 @@
     &gt;&gt;A <br />
     
     <table>
-        <tr><td>0.57735</td></tr>
-        <tr><td>-0.57735</td></tr>
-        <tr><td> 0.57735</td></tr>
+        <tr>
+            <td>0.57735</td>
+        </tr>
+        <tr>
+            <td>-0.57735</td>
+        </tr>
+        <tr>
+            <td> 0.57735</td>
+        </tr>
     </table>
 
     
