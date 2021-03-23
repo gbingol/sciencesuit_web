@@ -554,10 +554,6 @@
 
 
 
-
-
-
-
 <h2 class="head_l2"  id="plotmultipleseries">Plotting Multiple Series</h2>
 
 <p>
@@ -566,44 +562,60 @@
 </p>
 
 
-<p>&nbsp;</p>
 
-
-
-<h3 class="head_l3"  id="Selection">Selection</h3>
-
-<p>Assume you have made the following selection in a worksheet: </p>
-
-
-
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-
-
-<h3 class="head_l3"  id="Using_Only_Commands">Using Only Commands</h3>
+<h3 class="head_l3"  id="Using_Only_Commands">Using Commands</h3>
 
 <p>
     In order to plot multiple series using only commands, you can use <em>hwnd</em>
-    property of <a href="../../std/funcs/argand.php">std.argand</a> command.
+    property of <a href="../../std/funcs/argand.php">std.argand</a> command. 
+
+    <br>
+    
+    Note that if an argand diagram is already shown its window handle 
+    can also be obtained using <a href="../../std/funcs/plothwnd.php">std.plothwnd</a> 
+    command.
 </p>
+
+
+<p>&nbsp;</p>
+
+<p>
+    In the following demo, one series comes from a selection and the other 
+    comes from the roots of a polynomial.
+</p>
+
+<p>First, assume you have made the following selection in a worksheet: </p>
+
+<img src="images/simpleplot_datainwb.png" alt="">
+
+<p>
+    From the selection <a href="../../workbook/createdatastructures.php#array">create an array</a> 
+    and name it as <em>arr</em>.
+</p>
+
+
+
+<p>
+    Secondly, obtain the roots of the polynom: <em>x<sup>4</sup> + 1 = 0 </em> as shown in 
+    <a href="#Using_Commands">above-section</a>.
+</p>
+
 
 <p class="CodeCommand">
-   
-
+    &gt;&gt;poly=std.util.tovector{1, 0, 0, 0, 1} <br>
+    &gt;&gt;roots=std.polyroots(poly) <br>
+    
+    <br>
+    
+    &gt;&gt;hwnd=std.argand{arr} <br>
+    &gt;&gt;std.argand{roots, hwnd=hwnd}
 </p>
 
+<p>
+    The following chart with two series (green and red) will be obtained. 
+</p>
 
-
-
+<img id="chart_multipleseries" src="images/multipleseries_usingcommands.png" alt="">
 
 
 
@@ -632,13 +644,15 @@
 </p>
 
 <p class="CodeCommand">
+    &gt;&gt;poly=std.util.tovector{1, 0, 0, 0, 1} <br>
+    &gt;&gt;roots=std.polyroots(poly) <br>
     
+    <br>
+
+    &gt;&gt;std.argand{roots}
 </p>
 
 
-
-
-<p> &nbsp;</p>
 
 
 <p>
@@ -649,10 +663,10 @@
 
 
 
-<p>&nbsp;</p>
 
 <p>
-    <b>3)</b> Click "<em>OK</em>" button and a new series will be added to the same plot window as shown below.
+    <b>3)</b> Click "<em>OK</em>" button and a new series will be added to the  
+     <a href="#chart_multipleseries">chart</a>.
 </p>
 
 
@@ -660,7 +674,7 @@
 <p>&nbsp;</p>
 
 <p>
-    Please note that, it is also possible to use "Add Visible Selection" option,
+    Please note that, it is also possible to use <em>"Add Visible Selection"</em> option,
     to add another series to an existing chart.
 </p>
 
