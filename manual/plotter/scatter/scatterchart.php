@@ -501,50 +501,11 @@
 <h3 class="head_l3"  id="Axis_Options">Axis Options</h3>
 
 <p>
-    The plotter allows changing axis options (horizontal or vertical). Here,
-    changing the properties of the horizontal axis will be presented. Similar
-    steps are followed to modify the properties of the vertical axis.
-</p>
-
-<p><b>1)</b> Right-click on the horizontal axis and select "<em>Format Horizontal Axis...</em>"</p>
-
-<img src="images/axisoptions_popupmenu_formathorizontalaxis.png" alt="" />
-
-<p>&nbsp;</p>
-<p><b>2)</b> A dialog similar to the following will be shown (note that minimum value has already been changed to 0):</p>
-
-
-<img src="images/axisoptions_dlg_horizontalaxisprop.png" alt=""/>
-<p>The bounds (minimum, maximum), major unit and the value at which horizontal axis crosses vertical axis are shown. </p>
-
-
-
-<p>&nbsp;</p>
-
-<p>
-    <em>Let's modify as follows:</em>
-</p>
-
-<p>
-    <em>Bounds:</em> Minimum: 2&nbsp;&nbsp;&nbsp; Maximum: 5 <br>
-    <em>Major:</em> 0.5
+    The plotter allows changing axis options (horizontal or vertical). It 
+    is presented in detail <a href="../chartelements.php#axes">axes options</a>.
 </p>
 
 
-<img src="images/axisoptions_chart_afterchanginghoraxis.png" alt=""/>
-
-<p>It is seen that the data is "filtered" to contain only the points between the newly chosen scale.</p>
-
-
-<p>&nbsp;</p>
-<p>If you right-click on the horizontal axis again and select the "<em>Format Horizontal Axis...</em>", the dialog will be shown as follows:</p>
-
-
-<img src="images/axisoptions_dlg_horizontalaxisprop_resetbtn.png" alt=""/>
-<p>
-    It is seen that, the "<em>Reset</em>" buttons are now active for properties which have been manually changed.
-    Clicking on the "<em>Reset</em>" button will reset the bound to its value that had been calculated automatically.
-</p>
 
 
 
@@ -602,80 +563,27 @@
 <p>
     <a href="#addnewseries">Add New Series</a> and
     <a href="#addvisibleselection">Add Visible Selection</a>
-    have already been presented in detail and formatting of the 
-    gridlines are presented in detail 
-    <a href="../chartelements.php#gridlines" >here</a>.
-</p>
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-
-<p>
-    By using the context-menu, it is also possible to add <em>chart title</em>,
-    <em>vertical and horizontal axes titles</em> and <em>legend</em> as shown below:
-</p>
-
-<img src="images/elementsmenu_initial_titlesshown.png" alt=""/>
-
-<p>
-    Once the mouse cursor is on a title, the shape of the mouse cursor will change
-    indicating that an interaction can take place:
+    have already been presented in detail.
 </p>
 
 <p>
-    <b>A)</b> When dragged with the mouse, the title will move to a desired location,
-
-    <br>
-
-    <b>B)</b> When clicked, the title will switch to the edit mode and will allow you to type and change the text.
-    To close the edit mode, simply click somewhere out of the shown text editor.
+    In order to format:
 </p>
 
+<ol class="linespaced">
+    <li>
+        <a href="../chartelements.php#gridlines" >Gridlines</a>
+    </li>
 
+    <li>
+        <a href="../chartelements.php#legend">Legend</a>
+    </li>
 
-<p>&nbsp;</p>
+    <li>
+        <a href="../chartelements.php#textbox">Title, vertical and horizontal axis labels</a>
+    </li>
+</ol>
 
-
-<p>Right-clicking on a title will show the following menu:</p>
-
-
-<img src="images/charttitle_popupmenuoptions.png" alt=""/>
-
-<p>
-    The menu shows two options: <br>
-
-    <b>A)</b> "<em>Font...</em>" to be able to change the format of the font,
-    covered <a href="../chartelements.php#textbox">here</a>.
-
-    <br>
-
-    <b>B)</b> "<em>Delete</em>" to be able to delete the title. Once the title is deleted,
-    its allocated space will be claimed back by the plot area.
-</p>
-
-
-<p>&nbsp;</p>
-<p>After some minor formatting and changing the initial default titles:</p>
-
-<img src="images/elementsmenu_formattedchart.png" alt=""/>
-
-<p>&nbsp;</p>
-
-
-<p>
-    Right-clicking on the legend will show the following context-menu,
-    details of which is covered <a href="../chartelements.php#legend">here</a>.
-</p>
-
-<img src="images/legend_contextmenu.png" alt=""/>
 
 
 

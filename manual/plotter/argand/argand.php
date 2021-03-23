@@ -458,8 +458,8 @@
 <h3 class="head_l3"  id="Axis_Options">Axis Options</h3>
 
 <p>
-    Please refer to <a href="../scatter/scatterchart.php#Axis_Options">axis options for scatter chart</a>
-    as the rationale is similar.
+    The plotter allows changing axis options (real or imaginary). It 
+    is presented in detail <a href="../chartelements.php#axes">axes options</a>.
 </p>
     
 
@@ -516,64 +516,23 @@
 <p>
     <a href="#addnewseries">Add New Series</a> and
     <a href="#addvisibleselection">Add Visible Selection</a>
-    have already been presented in detail and 
-    formatting of the gridlines are presented in detail 
-    <a href="../chartelements.php#gridlines">here</a>.
-</p>
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-
-<p>
-    If already not added, by using the context-menu, it is also possible to add <em>chart title</em>,
-    <em>real and imaginary axes titles</em> as shown below:
-</p>
-
-<img src="images/elementsmenu_initial_titlesshown.png" alt=""/>
-
-<p>
-    Once the mouse cursor is on a title, the shape of the mouse cursor will change
-    indicating that an interaction can take place:
+    have already been presented in detail.
 </p>
 
 <p>
-    <b>A)</b> When dragged with the mouse, the title will move to a desired location,
-
-    <br>
-
-    <b>B)</b> When clicked, the title will switch to the edit mode and will allow you to type and change the text.
-    To close the edit mode, simply click somewhere out of the shown text editor.
+    In order to format:
 </p>
 
+<ol class="linespaced">
+    <li>
+        <a href="../chartelements.php#gridlines" >Gridlines</a>
+    </li>
 
+    <li>
+        <a href="../chartelements.php#textbox">Title, real and imaginary axis labels</a>
+    </li>
+</ol>
 
-<p>&nbsp;</p>
-
-
-<p>Right-clicking on a title will show the following menu:</p>
-
-
-<img src="images/charttitle_popupmenuoptions.png" alt=""/>
-
-<p>
-    The menu shows two options: <br>
-
-    <b>A)</b> "<em>Font...</em>" to be able to change the format of the font,
-    covered <a href="../chartelements.php#textbox">here</a>.
-
-    <br>
-
-    <b>B)</b> "<em>Delete</em>" to be able to delete the title. Once the title is deleted,
-    its allocated space will be claimed back by the plot area.
-</p>
 
 
 
