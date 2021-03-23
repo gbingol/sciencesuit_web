@@ -112,29 +112,42 @@
 <p>&nbsp;</p>
 
 
+<h3>
+    Essentials: 
+</h3>
 
-<p><a href="plotwindow.php">Basics of Plot Window</a></p>
+<ul class="linespaced">
+    <li>
+        <a href="plotwindow.php">Plot Window</a>
+    </li>
 
+    <li>
+        <a href="chartelements.php">Chart Elements (Axes, Titles, Labels, Gridlines...)</a>
+    </li>
 
-<p><a href="scatter/bubblechart.php">Bubble Charts</a></p>
+</ul>
 
-<p><a href="scatter/scatterchart.php">Scatter Charts</a></p>
-
-<p><a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a> </p>
-   
-<p><a href="argand/argand.php">Argand Diagram</a> </p>
-    
-    
 
 <p>&nbsp;</p>
-<p>&nbsp;</p>
+
+<h3>
+    Available charts: 
+</h3>
+
+<ol class="linespaced">
+    <li><a href="argand/argand.php">Argand Diagram</a></li>
+
+    <li><a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a></li>
+
+    <li><a href="scatter/bubblechart.php">Bubble Chart</a></li>
+
+    <li><a href="scatter/scatterchart.php">Scatter Charts</a></li>
+
+</ol>
 
 
 
-<div class="RelatedLinks">
-    <a href="../std/funcs/scatter.php">std.scatter</a>
-    <a href="../std/funcs/boxplot.php">std.boxplot</a>
-</div>
+
     
 
 
