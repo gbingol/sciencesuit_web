@@ -236,9 +236,12 @@
 
 
 <div class="RelatedLinks">
-    <a href="scatter/scatterchart.php">Scatter</a>
-    <a href="boxwhisker/boxwhisker.php">Box and Whisker</a>
     <a href="argand/argand.php">Argand Diagram</a>
+    <a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a>
+    <a href="scatter/bubblechart.php">Bubble Chart</a>
+    <a href="scatter/scatterchart.php">Scatter Charts</a>
+    
+    
 </div>
 
 </body>
