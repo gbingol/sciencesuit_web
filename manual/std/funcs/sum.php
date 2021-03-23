@@ -60,7 +60,7 @@
 <h2 id="vector">Vector</h2>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{3, 5, 2, 1, 7, 4} <br />
+    &gt;&gt;v=std.util.tovector{3, 5, 2, 1, 7, 4} <br />
     &gt;&gt;v <br />
     3 &emsp; 5 &emsp; 2&emsp; 1&emsp; 7 &emsp; 4 &emsp; COL <br />
     <br />
@@ -88,7 +88,7 @@
 
 <h2 id="matrix">Matrix</h2>
 <p class="CodeCommand">
-    &gt;&gt;m=std.tomatrix{ {1, 2} , {3, 4} } <br />
+    &gt;&gt;m=std.util.tomatrix{ {1, 2} , {3, 4} } <br />
     &gt;&gt;m  <br />
        1&emsp; 2   <br />
        3&emsp; 4   <br />
@@ -193,8 +193,8 @@
 </p>
 <p class="CodeCommand">
     &gt;&gt;t={} <br />
-    &gt;&gt;t.v1=std.tovector{1, 2, 3, 4} <br />
-    &gt;&gt;t.v2=std.tovector{4, 3, 2, 1} <br />
+    &gt;&gt;t.v1=std.util.tovector{1, 2, 3, 4} <br />
+    &gt;&gt;t.v2=std.util.tovector{4, 3, 2, 1} <br />
     <br />
     &gt;&gt;t <br />
     v1=Vector <br />

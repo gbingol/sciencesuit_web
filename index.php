@@ -614,6 +614,47 @@
     var InitialTextValue=document.getElementById("SearchTextBox").value;
     
     
+    function PerformSearch(Text, Library, LibraryName, Dir, UCase)
+    {
+        var Result = "";
+        
+        for(var i=0; i < Library.length; ++i)
+        {
+           var SecondEntry = Library[i][1];
+           
+           var EntryName =" ";
+           
+           if(Array.isArray(SecondEntry))
+               Result += PerformSearch(Text, SecondEntry, Library[i][0], Dir, UCase);
+           
+           if(LibraryName !=="")
+               EntryName = LibraryName+ "." + Library[i][0].toLowerCase();
+           else
+               EntryName = Library[i][0].toLowerCase();
+           
+           EntryName.trim();
+           
+           
+           var EntryURL ="";
+           
+           if(typeof SecondEntry === 'string' )
+               EntryURL = Dir + SecondEntry;
+           else
+               EntryURL = Dir + EntryName + ".php";
+           
+          
+           //Dont print library name as a link, such as util.php 
+           if(EntryName.includes(Text) && Array.isArray(SecondEntry) === false)
+           {
+               if(UCase === true)
+                   EntryName = EntryName.charAt(0).toUpperCase() + EntryName.substr(1);
+               
+                Result=Result + "<a href="+ EntryURL + ">" + EntryName + "</a><br><br>";
+           }
+        }
+        
+        return Result;
+    }
     
     
     
@@ -630,36 +671,11 @@
        
        var Result="";
        
-        for(var i=0; i<StdLibClasses.length;++i)
-        {
-           var ClassName=StdLibClasses[i][0].toLowerCase();
-           var ClassLink=ClassName+".php";
-           
-          
-            
-           if(ClassName.includes(CurText))
-           {
-               ClassName=ClassName.charAt(0).toUpperCase()+ClassName.substr(1);
-               
-                Result=Result+"<a href=\"/manual/std/classes/"+ClassLink+"\">"+ClassName+"</a><br><br>";
-           }
-        }
+       Result += PerformSearch(CurText, StdLibClasses, "", "/manual/std/classes/", true );
        
+       Result += PerformSearch(CurText, StdLibFunctions, "" ,"/manual/std/funcs/", false );
        
-       
-       for(var i=0; i<StdLibFunctions.length;++i)
-       {
-           var FuncName=StdLibFunctions[i][0];
-           var linkName=StdLibFunctions[i][2];
-           
-           if(linkName==null) 
-                linkName=FuncName+".php"; 
-            
-           if(FuncName.includes(CurText))
-           {
-                Result=Result+"<a href=\"/manual/std/funcs/"+linkName+"\">"+FuncName+"</a><br><br>";
-           }
-       }
+     
        
        document.getElementById("VariableStdLibraryContent").innerHTML=Result;
     }

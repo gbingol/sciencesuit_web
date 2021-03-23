@@ -24,10 +24,25 @@
 
 
 <body>
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
+
+
 
 <h1>Student t Distribution</h1>
 
@@ -37,12 +52,12 @@
 
 
 
-<h3>Arguments</h3>
+<h3 id="arguments">Arguments</h3>
 
 <table class="funcarguments">
     <tr>
         <td>x:</td> 
-        <td>quantile, number / Vector</td>
+        <td>quantile, number/Vector/Array</td>
     </tr>
     <tr>
         <td>p:</td> 
@@ -50,7 +65,7 @@
     </tr>
     <tr>
         <td>q:</td>
-        <td>quantile, number / Vector </td>
+        <td>quantile, number/Vector/Array </td>
     </tr>
     <tr>
         <td>df</td>
@@ -65,6 +80,9 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -75,20 +93,24 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="dt">dt</h2>
+
+
+
+
+
+<h2 class="head_l2" id="dt">dt</h2>
 
 <p>Computes the height of the probability density function. </p>
 
 <p class="funcsignature">
     
-    dt(x=, df=) &rarr; number/ Vector <br />
+    dt(x=, df=) &rarr; number/Vector/Array <br />
     
     <br>
     
-    dt{x=, df=}  &rarr; number/ Vector
+    dt{x=, df=}  &rarr; number/Vector/Array
     
 </p>
     
@@ -127,19 +149,19 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="pt">pt</h2>
+
+<h2 class="head_l2" id="pt">pt</h2>
 <p>Computes the cumulative probability .</p>
 
 <p class="funcsignature">
     
-    pt{q=, df=}  &rarr; number/ Vector <br>
+    pt{q=, df=}  &rarr; number/Vector/Array <br>
     
     <br>
     
-    pt(q=, df=) &rarr; number/ Vector
+    pt(q=, df=) &rarr; number/Vector/Array
     
 </p>
     
@@ -163,30 +185,6 @@
 
 
 
-<p>&nbsp;</p>
-
-<p>Using the equation, it can be computed as follows: </p>
-<img src="../images/dist_t_pt.png" alt=""/>
-
-    
-<p>&nbsp;</p>
-
-<p>A simple approach to handle the above equation with a script is:</p>
-
-<p class="CodeCommand">
-    <span class="LuaKeyword">function</span> f(t, n) <br />
-        &nbsp;&nbsp;&nbsp; <span class="LuaKeyword">local</span> num=std.gamma((n+1)/2) <br />
-        &nbsp;&nbsp;&nbsp;  <span class="LuaKeyword">local</span> denom=math.sqrt(n*math.pi)*std.gamma(n/2)*(1+t^2/n)^((n+1)/2)<br />
-        <br />
-        &nbsp;&nbsp;&nbsp; <span class="LuaKeyword">return</span> num/denom<br />
-    <span class="LuaKeyword">end</span><br />
-    <br />
-    <span class="LuaKeyword">local</span> <span class="LuaKeyword">function</span> func(t) <span class="LuaKeyword">return</span> f(t,5) <span class="LuaKeyword">end</span> <br />
-    <br />
-    <span class="LuaKeyword">local</span> res=std.trapz{f=func, a=-100,b=1, inter=1000}<br />
-    <br />
-    print(res) <span class="LuaComment">--0.818204 </span>
-</p>
 
 
 
@@ -206,21 +204,21 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="qt">qt</h2>
+
+<h2 class="head_l2" id="qt">qt</h2>
 
 
 <p>Computes the lower tail quantile.</p>
 
 <p class="funcsignature">
     
-    qt{p=, df=} &rarr; number/ Vector <br>
+    qt{p=, df=} &rarr; number/Vector/Array <br>
     
     <br>
     
-    qt(p=, df=) &rarr; number/ Vector
+    qt(p=, df=) &rarr; number/Vector/Array
 </p>
     <p>&nbsp;</p>
 
@@ -235,12 +233,6 @@
     0.999999
 </p>
 
-    
-
-<p>The following equation can be used:</p>
-<img src="../images/dist_t_qt.png" alt=""/>
-
-
 
 
 
@@ -261,10 +253,10 @@
 
 
 
-<!-- ******************************************************************* -->
 
 
-<h2 id="rt">rt</h2>
+
+<h2 class="head_l2" id="rt">rt</h2>
 
 <p>Generates random sample for the Student t distribution</p>
 <p class="funcsignature">
@@ -286,7 +278,7 @@
     <br />
 
     &gt;&gt;std.rt{n=5, df=5} <br />
-    -1.0581&nbsp;&nbsp;&nbsp; 0.0325742&nbsp;&nbsp;&nbsp; -0.980538&nbsp;&nbsp;&nbsp; 1.71746&nbsp;&nbsp;&nbsp; -0.593335&nbsp;&nbsp;&nbsp; COL
+    -1.0581&emsp; 0.0325742&emsp; -0.980538&emsp; 1.71746&emsp; -0.593335&emsp; COL
 </p>
 
     
@@ -296,8 +288,12 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 

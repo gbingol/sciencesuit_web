@@ -42,8 +42,21 @@
 ?>
 
 
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>
+    
+    
+
 <h1>Food Class</h1>
-<p>Food in ScienceSuit is assumed to be composed of macronutrients, ash and salt: </p>
+
+
+<p>
+    Food in ScienceSuit is assumed to be composed of macronutrients, ash and salt: 
+</p>
+
 <ul class="linespaced">
     <li>Water,</li>
     <li>Carbohydrate (CHO),</li>
@@ -52,6 +65,9 @@
     <li>Ash</li>
     <li>Salt.</li>
 </ul>
+
+
+<h2 class="head_l2"  id="create">Create Food variable</h2>
 
 <p>In order to create a variable of type Food, we run the following command:</p>
 
@@ -100,12 +116,29 @@
     pH=6.00
 </p>
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<h2>Mathematical Operations</h2>
+
+
+
+
+
+
+
+
+
+
+<h2 class="head_l2"  id="mathops">Mathematical Operations</h2>
 
 <p>
     Food data structure supports some arithmetic operations: 
@@ -150,6 +183,9 @@
 <img src="../images/classes/food_energybalance_averagecp.png" alt=""/>
 
 <p>&nbsp;</p>
+
+
+<h3 class="head_l3"  id="addition">Addition</h3>
 
 <p>Let's create two food materials:</p>
 
@@ -208,14 +244,17 @@
     two food materials are considered to be equivalent if they contain the same amount of each macro-components. 
 </p>
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-
+<h3 class="head_l3"  id="subtraction">Subtraction</h3>
 <p>
-    <strong>B) Subtraction:</strong> Subtraction can be considered as the unit operation evaporation or extraction. 
+    Subtraction can be considered as the unit operation evaporation or extraction. 
     Therefore, it is only allowed to subtract <em>f</em><sub>2</sub> from <em>f</em><sub>1</sub>, if and only if, 
     <em>f</em><sub>2</sub> is at the same temperature with <em>f</em><sub>1</sub> and contains exactly the same, 
     but to a lesser amount of, macro-components.
@@ -278,8 +317,10 @@
 
 <p>&nbsp;</p>
 
+<h3 class="head_l3"  id="multiplication">Multiplication</h3>
+
 <p>
-    <strong>C) Multiplication:</strong> Unlike addition or subtraction, which yielded new food materials, multiplication 
+    Unlike addition or subtraction, which yielded new food materials, multiplication 
     does not yield a new food material. It only changes the weight of the food material. This is necessary 
     to be able to perform addition or subtraction operations:
 </p>
@@ -297,17 +338,28 @@
 
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
-<!-- ************************************************************************* -->
 
-<h2>Member Functions</h2>
+
+
+
+
+
+<h2 class="head_l2"  id="memberfuncs">Member Functions</h2>
 
 <p>&nbsp;</p>
 
-<h3 id="aw">aw (Water Activity)</h3>
+<h3 class="head_l3"  id="aw">aw (Water Activity)</h3>
 <p class="funcsignature">
     aw() &rarr; number <br>
     
@@ -436,13 +488,22 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
 
-<h3 id="cp">cp (Specific Heat Capacity)</h3>
+
+
+
+
+
+<h3 class="head_l3"  id="cp">cp (Specific Heat Capacity)</h3>
 <p class="funcsignature">
     cp() &rarr; number <br>
     
@@ -468,13 +529,21 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
 
-<h3 id="get">get</h3>
+
+
+
+
+<h3 class="head_l3"  id="get">get</h3>
 <p class="funcsignature">
     get() &rarr; Lua Table
 </p>
@@ -499,13 +568,21 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
 
-<h3 id="k">k (Thermal Conductivity)</h3>
+
+
+
+
+
+<h3 class="head_l3"  id="k">k (Thermal Conductivity)</h3>
 <p class="funcsignature">
     k() &rarr; number <br>
     
@@ -538,7 +615,13 @@
 <p>&nbsp;</p>
 
 
-<h3 id="normalize">normalize</h3>
+
+
+
+
+
+
+<h3 class="head_l3"  id="normalize">normalize</h3>
 <p class="funcsignature">
     normalize()
 </p>
@@ -576,6 +659,10 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -584,7 +671,12 @@
 
 
 
-<h3 id="ph">ph</h3>
+
+
+
+
+
+<h3 class="head_l3"  id="ph">ph</h3>
 <p class="funcsignature">
     ph() &rarr; number <br>
     
@@ -612,6 +704,9 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -619,7 +714,11 @@
 
 
 
-<h3 id="rho">rho (Density)</h3>
+
+
+
+
+<h3 class="head_l3"  id="rho">rho (Density)</h3>
 <p class="funcsignature">
     rho() &rarr; number <br>
     
@@ -654,7 +753,10 @@
 
 
 
-<h3 id="T">T (Temperature)</h3>
+
+
+
+<h3 class="head_l3"  id="T">T (Temperature)</h3>
 <p class="funcsignature">
     T() &rarr; number <br>
     
@@ -669,8 +771,15 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 

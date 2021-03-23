@@ -24,11 +24,20 @@
 
 
 <body>
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
 
 
 <h1>Binomial Dist</h1>
@@ -42,7 +51,7 @@
 <table class="funcarguments">
     <tr>
         <td>x:</td>
-        <td>Number of successes, number / Vector</td>
+        <td>Number of successes, number/Vector/Array</td>
     </tr>
     <tr>
         <td>p:</td>
@@ -50,7 +59,7 @@
     </tr>
     <tr>
         <td>q:</td>
-        <td>quantile, number / Vector</td>
+        <td>quantile, number/Vector/Array</td>
     </tr>
     <tr>
         <td>size:</td>
@@ -66,23 +75,32 @@
 
 
 
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
 
 
 
 <!-- ********************************************************************** -->
     
-<h2 id="dbinom">dbinom</h2>
+<h2 class="head_l2"  id="dbinom">dbinom</h2>
 <p>Computes the probability value for Binomial distribution. </p>
 
 <p class="funcsignature">
     
-    dbinom{x=, size=, prob=} &rarr; Vector / number<br>
+    dbinom{x=, size=, prob=} &rarr; number/Vector/Array<br>
     
     <br>
     
-    dbinom(x=, size=, prob=) &rarr; Vector / number
+    dbinom(x=, size=, prob=) &rarr; number/Vector/Array
    
 </p>
 
@@ -121,7 +139,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{7, 8, 9} <br />
+    &gt;&gt;x=std.util.tovector{7, 8, 9} <br />
     &gt;&gt;probs=std.dbinom{x=x, trials=9, prob=0.94} <br />
     &gt;&gt;std.sum(probs) <br />
     0.986
@@ -142,16 +160,16 @@
     
 <!-- ********************************************************************* -->
     
-<h2 id="pbinom">pbinom</h2>
+<h2 class="head_l2"  id="pbinom">pbinom</h2>
 <p>Computes the cumulative probability values. </p>
 
 <p class="funcsignature">
     
-    pbinom{q=, size=, prob=} &rarr; Vector / number <br>
+    pbinom{q=, size=, prob=} &rarr; number/Vector/Array <br>
     
     <br>
     
-    pbinom(q=, size=, prob=) &rarr; Vector / number
+    pbinom(q=, size=, prob=) &rarr; number/Vector/Array
     
 </p>
     
@@ -204,16 +222,16 @@
 <!-- ********************************************************************* -->
 
 
-<h2 id="qbinom">qbinom</h2>
+<h2 class="head_l2"  id="qbinom">qbinom</h2>
 <p>Computes the lower tail quantile (inverse of <a href="#pbinom">pbinom</a>). </p>
 
 <p class="funcsignature">
     
-    qbinom{p=, size=, prob=} &rarr; Vector / number <br>
+    qbinom{p=, size=, prob=} &rarr; number/Vector/Array <br>
 
     <br>
 
-    qbinom(p=, size=, prob=) &rarr; Vector / number
+    qbinom(p=, size=, prob=) &rarr; number/Vector/Array
     
 </p>
 
@@ -248,7 +266,9 @@
 </p>
 
 <p>
-    Although the cumulative probability in all 3 cases are different (0.53, 0.80, 0.83692) the quantile is always reported as 2. 
+    Although the cumulative probability in all 3 cases are different (0.53, 0.80, 0.83692) 
+    the quantile is always reported as 2. 
+    
     Here, the function applies a policy, where it always rounds up the result 
     (<a href="https://www.boost.org/doc/libs/1_40_0/libs/math/doc/sf_and_dist/html/math_toolkit/policy/pol_tutorial/understand_dis_quant.html" 
         target="_blank">for more info</a>).
@@ -267,8 +287,9 @@
 </p>
 
 <p>
-    It can be seen that p=0.53 is close to q=1 (p=0.52822), whereas p=80 is close to q=2 (p=0.83692), therefore, any number in between 
-    p=0.52822 and p=0.83692 will be reported as q=2 by <i>qbinom</i> function.
+    It can be seen that p=0.53 is close to q=1 (p=0.52822), whereas p=80 is 
+    close to q=2 (p=0.83692), therefore, any number in between p=0.52822 and p=0.83692 
+    will be reported as q=2 by <i>qbinom</i> function.
 </p>
 
 
@@ -278,11 +299,17 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
+
+
+
     
 <!-- *********************************************************************** -->   
     
     
-<h2 id="rbinom">rbinom</h2>
+<h2 class="head_l2"  id="rbinom">rbinom</h2>
 
 <p>Generates binomiallly distributed random numbers.</p>
 <p class="funcsignature">
@@ -300,8 +327,8 @@
 <p class="CodeCommand">
     &gt;&gt;v=std.rbinom{n=10, size=5, prob=0.3} <br>
     &gt;&gt;v <br>
-    0&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 
-    2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL
+    0 &emsp; 2&emsp; 2&emsp; 1&emsp; 0&emsp; 
+    2&emsp; 0&emsp; 2&emsp; 2&emsp; 4&emsp; COL
 </p>
 
 <p>&nbsp;</p>
@@ -366,8 +393,14 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 

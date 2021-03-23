@@ -21,6 +21,64 @@ h4
 }
 
 
+
+
+/*provides headings such as 1) 1.1).. */
+h2.head_l2 
+{
+    counter-increment: counter_h2;
+    counter-reset: counter_h3;
+    
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+h3.head_l3 
+{
+    counter-increment: counter_h3;
+    counter-reset: counter_h4;
+}
+
+h4.head_l4 
+{
+    counter-increment: counter_h4;
+}
+
+h2.head_l2::before 
+{
+    content: counter(counter_h2)") ";
+}
+
+h3.head_l3::before 
+{
+    content: counter(counter_h2)"."counter(counter_h3)") ";
+}
+
+h4.head_l4::before 
+{
+    content: counter(counter_h2)"."counter(counter_h3)"."counter(counter_h4)") ";
+}
+
+h2.head_l2_reset
+{
+    counter-reset:level1;
+}
+
+
+
+
+details
+{
+    width: fit-content;
+}
+
+summary:hover
+{
+    cursor: pointer;
+}
+
+
+
 .CodeCommand 
 {
     background-color: #f9f9f9;
@@ -74,6 +132,12 @@ p.funcsignature
 }
 
 
+p.rightmargined
+{
+    margin-right: 10%;
+}
+
+
 
 
 mark{
@@ -117,38 +181,38 @@ a[target="_blank"]
 
 
 /*Matrix or Vector borders*/
-    table.matrix 
-    {
-        position: relative;
-    }
+table.matrix 
+{
+    position: relative;
+}
 
-    table.matrix:before, table.matrix:after 
-    {
-        content: "";
-        position: absolute;
-        top: 0;
-        border: 1px solid black;
-        width: 6px;
-        height: 100%;
-    }
+table.matrix:before, table.matrix:after 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    border: 1px solid black;
+    width: 6px;
+    height: 100%;
+}
 
-    table.matrix:before 
-    {
-        left: -2px;
-        border-right: 0px;
-    }
+table.matrix:before 
+{
+    left: -2px;
+    border-right: 0px;
+}
 
-    table.matrix:after 
-    {
-        right: -2px;
-        border-left: 0px;
-    }
+table.matrix:after 
+{
+    right: -2px;
+    border-left: 0px;
+}
 
-    table.matrix td 
-    {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+table.matrix td 
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 
@@ -202,6 +266,14 @@ p.reset
 {
     counter-reset:level1;
 }
+
+
+
+
+
+
+
+
         
 
 div.youtube
@@ -221,6 +293,12 @@ ol.linespaced li, ul.linespaced li
 }
 
 
+
+
+
+
+
+
 @media only screen and (max-width:900px) 
 {
     img 
@@ -228,6 +306,12 @@ ol.linespaced li, ul.linespaced li
         width: auto;
         height: auto;
         max-width: 100%;
+    }
+
+
+    details
+    {
+        width: 100%;
     }
     
     
@@ -254,9 +338,16 @@ ol.linespaced li, ul.linespaced li
          margin-right: 2%;
     }
 
-    
+    p.rightmargined
+    {
+        margin-right: 2%;
+    }
     
 }
+
+
+
+
 
 
 
@@ -280,6 +371,11 @@ ol.linespaced li, ul.linespaced li
     ol.linespaced li, ul.linespaced li
     {
          margin-right: 1%;
+    }
+    
+    p.rightmargined
+    {
+        margin-right: 1%;
     }
 
     

@@ -49,6 +49,14 @@
 ?>
 
 
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>
+
+
 
 <h1>Vector</h1>
 
@@ -56,6 +64,10 @@
     Vectors in ScienceSuit is extremely flexible to work with. You can read from or change 
     elements of a vector in several ways. For accessing the elements of a vector the following are the possible cases:
 </p>
+
+
+
+<h2 class="head_l2"  id="elemaccess">Accessing Elements</h2>
 
 <ol class="linespaced">
     <li>Accessing to single values</li>
@@ -73,27 +85,27 @@
 
 <p> 
     Let's start working with the following vector, <strong>v</strong>: 
-    v = 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10
+    v = 1&emsp; 2&emsp; 3&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10
 </p>
 
 
-<h3>Case 1: Accessing to single values</h3>
+<h3 class="head_l3"  id="access_singlevalues">Accessing to single values</h3>
 
 
 <p>To change a single entry in the vector:</p>
 <p class="CodeCommand">
     &gt;&gt;v[1]=11<br>
     &gt;&gt;v<br>
-    <red>11</red>&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10
+    <red>11</red>&emsp; 2&emsp; 3&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10
 </p>
 
 
 
 <p>To read a single entry from the vector:</p>
 <p class="CodeCommand">
-    &gt;&gt;v[1] &nbsp;&nbsp;&nbsp; or&nbsp;&nbsp;&nbsp; &gt;&gt;v(1)<br>
+    &gt;&gt;v[1] &emsp; or&emsp; &gt;&gt;v(1)<br>
     11
 </p>
 
@@ -101,15 +113,15 @@
 <p>&nbsp;</p>
 
 
-<h3>Case 2: Accessing to multiple values</h3>
+<h3 class="head_l3"  id="access_multiplevalues">Accessing to multiple values</h3>
 
 <p>Changing the 2<sup>nd</sup> and the 3<sup>rd</sup> entries in the vector to number 20:</p>
 
 
 <p class="CodeCommand">
     &gt;&gt;v[{2, 3}] = 20<br>
-    11&nbsp;&nbsp;&nbsp;<red>20&nbsp;&nbsp;&nbsp; 20</red>&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10
+    11&emsp;<red>20&emsp; 20</red>&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10
 </p>
 
 <p>&nbsp;</p>
@@ -117,8 +129,8 @@
 <p>To change all entries to 30:</p>
 <p class="CodeCommand">
     &gt;&gt;v[{}] = 30<br>
-    30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 
-    30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30
+    30&emsp; 30&emsp; 30&emsp; 30&emsp; 30&emsp; 
+    30&emsp; 30&emsp; 30&emsp; 30&emsp; 30
 </p>
 
 <p>&nbsp;</p>
@@ -129,8 +141,8 @@
 
 <p class="CodeCommand">
     &gt;&gt;v[ { from=8} ] = 10<br>
-    30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 
-    30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; <red>10&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 10</red>
+    30&emsp; 30&emsp; 30&emsp; 30&emsp; 30&emsp; 
+    30&emsp; 30&emsp; <red>10&emsp; 10&emsp; 10</red>
 </p>
 
 <p>&nbsp;</p>
@@ -143,8 +155,8 @@
 <p class="CodeCommand">
     &gt;&gt;v[ {from=2, to=4} ] = 20<br>
     &gt;&gt;v<br>
-    30&nbsp;&nbsp;&nbsp; <red>20&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 20</red>&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 
-    30&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 10
+    30&emsp; <red>20&emsp; 20&emsp; 20</red>&emsp; 30&emsp; 
+    30&emsp; 30&emsp; 10&emsp; 10&emsp; 10
 </p>
 
 <p>&nbsp;</p>
@@ -158,9 +170,9 @@
 <p class="CodeCommand">
     &gt;&gt;v[ {from=1, to=10, by=2} ] = 40<br>
     &gt;&gt;v<br>
-    <red>40</red>&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;<red>40</red>&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 
-    <red>40</red>&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; <red>40</red>&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;
-    <red>40</red>&nbsp;&nbsp;&nbsp; 10 
+    <red>40</red>&emsp; 20&emsp;<red>40</red>&emsp; 20&emsp; 
+    <red>40</red>&emsp; 30&emsp; <red>40</red>&emsp; 10&emsp;
+    <red>40</red>&emsp; 10 
 </p>
 
 <p>&nbsp;</p>
@@ -168,8 +180,8 @@
 
 
 <p>
-    Let v = 1&nbsp;&nbsp; 2 &nbsp;&nbsp;3 &nbsp;&nbsp;4 &nbsp;&nbsp;5 &nbsp;&nbsp;
-    6 &nbsp;&nbsp;7 &nbsp;&nbsp;8 &nbsp;&nbsp;9 &nbsp;&nbsp;10
+    Let v = 1&emsp; 2 &emsp;3 &emsp;4 &emsp;5 &emsp;
+    6 &emsp;7 &emsp;8 &emsp;9 &emsp;10
 </p>
 
 <p>
@@ -178,8 +190,8 @@
 <p class="CodeCommand">
     &gt;&gt;v[ {1, 2} ] = {10, 20}<br>
     &gt;&gt;v<br>
-    <red>10</red>&nbsp;&nbsp;&nbsp; <red>20</red>&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 
-    5&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10 
+    <red>10</red>&emsp; <red>20</red>&emsp; 3&emsp; 4&emsp; 
+    5&emsp; 6&emsp; 7&emsp; 8&emsp; 9&emsp; 10 
 </p>
 
 <p>&nbsp;</p>
@@ -192,15 +204,15 @@
 <p class="CodeCommand">
     &gt;&gt;v[{1, 2, 3}] = {100, 200} <br>
     &gt;&gt;v<br>
-    <red>100&nbsp;&nbsp;&nbsp; 200</red>&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10 <br>
+    <red>100&emsp; 200</red>&emsp; 3&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10 <br>
     
     <br>
     
     &gt;&gt;v[{1, 2}] = {1, 2, 100}<br>
     &gt;&gt;v <br>
-    <red>1&nbsp;&nbsp;&nbsp; 2</red>&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10 
+    <red>1&emsp; 2</red>&emsp; 3&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10 
 </p>
 
 
@@ -216,8 +228,8 @@
 <p class="CodeCommand">
     &gt;&gt;v[{}] = {11, 12,13}<br>
     &gt;&gt;v <br>
-    <red>11&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 13</red>&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10 
+    <red>11&emsp; 12&emsp; 13</red>&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10 
 </p>
 
 
@@ -233,8 +245,8 @@
 <p class="CodeCommand">
     &gt;&gt;v[{to=3}] = {1, 2, 3}<br>
     &gt;&gt;v <br>
-    <red>1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3</red>&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10
+    <red>1&emsp; 2&emsp; 3</red>&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10
 </p>
 
 
@@ -249,9 +261,9 @@
 <p class="CodeCommand">
     &gt;&gt;v[{from=5, to=7}] = {50, 60, 70, 80}<br>
     &gt;&gt;v<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 
-    <red>50&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp; 70</red>
-    &nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10 
+    1&emsp; 2&emsp; 3&emsp; 4&emsp; 
+    <red>50&emsp; 60&emsp; 70</red>
+    &emsp; 8&emsp; 9&emsp; 10 
 </p>
 
 
@@ -268,8 +280,8 @@
     <span class="LuaComment">-- note the order of the assignment, v[7]=7...<br></span>
     &gt;&gt;v[{from=7, to=5}] = {7, 6, 5} <br>
     &gt;&gt;v<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; <red>5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7</red>&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10
+    1&emsp; 2&emsp; 3&emsp; 4&emsp; <red>5&emsp; 
+    6&emsp; 7</red>&emsp; 8&emsp; 9&emsp; 10
 </p>
 
 
@@ -284,14 +296,14 @@
 
 
 <p>
-    v = [1 2 3 4 5 6 7 8 9 10]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a = [10 20 30 40 50] 
+    v = [1 2 3 4 5 6 7 8 9 10]&emsp;&emsp;&nbsp; a = [10 20 30 40 50] 
 </p>
 
 <p class="CodeCommand">
     &gt;&gt;v[{1, 2}] = a<br>
     &gt;&gt;v  <br>
-    <red>10&nbsp;&nbsp;&nbsp; 20</red>&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 
-    6&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; 10<br>
+    <red>10&emsp; 20</red>&emsp; 3&emsp; 4&emsp; 5&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10<br>
     
     <br>
     &gt;&gt;v[{}] = a<br>
@@ -299,21 +311,23 @@
     <br>
     
     &gt;&gt;v <br>
-    <red>10 &nbsp;&nbsp; 20 &nbsp;&nbsp;30&nbsp;&nbsp; 40&nbsp;&nbsp; 50</red>&nbsp;&nbsp; 
-    6&nbsp;&nbsp; 7&nbsp;&nbsp; 8&nbsp;&nbsp; 9&nbsp;&nbsp; 10
+    <red>10 &emsp; 20 &emsp;30&emsp; 40&emsp; 50</red>&emsp; 
+    6&emsp; 7&emsp; 8&emsp; 9&emsp; 10
 </p>
 
 
 
 
-<!-- ****************************************************************************** -->
+
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<h2>Arithmetic Operations</h2>
+<h2 class="head_l2"  id="arithmeticops">Arithmetic Operations</h2>
 <p>
     Vector class supports essential arithmetic operations: Let <em>v<sub>1</sub></em>,<em>v<sub>2</sub></em>
     and <em>v<sub>3</sub></em> denote vectors of same size, <em>m</em> a matrix and <em>a</em> an arbitrary number.
@@ -359,21 +373,36 @@
     is an <a href="../index.php">iteratable container</a>.
 </p>
 
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<!-- ************************************************************************ -->
 
 
-<h2 id="Member_Functions">Member Functions</h2>
+
+
+
+
+
+
+
+
+<h2 class="head_l2"  id="Member_Functions">Member Functions</h2>
 
 <p>&nbsp;</p>
 
 
 
-<h3 id="clone">clone</h3>
+<h3 class="head_l3"  id="clone">clone</h3>
 <p class="funcsignature">
     clone() &rarr; Vector
 </p>
@@ -396,13 +425,19 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
 
-<h3 id="capacity">capacity</h3>
+
+
+
+<h3 class="head_l3"  id="capacity">capacity</h3>
 <p class="funcsignature">
     capacity() &rarr; integer
 </p>
@@ -419,7 +454,12 @@
 
 
 
-<h3 id="equal">equal</h3>
+
+
+
+
+
+<h3 class="head_l3"  id="equal">equal</h3>
 <p class="funcsignature">
     equal(arg, tol=1E-5) &rarr; Vector
 </p>
@@ -433,9 +473,9 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3.1, 3, 5, 5}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3.1, 3, 5, 5}<br>
     &gt;&gt;v<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3.1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; COL
+    1&emsp; 2&emsp; 3.1&emsp; 3&emsp; 5&emsp; 5&emsp; COL
 </p>
 
 <p>&nbsp;</p>
@@ -459,7 +499,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;v:equal(3, 0.2)<br>
-    3.1&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; COL
+    3.1&emsp; 3&emsp; COL
 </p>
 
 <p>
@@ -473,12 +513,12 @@
 <p>If we want to test whether elements of the two vectors are equal with default tolerance level:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;v1=std.tovector{1, 2, 3.1, 3, 5, 5}<br>
-    &gt;&gt;v2=std.tovector{1, 2, 3, 3, 4, 5}<br>
+    &gt;&gt;v1=std.util.tovector{1, 2, 3.1, 3, 5, 5}<br>
+    &gt;&gt;v2=std.util.tovector{1, 2, 3, 3, 4, 5}<br>
     <br>
     &gt;&gt;v1:equal(v2)<br>
-    1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 
-    <red>1</red> &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; <red>1</red> &nbsp;&nbsp;&nbsp; COL
+    1&emsp; 1&emsp; 0&emsp; 
+    <red>1</red> &emsp; 0 &emsp; <red>1</red> &emsp; COL
 </p>
 
 <p>
@@ -491,7 +531,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;v1:equal(v2, 0.2)<br>
-    1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; <red>1</red>&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; COL
+    1&emsp; 1&emsp; <red>1</red>&emsp; 1&emsp; 0&emsp; 1&emsp; COL
 </p>
 
 
@@ -504,7 +544,12 @@
 <p>&nbsp;</p>
 
 
-<h3 id="greater">greater</h3>
+
+
+
+
+
+<h3 class="head_l3"  id="greater">greater</h3>
 <p class="funcsignature">
     greater(arg=) &rarr; Vector
 </p>
@@ -517,11 +562,18 @@
 
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
-<h3 id="greater_equal">greater_equal</h3>
+
+
+
+
+
+
+<h3 class="head_l3"  id="greater_equal">greater_equal</h3>
 <p class="funcsignature">
     greater_equal(arg=) &rarr; Vector
 </p>
@@ -541,7 +593,11 @@
 
 
 
-<h3 id="insert">insert</h3>
+
+
+
+
+<h3 class="head_l3"  id="insert">insert</h3>
 <p class="funcsignature">
     insert(pos, elem)
 </p>
@@ -552,11 +608,11 @@
 <p>To insert <em>number</em> 10 to the 1<sup>st</sup> position in the vector:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3}<br>
     &gt;&gt;v:insert(1, 10)<br>
     &gt;&gt;v<br>
     
-    <red>10</red>&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; COL
+    <red>10</red>&emsp;1&emsp; 2&emsp; 3&emsp; COL
 </p>
 
 <p>&nbsp;</p>
@@ -564,27 +620,34 @@
 <p>To be able to insert another <em>vector</em> in to a specified position:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3}<br>
-    &gt;&gt;v2=std.tovector{10, 20, 30}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3}<br>
+    &gt;&gt;v2=std.util.tovector{10, 20, 30}<br>
     
     <br>
     
     &gt;&gt;v:insert(1, v2)<br>
     &gt;&gt;v<br>
-   10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; COL
+   10&emsp; 20&emsp; 30&emsp; 1&emsp; 2&emsp; 3&emsp; COL
 </p>
 
 
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
 
-<h3 id="less">less</h3>
+
+
+
+
+<h3 class="head_l3"  id="less">less</h3>
 <p class="funcsignature">
     less(arg=) &rarr; Vector
 <p>
@@ -603,7 +666,12 @@
 
 
 
-<h3 id="less_equal">less_equal</h3>
+
+
+
+
+
+<h3 class="head_l3"  id="less_equal">less_equal</h3>
 <p class="funcsignature">
     less_equal(arg=) &rarr; Vector
 <p>
@@ -614,18 +682,26 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
-<h3 id="push_back">push_back</h3>
+
+
+
+
+
+<h3 class="head_l3"  id="push_back">push_back</h3>
 <p class="funcsignature">
     push_back(arg=)
 </p>
 
 <p> 
-    Adds an element to the end of the vector. Let <em>v</em>= [1 &nbsp;&nbsp;2&nbsp;&nbsp; 3] and 
-    <em>v<sub>1</sub></em>=[100 &nbsp;&nbsp; 200]
+    Adds an element to the end of the vector. Let <em>v</em>= [1 &emsp;2&emsp; 3] and 
+    <em>v<sub>1</sub></em>=[100 &emsp; 200]
 </p>
 
 <p>To add a single number at the end of the vector:</p>
@@ -633,7 +709,7 @@
 <p class="CodeCommand">
     &gt;&gt;v:push_back(4)<br>
     &gt;&gt;v<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; <red>4</red>
+    1&emsp; 2&emsp; 3&emsp; <red>4</red>
 </p>
 
 <p>&nbsp;</p>
@@ -652,8 +728,8 @@
     <br>
     
     &gt;&gt;v<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp; 
-    <red>10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 30 </red>
+    1&emsp; 2&emsp; 3&emsp;4&emsp; 
+    <red>10&emsp; 20&emsp; 30 </red>
 </p>
 
 <p>&nbsp;</p>
@@ -663,9 +739,9 @@
 <p class="CodeCommand">
     &gt;&gt;v:push_back(v1)<br>
     &gt;&gt;v<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 
-    10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;
-    <red>100&nbsp;&nbsp;&nbsp; 200 </red>
+    1&emsp; 2&emsp; 3&emsp; 4&emsp; 
+    10&emsp; 20&emsp; 30&emsp;
+    <red>100&emsp; 200 </red>
 </p>
 
 
@@ -674,12 +750,21 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<h3 id="reserve">reserve</h3>
+
+
+
+
+
+
+
+<h3 class="head_l3"  id="reserve">reserve</h3>
 <p class="funcsignature">
     reserve(num=)
 </p>
@@ -734,7 +819,15 @@
 
 
 
-<h3 id="resize">resize</h3>
+
+
+
+
+
+
+
+
+<h3 class="head_l3"  id="resize">resize</h3>
 <p class="funcsignature">
     resize(num=)
 </p>
@@ -754,7 +847,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;v:resize(2)<br>
-    10&nbsp;&nbsp;&nbsp; 20 
+    10&emsp; 20 
 </p>
 
 <p>&nbsp;</p>
@@ -765,7 +858,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;v:resize(4)<br>
-    10&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp; 0 
+    10&emsp; 20&emsp;0&emsp; 0 
 </p>
 
 
@@ -773,6 +866,9 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -780,7 +876,14 @@
 
 
 
-<h3 id="reverse">reverse</h3>
+
+
+
+
+
+
+
+<h3 class="head_l3"  id="reverse">reverse</h3>
 <p class="funcsignature">
     reverse()
 </p>
@@ -790,15 +893,18 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4, 5}<br>
     &gt;&gt;v:reverse()<br>&gt;&gt;
-    v<br>5&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; COL
+    v<br>5&emsp; 4&emsp; 3&emsp; 2&emsp; 1&emsp; COL
 </p>
 
 
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -806,7 +912,11 @@
 
 
 
-<h3 id="shape">shape</h3>
+
+
+
+
+<h3 class="head_l3"  id="shape">shape</h3>
 <p class="funcsignature">
     shape() &rarr; string
 </p>
@@ -819,7 +929,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3}<br>
     &gt;&gt;v:shape()<br> 
     col
 </p>
@@ -840,6 +950,10 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -847,7 +961,14 @@
 
 
 
-<h3 id="shuffle">shuffle</h3>
+
+
+
+
+
+
+
+<h3 class="head_l3"  id="shuffle">shuffle</h3>
 <p class="funcsignature">
     shuffle()
 <p>
@@ -857,9 +978,9 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5} <br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4, 5} <br>
     &gt;&gt;v:shuffle()<br>
-    4&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3 
+    4&emsp; 1&emsp; 5&emsp; 2&emsp; 3 
 </p>
 
 
@@ -867,6 +988,9 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -874,7 +998,13 @@
 
 
 
-<h3 id="slice">slice</h3>
+
+
+
+
+
+
+<h3 class="head_l3"  id="slice">slice</h3>
 <p class="funcsignature">
     slice(pos=) &rarr; Vector, Vector
 </p>
@@ -885,18 +1015,18 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5}<br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4, 5}<br>
     &gt;&gt;v1,v2=v:slice(3)<br>
     
     <br>
     
     &gt;&gt;v1<br>
-    1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; COL<br>
+    1&emsp; 2&emsp; 3&emsp; COL<br>
 
     <br>
     
     &gt;&gt;v2<br>
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; COL
+    4&emsp; 5&emsp; COL
 </p>
 
 
@@ -904,6 +1034,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -911,7 +1043,13 @@
 
 
 
-<h3 id="sort">sort</h3>
+
+
+
+
+
+
+<h3 class="head_l3"  id="sort">sort</h3>
 <p class="funcsignature">
     sort(order=)
 </p>
@@ -922,15 +1060,15 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1,5,2,7,4}<br>
+    &gt;&gt;v=std.util.tovector{1,5,2,7,4}<br>
     &gt;&gt;v<br>
-    1&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; COL
+    1&emsp; 5&emsp; 2&emsp; 7&emsp; 4&emsp; COL
 </p>
 
 
 <p class="CodeCommand">
     &gt;&gt;v:sort(&quot;A&quot;)<br>
-    &gt;&gt;v<br>1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; COL
+    &gt;&gt;v<br>1&emsp; 2&emsp; 4&emsp; 5&emsp; 7&emsp; COL
 </p>
 
 

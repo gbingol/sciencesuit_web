@@ -54,14 +54,14 @@
 
 <h3>From Vector</h3>
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{1, 2, 3, 4, 5, 6} <br>
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4, 5, 6} <br>
     
     <br>
     
-    &gt;&gt;m=std.tomatrix(v, 2, 3) <br>
+    &gt;&gt;m=std.util.tomatrix(v, 2, 3) <br>
     &gt;&gt;m <br>
-    1 &nbsp;&nbsp;&nbsp;  2 &nbsp;&nbsp;&nbsp;  3 <br>
-    4  &nbsp;&nbsp;&nbsp; 5  &nbsp;&nbsp;&nbsp; 6
+    1 &emsp;  2 &emsp;  3 <br>
+    4  &emsp; 5  &emsp; 6
 </p>
 
 
@@ -77,10 +77,10 @@
     
     <br>
     
-    &gt;&gt;m=std.tomatrix(t, 2, 3) <br>
+    &gt;&gt;m=std.util.tomatrix(t, 2, 3) <br>
     &gt;&gt;m <br>
-    1 &nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp; 3 <br>
-    4 &nbsp;&nbsp;&nbsp; 5  &nbsp;&nbsp;&nbsp; 6
+    1 &emsp; 2 &emsp; 3 <br>
+    4 &emsp; 5  &emsp; 6
 </p>
 
 
@@ -97,11 +97,11 @@
     
     <br>
     
-    &gt;&gt;m=std.tomatrix(t) <br>
+    &gt;&gt;m=std.util.tomatrix(t) <br>
     &gt;&gt;m <br>
-    1 &nbsp;&nbsp;&nbsp;  2 <br>
-    3 &nbsp;&nbsp;&nbsp;  4 <br>
-    5 &nbsp;&nbsp;&nbsp;  6
+    1 &emsp;  2 <br>
+    3 &emsp;  4 <br>
+    5 &emsp;  6
 </p>
 
 <p>&nbsp;</p>
@@ -112,11 +112,11 @@
     
     <br>
     
-    &gt;&gt;m=std.tomatrix(t) <br>
+    &gt;&gt;m=std.util.tomatrix(t) <br>
     &gt;&gt;m <br>
-    1 &nbsp;&nbsp;&nbsp;  <span style="color: red"> 0.58168</span> <br>
-    3 &nbsp;&nbsp;&nbsp;  4 <br>
-    5 &nbsp;&nbsp;&nbsp;  6
+    1 &emsp;  <span style="color: red"> 0.58168</span> <br>
+    3 &emsp;  4 <br>
+    5 &emsp;  6
 </p>
 
 
@@ -130,11 +130,11 @@
 
 <p class="CodeCommand">
         
-    &gt;&gt;m=std.tomatrix(rng, 3, 2) <br>
+    &gt;&gt;m=std.util.tomatrix(rng, 3, 2) <br>
     &gt;&gt;m <br>
-    1 &nbsp;&nbsp;&nbsp;  2 <br>
-    3 &nbsp;&nbsp;&nbsp;  4 <br>
-    5 &nbsp;&nbsp;&nbsp;  6
+    1 &emsp;  2 <br>
+    3 &emsp;  4 <br>
+    5 &emsp;  6
 </p>
 
 <p>
@@ -146,7 +146,7 @@
 
 <div class="RelatedLinks">
     <a href="../classes/matrix.php">Matrix</a>
-    <a href="tovector.php">std.tovector</a>
+    <a href="util.tovector.php">std.util.tovector</a>
 </div>
 
 

@@ -10,29 +10,13 @@
     <link href="../../../css/common.css" rel="stylesheet" type="text/css" />
     
     <style>
-        h2
-        {
-            color: red;
-        }
-        
-        h3
-        {
-            color:brown;
-        }
-        
-        
+       
         p
         {
             margin-right: 10%;
         }
         
         
-        
-        ul.spaced li, ol.spaced li
-        {
-            padding-top: 6px;
-            padding-bottom: 6px;
-        }
         
         #selectsection
         {
@@ -109,7 +93,17 @@
 </p>
 
 
+
+
+
+
+
 <p>&nbsp;</p>
+
+
+
+
+
 
 
 <!-- ***************************** MENUS ************************************ -->
@@ -120,6 +114,8 @@
     All functionality in the editor can be controlled using menus and as shown below, 
     there are 4 main menus, all of which are populated, enabled/disabled dynamically.
 </p>
+
+
 
 <p>&nbsp;</p>
 
@@ -151,7 +147,12 @@
     Up to 10 recently opened scripts will be displayed.
 </p>
 
-<p><em>Preferences:</em> Shows a dialog where settings can be changed.</p>
+<p>
+    <em>Preferences:</em> Shows a dialog where settings can be changed.
+</p>
+
+
+
 <p>&nbsp;</p>
 
 
@@ -174,6 +175,11 @@
 </p>
 
 
+<p>&nbsp;</p>
+
+
+
+
 <h3 id="debugmenu">Debug Menu</h3>
 
 <img src="images/menu_debug.png" alt=""/>
@@ -188,7 +194,11 @@
     <em>Compile:</em> Compiles the current script into Lua bytecode. Enabled when the script is available from a path.
 </p>
 
+
+
 <p>&nbsp;</p>
+
+
 
 
 <h3 id="windowmenu">Window Menu</h3>
@@ -203,8 +213,16 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
 
 
 
@@ -222,8 +240,10 @@
 
 <img src="images/dirlist_rootdirectories_foldercontextmenu.png" alt=""/>
 
-<p>
-    &nbsp;</p>
+
+<p>&nbsp;</p>
+
+
 <p>
     However, once the directory which contains scripts are located, by right-clicking on the folder 
     it can be "<em>Set as default</em>", as shown in Fig B. Therefore, the next time the editor starts, 
@@ -233,8 +253,10 @@
 </p>
 
 <p>
-    Instead of a directory, right-clicking on a file will show the "<em>Reveal in Explorer</em>" menu, 
-    which works exactly the same way for the directories such that it will show the file in OS’s default explorer window.
+    Instead of a directory, right-clicking on a file will show the 
+    "<em>Reveal in Explorer</em>" menu, which works exactly the same 
+    way for the directories such that it will 
+    show the file in OS’s default explorer window.
 </p>
 
 <img src="images/dirlist_filecontextmenu_revealinexplorer.png" alt=""/>
@@ -247,12 +269,21 @@
 </p>
 
 <ul class="linespaced">
-    <li><em>Lua files:</em> Will be loaded into the editor.</li>
+    <li>
+        <em>Lua files:</em> 
+        Will be loaded into the editor.
+    </li>
 
-    <li><em>Executable files:</em> No action will be performed and a warning message will be issued.</li>
+    <li>
+        <em>Executable files:</em> 
+        No action will be performed and a warning message will be issued.
+    </li>
 
-    <li><em>Other file types:</em> If there is a default program associated in the OS with the particular extension, 
-        it will be opened with the default program.</li>
+    <li>
+        <em>Other file types:</em> 
+        If there is a default program associated in the OS with the particular extension, 
+        it will be opened with the default program.
+    </li>
 </ul>
 
 
@@ -275,8 +306,9 @@
 <h2 id="runscript">Running Scripts</h2>
 
 <p>
-    Once a script is loaded into the editor, either via <em>File &rarr; Open</em> or double-clicking 
-    on the directory list, it is possible to run the script using <em>Debug &rarr; Start Without Debugging</em> menu. 
+    Once a script is loaded into the editor, either via <em>File &rarr; Open</em> 
+    or double-clicking on the directory list, it is possible to run the script 
+    using <em>Debug &rarr; Start Without Debugging</em> menu. 
 </p>
 
 <p>&nbsp;</p>
@@ -293,14 +325,18 @@
 <p>&nbsp;</p>
 
 <p>
-    When the script is run, any output from the script will be shown at the output window which will be floating atop the script:
+    When the script is run, any output from the script will be shown at 
+    the output window which will be floating atop the script:
 </p>
 
 <p>&nbsp;</p>
 
 <img src="images/runningscript_outputwindow.png" alt=""/>
 
+
+
 <p>Output Window shows: </p>
+
 <ol class="linespaced">
     <li>Date (year month day) and the time (hour, minute, seconds),</li>
 
@@ -309,7 +345,8 @@
     <li>If available any output (print statements) from the script.</li>
 </ol>
 
-<p style="clear:both;">&nbsp;</p>
+
+
 
 
 
@@ -318,6 +355,9 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -334,7 +374,8 @@
     ScienceSuit is equipped a <a href="../../std/index.php">std library</a> with several data structures and 
     a huge number of functions. 
     Remembering function names, parameters and the details of the function is not an easy task. 
-    Therefore, an auto-completion dialog along with help (seen below) is designed to make scripting or typing commands considerably more convenient.
+    Therefore, an auto-completion dialog along with help (seen below) is designed to make scripting 
+    or typing commands considerably more convenient.
 </p>
 
 
@@ -345,15 +386,33 @@
     followed by a "." or ":" is typed, the contents will be listed and will be shown with the following signs:
 </p>
 
-<ul>
-    <li><em>table:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {} </em> </li>
-    <li><em>function:&nbsp;&nbsp;&nbsp; f </em> </li>
-    <li><em>string:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s </em> </li>
-    <li><em>number:&nbsp;&nbsp;&nbsp; n </em> </li>
-</ul>
+<!-- class is funcarguments just to make first column italic -->
+<table class="funcarguments">
+    <tr>
+        <td>table:</td>
+        <td>{}</td>
+    </tr>
+    
+    <tr>
+        <td>function:</td>
+        <td>f</td>
+    </tr>
+    
+    <tr>
+        <td>string:</td>
+        <td>s</td>
+    </tr>
+    
+    <tr>
+        <td>number:</td>
+        <td>n</td>
+    </tr>
+</table>
 
-<p>
-    &nbsp;</p>
+
+
+<p>&nbsp;</p>
+
 <p>
     Continuing to type after the auto-complete dialog is shown will filter the contents of the 
     auto-complete dialog to be able to find the exact match. Selecting any of the list item, 
@@ -386,8 +445,23 @@
 <img src="images/autocomplete_contexthelp_screenshothelpfiles.png" alt="" />
 
 
-<p style="clear:both;">&nbsp;</p>
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 
@@ -396,7 +470,9 @@
 <h2 id="findreplace">Find/Replace</h2>
 
 <p>
-    In order to find occurrence(s) of an identifier either go to <em>Edit &rarr; Find</em> or simply click <em>Ctrl+F</em>. This will show the following dialog:
+    In order to find occurrence(s) of an identifier either go to 
+    <em>Edit &rarr; Find</em> or simply click <em>Ctrl+F</em>. 
+    This will show the following dialog:
 </p>
 
 <img src="images/dlg_find_replace.png" alt=""/>
@@ -413,23 +489,54 @@
 
 <img src="images/dlg_find_search_showinghighlights_script.png" alt=""/>
 
+
 <p><em>Search conditions:</em> </p>
-<p style="font-size: 0.8em;">
-    <em>C:</em>&nbsp;&nbsp;&nbsp;&nbsp; Match the case  <br />
-    <em>W:</em>&nbsp;&nbsp;&nbsp; 	Whole words only  <br />
-    <em>RE:</em>&nbsp;&nbsp;&nbsp; Regular expression 
-</p>
+
+<!-- class is funcarguments just to make first column italic -->
+<table class="funcarguments">
+    <tr>
+        <td>C:</td>
+        <td>Match the case</td>
+    </tr>
+    <tr>
+        <td>W:</td>
+        <td>Match the whole word</td>
+    </tr>
+    <tr>
+        <td>RE:</td>
+        <td>Evaluate search word as regular expression</td>
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>All:</td>
+        <td>Include everything in search (comments, identifiers,...)</td>
+    </tr>
+    <tr>
+        <td>Id:</td>
+        <td>Only search identifiers</td>
+    </tr>
+    <tr>
+        <td>Str:</td>
+        <td>Only search strings</td>
+    </tr>
+</table>
 
 
-<p style="clear:both;">&nbsp;</p>
+
+
+<p>&nbsp;</p>
 
 <p>
-    Firstly noting that only 4 matching conditions are shown in the image, 
-    here, "<em>2 of 6</em>" means that in the script file there are 6 entries matching 
-    the current phrase and conditions being found and currently the 2<sup>nd</sup> one 
+    Firstly noting that only 3 matching conditions are shown in the image, 
+    here, "<em>1 of 6</em>" means that in the script file there are 6 entries matching 
+    the current phrase and conditions being found and currently the 1<sup>st</sup> one 
     (for this case, top=1 and bottom=6) is located 
     (please notice the difference between highlighted phrases and the phrase with the rectangle around). 
-    The reason the 2nd phrase was located was that it was closer to the caret's current position from a top-down sense. 
+    
+    The reason the 1st phrase was located was that it was closer to the 
+    caret's current position from a top-down sense. 
     Using the up and down arrow buttons, the previous or the next occurrence can be chosen.
 </p>
 
@@ -450,21 +557,33 @@
 <p>
     Naturally, to be able to replace an occurrence or multiple occurrences of a text, 
     first it must be found in the document. Therefore, initially, 
-    the phrase "retEntry" will be found as explained above. Once at least one 
+    the phrase "NEntries" will be found as explained above. Once at least one 
     occurrence of the search text has been found, 
     then the buttons "<em>Replace Current</em>" and “<em>Replace All</em>” will become active. 
 </p>
 
 <p>
     For the above figure, "<em>Replace Current</em>" will replace 
-    the 1<sup>st</sup> occurrence of "<em>retEntry</em>" with "<em>Entry</em>" 
-    whereas "<em>Replace All</em>" will replace all 6 occurrences of "<em>retEntry</em>" with "<em>Entry</em>".
+    the 1<sup>st</sup> occurrence of "<em>NEntries</em>" with "<em>Entries</em>" 
+    whereas "<em>Replace All</em>" will replace all 6 occurrences at once.
 </p>
 
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
 
 
 

@@ -107,6 +107,9 @@
     include $mainmenuloc;
 ?>
 
+    
+<script src="/jsscripts/createoutline.js"></script>
+    
 
 <h1>t test</h1>
 
@@ -126,7 +129,8 @@
 
 
 
-<h3>Arguments:</h3>
+
+<h3 id="arguments">Arguments:</h3>
 <table class="funcarguments">
     <tr>
         <td><em>x:</em></td>
@@ -172,11 +176,19 @@
     </li>
 </ol>
 
+
+
+
+
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
 
-<h3>Possible Usage:</h3>
+<h2 id="ttest_types">Different t-test types</h2>
+
+
+<h3 id="possibleusage">Possible Usage:</h3>
 
 <ol class="linespaced">
     <li>
@@ -198,6 +210,7 @@
 
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -206,7 +219,7 @@
 
 
 
-<h3>1-Sample t-test</h3>
+<h3 id="1sample">1-Sample t-test</h3>
 <p>
     If the standard deviation of the population is not known 
     we use the one-sample t-test procedure to test &mu;=&mu;<sub>0</sub>.
@@ -223,7 +236,7 @@
 
 
 
-<h3>2-Sample t-test</h3>
+<h3 id="2sample">2-Sample t-test</h3>
 <p>
     Suppose that a given experiment consists of two independent random samples 
     X<sub>1</sub>, X<sub>2</sub>,…, X<sub>n</sub> and Y<sub>1</sub>, Y<sub>2</sub>,…,Y<sub>m</sub>. 
@@ -304,7 +317,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;v=std.tovector{5, 6, 0, 4, 11, 9, 2, 3} <br />
+    &gt;&gt;v=std.util.tovector{5, 6, 0, 4, 11, 9, 2, 3} <br />
     
     <br>
     <span class="auto-style11">-- 1 sample t-test</span><br />
@@ -329,7 +342,7 @@
 
 
 
-<h3>Example #2:</h3>
+<h4>Example #2:</h4>
 <p>
     Following data is obtained for Degree of Reading Power 
     for 3rd graders*. We want to know whether there is a difference between control 

@@ -67,6 +67,14 @@
 ?>
     
     
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>
+
+
+    
 <script>
     function PrintOrigTable()
     {
@@ -111,7 +119,7 @@
 
 
     
-<h2 id="create">Creating a DataFrame</h2>
+<h2 class="head_l2"  id="create">Creating a DataFrame</h2>
 
 
 <p class="funcsignature">
@@ -128,8 +136,8 @@
 <p>&nbsp;</p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{"a", 2, 3}, 
-    std.toarray{"abc", 12, "b", 4}, std.toarray{10, 20, 30} } <br>
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{"a", 2, 3}, 
+    std.util.toarray{"abc", 12, "b", 4}, std.util.toarray{10, 20, 30} } <br>
     
     &gt;&gt;df
     
@@ -185,8 +193,8 @@
 <p>&nbsp;</p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{"a", 2, 3}, 
-    A=std.toarray{"abc", 12, "b", 4}, std.toarray{10, 20, 30} }
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{"a", 2, 3}, 
+    A=std.util.toarray{"abc", 12, "b", 4}, std.util.toarray{10, 20, 30} }
     
     <br>
     
@@ -251,8 +259,8 @@
 
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{B=std.toarray{"a", 2, 3}, 
-    A=std.toarray{"abc", 12, "b", 4}, C=std.toarray{10, 20, 30} }
+    &gt;&gt;df = std.DataFrame.new{B=std.util.toarray{"a", 2, 3}, 
+    A=std.util.toarray{"abc", 12, "b", 4}, C=std.util.toarray{10, 20, 30} }
     
     <br>
     &gt;&gt;df 
@@ -299,8 +307,8 @@
 </p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{"a", 2, 3}, std.toarray{"abc", 12, "b", 4}, 
-    std.toarray{10,20,30}, cols={"A","B","C"} } <br>
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{"a", 2, 3}, std.util.toarray{"abc", 12, "b", 4}, 
+    std.util.toarray{10,20,30}, cols={"A","B","C"} } <br>
     
     &gt;&gt;df
     <table class="dataframe">
@@ -353,8 +361,8 @@
 </p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{A=std.toarray{"a", 2, 3}, B=std.toarray{"abc", 12, "b", 4}, 
-    std.toarray{10, 20, 30}, cols={"C"}, rows={"a", "b"} } <br>
+    &gt;&gt;df = std.DataFrame.new{A=std.util.toarray{"a", 2, 3}, B=std.util.toarray{"abc", 12, "b", 4}, 
+    std.util.toarray{10, 20, 30}, cols={"C"}, rows={"a", "b"} } <br>
     
     &gt;&gt;df
     <table class="dataframe">
@@ -412,7 +420,7 @@
 
 <!-- ******************************************************* -->
 
-<h2 id="accessdata">Accessing Data</h2>
+<h2 class="head_l2"  id="accessdata">Accessing Data</h2>
 <p>
     By access, it is meant to read from or write to parts of the dataframe. For access, the header
     labels are very important and it is via the header labels that we access the data.
@@ -458,7 +466,8 @@
 
 <p>&nbsp;</p>
 
-<h3 id="columnaccess">1) Column Access</h3>
+
+<h3 class="head_l3"  id="columnaccess">Column Access</h3>
 
 <p class="CodeCommand">
     &gt;&gt;df("C") <br>
@@ -624,7 +633,7 @@
 
 <p>&nbsp;</p>
 
-<h4>CAUTION:</h4>
+<h4 class="head_l4" >CAUTION:</h4>
 <p>
     Although we used indexing notation <em>for the dataframe</em>, [], to access the data, the value inside the 
     brackets was of type Lua table. Caution should be exercised when the value is of type string.
@@ -706,7 +715,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h3 id="rowaccess">2) Reading a Row</h3>
+<h3 class="head_l3"  id="rowaccess">Reading a Row</h3>
 
 <p>
     Unlike column access, row access is read-only as a <em>copy</em> of the row is returned as an array. 
@@ -755,15 +764,21 @@
 <p>&nbsp;</p>
 
 
+
+
+
 <!-- ********************************************************************* -->
 
-<h2 id="memberfunc">Member Functions</h2>
+
+
+
+<h2 class="head_l2"  id="memberfunc">Member Functions</h2>
 
 
 
 
 
-<h3 id="cbind">cbind</h3>
+<h3 class="head_l3"  id="cbind">cbind</h3>
 
 <p class="funcsignature">
     cbind(arg, [label=])
@@ -835,7 +850,7 @@
     
     
     <span class="LuaComment">--Adding an Array</span><br>
-    &gt;&gt;arr=std.toarray{"A", "B", 1, 2} <br>
+    &gt;&gt;arr=std.util.toarray{"A", "B", 1, 2} <br>
     &gt;&gt;df:cbind(arr, "ARRAY") <br>
     &gt;&gt;df 
     
@@ -912,7 +927,7 @@
 
 
 
-<h3 id="clone">clone</h3>
+<h3 class="head_l3"  id="clone">clone</h3>
 
 <p class="funcsignature">
     clone() &rarr; DataFrame
@@ -954,7 +969,7 @@
 
 
 
-<h3 id="colnames">colnames</h3>
+<h3 class="head_l3"  id="colnames">colnames</h3>
 <p class="funcsignature">
     colnames() &rarr; Lua Table
 </p>
@@ -1000,7 +1015,7 @@
 
 
 
-<h3 id="dtypes">dtypes</h3>
+<h3 class="head_l3"  id="dtypes">dtypes</h3>
 
 <p class="funcsignature">
     dtypes() &rarr; string
@@ -1070,7 +1085,7 @@
 
 
 
-<h3 id="head">head</h3>
+<h3 class="head_l3"  id="head">head</h3>
 
 <p class="funcsignature">
     head(n=)
@@ -1128,7 +1143,7 @@
 
 
 
-<h3 id="ncols">ncols</h3>
+<h3 class="head_l3"  id="ncols">ncols</h3>
 <p class="funcsignature">
     ncols() &rarr; integer
 </p>
@@ -1165,7 +1180,7 @@
 
 
 
-<h3 id="nrows">nrows</h3>
+<h3 class="head_l3"  id="nrows">nrows</h3>
 
 <p class="funcsignature">
     nrows() &rarr; integer
@@ -1205,7 +1220,7 @@
 
 
 
-<h3 id="rbind">rbind</h3>
+<h3 class="head_l3"  id="rbind">rbind</h3>
 
 <p class="funcsignature">
     rbind(arg, [label=])
@@ -1219,8 +1234,8 @@
 </p>
 
 <div class="CodeCommand">
-    &gt;&gt;df = std.DataFrame.new{std.toarray{10, 20, 30}, std.toarray{"a", 2, 3}, 
-     std.toarray{"abc", 12, "b", 4},  cols={"C","A","B"}, rows={"a", "b"} } <br>
+    &gt;&gt;df = std.DataFrame.new{std.util.toarray{10, 20, 30}, std.util.toarray{"a", 2, 3}, 
+     std.util.toarray{"abc", 12, "b", 4},  cols={"C","A","B"}, rows={"a", "b"} } <br>
     &gt;&gt;df <br> 
     
     <script>PrintOrigTable();</script>
@@ -1307,7 +1322,7 @@
 
 
 
-<h3 id="rename">rename</h3>
+<h3 class="head_l3"  id="rename">rename</h3>
 
 <p class="funcsignature">
     rename{cols={OldLabel=NewLabel, ...}, rows={OldLabel=NewLabel},... }
@@ -1384,7 +1399,7 @@
 
 
 
-<h3 id="rownames">rownames</h3>
+<h3 class="head_l3"  id="rownames">rownames</h3>
 
 <p class="funcsignature">
     rownames() &rarr; Lua Table
@@ -1422,7 +1437,7 @@
 <p>&nbsp;</p>
 
 
-<h3 id="swap">swap</h3>
+<h3 class="head_l3"  id="swap">swap</h3>
 
 <p class="funcsignature">
     swap(Label1, Label2)
@@ -1502,7 +1517,7 @@
 
 
 
-<h3 id="summary">summary</h3>
+<h3 class="head_l3"  id="summary">summary</h3>
 
 <p class="funcsignature">
     summary() &rarr; string
@@ -1537,7 +1552,7 @@
 
 
 
-<h3 id="tail">tail</h3>
+<h3 class="head_l3"  id="tail">tail</h3>
 
 <p class="funcsignature">
     tail(n=)
@@ -1619,7 +1634,7 @@
 
 
 
-<h3 id="type">type</h3>
+<h3 class="head_l3"  id="type">type</h3>
 
 <p class="funcsignature">
     type() &rarr; string

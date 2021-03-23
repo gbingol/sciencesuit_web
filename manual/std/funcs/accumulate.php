@@ -26,6 +26,15 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+    
+
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H3"), false);
+</script>
+    
 
 <h1>accumulate</h1>
 
@@ -46,7 +55,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Arguments:</h3>
+<h3 id="arguments">Arguments:</h3>
 
 <table class="funcarguments">
     <tr>
@@ -73,7 +82,7 @@
 <p>&nbsp;</p>
 
 
-
+<h3 id="luatable">Lua table</h3>
     
 <p>By default Lua tables are iteratable:</p>
 <p class="CodeCommand">
@@ -87,7 +96,7 @@
 
     <br />
 
-    &gt;&gt;v=std.tovector(t) <br />
+    &gt;&gt;v=std.util.tovector(t) <br />
     &gt;&gt;v <br />
     3&emsp; 5&emsp; 2&emsp; 1&emsp; 7&emsp; 4&emsp; COL <br />
     <br />
@@ -98,14 +107,19 @@
     <br />
     <br />
     <span class="LuaComment">--Sum up squares of entries</span> <br />
-    &gt;&gt;std.accumulate(t, 0, <span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>) <br />
+    &gt;&gt;std.accumulate(t, 0, <span class="LuaKeyword">function</span>(x) 
+    <span class="LuaKeyword">return</span> x^2 
+    <span class="LuaKeyword">end</span>) <br />
     104	 <br />
     6	
 </p>
 
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 
+
+<h3 id="vector">Vector</h3>
 
 <p>
     Since <a href="../classes/vector.php">Vectors</a> are addable (v<sub>1</sub>+v<sub>2</sub>=v<sub>3</sub>) 
@@ -114,8 +128,8 @@
 
 <p class="CodeCommand">
     &gt;&gt;t={} <br />
-    &gt;&gt;t.v1=std.tovector{1, 2, 3, 4} <br />
-    &gt;&gt;t.v2=std.tovector{4, 3, 2, 1} <br />
+    &gt;&gt;t.v1=std.util.tovector{1, 2, 3, 4} <br />
+    &gt;&gt;t.v2=std.util.tovector{4, 3, 2, 1} <br />
     <br />
     &gt;&gt;t <br />
     v1=Vector <br />
@@ -128,7 +142,9 @@
 
 </p>
 
+
 <p>&nbsp;</p>
+
 
 <p>
     Note that since addition of a Vector with a number is also defined (<em>v<sub>1</sub>+number=v<sub>2</sub></em>), 
@@ -138,7 +154,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;x0=std.tovector{0, 0, 0, 0} <br />
+    &gt;&gt;x0=std.util.tovector{0, 0, 0, 0} <br />
 
     <br />
 

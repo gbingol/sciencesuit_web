@@ -51,6 +51,13 @@
 ?>
 
 
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>
+    
 
 <h1>Range Class</h1>
 <p>
@@ -60,7 +67,16 @@
 
 <p> &nbsp;</p>
 
-<h3 id="createrange">Creating Range</h3>
+
+
+
+
+<h2 class="head_l2"  id="create_access">Create and Access</h2>
+
+
+
+
+<h3 class="head_l3"  id="createrange">Creating Range</h3>
 
 <p>
     Unlike Worksheet, where indices (1,1) refers to <em>A1</em>, for a Range, (1,1) refers to the topleft 
@@ -80,6 +96,8 @@
 
 
 <p>&nbsp;</p>
+
+
 <p>
     <span class="auto-style4"><em>Important note:</em></span> If the Worksheet owning the range(s) is closed, 
     the range(s) becomes invalid.
@@ -105,13 +123,23 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
     
+
+
+
     
-<h3 id="accesscells">Accessing cells</h3>
-<p>You can read from and write to the region specified by the range inside the Worksheet.</p>
+<h3 class="head_l3"  id="accesscells">Accessing cells</h3>
+
+<p>
+    You can read from and write to the region specified by the range inside the Worksheet.
+</p>
+
 <p class="CodeCommand">
     <span class="LuaComment">--create a range [region is 2x2, from B2 to C3]</span><br />
     &gt;&gt;r=Range.new("Sheet 1!B2:C3") <br />
@@ -149,17 +177,31 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
     
     
 
-<!-- **************************************************************** -->
+
+
+
+
+
+
+
     
-<h2>Member functions</h2>
+<h2 class="head_l2"  id="memberfuncs">Member functions</h2>
+
+
 <p>&nbsp;</p>
 
-<h3 id="col">col</h3>
+
+
+
+<h3 class="head_l3"  id="col">col</h3>
 <p class="funcsignature">
     col(i) &rarr; Array
 </p>
@@ -176,7 +218,7 @@
 
 
 
-<h3 id="coords">coords </h3>
+<h3 class="head_l3"  id="coords">coords </h3>
 <p class="funcsignature">
     coords() &rarr; Lua table, Lua table
 </p>
@@ -213,7 +255,7 @@
 
 
 
-<h3 id="get">get</h3>
+<h3 class="head_l3"  id="get">get</h3>
 <p class="funcsignature">
     get(i, j) &rarr; number/string
 </p>
@@ -234,7 +276,7 @@
 
     
     
-<h3 id="parent">parent</h3>
+<h3 class="head_l3"  id="parent">parent</h3>
 <p class="funcsignature">
     parent() &rarr; Worksheet
 </p>
@@ -260,7 +302,7 @@
 
 
     
-<h3 id="select">select </h3>
+<h3 class="head_l3"  id="select">select </h3>
 <p class="funcsignature">
     select()
 </p>
@@ -287,7 +329,7 @@
     
     
     
-<h3 id="set">set</h3>
+<h3 class="head_l3"  id="set">set</h3>
 <p class="funcsignature">
     set(i, j, val)
 </p>
@@ -304,7 +346,7 @@
 
     
     
-<h3 id="sort">sort</h3>
+<h3 class="head_l3"  id="sort">sort</h3>
 <p class="funcsignature">
     sort(pos, order, casesensitive=<span class="LuaKeyword">false</span>)
 </p>
@@ -331,7 +373,7 @@
 
 
     
-<h3 id="subrange">subrange </h3>
+<h3 class="head_l3"  id="subrange">subrange </h3>
 <p class="funcsignature">
     subrange({row=, col=}, nrows=, ncols=) &rarr; Range
 </p>
@@ -373,7 +415,7 @@
 
    
    
-<h3 id="tostring">tostring</h3>
+<h3 class="head_l3"  id="tostring">tostring</h3>
 <p class="funcsignature">
     tostring() &rarr; string
 </p>

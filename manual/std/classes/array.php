@@ -70,19 +70,26 @@
 ?>
 
 
-
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+</script>
     
     
     
     
 <h1>Array</h1>
+
+
+
+
 <p class="rightmargin">
     Array is a 1D data structure and has the following properties:
 </p>
 
 <ol class="linespaced">
     <li>
-        Can contain real numbers (float, integer) and non-numeric 
+        Can contain real (float, integer) and complex numbers and also non-numeric 
         (string, <span class="LuaKeyword">nil</span>) values. 
     </li>
     
@@ -115,10 +122,10 @@
 
 
 
-<h2 id="createarray">Creating Array</h2>
+<h2 class="head_l2" id="createarray">Creating Array</h2>
     
     
-<h3 id="array_new">Array.new</h3>
+<h3 class="head_l3"  id="array_new">Array.new</h3>
 
 <p class="funcsignature">
     Array.new(n=, [value=]) &rarr; Array 
@@ -169,7 +176,7 @@
 
 
 
-<h3 id="array_rbinom">Array.rbinom</h3>
+<h3 class="head_l3"  id="array_rbinom">Array.rbinom</h3>
 
 <p>
     Generates random sample for the binomial distribution. 
@@ -227,7 +234,7 @@
 
 
 
-<h3 id="array_rchisq">Array.rchisq</h3>
+<h3 class="head_l3"  id="array_rchisq">Array.rchisq</h3>
 
 <p>
     Generates random sample for the chisq distribution. 
@@ -281,7 +288,7 @@
 
 
 
-<h3 id="array_rf">Array.rf</h3>
+<h3 class="head_l3"  id="array_rf">Array.rf</h3>
 
 <p>
     Generates random sample for the F distribution. 
@@ -333,7 +340,7 @@
 
 
 
-<h3 id="array_rnorm">Array.rnorm</h3>
+<h3 class="head_l3"  id="array_rnorm">Array.rnorm</h3>
 
 <p>
     Generates random sample for the normal distribution. 
@@ -387,7 +394,7 @@
 
 
 
-<h3 id="array_rpois">Array.rpois</h3>
+<h3 class="head_l3"  id="array_rpois">Array.rpois</h3>
 
 <p>
     Generates random sample for the Poisson distribution. 
@@ -440,7 +447,7 @@
 
 
 
-<h3 id="array_rt">Array.rt</h3>
+<h3 class="head_l3"  id="array_rt">Array.rt</h3>
 
 <p>
     Generates random sample for the Student t distribution. 
@@ -494,7 +501,7 @@
 
 
 
-<h3 id="array_runif">Array.runif</h3>
+<h3 class="head_l3"  id="array_runif">Array.runif</h3>
 
 <p>
     Generates random sample for uniform distribution. 
@@ -562,7 +569,7 @@
 
 
 
-<h3>From Existing Data</h3>
+<h3 class="head_l3"  id="fromExistingData">From Existing Data</h3>
 
 <p>
     In order to create an array from:
@@ -573,7 +580,7 @@
     </li>
     
     <li>
-        Vector, Matrix, Lua table: <a href="../funcs/toarray.php">std.toarray</a>
+        Vector, Matrix, Lua table: <a href="../funcs/util.toarray.php">std.util.toarray</a>
     </li>
     
 </ul>
@@ -598,7 +605,7 @@
 
 
 
-<h2>Array Manipulation</h2>
+<h2 class="head_l2" id="array_manipulation">Array Manipulation</h2>
 
 
 <p>
@@ -683,7 +690,7 @@
 
 <!-- ************************Arithmetic Operations ********************************* -->
 
-<h2 id="arithmeticops">Arithmetic Operations</h2>
+<h2 class="head_l2" id="arithmeticops">Arithmetic Operations</h2>
 
 <p>
     It has already been mentioned that an array can contain numbers (float, integer) 
@@ -763,10 +770,10 @@
 
 <!-- ************************Member Functions********************************* -->
 
-<h2 id="memberfuncs">Member functions</h2>
+<h2 class="head_l2" id="memberfuncs">Member functions</h2>
     
 
-<h3 id="capacity">capacity</h3>
+<h3 class="head_l3"  id="capacity">capacity</h3>
 
 <p class="funcsignature">
     capacity() &rarr; integer
@@ -775,7 +782,7 @@
 <p>Returns the capacity of the array. </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
     &gt;&gt;a <br />
     1&emsp; 2&emsp; 3&emsp; "a"&emsp; "b" <br />
 
@@ -818,7 +825,7 @@
 
 
     
-<h3 id="clone">clone</h3>
+<h3 class="head_l3"  id="clone">clone</h3>
 
 <p class="funcsignature">
     clone() &rarr; Array
@@ -829,7 +836,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
 
     <br />
 
@@ -848,7 +855,7 @@
 <p>However, if we had used clone() function:</p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
     &gt;&gt;b=a:clone() <br />
 
     <br />
@@ -887,7 +894,7 @@
 
 
 
-<h3 id="dtypes">dtypes</h3>
+<h3 class="head_l3"  id="dtypes">dtypes</h3>
 
 <p class="funcsignature">
     dtypes() &rarr; Lua table
@@ -931,7 +938,7 @@
 
 
 
-<h3 id="erase">erase</h3>
+<h3 class="head_l3"  id="erase">erase</h3>
 
 <p class="funcsignature">
     erase(pos)
@@ -943,7 +950,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, 3, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, 3, "a", "b"} <br />
 
     <br />
 
@@ -953,7 +960,7 @@
 
     <br />
 
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
     &gt;&gt;a:erase(1) <br />
     &gt;&gt;a <br />
     "b"	 <br />
@@ -982,7 +989,7 @@
 
 
 
-<h3 id="insert">insert</h3>
+<h3 class="head_l3"  id="insert">insert</h3>
 
 <p class="funcsignature">
     insert(i, elem)
@@ -991,7 +998,7 @@
 <p>Inserts a number, 1D Lua table or an array at <em>i<sup>th</sup> </em>position.</p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
     &gt;&gt;a:insert( 2, {1, <span class="auto-style2">"c"</span>} ) <br />
 
     <br />
@@ -1002,8 +1009,8 @@
     <br />
     <br />
 
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
-    &gt;&gt;a2=std.toarray{<span class="auto-style3">1</span>, "c"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
+    &gt;&gt;a2=std.util.toarray{<span class="auto-style3">1</span>, "c"} <br />
 
     <br />
 
@@ -1039,7 +1046,7 @@
 
 
 
-<h3 id="is_linked">is_linked</h3>
+<h3 class="head_l3"  id="is_linked">is_linked</h3>
 
 <p class="funcsignature">
     is_linked() &rarr; boolean
@@ -1084,28 +1091,107 @@
 
 
 
-<h3 id="keep_numbers">keep_numbers</h3>
+<h3 class="head_l3"  id="keep_realnumbers">keep_complexnumbers</h3>
+
+<p class="funcsignature">
+    keep_complexnumbers()
+</p>
+
+<p>
+    Only keep complex numbers and discard the others.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
+    
+    <br>
+    
+    &gt;&gt;arr:keep_complexnumbers() <br>
+    
+    <br>
+    &gt;&gt;arr <br>
+    3 + 2i
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+<h3 class="head_l3"  id="keep_numbers">keep_numbers</h3>
 
 <p class="funcsignature">
     keep_numbers()
 </p>
 
 <p>
-    Only keep the numbers and discard the others.
+    Only keep numbers (real and complex) and discard the others.
 </p>
 
 <p class="CodeCommand">
     &gt;&gt;arr <br>
-    "a" &emsp; "b" &emsp; 1 &emsp; 2 &emsp; 3.5 &emsp; <span class="LuaKeyword">nil</span><br>
-
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
+    
     <br>
     
     &gt;&gt;arr:keep_numbers() <br>
     
     <br>
-    
     &gt;&gt;arr <br>
-    1 &emsp; 2 &emsp; 3.5   
+    1  &emsp; 2 &emsp;  3 + 2i   
+</p>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+<h3 class="head_l3"  id="keep_realnumbers">keep_realnumbers</h3>
+
+<p class="funcsignature">
+    keep_realnumbers()
+</p>
+
+<p>
+    Only keep real numbers and discard the others.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;arr <br>
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
+    
+    <br>
+    
+    &gt;&gt;arr:keep_realnumbers() <br>
+    
+    <br>
+    &gt;&gt;arr <br>
+    1  &emsp; 2 
 </p>
 
 
@@ -1126,9 +1212,7 @@
 
 
 
-
-
-<h3 id="keep_strings">keep_strings</h3>
+<h3 class="head_l3"  id="keep_strings">keep_strings</h3>
 
 <p class="funcsignature">
     keep_strings()
@@ -1171,7 +1255,7 @@
 
 
 
-<h3 id="push_back">push_back</h3>
+<h3 class="head_l3"  id="push_back">push_back</h3>
 
 <p class="funcsignature">
     push_back(elem)
@@ -1183,7 +1267,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{"a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{"a", "b"} <br />
     &gt;&gt;a:insert(3, "c") <br />
     ERROR: Requested position index exceeds array's size. <br />
 
@@ -1213,25 +1297,25 @@
 
 
 
-<h3 id="remove_numbers">remove_numbers</h3>
+<h3 class="head_l3"  id="remove_numbers">remove_numbers</h3>
 
 <p class="funcsignature">
     remove_numbers()
 </p>
    
 <p>
-    Removes all the elements of type number (float, integer).
+    Removes all the elements of type number (real and complex).
 </p>
 
 <p class="CodeCommand">
     &gt;&gt;arr <br>
-    "a" &emsp;  1  &emsp;  "b"  &emsp;  2  &emsp;  3.14  &emsp;  nil &emsp;   4.5 <br>
+    1  &emsp; 2  &emsp; "A" &emsp;  "b" &emsp;  3 + 2i &emsp;  <span class="LuaKeyword">nil</span> <br>
     
     <br>
     
     &gt;&gt;arr:remove_numbers() <br>
     &gt;&gt;arr <br>
-    "a" &emsp;  "b"  &emsp;  nil
+    "A" &emsp;  "b"  &emsp;  <span class="LuaKeyword">nil</span>
     
 </p>
 
@@ -1254,7 +1338,7 @@
 
 
 
-<h3 id="remove_nils">remove_nils</h3>
+<h3 class="head_l3"  id="remove_nils">remove_nils</h3>
 
 <p class="funcsignature">
     remove_nils()
@@ -1294,7 +1378,7 @@
 
 
 
-<h3 id="remove_strings">remove_strings</h3>
+<h3 class="head_l3"  id="remove_strings">remove_strings</h3>
 
 <p class="funcsignature">
     remove_strings()
@@ -1335,7 +1419,7 @@
 
 
     
-<h3 id="reserve">reserve</h3>
+<h3 class="head_l3"  id="reserve">reserve</h3>
 
 <p class="funcsignature">
     reserve(n)
@@ -1348,7 +1432,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;arr=std.toarray{1, 2, "a", "b"} <br />
+    &gt;&gt;arr=std.util.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;arr:capacity() <br />
     4	<br />
 
@@ -1386,7 +1470,7 @@
 
 
 
-<h3 id="resize">resize</h3>
+<h3 class="head_l3"  id="resize">resize</h3>
 
 <p class="funcsignature">
     resize(n) &rarr; Array
@@ -1399,7 +1483,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;arr=std.toarray{1, 2, "a", "b"} <br />
+    &gt;&gt;arr=std.util.toarray{1, 2, "a", "b"} <br />
     &gt;&gt;a <br />
     1&emsp; 2&emsp; "a"&emsp; "b"	<br />
     &gt;&gt;#a <br />
@@ -1455,14 +1539,14 @@
 
 
     
-<h3 id="shuffle">shuffle </h3>
+<h3 class="head_l3"  id="shuffle">shuffle </h3>
 <p class="funcsignature">
     shuffle()
 </p>
 <p>Shuffles the order of the elements in the Array.</p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, 2, "a", "b"} <br />
+    &gt;&gt;a=std.util.toarray{1, 2, "a", "b"} <br />
     <br />
     &gt;&gt;a:shuffle() <br />
     <br />
@@ -1490,7 +1574,7 @@
 
     
     
-<h3 id="sort">sort</h3>
+<h3 class="head_l3"  id="sort">sort</h3>
 
 <p class="funcsignature">
     sort(order=, caseSensitive=<span class="LuaKeyword">true</span>)
@@ -1505,7 +1589,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{2, "c", "a", "d", 1} <br />
+    &gt;&gt;a=std.util.toarray{2, "c", "a", "d", 1} <br />
     &gt;&gt;a <br />
     2&emsp; "c"&emsp; "a"&emsp; "d"&emsp; 1 <br />
 
@@ -1540,7 +1624,7 @@
 
 
 
-<h3 id="unique">unique</h3>
+<h3 class="head_l3"  id="unique">unique</h3>
 
 <p class="funcsignature">
     unique()
@@ -1552,7 +1636,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;a=std.toarray{1, "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>", "a", 
+    &gt;&gt;a=std.util.toarray{1, "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>", "a", 
     "<span class="auto-style4">b</span>", "<span class="auto-style5">2</span>"} <br />
     
     &gt;&gt;a <br />

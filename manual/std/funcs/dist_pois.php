@@ -23,10 +23,23 @@
 
 <body>
 
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
+
+
 
 <h1>Poisson Dist</h1>
 
@@ -46,7 +59,7 @@
 <table class="funcarguments">
     <tr>
         <td>x:</td> 
-        <td>quantile, number / Vector</td>
+        <td>quantile, number/Vector/Array</td>
     </tr>
     <tr>
         <td>p:</td> 
@@ -54,7 +67,7 @@
     </tr>
     <tr>
         <td>q:</td> 
-        <td>quantile, number / Vector </td>
+        <td>quantile, number/Vector/Array </td>
     </tr>
     <tr>
         <td>lambda:</td>  
@@ -68,6 +81,9 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -78,19 +94,23 @@
 
 
 
-<!-- ********************************************************************** -->
 
-<h2 id="dpois">dpois</h2>
+
+
+
+
+
+<h2 class="head_l2" id="dpois">dpois</h2>
 
 <p>Computes the probability. </p>
 
 <p class="funcsignature">
     
-    dpois(x=, lambda=) &rarr; number/ Vector <br>
+    dpois(x=, lambda=) &rarr; number/Vector/Array <br>
     
     <br>
     
-    dpois{x=, lambda=}  &rarr; number/ Vector
+    dpois{x=, lambda=}  &rarr; number/Vector/Array
     
 </p>
 
@@ -110,7 +130,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Example</h3>
+<h3 class="head_l3" id="dpois_example">Example</h3>
 <p>
     If on the average, 2 cars enter a certain parking lot per 
     minute, what is the probability that during any given minute 4 or more cars will 
@@ -122,10 +142,15 @@
     choose the upper limit n=100.
 </p>
 
+
+
+
+
 <p>&nbsp;</p>
 
 
-<h4>The code:</h4>
+
+<h4>The code</h4>
     
 <p class="CodeCommand">
     <span class="LuaComment">-- 4, 5, 6, .... 100 </span> <br>
@@ -141,7 +166,13 @@
     &gt;&gt;std.sum(probs) 
 </p>	 
 	
-<p>Compare the approach to the solution with <a href="#ppois">ppois</a>.</p>
+<p>
+    Compare the approach to the solution with <a href="#ppois">ppois</a>.
+</p>
+
+
+
+
 
 
 
@@ -154,20 +185,27 @@
 
 
 
-<!-- ********************************************************************** -->
 
 
-<h2 id="ppois">ppois</h2>
+
+
+
+
+
+
+<h2 class="head_l2" id="ppois">ppois</h2>
+
 <p>Computes the cumulative probability .</p>
+
 <h3>Syntax</h3>
 
 <p class="funcsignature">
     
-    ppois{q=, lambda=}  &rarr; number/ Vector<br>
+    ppois{q=, lambda=}  &rarr; number/Vector/Array<br>
     
     <br>
     
-    ppois(q=, lambda=) &rarr; number/ Vector
+    ppois(q=, lambda=) &rarr; number/Vector/Array
     
 </p>
     <p>
@@ -183,8 +221,11 @@
 
 
 <p>&nbsp;</p>
+
+
+<h3 class="head_l3" id="ppois_example">Example</h3>
 <p>
-    <em><strong>Example:</strong></em> If on the average, 2 cars enter a certain parking lot per 
+    If on the average, 2 cars enter a certain parking lot per 
     minute, what is the probability that during any given minute 4 or more cars will 
     enter the lot? (<span class="auto-style3">Kreyszig E. (2006). Advanced 
     Engineering Mathematics 9th Edition, pp 1023</span>)  
@@ -199,6 +240,7 @@
 
 
 <p>&nbsp;</p>
+
 <p><em>The code:</em> </p>	
 
 <p class="CodeCommand">
@@ -211,6 +253,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -220,9 +264,14 @@
 
 
 
-<!-- ********************************************************************** -->
 
-<h2 id="qpois">qpois</h2>
+
+
+
+
+
+
+<h2 class="head_l2" id="qpois">qpois</h2>
 
 
 <p>
@@ -234,11 +283,11 @@
 
 <p class="funcsignature">
     
-    qpois{p=, lambda=} &rarr; number/ Vector <br>
+    qpois{p=, lambda=} &rarr; number/Vector/Array <br>
     
     <br>
     
-    qpois(p=, lambda=) &rarr; number/ Vector
+    qpois(p=, lambda=) &rarr; number/Vector/Array
     
 </p>
     
@@ -255,6 +304,9 @@
     &gt;&gt;std.ppois{q=2, lambda=3}<br>
     0.42319
 </p>
+
+
+
 
 <p>&nbsp;</p>
     
@@ -293,10 +345,15 @@
 
 
 
-<!-- ********************************************************************** -->
 
 
-<h2 id="rpois">rpois</h2>
+
+
+
+
+
+
+<h2 class="head_l2" id="rpois">rpois</h2>
 
 <p>Generates random sample for the Poisson distribution</p>
 
@@ -318,15 +375,17 @@
     
     &gt;&gt;v <br>
     
-    5&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 
-    4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; COL
+    5&emsp; 4&emsp; 3&emsp; 4&emsp; 2&emsp; 
+    4&emsp; 5&emsp; 2&emsp; 2&emsp; 0&emsp; COL
 </div>
 
 
 <p>&nbsp;</p>
     
 
-<p>Check if above numbers represent a Poisson distribution with &lambda;=3: We know that E(X)=&lambda;</p>
+<p>
+    Check if above numbers represent a Poisson distribution with &lambda;=3: We know that E(X)=&lambda;
+</p>
 
 <p class="CodeCommand">
     &gt;&gt;std.mean(v) <br>
@@ -338,8 +397,16 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
 
 
 

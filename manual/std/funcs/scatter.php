@@ -40,11 +40,23 @@
 </head>
 
 
+
+
+
 <body>
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H3"), false);
+</script>
+
+
 
 <h1>scatter</h1>
 
@@ -73,6 +85,10 @@
         [<key>ylab</key>=""], <br />
 
         <br />
+
+        [<key>smooth=</key>=false], <br />
+
+        <br />
         
         
         [<key>bubble</key>={size=, color=DefaultColor, mode="A", scale=100}], <br />
@@ -82,7 +98,7 @@
         [<key>marker</key>={type="c", size=4,  fill=DefaultColor, linewidth=1, linecolor=DefaultColor}], <br />
         <br />
 
-        [<key>line</key>={ color=DefaultColor, width=1, style="solid", smooth=false}], <br />
+        [<key>line</key>={ color=DefaultColor, width=1, style="solid"}], <br />
         <br />
 
         [<key>trendline</key>={ type="linear", degree=2, intercept=AutoCompute, name=DefaultName, color=DefaultColor, width=1, style="dash"}] <br />
@@ -145,6 +161,11 @@
     <tr>
         <td>ylab:</td>
         <td>Label of y-axis &larr; <em>string</em></td>
+    </tr>
+
+    <tr>
+        <td>smooth:</td>
+        <td>Spline algorithm is applied to smooth the line &larr; boolean</td>
     </tr>
     
      <tr>
@@ -234,10 +255,7 @@
         <td>"<em>solid</em>", "<em>dash</em>" or "<em>dot</em>" &larr; string</td>
     </tr>
 
-    <tr>
-        <td>smooth:</td>
-        <td>Spline algorithm is applied to smooth the line &larr; boolean</td>
-    </tr>
+   
     
     <tr>
         <td colspan="2">&nbsp;</td>
@@ -340,8 +358,8 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;x=std.tovector{1, 2, 3, 4} <br />
-    &gt;&gt;y=std.tovector{1, 3, 7, 14}
+    &gt;&gt;x=std.util.tovector{1, 2, 3, 4} <br />
+    &gt;&gt;y=std.util.tovector{1, 3, 7, 14}
 </p>
 
 
@@ -390,7 +408,7 @@
 
 
 
-<h3>Define name and marker properties</h3>
+<h3 id="name_marker">Define name and marker properties</h3>
 <p>
     The marker properties can be fully customized.
 </p>
@@ -453,7 +471,7 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.scatter{x=x, y=y, <key>line</key>={color="255 0 0", width=2, <em>smooth</em>=<span class="LuaKeyword">true</span>}}
+    &gt;&gt;std.scatter{x=x, y=y, <key>line</key>={color="255 0 0", width=2}, <em>smooth</em>=<span class="LuaKeyword">true</span>}
 </p>
 
  <img alt="" src="../images/scatter_smoothline.png" />
@@ -534,7 +552,8 @@
 <p>
     In order to add a bubble chart, the <em>size</em> property must be defined.
     Consider the following data set 
-    <span style="font-size: small;"> (data extracted from 
+    <span style="font-size: small;"> 
+    (data extracted from 
     <a href="https://developers.google.com/chart/interactive/docs/gallery/bubblechart" target="_blank"> Google Charts</a>
     )
     </span>
@@ -542,11 +561,9 @@
 </p>
 
 <p style="font-size: small;">
-    Life expectancy=[80.66, 79.84, 78.6, 72.73,80.05, 72.49, 68.09, 81.55, 68.6, 78.09] <br>
-    
-    Fertility rate=[1.67, 1.36,  1.84, 2.78, 2, 1.7, 4.77, 2.96, 1.54, 2.05] <br>
-    
-    Population=[33739900, 81902307, 5523095, 79716203, 61801570, 73137148, 31090763, 7485600, 141850000, 307007000]
+    life = std.util.tovector{80.66, 79.84, 78.6, 72.73,80.05, 72.49, 68.09, 81.55, 68.6, 78.09} <br>
+    fertil = std.util.tovector{1.67, 1.36, 1.84, 2.78, 2, 1.7, 4.77, 2.96, 1.54, 2.05} <br>
+    pop = std.util.tovector{33739900, 81902307, 5523095, 79716203, 61801570, 73137148, 31090763, 7485600, 141850000, 307007000}
     
 </p>
 

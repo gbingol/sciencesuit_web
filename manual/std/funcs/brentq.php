@@ -46,6 +46,12 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+    
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H3"), false);
+</script>
 
 
 
@@ -78,7 +84,7 @@
 
 
 
-<h3>Arguments:</h3>
+<h3 id="arguments">Arguments</h3>
 <table class="funcarguments">
     <tr>
         <td>f:</td>
@@ -92,7 +98,7 @@
     
     <tr>
         <td>tol:</td>
-        <td>Minimum tolerance for error &larr; <em>number</em></td>
+        <td>tolerance for error &larr; <em>number</em></td>
     </tr>
     <tr>
         <td>maxiter:</td>
@@ -108,7 +114,7 @@
 
 
 
-
+<h3 id="example">Example</h3>
 <p> 
     Solving the equations <em>f(x)=x<sup>2</sup>-5=0</em> and <em>f(x)=x<sup>10</sup>-1=0</em>:
 </p>
@@ -150,8 +156,6 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-
-
 
 
 

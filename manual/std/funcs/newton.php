@@ -70,7 +70,7 @@
 
 
 <p>
-    The function returns the <em>root,</em> <em>error </em>and<em> number of iterations</em>.
+    returns the <em>root,</em> <em>error </em>and<em> number of iterations</em>.
 </p>
 
 
@@ -78,31 +78,28 @@
 
 
 
-<h3>Arguments:</h3>
+<h3>Arguments</h3>
 <table class="funcarguments">
     <tr>
         <td>f:</td>
-        <td>A unary function whose root is sought after &larr; <em>function</em></td>
+        <td>A unary function  &larr; <em>function</em></td>
     </tr>
     <tr>
         <td>fprime:</td>
-        <td>A unary function (derivative of f)  &larr; <em>function</em></td>
+        <td>derivative of <em>f</em>  &larr; <em>function</em></td>
     </tr>
     <tr>
-        <td>x0:</td>
-        <td>Initial guess &larr; number</td>
+        <td>x0, x1:</td>
+        <td>Initial guesses &larr; <em>real number</em></td>
     </tr>
-    <tr>
-        <td>x1:</td>
-        <td>Initial guess &larr; number</td>
-    </tr>
+
     <tr>
         <td>tol:</td>
-        <td>Minimum tolerance for error &larr; <em>number</em></td>
+        <td>tolerance for error &larr; <em> real number</em></td>
     </tr>
     <tr>
         <td>maxiter:</td>
-        <td>Maximum number of iterations during the search for the root &larr; <em>integer</em></td>
+        <td>Max number of iterations &larr; <em>integer</em></td>
     </tr>
 </table>
 
@@ -143,8 +140,17 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.newton{f=<span class="LuaKeyword">function</span> (x) <span class="LuaKeyword">return</span> x^2-5 <span class="LuaKeyword">end</span>, x0=1, <mark>fprime</mark>=function(x) return 2*x end} <br />
+    &gt;&gt;std.newton{f=
+        <span class="LuaKeyword">function</span> (x) 
+        <span class="LuaKeyword">return</span> x^2-5 
+        <span class="LuaKeyword">end</span>, 
+        x0=1, 
+        <mark>fprime</mark>=<span class="LuaKeyword">function</span>(x) 
+        <span class="LuaKeyword">return</span> 2*x 
+        <span class="LuaKeyword">end</span>} <br />
+
     2.23607 &emsp; <span class="LuaComment">--root</span>  <br />
+    
     9.18143e-07 &emsp; <span class="LuaComment">--error</span>     <br />
     
     5 &emsp; <span class="LuaComment">--number of iterations </span>  <br />
@@ -152,7 +158,16 @@
     <br>
     <br />
 
-    &gt;&gt;std.newton{f=<span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x^10-1 end, x0=1.3, <mark>fprime</mark>=function(x) return 10*x^9 end} <br />
+    &gt;&gt;std.newton{f=
+        <span class="LuaKeyword">function</span>(x) 
+            <span class="LuaKeyword">return</span> x^10-1 
+        <span class="LuaKeyword">end</span>, 
+        x0=1.3, 
+        <mark>fprime</mark>=
+        <span class="LuaKeyword">function</span>(x) 
+            <span class="LuaKeyword">return</span> 10*x^9 
+        <span class="LuaKeyword">end</span>} <br />
+
     1 &emsp; 2.91879e-09 &emsp; 7	
 </p>
 
@@ -178,7 +193,11 @@
 </p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.newton{f=<span class="LuaKeyword">function</span> (x) <span class="LuaKeyword">return</span> x^2-5 <span class="LuaKeyword">end</span>, x0=1, <mark>x1</mark>=3} <br />
+    &gt;&gt;std.newton{f=
+        <span class="LuaKeyword">function</span> (x) 
+        <span class="LuaKeyword">return</span> x^2-5 
+        <span class="LuaKeyword">end</span>, 
+        x0=1, <mark>x1</mark>=3} <br />
     2.23607 &emsp; 7.4651e-09 &emsp; 7
 </p>
 
@@ -191,10 +210,11 @@
 
 
 
-<h3>Definition of error</h3>
+<h3 id="errordefinition">Definition of error</h3>
 <p> 
     For both Newton-Raphson and Secant methods, 
-    the error is calculated as the difference between two consecutive iterations: <em>Error</em>=&verbar;X<sub>i+1</sub>-X<sub>i</sub>&verbar;
+    the error is calculated as the difference between two consecutive iterations: 
+    <em>Error</em>=&verbar;X<sub>i+1</sub>-X<sub>i</sub>&verbar;
 </p>
 
 
@@ -211,6 +231,7 @@
 
 <div class="RelatedLinks">
     <a href="brentq.php">brentq</a>
+    <a href="muller.php">muller</a>
     <a href="bisection.php">bisection</a>
     <a href="solve.php">solve</a>
 </div>

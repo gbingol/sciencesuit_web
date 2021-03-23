@@ -25,13 +25,28 @@
 
 <body>
 
+
+
+
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"] . "/mainmenu.php";
     include $mainmenuloc;
 ?>
 
 
+
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
+
+
+
+
 <h1>Normal Dist</h1>
+
 <p>
     The equation for normal distribution, where <em>mean </em>(&mu;) and 
     <em>standard deviation</em> (&sigma;): 
@@ -44,12 +59,12 @@
 <p>&nbsp;</p>
 
 
-<h3>Arguments</h3>
+<h3 id="arguments">Arguments</h3>
 
 <table class="funcarguments">
     <tr>
         <td>x:</td> 
-        <td>Quantile, <em>number / Vector</em></td>
+        <td>Quantile, <em>number / Vector / Array</em></td>
     </tr>
     <tr>
         <td>p:</td> 
@@ -57,7 +72,7 @@
     </tr>
     <tr>
         <td>q:</td> 
-        <td>quantile, <em>number / Vector</em></td>
+        <td>quantile, <em>number / Vector / Array</em></td>
     </tr>
     <tr>
         <td>mean:</td>   
@@ -83,19 +98,19 @@
 
 
 
-<!-- ********************************************************************** -->
 
-<h2 id="dnorm">dnorm</h2>
+
+<h2 class="head_l2" id="dnorm">dnorm</h2>
 
 <p>Computes the density. </p>
 
 <p class="funcsignature">
 
-    dnorm(x, mean=0, sd=1) &rarr; number/Vector <br>
+    dnorm(x, mean=0, sd=1) &rarr; number/Vector/Array <br>
 
     <br>
 
-    dnorm{x=, mean=0, sd=1} &rarr; number/Vector
+    dnorm{x=, mean=0, sd=1} &rarr; number/Vector/Array
 
 </p>
 
@@ -114,7 +129,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Example</h3>
+<h3 class="head_l3">Example</h3>
 <p>
     Assume that the mean test score for a class of large 
     size is 70 and standard deviation is 15. What is the percentage of students 
@@ -138,6 +153,8 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -147,19 +164,19 @@
 
 
 
-<!-- ********************************************************************** -->
 
 
-<h2 id="pnorm">pnorm</h2>
+
+<h2 class="head_l2" id="pnorm">pnorm</h2>
 <p>Computes the lower tail area (probability). </p>
 
 <p class="funcsignature">
 
-    pnorm(q=,mean=0, sd=1) &rarr; number/Vector<br>
+    pnorm(q=,mean=0, sd=1) &rarr; number/Vector/Array<br>
 
     <br>
 
-    pnorm{q=, mean=0, sd=1} &rarr; number/Vector
+    pnorm{q=, mean=0, sd=1} &rarr; number/Vector/Array
 
 </p>
 
@@ -176,7 +193,7 @@
 
     <br />
 
-    &gt;&gt;std.pnorm{q=1, mean=0, sd=1}
+    &gt;&gt;std.pnorm{q=1, mean=0, sd=1} <br>
     0.841345
 </p>
 
@@ -188,7 +205,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Example</h3>
+<h3 class="head_l3">Example</h3>
 <p>
     Assume that the mean test score for a class of large 
     size is 70 and standard deviation is 15. What is the percentage of students 
@@ -215,35 +232,39 @@
 
 
 
-<!-- ********************************************************************** -->
 
 
 
-<h2 id="qnorm">qnorm</h2>
+
+<h2 class="head_l2" id="qnorm">qnorm</h2>
 
 <p>Computes the lower tail quantile (inverse of <a href="#pnorm">pnorm</a>). </p>
 
 <p class="funcsignature">
 
-    qnorm(p=,mean=0, sd=1) &rarr; number/Vector<br>
+    qnorm(p=,mean=0, sd=1) &rarr; number/Vector/Array<br>
 
     <br>
 
-    qnorm{p=,mean=0, sd=1} &rarr; number/Vector 
+    qnorm{p=,mean=0, sd=1} &rarr; number/Vector/Array 
 
 </p>
 
 <p>&nbsp;</p>
 
 
-<h3>Example</h3>
+<h3 class="head_l3">Example</h3>
 <p>
     Assume that the mean test score for a class of large 
     size is 70 and standard deviation is 15. How well did 75% of the students do?</p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.qnorm{p=0.75,mean=70,sd=15} - std.qnorm(0.75, 70, 15)<br />
-    80.11  <span style="color:green"> -- 75% of students scored less than 80.11.</span>
+    &gt;&gt;std.qnorm{p=0.75,mean=70,sd=15} - std.qnorm(0.75, 70, 15) <br />
+    80.11 
+</p>
+
+<p>
+    The result tells that 75% of students scored less than 80.11.
 </p>
 
 
@@ -261,13 +282,12 @@
 
 
 
-<!-- ********************************************************************** -->
 
 
 
-<h2 id="rnorm">rnorm</h2>
+
+<h2 class="head_l2" id="rnorm">rnorm</h2>
 <p>Generates normally distributed random numbers.</p>
-<h3>Syntax</h3>
 
 <p class="funcsignature">
 
@@ -282,7 +302,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Example #1</h3>
+<h3 class="head_l3">Example</h3>
 <p>
     Generate 100 normally distributed random numbers with &mu;=0 and &sigma;=1</p>
 
@@ -302,7 +322,7 @@
 <p>&nbsp;</p>
 
 
-<h3>Example #2</h3>
+<h3 class="head_l3">Example</h3>
 <p>
     Generate 100 normally distributed random numbers with &mu;=5 and &sigma;=2</p>
 

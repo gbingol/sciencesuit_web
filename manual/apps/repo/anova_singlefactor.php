@@ -34,11 +34,20 @@
 
 </head>
 
+
+
+
+
+
 <body>
+    
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+    
+    
+
 
 
 <h2>Single-factor ANOVA</h2>

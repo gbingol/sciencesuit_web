@@ -1,91 +1,108 @@
 
         /*
         0: function name
-        1: category
         2: link
 
         if link does not exist explicitly, then link=functionname+.php
 
         */
+       
+       
+       
+var StdUtilLib = [
+       ["toarray"], ["tokenize"], ["tomatrix"], ["totable"], ["tovector"]
+  ];
 
+
+    StdUtilLib.sort();
 
 var StdLibFunctions = [
-        ["accumulate","utility"], ["activeworksheet", "utility"], ["anova", "stat"], ["anova2","stat"], 
-
-        ["appendworksheet", "utility"], ["besselj", "math", "specialfuncs.php#besselj"], ["beta", "math", "specialfuncs.php#beta"],
-
-        ["bisection","math"], ["boxplot", "stat"],  ["brentq","math"],
+        ["abs"], ["acos"], ["asin"], ["atan"], ["ceil"], ["cos"], ["cosh"],
         
-        ["const {}","utility", "const.php"], ["cor","stat"], ["count", "utility"],
+        ["cosh"], ["exp"], ["floor"], ["ln"], ["log10"], ["pow"], ["sin"], 
+        
+        ["sinh"], ["tan"], ["tanh"],
+        
+        //
+        
+        ["accumulate"], ["activeworksheet"], ["anova"], ["anova2"], 
 
-        ["cov", "stat"], ["cumsum","stat"],
+        ["appendworksheet"], ["besselj", "specialfuncs.php#besselj"], ["beta", "specialfuncs.php#beta"],
 
-        ["cumtrapz","math"], ["cwd", "utility"], ["dbinom","stat","dist_binom.php#dbinom"],
+        ["bisection"], ["boxplot"],  ["brentq"],
+        
+        ["const"], ["cor"], ["count"], ["cov"], ["cumsum"],
 
-        ["dchisq","stat","dist_chisq.php#dchisq"], ["det", "math"], ["df","stat","dist_f.php#df"],
+        ["cumtrapz"], ["cwd"], ["dbinom","dist_binom.php#dbinom"],
 
-        ["diag","math"], ["diff", "math"], ["dnorm","stat","dist_norm.php#dnorm"],
+        ["dchisq","dist_chisq.php#dchisq"], ["det"], ["df","dist_f.php#df"],
 
-        ["dpois","stat","dist_pois.php#dpois"], ["dsignrank","stat","dist_wilcox_signrank.php#dsignrank"],
+        ["diag"], ["diff"], ["dnorm"],
 
-        ["dt","stat","dist_t.php#dt"], ["dunif","stat","dist_unif.php#dunif"],
+        ["dpois","dist_pois.php#dpois"], ["dsignrank","dist_wilcox_signrank.php#dsignrank"],
 
-        ["eig","math"], ["expfit","math"], ["eye","math"], ["find","utility","find.php#find"],
+        ["dt","dist_t.php#dt"], ["dunif","dist_unif.php#dunif"],
 
-        ["find_if","utility","find.php#find_if"], ["findfirst_if","utility","find.php#findfirst_if"],
+        ["eig"], ["expfit"], ["eye"], ["find","find.php#find"],
 
-        ["find_minmax","utility","find.php#find_minmax"], ["for_each","utility"], ["gamma", "math", "specialfuncs.php#gamma"],
+        ["find_if", "find.php#find_if"], ["findfirst_if","find.php#findfirst_if"],
 
-        ["gammaln", "math", "specialfuncs.php#gammaln"], ["gcd", "math"], ["inv", "math"], ["kurt","stat"],
+        ["find_minmax","find.php#find_minmax"], ["for_each"], ["gamma", "specialfuncs.php#gamma"],
 
-        ["lcm", "math"], ["linspace", "math"], ["lm","stat"], ["logfit", "math"], ["lu", "math"],
+        ["gammaln", "specialfuncs.php#gammaln"], ["gcd"], ["inv"], ["kurt"],
 
-        ["max", "stat","minmax.php#max"], ["mean","stat"], ["median", "stat"],
+        ["lcm"], ["linspace"], ["lm"], ["logfit"], ["lu"],
 
-        ["meshgrid", "math"], ["minmax", "stat","minmax.php"], ["min", "stat","minmax.php#min"],
+        ["max", "minmax.php#max"], ["mean"], ["median"],
 
-        ["mode", "stat"], ["newton", "math"], ["null", "math"], ["pbinom", "stat","dist_binom.php#pbinom"],
+        ["meshgrid"], ["minmax", "minmax.php"], ["min", "minmax.php#min"],
 
-        ["pchisq","stat","dist_chisq.php#pchisq"], ["pf","stat","dist_f.php#pf"], ["plot","utility"],
+        ["mode"], ["newton"], ["null"], ["pbinom", "dist_binom.php#pbinom"],
 
-        ["plothwnd","utility"], ["plotlayout","utility"], ["pnorm", "stat","dist_norm.php#pnorm"],
+        ["pchisq","dist_chisq.php#pchisq"], ["pf","dist_f.php#pf"], ["plot"],
 
-        ["ppois", "stat","dist_pois.php#ppois"], ["psignrank","stat","dist_wilcox_signrank.php#psignrank"],
+        ["plothwnd"], ["plotlayout"], ["pnorm", "dist_norm.php#pnorm"],
 
-        ["pt","stat","dist_t.php#pt"], ["polyfit", "math"], ["polyval","math"], ["powfit", "math"],
+        ["ppois","dist_pois.php#ppois"], ["psignrank","dist_wilcox_signrank.php#psignrank"],
 
-        ["psychrometry", "process"], ["punif","stat","dist_unif.php#punif"], ["qbinom", "stat","dist_binom.php#qbinom"],
+        ["pt","dist_t.php#pt"], ["polyfit"], ["polyval"], ["powfit"],
 
-        ["qchisq","stat","dist_chisq.php#qchisq"], ["qf","stat","dist_f.php#qf"], ["qnorm","stat","dist_norm.php#qnorm"],
+        ["psychrometry"], ["punif","dist_unif.php#punif"], ["qbinom","dist_binom.php#qbinom"],
 
-        ["qpois", "stat", "dist_pois.php#qpois"], ["qsignrank","stat","dist_wilcox_signrank.php#qsignrank"],
+        ["qchisq","dist_chisq.php#qchisq"], ["qf","dist_f.php#qf"], ["qnorm","dist_norm.php#qnorm"],
 
-        ["qt","stat","dist_t.php#qt"], ["qr", "math"], ["quantile","stat"], ["qunif","stat","dist_unif.php#qunif"],
+        ["qpois", "dist_pois.php#qpois"], ["qsignrank","dist_wilcox_signrank.php#qsignrank"],
 
-        ["rand", "stat"], ["rank", "math"], ["rbinom", "stat","dist_binom.php#rbinom"], ["rchisq","stat","dist_chisq.php#rchisq"],
+        ["qt","dist_t.php#qt"], ["qr"], ["quantile"], ["qunif","dist_unif.php#qunif"],
 
-        ["rf","stat","dist_f.php#rf"], ["rnorm", "stat","dist_norm.php#rnorm"], ["round", "utility"], ["rpois", "stat", "dist_pois.php#rpois"],
+        ["rand"], ["rank"], ["rbinom", "dist_binom.php#rbinom"], ["rchisq","dist_chisq.php#rchisq"],
 
-        ["rt","stat","dist_t.php#rt"], ["runif","stat","dist_unif.php#runif"], ["sample", "stat"], ["scatter","utility"],
+        ["rf","dist_f.php#rf"], ["rnorm", "dist_norm.php#rnorm"], ["round"], ["rpois", "dist_pois.php#rpois"],
 
-        ["search_if","utility"], ["sequence","stat"], ["simpson", "math"], ["size", "utility"], ["skew", "stat"], ["solve", "math"],
+        ["rt","dist_t.php#rt"], ["runif","dist_unif.php#runif"], ["sample"], ["scatter"],
 
-        ["stdev", "stat"], ["sum", "stat"], ["svd", "math"], ["test_f", "stat"], ["test_sign", "stat"], 
+        ["search_if"], ["sequence"], ["simpson"], ["size"], ["skew"], ["solve"],
 
-        ["test_norm_ad", "stat"], ["test_t", "stat"], ["test_z", "stat"],["thermofluid","process"], ["tictoc", "utility"],
+        ["stdev"], ["sum"], ["svd"], ["test_f"], ["test_sign"], 
 
-        ["toarray", "utility"], ["tokenize","utility"], ["tomatrix", "utility"], ["totable", "utility"], ["tovector", "utility"], 
+        ["test_norm_ad"], ["test_t"], ["test_z"],["thermofluid"], ["tictoc"], 
 
-        ["trans", "math"], ["trapz", "math"], ["tukey", "stat"], ["var" , "stat"] ];
+        ["trans"], ["trapz"], ["tukey"], 
+        
+        ["util", StdUtilLib],
+        
+        ["var"]    
+
+    ];
     
     
+    StdLibFunctions.sort();
   
+
+
+
   var StdLibClasses=[
-      ["Array","utility"],
-      ["Food","process"],
-      ["Database","utility"],
-      ["DataFrame","utility"],
-      ["Matrix", "math"],
-      ["Range","utility"],
-      ["Vector", "math"], 
-      ["Worksheet","utility"]];
+      ["Array"], ["Complex"], ["Database"], ["DataFrame"], ["Food"], ["Matrix"], ["Range"], ["Vector"], ["Worksheet"]];
+  
+  
+  

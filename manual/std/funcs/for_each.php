@@ -122,7 +122,7 @@
     <br />
     <br />
 
-    &gt;&gt;v=std.tovector{1, 2, 3, 4} <br />
+    &gt;&gt;v=std.util.tovector{1, 2, 3, 4} <br />
     &gt;&gt;y=2 <br />
     &gt;&gt;std.for_each(v, <span class="LuaKeyword">function</span>(x, <mark>y</mark>) <span class="LuaKeyword">return</span> math.pow(x, y) <span class="LuaKeyword">end</span>, <mark>y</mark>) <br />
     1 &emsp; 4 &emsp;  9 &emsp;  16 &emsp;  COL <br />
