@@ -67,7 +67,7 @@ var StdLibFunctions = [
 
         ["pt","dist_t.php#pt"], ["polyfit"], ["polyval"], ["powfit"],
 
-        ["psychrometry"], ["punif","dist_unif.php#punif"], ["qbinom","dist_binom.php#qbinom"],
+        ["punif","dist_unif.php#punif"], ["qbinom","dist_binom.php#qbinom"],
 
         ["qchisq","dist_chisq.php#qchisq"], ["qf","dist_f.php#qf"], ["qnorm","dist_norm.php#qnorm"],
 
@@ -85,13 +85,13 @@ var StdLibFunctions = [
 
         ["stdev"], ["sum"], ["svd"], ["test_f"], ["test_sign"], 
 
-        ["test_norm_ad"], ["test_t"], ["test_z"],["thermofluid"], ["tictoc"], 
+        ["test_norm_ad"], ["test_t"], ["test_z"], ["tictoc"], 
 
-        ["trans"], ["trapz"], ["tukey"], 
+        ["trans"], ["trapz"], ["tukey"], ["var"],
+
+        ["refrigerant"], ["psychrometry"],
         
-        ["util", StdUtilLib],
-        
-        ["var"]    
+        ["util", StdUtilLib]
 
     ];
     
