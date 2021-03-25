@@ -9,12 +9,24 @@
        
        
        
-var StdUtilLib = [
-       ["toarray"], ["tokenize"], ["tomatrix"], ["totable"], ["tovector"]
-  ];
+var StdUtilLib = 
+[
+  ["toarray"], ["tokenize"], ["tomatrix"], ["totable"], ["tovector"]
+].sort();
 
 
-    StdUtilLib.sort();
+var StdFluidLib =
+[
+  ["psychrometry"], ["refrigerant"]
+].sort();
+
+
+var StdPlotLib =
+[
+  ["hwnd"], ["layout"]
+].sort();
+  
+
 
 var StdLibFunctions = [
         ["abs"], ["acos"], ["asin"], ["atan"], ["ceil"], ["cos"], ["cosh"],
@@ -59,9 +71,9 @@ var StdLibFunctions = [
 
         ["mode"], ["newton"], ["null"], ["pbinom", "dist_binom.php#pbinom"],
 
-        ["pchisq","dist_chisq.php#pchisq"], ["pf","dist_f.php#pf"], ["plot"],
+        ["pchisq","dist_chisq.php#pchisq"], ["pf","dist_f.php#pf"],
 
-        ["plothwnd"], ["plotlayout"], ["pnorm", "dist_norm.php#pnorm"],
+        ["pnorm", "dist_norm.php#pnorm"],
 
         ["ppois","dist_pois.php#ppois"], ["psignrank","dist_wilcox_signrank.php#psignrank"],
 
@@ -89,7 +101,9 @@ var StdLibFunctions = [
 
         ["trans"], ["trapz"], ["tukey"], ["var"],
 
-        ["refrigerant"], ["psychrometry"],
+        ["fluid", StdFluidLib],
+
+        ["plot", StdPlotLib],
         
         ["util", StdUtilLib]
 

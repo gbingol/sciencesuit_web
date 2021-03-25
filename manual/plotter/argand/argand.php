@@ -572,7 +572,7 @@
     <br>
     
     Note that if an argand diagram is already shown its window handle 
-    can also be obtained using <a href="../../std/funcs/plothwnd.php">std.plothwnd</a> 
+    can also be obtained using <a href="../../std/funcs/plot.hwnd.php">std.plot.hwnd</a> 
     command.
 </p>
 

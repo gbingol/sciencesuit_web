@@ -602,9 +602,8 @@
 
 <div class="RelatedLinks">
     <a href="boxplot.php">boxplot</a>
-    <a href="plotlayout.php">plotlayout</a>
-    <a href="plothwnd.php">plothwnd</a>
-    <a href="plot.php">plot</a>
+    <a href="plot.layout.php">plot.layout</a>
+    <a href="plot.hwnd.php">plot.hwnd</a>
 </div>
 
 

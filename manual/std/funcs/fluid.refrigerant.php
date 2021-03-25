@@ -65,7 +65,7 @@
 
 
 <h1>refrigerant</h1>
-<p>Computes <em>thermodynamic</em> properties of fluids.</p>
+<p>Computes <em>thermodynamic</em> properties of refrigerants.</p>
 
 <p class="funcsignature">
     
@@ -303,7 +303,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;std.refrigerant("water", {<mark>T</mark>=100}) <br>
+    &gt;&gt;std.fluid.refrigerant("water", {<mark>T</mark>=100}) <br>
     T=100 &emsp; hg=2676.1 &emsp;  sg=7.3549 &emsp;
     sf=1.3069 &emsp; ug=2506.55 &emsp; uf=418.934 &emsp; P=101.35 &emsp;
     vg=1.6729 &emsp; vf=0.001044 &emsp; hf=419.04
@@ -314,7 +314,7 @@
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.refrigerant("water", {<mark>P</mark>=10}) <br>
+    &gt;&gt;std.fluid.refrigerant("water", {<mark>P</mark>=10}) <br>
     P=10 &emsp; ug=2436.68 &emsp; vg=14.783 &emsp; hg=2584.51 &emsp;
     T=45.7384 &emsp; hf=191.534 &emsp;  sf=0.648314 &emsp; 
     vf=0.0010103 &emsp; uf=191.523 &emsp; sg=8.15173
@@ -324,7 +324,7 @@
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.refrigerant("water", {<mark>hf</mark>=191}) <br>
+    &gt;&gt;std.fluid.refrigerant("water", {<mark>hf</mark>=191}) <br>
     hf=191 &emsp; ug=2436.68 &emsp; vg=14.8655 &emsp; hg=2584.29 &emsp;
     T=45.6106 &emsp; P=9.92958 &emsp;  sf=0.64665 &emsp;
     vf=0.00101024 &emsp; uf=190.99 &emsp; sg=8.15399
@@ -333,7 +333,7 @@
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
-    &gt;&gt;std.refrigerant("water", {<mark>sg</mark>=8.15}) <br>
+    &gt;&gt;std.fluid.refrigerant("water", {<mark>sg</mark>=8.15}) <br>
     sg=8.15 &emsp; vf=0.00101033 &emsp; P=10.0539 &emsp; hf=191.942 &emsp;
     vg=14.7198 &emsp; hg=2584.69 &emsp; sf=0.649587 &emsp;
     ug=2436.7 &emsp; T=45.8362 &emsp;uf=191.932
@@ -351,7 +351,7 @@
 
 <h3>Superheated vapors </h3>
 <p class="CodeCommand">
-    &gt;&gt;std.refrigerant("water", {T=150, P=220}) <br>
+    &gt;&gt;std.fluid.refrigerant("water", {T=150, P=220}) <br>
     <red>state=1</red> &emsp; h=2767.24 &emsp; s=7.23916 &emsp; v=0.89446
 </p>
 
@@ -366,7 +366,7 @@
 
 <h3>Compressed liquids</h3>
 <p class="CodeCommand">
-    &gt;&gt;std.refrigerant("water", {T=150, P=500}) <br>
+    &gt;&gt;std.fluid.refrigerant("water", {T=150, P=500}) <br>
     <red>state=-1</red> &emsp; h=639.981 &emsp; s=1.86003 &emsp; v=0.0010928
 </p>
 
@@ -382,7 +382,7 @@
 <p class="CodeCommand">
     
     <span class="LuaComment">--The last parameter signals that <em>KeepAlive=true</em></span><br>
-    &gt;&gt;tbl=std.refrigerant("water", {P=10}, <span class="LuaKeyword">true</span>) <br>
+    &gt;&gt;tbl=std.fluid.refrigerant("water", {P=10}, <span class="LuaKeyword">true</span>) <br>
 
     &gt;&gt;tbl<br>
 
@@ -394,7 +394,7 @@
     <br>
     
     <span class="LuaComment">--Using the "alive" connection</span><br>
-    &gt;&gt;tbl=std.refrigerant("water", {T=150, P=500}, <mark>tbl.conninfo</mark>) <br>
+    &gt;&gt;tbl=std.fluid.refrigerant("water", {T=150, P=500}, <mark>tbl.conninfo</mark>) <br>
     &gt;&gt;tbl <br>
     <red>conninfo=table</red> &emsp; state=-1&emsp; h=639.981 &emsp; 
     s=1.86003 &emsp; v=0.0010928 <br>
@@ -403,7 +403,7 @@
     
     <span class="LuaComment">--Verify the connection is "alive"</span> <br>
     &gt;&gt;tbl.conninfo.m_Database <br>
-    Connected to: C:\Users\...\datafiles\refrigerants.db <br>
+    Connected to: C:\Users\...\datafiles\Fluids.db <br>
     
     <br>
     

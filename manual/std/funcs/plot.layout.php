@@ -5,7 +5,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>plotlayout</title>
+    <title>layout</title>
 
     <link href="../../../css/common.css" rel="stylesheet" type="text/css" />
 
@@ -28,14 +28,14 @@
     include $mainmenuloc;
 ?>
 
-<h1>plotlayout</h1>
+<h1>layout</h1>
 
 <p>
     Generates a 2D Lua table of window handles which point to the different blocks of the same plot window.
 </p>
 
 <p class="funcsignature">
-    plotlayout(row=, column=, [Show =<span class="LuaKeyword">false</span>]) &rarr; 2D Lua table of window handles (light userdata)
+    plot.layout(row=, column=, [Show =<span class="LuaKeyword">false</span>]) &rarr; 2D Lua table of window handles (light userdata)
 </p>
 
 
@@ -60,7 +60,7 @@
 
 <p class="CodeCommand">
     <span class="LuaComment">--generate 2x2 matrix of window handles </span> <br />
-    &gt;&gt;t=std.plotlayout(2,2)  <br />
+    &gt;&gt;t=std.plot.layout(2,2)  <br />
 
      <br />
 
@@ -119,7 +119,7 @@
 
 <p class="CodeCommand">
     <span class="LuaComment">--generate 2x1 matrix of window handles </span> <br />
-    &gt;&gt;t=std.plotlayout(2, 1, <span class="LuaKeyword">true</span>) 
+    &gt;&gt;t=std.plot.layout(2, 1, <span class="LuaKeyword">true</span>) 
 </p>
 
 <p>&nbsp;</p>
@@ -182,7 +182,6 @@
 <div class="RelatedLinks">
     <a href="boxplot.php">boxplot</a>
     <a href="scatter.php">scatter</a>
-    <a href="plot.php">plot</a>
 </div>
 
 

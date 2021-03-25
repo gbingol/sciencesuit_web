@@ -5,7 +5,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>plothwnd</title>
+    <title>hwnd</title>
 
     <link href="../../../css/common.css" rel="stylesheet" type="text/css" />
 
@@ -41,7 +41,7 @@
     
     
     
-<h1>plothwnd</h1>
+<h1>hwnd</h1>
 <p>
     Obtains a handle to the selected plot window. 
     Argument <em>WindowID</em> is the ID of the plot window.
@@ -49,7 +49,7 @@
 
 <p class="funcsignature">
     
-    plothwnd(WindowID) &rarr; window handle (light userdata)
+    plot.hwnd(WindowID) &rarr; window handle (light userdata)
     
 </p>
 
@@ -84,7 +84,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;std.plothwnd(1) <br />
+    &gt;&gt;std.plot.hwnd(1) <br />
     Light userdata: 0000028B9A6348F0
 </p>
 
@@ -99,7 +99,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;<span class="auto-style2">hwnd</span>=std.plothwnd(1) <br />
+    &gt;&gt;<span class="auto-style2">hwnd</span>=std.plot.hwnd(1) <br />
      &gt;&gt;std.scatter{x=x, y=std.cos(x), hwnd=hwnd} <br />
     Light userdata: 0000028B9A6348F0
 </p>
@@ -120,9 +120,8 @@
 
 <div class="RelatedLinks">
     <a href="boxplot.php">boxplot</a>
-    <a href="plotlayout.php">plotlayout</a>
+    <a href="plot.layout.php">plot.layout</a>
     <a href="scatter.php">scatter</a>
-    <a href="plot.php">plot</a>
 </div>
 
 

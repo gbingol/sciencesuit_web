@@ -170,7 +170,7 @@
 
 
 <div class="RelatedLinks">
-    <a href="../../std/funcs/psychrometry.php">psychrometry</a>
+    <a href="../../std/funcs/fluid.psychrometry.php">fluid.psychrometry</a>
 </div>
 
 

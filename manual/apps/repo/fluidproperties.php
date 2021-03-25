@@ -89,7 +89,7 @@
 
 
 <div class="RelatedLinks">
-    <a href="../../std/funcs/thermofluid.php">std.thermofluid</a>
+    <a href="../../std/funcs/fluid.refrigerant.php">std.fluid.refrigerant</a>
     <a href="psychrometry.php">Psychrometry App</a>
 </div>
 

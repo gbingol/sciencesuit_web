@@ -150,7 +150,7 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;std.psychrometry{P=101.3, Tdb=50, RH=40} <br />
+    &gt;&gt;std.fluid.psychrometry{P=101.3, Tdb=50, RH=40} <br />
     P=101.3 kPa <br>
     Tdb=50 C <br>
     Twb=36 C <br>
@@ -184,8 +184,8 @@
 
 <div class="RelatedLinks">
     <a href="../../apps/repo/psychrometry.php">Psychrometry App</a>
-    <a href="../../apps/repo/thermoproprefrigerants.php">Thermodynamic Properties App</a>
-    <a href="thermofluid.php">std.thermfluid</a>
+    <a href="../../apps/repo/fluidproperties.php">Properties of Fluids</a>
+    <a href="fluid.refrigerant.php">std.fluid.refrigerant</a>
 </div>
 
 

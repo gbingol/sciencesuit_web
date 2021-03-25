@@ -709,7 +709,7 @@ delete option.
 <h3 class="head_l3"  id="plotmultiple_selection_cmd">Selection & Command</h3>
 <p>
     If there is already a plot window with series on it, 
-    you can use <a href="../../std/funcs/plothwnd.php">std.plothwnd</a> to 
+    you can use <a href="../../std/funcs/plot.hwnd.php">std.plot.hwnd</a> to 
     obtain the <em>window handle, hwnd</em> and then use 
     <a href="../../std/funcs/boxplot.php">std.boxplot</a> to add series on 
     the plot window. 

@@ -33,7 +33,7 @@ function ShowApps(AppCategory)
 	["Food Database", "engineering", "fooddatabase.php"], 
 	["Psychrometry", "engineering", "psychrometry.php"],
 	["Thermal Processing of Foods", "engineering", "foodthermalprocessing.php"], 
-        ["Thermodynamic Properties of Fluids", "engineering", "thermoproprefrigerants.php"],
+        ["Properties of Fluids", "engineering", "fluidproperties.php"],
 	];
 	
 
