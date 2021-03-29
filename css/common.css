@@ -162,7 +162,7 @@ table.funcarguments td:first-child {
 
 
 
-.RelatedLinks a
+div.RelatedLinks a
 { 
     margin-right: 20px;
 }
@@ -324,11 +324,13 @@ ol.linespaced li, ul.linespaced li
     }
     
     
-    .RelatedLinks 
+    div.RelatedLinks 
     { 
         display: flex;
+
+        line-height: 1.5em;
         
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
     
     
