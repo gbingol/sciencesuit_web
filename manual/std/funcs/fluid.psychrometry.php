@@ -63,13 +63,14 @@
 ?>
 
 
-<h1>psychrometry</h1>
+<h1>fluid.psychrometry</h1>
 <p>
     Computes the thermodynamic properties of humid air.
 </p>
 
+
 <p class="funcsignature">  
-    psychrometry (tbl) &rarr; Lua Table  
+    fluid.psychrometry (tbl) &rarr; Lua Table  
 </p>
 
 <p>
@@ -186,6 +187,7 @@
     <a href="../../apps/repo/psychrometry.php">Psychrometry App</a>
     <a href="../../apps/repo/fluidproperties.php">Properties of Fluids</a>
     <a href="fluid.refrigerant.php">std.fluid.refrigerant</a>
+    <a href="fluid.heattransfer.php">std.fluid.heattransfer</a>
 </div>
 
 

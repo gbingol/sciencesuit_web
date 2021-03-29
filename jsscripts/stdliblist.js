@@ -17,7 +17,7 @@ var StdUtilLib =
 
 var StdFluidLib =
 [
-  ["psychrometry"], ["refrigerant"]
+  ["psychrometry"], ["refrigerant"], ["range"], ["new"],["heattransfer"]
 ].sort();
 
 

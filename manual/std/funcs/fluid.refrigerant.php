@@ -64,38 +64,38 @@
 ?>
 
 
-<h1>refrigerant</h1>
+<h1>fluid.refrigerant</h1>
 <p>Computes <em>thermodynamic</em> properties of refrigerants.</p>
+
 
 <p class="funcsignature">
     
-    refrigerant(fluid=, Properties=, KeepAlive=<span class="LuaKeyword">false</span>) &rarr; Lua Table  <br>
+    fluid.refrigerant(FluidName=, Properties=) &rarr; table  <br>
     
     <br>
     
-    refrigerant(fluid=, Properties=, ConnInfo=)  &rarr; Lua Table
+    fluid.refrigerant(fluid=, Properties=)  &rarr; table
 </p>
 
+
 <p>&nbsp;</p>
+
 
 <h3>Parameters:</h3>
 <table class="funcarguments">
     <tr>
-        <td>fluid:</td>
+        <td>FluidName:</td>
         <td>Name of the fluid either ASHRAE or IUPAC &larr; string</td>
     </tr>
     <tr>
         <td>Properties:</td>
         <td>Requested properties (<a href="#tablekeys">See below</a>) &larr; Lua Table</td>
     </tr>
+    
     <tr>
-        <td>KeepAlive:</td>
-        <td>Keep database connection open (<a href="#keepalive">See below</a>).</td>
-    </tr>
-    <tr>
-        <td>ConnInfo:</td>
+        <td>fluid:</td>
         <td>
-            Connection info table generated when parameter <em>KeepAlive</em> is <span class="LuaKeyword">true</span>.
+            An abstract fluid object (see <a href="fluid.new.php">fluid.new</a>).
         </td>
     </tr> 
 </table>
@@ -103,33 +103,15 @@
 
 <p>&nbsp;</p>
 
-<h4>Keep Alive</h4>
-<div id="keepalive" style="margin-right: 5%;">
-    <p>When the function executes, it performs the following steps:</p>
-    <ol>
-        <li>Creates a database object,</li>
-        <li>Connects database object to the database file,</li>
-        <li>Queries the "MainTable" to learn about existing tables' ASHRAE and IUPAC names,</li>
-        <li>Populates internal data structures with the queried info.</li>
-        <li>Perform queries to compute states.</li>
-        <li>Closes the database connection.</li>
-    </ol>
+
+<p>
+    The advantage of using an abstract fluid object (<em>fluid</em>) as first parameter is that 
+    the connection to the database will only be established once and will be kept alive. 
     
-    <p>
-        If an application needs to call the function several times, 
-        the initialization steps (1-4) might become expensive and might need to be skipped. 
-        
-        By default the parameter <em>KeepAlive</em> is <span class="LuaKeyword">false</span> which means that after the 5<sup>th</sup> 
-        step, the 6<sup>th</sup> step will follow. However, if set to <span class="LuaKeyword">true</span> then 6<sup>th</sup> is skipped
-        which means the database connection is kept alive. Furthermore, the function along with the properties of fluid, 
-        will add a <em>ConnInfo</em> table to the returned table. 
-        
-        The <em>ConnInfo</em> table then can be passed as an argument to the function which will then 
-        only perform 5<sup>th</sup> step 
-        
-        (<a href="#ex_keepalive">see the example</a>).
-    </p>
-</div>
+    However, please also note that, if instead of fluid name, an abstract fluid object is used as 
+    first parameter then the user is responsible to close the database connection.
+</p>
+
 
 
 <p>&nbsp;</p>
@@ -178,13 +160,13 @@
 <ol class="linespaced">
     <li>Single argument: only saturated properties are searched</li>
 
-    <li><em>P,T</em> (compressed, saturated and superheated properties are searched)</li>
+    <li><em>P,T</em> (superheated properties are searched)</li>
 
-    <li><em>P,s </em>(saturated and superheated properties are searched) and <em>T,s</em> (only saturated properties are searched)</li>
+    <li><em>P,s </em>(superheated properties are searched)</li>
 
-    <li><em>P,v and T,v </em>(only saturated properties are searched)</li>
+    <li><em>P,v</em> (superheated properties are searched)</li>
 
-    <li><em>P,h and T,h </em>(only saturated properties are searched)</li>
+    <li><em>P,h</em>(superheated properties are searched)</li>
 </ol>
 
 
@@ -197,70 +179,60 @@
     <tr >
         <td>ASHRAE</td>
         <td>IUPAC</td>
-        <td>TYPE</td>
         <td>N<sub>saturation</sub></td>
         <td>N<sub>superheated</sub></td>
     </tr>
     <tr >
         <td >R12</td>
         <td>Dichlorodifluoromethane</td>
-        <td>CFC</td>
         <td>42</td>
         <td>271</td>
     </tr>
     <tr >
         <td >R22</td>
         <td>Chlorodifluoromethane</td>
-        <td>HCFC</td>
         <td>35</td>
         <td>155</td>
     </tr>
     <tr >
         <td >R23</td>
         <td>Trifluoromethane </td>
-        <td>HFC</td>
         <td>176</td>
         <td>1333</td>
     </tr>
     <tr >
         <td >R32</td>
         <td>Difluoromethane</td>
-        <td>HFC</td>
         <td>68</td>
         <td>53</td>
     </tr>
     <tr >
         <td >R125</td>
         <td>Pentafluoroethane</td>
-        <td>HFC</td>
         <td>69</td>
         <td>64</td>
     </tr>
     <tr>
         <td >R134A</td>
         <td>1,1,1,2-Tetrafluoroethane</td>
-        <td>HFC</td>
         <td>69</td>
         <td>334</td>
     </tr>
     <tr>
         <td >R143A</td>
         <td>1,1,1-Trifluoroethane</td>
-        <td>HFC</td>
         <td>66</td>
         <td>63</td>
     </tr>
     <tr>
         <td >R717</td>
         <td>Ammonia</td>
-        <td>N/A</td>
         <td>67</td>
         <td>371</td>
     </tr>
     <tr>
         <td >R718</td>
         <td>Water</td>
-        <td>N/A</td>
         <td>71</td>
         <td>569</td>
     </tr>
@@ -276,19 +248,6 @@
     be found from the database and then linear interpolation will be performed to compute the properties at 85&deg;C. 
 </p>
     
-
-
-<p>&nbsp;</p>
-
-
-<h3>Assumptions</h3>
-<p>
-    For the <em>compressed state</em>, it is assumed that the properties are equal to saturated liquid's properties. 
-    For more on this assumption please see <a href="https://www.amazon.com/Thermodynamics-Engineering-Approach-5th/dp/B003I01E40" target="_blank">
-        Cengel &amp; Boles, Thermodynamics: An Engineering Approach</a>
-</p>
-
-
 
 
 <p>&nbsp;</p>
@@ -352,7 +311,7 @@
 <h3>Superheated vapors </h3>
 <p class="CodeCommand">
     &gt;&gt;std.fluid.refrigerant("water", {T=150, P=220}) <br>
-    <red>state=1</red> &emsp; h=2767.24 &emsp; s=7.23916 &emsp; v=0.89446
+    h=2767.24 &emsp; s=7.23916 &emsp; v=0.89446
 </p>
 
 
@@ -361,84 +320,17 @@
 <p> &nbsp;</p>
 <p> &nbsp;</p>
 
-
-
-
-<h3>Compressed liquids</h3>
-<p class="CodeCommand">
-    &gt;&gt;std.fluid.refrigerant("water", {T=150, P=500}) <br>
-    <red>state=-1</red> &emsp; h=639.981 &emsp; s=1.86003 &emsp; v=0.0010928
-</p>
-
-
-
-
-<p> &nbsp;</p>
-<p> &nbsp;</p>
-
-
-
-<h3 id="ex_keepalive">Keep Alive</h3>
-<p class="CodeCommand">
-    
-    <span class="LuaComment">--The last parameter signals that <em>KeepAlive=true</em></span><br>
-    &gt;&gt;tbl=std.fluid.refrigerant("water", {P=10}, <span class="LuaKeyword">true</span>) <br>
-
-    &gt;&gt;tbl<br>
-
-    <red>conninfo=table</red> &emsp; P=10 &emsp; ug=2436.68 &emsp; vg=14.783 &emsp; 
-    hg=2584.51 &emsp; T=45.7384 &emsp; hf=191.534 &emsp; state=0 &emsp; 
-    sf=0.648314 &emsp; vf=0.0010103 &emsp; uf=191.523 &emsp; sg=8.15173
-
-    <br>
-    <br>
-    
-    <span class="LuaComment">--Using the "alive" connection</span><br>
-    &gt;&gt;tbl=std.fluid.refrigerant("water", {T=150, P=500}, <mark>tbl.conninfo</mark>) <br>
-    &gt;&gt;tbl <br>
-    <red>conninfo=table</red> &emsp; state=-1&emsp; h=639.981 &emsp; 
-    s=1.86003 &emsp; v=0.0010928 <br>
-    
-    <br>
-    
-    <span class="LuaComment">--Verify the connection is "alive"</span> <br>
-    &gt;&gt;tbl.conninfo.m_Database <br>
-    Connected to: C:\Users\...\datafiles\Fluids.db <br>
-    
-    <br>
-    
-    <span class="LuaComment">--It is our responsibility to close the connection when done</span><br>
-    &gt;&gt;tbl.conninfo.m_Database:close() <br>
-    
-    <br>
-    
-    <span class="LuaComment">--Verifying it is closed</span><br>
-    &gt;&gt;tbl.conninfo.m_Database <br>
-    You are not connected to a database. <br>
-    
-    <br>
-    
-    <span class="LuaComment">--Let's attempt to use the not "alive" connection</span><br>
-    &gt;&gt;tbl=std.refrigerant("water", {T=150, P=500}, <mark>tbl.conninfo</mark>) <br>
-    <red>WXSQLITE_ERROR[1000]: No Database opened</red>
-
-    
-</p>
-
-
-
-<p> &nbsp;</p>
-<p> &nbsp;</p>
 
 
 
 <div class="RelatedLinks">
-    <a href="../../apps/repo/thermoproprefrigerants.php">Thermal Properties of Refrigerants App</a>
+    <a href="fluid.heattransfer.php">std.fluid.heattransfer</a>
+    <a href="fluid.psychrometry.php">std.fluid.psychrometry</a>
+    <a href="../../apps/repo/fluidproperties.php">Properties of Fluids App</a>
 </div>
 
 
 
-<p> &nbsp;</p>
 
 </body>
 </html>
