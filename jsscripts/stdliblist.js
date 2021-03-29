@@ -41,7 +41,7 @@ var StdLibFunctions = [
 
         ["appendworksheet"], ["besselj", "specialfuncs.php#besselj"], ["beta", "specialfuncs.php#beta"],
 
-        ["bisection"], ["boxplot"],  ["brentq"],
+        ["bisection"],  ["brentq"],
         
         ["const"], ["cor"], ["count"], ["cov"], ["cumsum"],
 
@@ -91,7 +91,7 @@ var StdLibFunctions = [
 
         ["rf","dist_f.php#rf"], ["rnorm", "dist_norm.php#rnorm"], ["round"], ["rpois", "dist_pois.php#rpois"],
 
-        ["rt","dist_t.php#rt"], ["runif","dist_unif.php#runif"], ["sample"], ["scatter"],
+        ["rt","dist_t.php#rt"], ["runif","dist_unif.php#runif"], ["sample"], 
 
         ["search_if"], ["sequence"], ["simpson"], ["size"], ["skew"], ["solve"],
 
@@ -100,6 +100,8 @@ var StdLibFunctions = [
         ["test_norm_ad"], ["test_t"], ["test_z"], ["tictoc"], 
 
         ["trans"], ["trapz"], ["tukey"], ["var"],
+
+        ["argand"], ["boxplot"], ["scatter"],
 
         ["fluid", StdFluidLib],
 
