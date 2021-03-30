@@ -41,7 +41,7 @@ var StdLibFunctions = [
 
         ["appendworksheet"], ["besselj", "specialfuncs.php#besselj"], ["beta", "specialfuncs.php#beta"],
 
-        ["bisection"],  ["brentq"],
+        ["bisection"],  ["brentq"], ["fsolve"], ["muller"], ["polyroots"],
         
         ["const"], ["cor"], ["count"], ["cov"], ["cumsum"],
 
@@ -94,6 +94,8 @@ var StdLibFunctions = [
         ["rt","dist_t.php#rt"], ["runif","dist_unif.php#runif"], ["sample"], 
 
         ["search_if"], ["sequence"], ["simpson"], ["size"], ["skew"], ["solve"],
+
+        ["read_csv"],
 
         ["stdev"], ["sum"], ["svd"], ["test_f"], ["test_sign"], 
 
