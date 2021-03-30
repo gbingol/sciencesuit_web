@@ -34,7 +34,7 @@
 
 
 <p class="funcsignature">
-      fluid.new(Fluid=, TableName=, PropertyName=) &rarr; table
+      fluid.range(Fluid=, TableName=, PropertyName=) &rarr; table
 </p>
 
 <p>
