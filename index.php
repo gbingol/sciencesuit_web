@@ -570,29 +570,36 @@
 
         <p class="CodeCommand">
             <span class="LuaComment"><em>--psychrometric properties of humid air </em></span> <br />
-            &gt;&gt;std.psychrometry{P=100, Tdb=25, RH=60} <br />
-            P=100 kPa&nbsp;&nbsp;&nbsp; Tdb=25 C&nbsp;&nbsp;&nbsp; Twb=19.241 C&nbsp;&nbsp;&nbsp; 
-            Tdp=16.064 C&nbsp;&nbsp;&nbsp; H=55.698 kJ/kg da&nbsp;&nbsp;&nbsp; RH=60 %&nbsp;&nbsp;&nbsp; 
-            W=0.012 kg/kg da&nbsp;&nbsp;&nbsp; V=0.872 m3/kg da
+            &gt;&gt;std.fluid.psychrometry{P=100, Tdb=25, RH=60} <br />
+            P=100 kPa&emsp; Tdb=25 C&emsp; Twb=19.241 C&emsp; 
+            Tdp=16.064 C &emsp; H=55.698 kJ/kg da&emsp; RH=60 %&emsp; 
+            W=0.012 kg/kg da &emsp; V=0.872 m3/kg da
 
             <br />
             <br />
             <br />
 
             <span class="LuaComment"><em>--solving non-linear equations </em></span> <br />
-            >>std.bisection{f=<span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x^10-1 <span class="LuaKeyword">end</span>, a=0, b=1.3, method="<em>rf</em>", modified=<span class="LuaKeyword">true</span>} <br />
-            0.999992&nbsp;&nbsp;&nbsp; 7.21e-06&nbsp;&nbsp;&nbsp; 25 <span class="LuaComment">--root, error, iterations</span><br />
+            &gt;&gt;std.brentq {f=<span class="LuaKeyword">function</span>(x) 
+                <span class="LuaKeyword">return</span> x^2-5 
+                <span class="LuaKeyword">end,</span> a=0, b=4} <br>
+            2.23607 &emsp; 7 <br>
 
             <br />
             <br />
 
             <em><span class="LuaComment">--statistical tests </span></em> <br />
-            &gt;&gt;std.test_f {x=treated, y=untreated} <br />
+            &gt;&gt;pval, tbl=std.test_t{x=treatment, y=control, varequal=false} <br>
 
-            0.443 <span class="LuaComment">-- p-value</span> <br />
+            <br>
 
-            df1=9&nbsp;&nbsp;&nbsp; df2=9&nbsp;&nbsp;&nbsp; var1=0.211&nbsp;&nbsp;&nbsp; var2=0.357&nbsp;&nbsp;&nbsp; 
-            Fcritical=0.590&nbsp;&nbsp;&nbsp; CI_lower=0.146&nbsp;&nbsp;&nbsp; CI_upper=2.37
+            &gt;&gt;pval <br>
+            0.0265149 <br>
+
+            <br>
+
+            &gt;&gt;tbl <br>
+            tcritical=2.31089 &emsp; CI_lower=1.22637 &emsp; CI_upper=18.6825 &emsp; df=37 ... 
         </p>
     
     </div>
