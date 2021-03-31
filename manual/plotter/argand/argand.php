@@ -692,7 +692,7 @@
 
 <div class="RelatedLinks">
     <a href="../scatter/scatterchart.php">Scatter Chart</a>
-    <a href="bubblechart.php">Bubble Chart</a>
+    <a href="../scatter/bubblechart.php">Bubble Chart</a>
     <a href="../boxwhisker/boxwhisker.php">Box and Whisker</a>
     <a href="../../std/funcs/scatter.php">std.scatter</a>
     <a href="../../std/funcs/boxplot.php">std.boxplot</a>
