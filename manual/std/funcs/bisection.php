@@ -244,7 +244,9 @@
 
 <p>
     <em>B) Regula falsi (false position):</em> 
-    The errror is calculated as the difference between two consecutive iterations: Error=&verbar;X<sub>i+1</sub>-X<sub>i</sub>&verbar; 
+    The errror is calculated as the difference between two 
+    consecutive iterations: 
+    Error=&verbar;X<sub>i+1</sub>-X<sub>i</sub>&verbar; 
 </p>
 
 
@@ -321,10 +323,10 @@
 
 
 <div class="RelatedLinks">
+    <a href="ridder.php">ridder</a>
     <a href="brentq.php">brentq</a>
-    <a href="solve.php">solve</a>
+    <a href="muller.php">muller</a>
     <a href="newton.php">newton</a>
-    <a href="qr.php">qr</a>
 </div>
 
 </body>
