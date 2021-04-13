@@ -68,13 +68,16 @@
     </style>
 
 
-    <script src="/jsscripts/stdliblist.js?v=193"></script>
+    <?php
+        $FileSize=filesize($_SERVER["DOCUMENT_ROOT"]."/jsscripts/stdliblist.js");
+        
+        echo "<script src=\"/jsscripts/stdliblist.js?v=".$FileSize."\"></script>";
+    ?>
     
     
     
     
 <script>
- 
 function ShowFuncClass(StdLibURL, Dir, DivID, RowDivisor)
 {
     var  ScreenWidth= screen.width;
