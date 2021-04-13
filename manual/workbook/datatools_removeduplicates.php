@@ -23,6 +23,12 @@
     include $mainmenuloc;
 ?>
 
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
     
     
 <h1>Remove Duplicates</h1>
@@ -43,7 +49,7 @@
 
 <!-- ************************** Single Column ***************************** -->
 
-<h2 id="Single_column">A) Single column</h2>
+<h2 class="head_l2" id="Single_column">Single column</h2>
 
 <p>
     This is the simplest and most intuitive case. In the following image, notice that #1 is duplicated.
@@ -71,6 +77,13 @@
 
     
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -82,7 +95,7 @@
 
 <!-- ****************************** Multiple Columns *********************** -->
 
-<h2 id="Multiple_columns">B) Multiple columns</h2>
+<h2 class="head_l2" id="Multiple_columns">Multiple columns</h2>
 
 <p>
     Here, the idea will be demonstrated with 2 columns; however, the same idea is applicable 
@@ -126,7 +139,10 @@
 
 
 <div class="RelatedLinks">
-    <a href="index.php">Essentials</a>
+    <a href="basics.php">Basics</a>
+    <a href="import_export.php">Import / Export</a>
+    <a href="createdatastructures.php">Create Data Structures</a>
+    <a href="tokenize_converttext.php">Tokenize / Convert Text to Columns</a>
 </div>
 
 </body>

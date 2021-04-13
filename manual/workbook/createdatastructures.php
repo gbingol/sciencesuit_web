@@ -52,7 +52,12 @@
     include $mainmenuloc;
 ?>
 
-    
+
+<script src="/jsscripts/createoutline.js"></script>
+<script>
+    window.addEventListener("load", MakeElement_Select_OutlineFromTagName.bind(null, "H2"), false);
+</script>
+
     
 <h1>Create Data Structures</h1>
 
@@ -114,7 +119,7 @@
 
 <!-- ************************** Array ***************************** -->
 
-<h2 id="array">Array</h2>
+<h2 class="head_l2" id="array">Array</h2>
 <p>
     Assume the following selection is made on a worksheet:
 </p>
@@ -182,7 +187,7 @@
 
 <!-- ************************** Vector ***************************** -->
 
-<h2 id="vector">Vector</h2>
+<h2 class="head_l2" id="vector">Vector</h2>
 <p>
     Assume the following selection is made on a worksheet:
 </p>
@@ -249,7 +254,7 @@
 
 <!-- ************************** DataFrame ***************************** -->
 
-<h2 id="dataframe">DataFrame</h2>
+<h2 class="head_l2" id="dataframe">DataFrame</h2>
 
 <p>
     Assume the following selection is made on a worksheet:
@@ -392,7 +397,7 @@
 
 <!-- ************************** Matrix ***************************** -->
 
-<h2 id="matrix">Matrix</h2>
+<h2 class="head_l2" id="matrix">Matrix</h2>
 <p>
     Assume the following selection is made on a worksheet:
 </p>
@@ -489,7 +494,7 @@
 
 <!-- ************************** Range ***************************** -->
 
-<h2 id="range">Range</h2>
+<h2 class="head_l2" id="range">Range</h2>
 <p>
     Assume the following selection is made on a worksheet:
 </p>
