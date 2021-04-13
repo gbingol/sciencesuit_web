@@ -4,7 +4,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Essentials</title>
+<title>Import/Export</title>
 
     <link href="../../css/common.css" rel="stylesheet" type="text/css" />
     
@@ -25,6 +25,13 @@
     
 </head>
 
+
+
+
+
+
+
+
 <body>
 
     
@@ -32,6 +39,9 @@
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
     include $mainmenuloc;
 ?>
+
+
+
 
 
 <script src="/jsscripts/createoutline.js"></script>
@@ -42,10 +52,13 @@
 
 
 
+
+
+
 <h1>Import / Export</h1>
 
     
-<h2 class="head_l2" id="importfromworkspace">Import Data from Workspace</h2>
+<h2 class="head_l2" id="importfromworkspace">Import from Workspace</h2>
 
 <p>
     It might sometimes be needed that after performing some calculations the variable holding the data should be saved or visualized in Workbook 
@@ -86,7 +99,11 @@
     &gt;&gt;tbl.var2={x=1, y=2, z=3}
 </p>
 
-<p>if you would like to import contents of <em>var2</em>, then the variable name entered should be <em>tbl.var2</em>.</p>
+<p>
+    if you would like to import contents of <em>var2</em>, then the variable name entered should be <em>tbl.var2</em>.
+</p>
+
+
 <p>&nbsp;</p>
 
 <p><em>Notes:</em></p>
@@ -118,7 +135,22 @@
 
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 <h3 class="head_l3" id="Lua_Tables">Lua Tables</h3>
@@ -161,7 +193,17 @@
 
 </table>
 
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
 
 <h4 class="head_l4" id="tblwithmetamethods">Tables with metamethods</h4>
 <p>
@@ -169,7 +211,9 @@
 </p>
 
 
+
 <p>&nbsp;</p>
+
 
 <p>
     <b>Case 1:</b> <em>__tostring() function not implemented:</em>
@@ -198,7 +242,9 @@
     an error message will be issued and nothing will be imported.
 </p>
 
+
  <p>&nbsp;</p>
+
 
 <p>
     <strong>Case 2:</strong> <em>__tostring() function implemented:</em>
@@ -234,7 +280,19 @@
 </p>
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
 
 
 <h3 class="head_l3" id="Userdata">Userdata</h3>
@@ -270,6 +328,8 @@
 
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
 
 
 
@@ -310,6 +370,7 @@
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
 
 
 
@@ -396,7 +457,15 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
 
 
 <h3 class="head_l3" id="import_sciencesuitwb">ScienceSuit Workbook</h3>
@@ -410,7 +479,21 @@
     instead of opening a workbook, importing it will be more convenient.
 </p>
 
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
 
 <h3 class="head_l3" id="import_csvfiles">CSV Files</h3>
 
@@ -431,7 +514,21 @@
     Notice that the Worksheet name is automatically assigned as the filename, <em>Book1.csv</em>.
 </p>
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
 
 <h3 class="head_l3" id="import_textfiles">Text Files</h3>
 
@@ -458,8 +555,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 
@@ -478,6 +592,10 @@
 <img src="images/import_export.png" alt=""/>
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
 
 <h3 class="head_l3" id="export_textfiles">Text Files</h3>
 <p>
@@ -508,6 +626,7 @@
 
 
 
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 

@@ -25,6 +25,13 @@
     
 </head>
 
+
+
+
+
+
+
+
 <body>
 
     
@@ -84,10 +91,27 @@
         horizontal (left, center, right)
     </li>
 </ol>
-	
-<p>As you move the cursor to different cells, the panel will automatically be updated with the format of the active cell. </p>
+
+
+<p>
+    As you move the cursor to different cells, the panel will automatically be updated with the format of the active cell. 
+</p>
+
+
+
+
+
+
+
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
 
 
 <h2 class="head_l2" id="Selection_of_Cells">Selection of Cells</h2>
@@ -99,8 +123,21 @@
 <img alt="" src="images/selectionshowingstatistics.png">
 
 
+
+
+
+
+
+
 <p>&nbsp;</p>
-	
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 <h2 class="head_l2" id="Copy_Paste">Copy/Paste</h2>
 <p>
@@ -131,10 +168,13 @@
 <img alt="" src="images/copy_options.png">
 
 
+
 <p>
     Copying a range such as shown (Fig A) in the following figures will produce an image 
     similar to Fig B. It is seen that the format and alignments are preserved.
 </p>
+
+
 
 <div style="display:table; content:''">
     <div style="float:left; padding-right:20px">
@@ -168,9 +208,23 @@
 </ol>
 
 
+
+
+
+
+
+
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h3 class="head_l3" id="Adding_Deleting_Rows_Columns">Inserting/Deleting Rows and Columns</h3>
+
+
+
+
+
+
+
+<h2 class="head_l2" id="Adding_Deleting_Rows_Columns">Inserting/Deleting Rows and Columns</h2>
 
 <p>
     By default, a Worksheet contains 1000 rows and 100 columns. In order to 
