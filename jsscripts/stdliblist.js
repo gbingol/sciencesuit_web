@@ -36,12 +36,15 @@ var StdLibFunctions = [
         ["sinh"], ["tan"], ["tanh"],
         
         //
+
+        ["bisection"],  ["brentq"], ["fsolve"], ["muller"], ["polyroots"], ["ridder"], ["newton"], 
+        //
         
         ["accumulate"], ["activeworksheet"], ["anova"], ["anova2"], 
 
         ["appendworksheet"], ["besselj", "specialfuncs.php#besselj"], ["beta", "specialfuncs.php#beta"],
 
-        ["bisection"],  ["brentq"], ["fsolve"], ["muller"], ["polyroots"],
+        
         
         ["const"], ["cor"], ["count"], ["cov"], ["cumsum"],
 
@@ -69,7 +72,7 @@ var StdLibFunctions = [
 
         ["meshgrid"], ["minmax", "minmax.php"], ["min", "minmax.php#min"],
 
-        ["mode"], ["newton"], ["null"], ["pbinom", "dist_binom.php#pbinom"],
+        ["mode"], ["null"], ["pbinom", "dist_binom.php#pbinom"],
 
         ["pchisq","dist_chisq.php#pchisq"], ["pf","dist_f.php#pf"],
 
