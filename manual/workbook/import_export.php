@@ -61,8 +61,9 @@
 <h2 class="head_l2" id="importfromworkspace">Import from Workspace</h2>
 
 <p>
-    It might sometimes be needed that after performing some calculations the variable holding the data should be saved or visualized in Workbook 
-    or exported to some other file. Importing the variable from workspace to the worksheet also enables analyzing the variable(s) using the apps. 
+    It might sometimes be needed that after performing some calculations the variable holding the data 
+    should be saved or visualized in Workbook or exported to some other file. 
+    Importing the variable from workspace to the worksheet also enables analyzing the variable(s) using the apps. 
 </p>
 
 <p>
@@ -297,9 +298,11 @@
 
 <h3 class="head_l3" id="Userdata">Userdata</h3>
 <p>
-    Two <a href="../std/index.php">userdata</a> types, namely 
-    <em><a href="../std/classes/vector.php">Vector</a></em> and 
-    <em><a href="../std/classes/matrix.php">Matrix</a></em> are handled specially. 
+    Three <a href="../std/index.php">userdata</a> types, namely 
+    <em><a href="../std/classes/vector.php">Vector</a></em>, 
+    <em><a href="../std/classes/matrix.php">Matrix</a></em> and 
+    <em><a href="../std/classes/dataframe.php">DataFrame</a></em>
+    are handled specially. 
     
     For the other userdata types, if the userdata implements 
     <em>__tostring()</em> metamethod, the string returned by the 
@@ -401,6 +404,33 @@
 
 
 
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+<h4 class="head_l4" id="dataframe">DataFrame</h4>
+<p>
+    The following command let's us choose a CSV file and then reads it into a dataframe.
+</p>
+<p class="CodeCommand">
+    &gt;&gt;df = std.read_csv{file=""}
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    When imported:
+</p>
+
+<img src="images/import_workspace_userdata_dataframe.png" alt="">
 
 
 
@@ -545,7 +575,7 @@
     Unlike CSV files, in which separation is well-defined with a single delimiter, 
     in text files, the data can be separated by many delimiters, such as tab, comma etc. 
    Therefore, when you import a text file, initially an import text wizard is 
-   shown (please see <a href="#tokenizingtext">tokenizing text</a> for more details). 
+   shown (please see <a href="tokenize_converttext.php">tokenizing text</a> for more details). 
    Once the text is tokenized, a new Worksheet will be added with the 
    name "<em>data.txt</em>" as shown in the following figure:
 </p>
