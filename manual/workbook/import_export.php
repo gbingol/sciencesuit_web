@@ -611,7 +611,7 @@
 
 
 
-<h2 class="head_l2" id="exportexternalresources">Export Data to External Resources</h2>
+<h2 class="head_l2" id="exportexternalresources">Export Data</h2>
 
 
 <p>
@@ -683,6 +683,66 @@
 
 
 
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<h2 class="head_l2" id="export_excel_oleautomation">Export to Excel</h2>
+<p>
+    Either the current worksheet or the whole ScienceSuit workbook can be exported to 
+    either a new MS Excel workbook or to an existing workbook. The menu to export to 
+    MS Excel is under the Workbook ribbon page and shown below:
+</p>
+
+<img src="images/export_xls_ribbonbutton.png" alt="">
+
+<p>A few things to note to use this functionality correctly:</p>
+<ol>
+    <li>
+        Relies on 
+        <a href="https://en.wikipedia.org/wiki/OLE_Automation" target="_blank">OLE Automation</a>; 
+        therefore, MS Excel must already have been properly installed.
+    </li>
+    <li>
+        Exporting to a <em>new</em> MS Excel workbook should always work as expected.   
+    </li>
+
+    <li>
+        Exporting to an <em>existing</em> MS Excel workbook requires understanding of the following info for troubleshooting purposes. 
+
+        <br><br>
+        
+        The export process either creates a new or connects to an existing instance of MS Excel 
+        (<a href="https://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-mso_win10-mso_2016/
+        what-are-excel-instances-and-why-is-this-important/20c39a6f-0857-4033-b713-18bf72e91d8b#:~:
+        text=Each%20iteration%20of%20Excel.exe,running%20in%20the%20same%20instance." target="_blank">more info on Excel instances</a>).
+        
+        If an instance is created by the export functionality, MS Excel itself might create a separate 
+        instance when you open a new document either through Explorer or via Excel itself. 
+
+        <br><br>
+
+        To summarize: separate instances do not communicate with each other and 
+        therefore if ScienceSuit has already created an instance instead of 
+        connecting to an existing one, it will not be able to export to an existing 
+        MS Excel workbook running on a separate instance of MS Excel.
+    </li>
+</ol>
+
+
+<p>&nbsp;</p>
+
+<p>
+    Once the above-shown menu is clicked, selecting the menu items "Entire Workbook" or "Active Worksheet: " 
+    will list the currently opened Excel Workbooks (running on the same instance as explained above) 
+    along with the option of "New Excel Workbook". Then, you can either append the worksheets of ScienceSuit workbook or 
+    the active worksheet to an existing MS Excel Workbook or create a new MS Excel Workbook and append to it.
+</p>
 
 
 
