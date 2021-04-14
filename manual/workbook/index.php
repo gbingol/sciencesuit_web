@@ -33,19 +33,42 @@
 
 <h1>Workbook</h1>
 
+
 <p>
-    It is very useful to save/load, format and manipulate data. You can also create 
-    several data structures directly from the data in the workbook.
+    Provides great convenience for many things. With workbook you can: 
 </p>
 
 
+<ol class="linespaced">
+    <li>
+        Save your data and and load it back.
+    </li>
 
-<p>
-    Furthermore, ScienceSuit allows you not only enter or manipulate data in the workbook manually but also through
-    its scripting facilities. By using  <a href="../std/classes/worksheet.php">Worksheet Class</a> and 
-    the <a href="../std/classes/range.php">Range Class</a>, you can transfer the results of your computation 
-    (formatted/unformatted) easily to the workbook.
-</p>
+    <li>
+        Format your data for visual convenience.
+    </li>
+
+    <li>
+        Import data from Lua workspace or from files. 
+    </li>
+
+    <li>
+        Export data to MS Excel or other types of files.
+    </li>
+
+    <li>
+        Create data structures to use in computations.
+    </li>
+
+    <li>
+        Easily transfer the results your computations 
+        (see 
+        <a href="../std/classes/worksheet.php">Worksheet</a> and 
+        <a href="../std/classes/range.php">Range</a> classes
+        ).
+    </li>
+</ol>
+
 
 
 
