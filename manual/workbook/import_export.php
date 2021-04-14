@@ -738,9 +738,12 @@
 <p>&nbsp;</p>
 
 <p>
-    Once the above-shown menu is clicked, selecting the menu items "Entire Workbook" or "Active Worksheet: " 
-    will list the currently opened Excel Workbooks (running on the same instance as explained above) 
-    along with the option of "New Excel Workbook". Then, you can either append the worksheets of ScienceSuit workbook or 
+    Once the above-shown menu is clicked, selecting the menu items <em>"Entire Workbook"</em> 
+    or <em>"Active Worksheet: "</em> will list the currently opened Excel Workbooks 
+    (running on the same instance as explained above) along with the 
+    option of <em>"New Excel Workbook"</em>. 
+    
+    Then, you can either append the worksheets of ScienceSuit workbook or 
     the active worksheet to an existing MS Excel Workbook or create a new MS Excel Workbook and append to it.
 </p>
 
