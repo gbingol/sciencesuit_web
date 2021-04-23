@@ -31,7 +31,8 @@
 <h1>Polynomial</h1>
     
 <p>
-    Polynomials are in the form of a<sub>n</sub>x<sup>n</sup> +  a<sub>n-1</sub>x<sup>n-1</sup> + ... + a<sub>0</sub>
+    A class to work with polynomials, which is 
+    in the form of a<sub>n</sub>x<sup>n</sup> +  a<sub>n-1</sub>x<sup>n-1</sup> + ... + a<sub>0</sub>
 </p>
 
 
@@ -45,7 +46,7 @@
 </p>
 
 <p>
-    where <em>param</em>  can be of type real number, 
+    where <em>param</em> can be of type real number, 
     <a href="vector.php">Vector</a> or Lua table containing only real numbers.
 </p>
 
@@ -62,8 +63,10 @@
         </li>
 
         <li>
-            If &mid;a<sub>n</sub>&mid; &lt; 10<sup>-12</sup>, then 
-            a<sub>n</sub> is removed, therefore a<sub>n-1</sub> becomes a<sub>n</sub>.
+            If order of polynomial is greater than 0 and 
+            &mid;a<sub>n</sub>&mid; &lt; 10<sup>-12</sup>, then 
+            a<sub>n</sub> is removed, therefore 
+            a<sub>n-1</sub> becomes a<sub>n</sub>.
         </li>
     </ol>
 </details>
@@ -71,7 +74,37 @@
 <p>&nbsp;</p>
 
 <p class="CodeCommand">
+    &gt;&gt;p1=std.Polynomial.new(0) <br>
+    &gt;&gt;p1 <br>
+    0 <br>
+
+    <br>
+
+    &gt;&gt;p2=std.Polynomial.new(1) <br>
+    &gt;&gt;p2 <br>
+    1 <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;p3=std.Polynomial.new{1, 2} <br>
+    &gt;&gt;p3 <br>
+    x + 2 <br>
+
+    <br>
+
+    &gt;&gt;p4=std.Polynomial.new{1, 2, 3} <br>
+    &gt;&gt;p4 <br>
+    x^2 + 2x + 3 <br>
+
+    <br>
+    <br>
     
+    &gt;&gt;vec=std.util.tovector{1, 2, 3} <br>
+    &gt;&gt;p5=std.Polynomial.new(vec) <br>
+    &gt;&gt;p5 <br>
+    x^2 + 2x + 3
+
 </p>
 
 
@@ -104,9 +137,14 @@
 </p>
 
 <ol class="linespaced">
-    <li>Polynomial <b>op</b> Polynomial = Polynomial</li>
+    <li>
+        Polynomial <b>op</b> Polynomial = Polynomial <br>
+
+        (uses <a href="https://www.boost.org/doc/libs/1_76_0/libs/math/doc/html/math_toolkit/polynomials.html"
+        target="_blank">boost library</a>)
+    </li>
     <li>Real number <b>op</b> Polynomial = Polynomial.</li>
-    <li>Polynomial <b>op</b> Real number = Complex</li>
+    <li>Polynomial <b>op</b> Real number = Polynomial</li>
 </ol>
 
 <p>
@@ -114,7 +152,42 @@
 </p>
 
 <p class="CodeCommand">
-    
+    &gt;&gt;p1=std.Polynomial.new{1, 2, 3} <br>
+    &gt;&gt;p2=std.Polynomial.new{2, 3} <br>
+
+    <br>
+
+    &gt;&gt;p1 <br>
+    x^2 + 2x + 3 <br>
+
+    <br>
+
+    &gt;&gt;p2 <br>
+    2x + 3 <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;p1+p2 <br>
+    x^2 + 4x + 6 <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;p1-p2 <br>
+    x^2 <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;p1*p2 <br>
+    2x^3 + 7x^2 + 12x + 9 <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;p1/p2 <br>
+    0.5x + 0.25
 </p>
 
 
