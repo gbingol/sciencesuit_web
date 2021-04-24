@@ -37,7 +37,7 @@ var StdLibFunctions = [
         
         //
 
-        ["bisection"],  ["brentq"], ["fsolve"], ["muller"], ["polyroots"], ["ridder"], ["newton"], 
+        ["bisection"],  ["brentq"], ["fsolve"], ["muller"],  ["ridder"], ["newton"], 
         //
         
         ["accumulate"], ["activeworksheet"], ["anova"], ["anova2"], 
@@ -80,7 +80,7 @@ var StdLibFunctions = [
 
         ["ppois","dist_pois.php#ppois"], ["psignrank","dist_wilcox_signrank.php#psignrank"],
 
-        ["pt","dist_t.php#pt"], ["polyfit"], ["polyval"], ["powfit"],
+        ["pt","dist_t.php#pt"], ["polyfit"], ["powfit"],
 
         ["punif","dist_unif.php#punif"], ["qbinom","dist_binom.php#qbinom"],
 
@@ -123,7 +123,9 @@ var StdLibFunctions = [
 
 
   var StdLibClasses=[
-      ["Array"], ["Complex"], ["Database"], ["DataFrame"], ["Food"], ["Matrix"], ["Range"], ["Vector"], ["Worksheet"]];
+      ["Array"], ["Complex"], ["Database"], ["DataFrame"], 
+      ["Food"], ["Matrix"], ["polynomial"],
+      ["Range"], ["Vector"], ["Worksheet"]];
   
   
   
