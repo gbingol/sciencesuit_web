@@ -493,19 +493,77 @@
 </p>
 
 <p class="funcsignature">
-    integ(m=1, [constants=]) &rarr; Polynomial <br>
+    integ([m=1], [k=0.0, ...]) &rarr; Polynomial <br>
 
     <br>
 
-    integ{m=1, [constants=]} &rarr; Polynomial <br>
+    integ{[m=1], [k=0.0, ...]} &rarr; Polynomial <br>
+</p>
+
+<p>
+    where parameter <em>m</em> is the order of integration 
+    and <em>k</em> is the integration constant(s) which is/are by default 0.0. <br>
+
+    <br>
+
+    Parameter <em>k</em> can be real number, Lua table (all entries real numbers) or a
+    Vector. When provided if the order of integration and the number of integration constants 
+    does not match, constants are padded with zeros.
+</p>
+
+
+<p class="CodeCommand">
+    &gt;&gt;p=std.Polynomial.new{1, 0, 2} <br>
+    &gt;&gt;p <br>
+    x^2 + 2 <br>
+
+    <br>
+
+    &gt;&gt;p:integ() <br>
+    0.333333x^3 + 2x <br>
+
+    <br>
+
+    &gt;&gt;p:integ(1, 5) <br>
+    0.333333x^3 + 2x + 5 <br>
+
+    <br>
+
+    <span class="LuaComment">Integration constants are all zeros</span><br>
+    &gt;&gt;p:integ(2) <br>
+    0.0833333x^4 + x^2 <br>
+
+    <br>
+
+    <span class="LuaComment">Integration constants are all different than zeros</span><br>
+    &gt;&gt;p:integ(2, {3, 5}) <br>
+    0.0833333x^4 + x^2 + 3x + 5 <br>
+
+    <br>
+
+    <span class="LuaComment">Integration constants are padded with zeros</span><br>
+    &gt;&gt;p:integ(2, {3}) <br>
+    0.0833333x^4 + x^2 + 3x
+</p>
+
+
+<p>
+    Please notice the difference in the last three commands where when integration constants are all zeros, 
+    when integration constants are all different than zeros and when order of integration is greater than 
+    the provided number of integration constants. All these scenarios yielded different polynomials.
+</p>
+
+
+<p>&nbsp;</p>
+
+
+<p>
+    It is also possible to work with named arguments:
 </p>
 
 <p class="CodeCommand">
-   
+
 </p>
-
-
-
 
 
 
