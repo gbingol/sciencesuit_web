@@ -13,6 +13,11 @@
 </head>
 
 
+
+
+
+
+
 <body>
 
 <?php
@@ -31,9 +36,12 @@
 <h1>Polynomial</h1>
     
 <p>
-    A class to work with 1D polynomials, which is 
-    in the form of a<sub>n</sub>x<sup>n</sup> +  a<sub>n-1</sub>x<sup>n-1</sup> + ... + a<sub>0</sub>
+    Represents 1D polynomials, which is in the form of 
+    a<sub>n</sub>x<sup>n</sup> +  a<sub>n-1</sub>x<sup>n-1</sup> + ... + a<sub>0</sub>
 </p>
+
+
+
 
 
 <p>&nbsp;</p>
@@ -71,7 +79,13 @@
     </ol>
 </details>
 
+
+
+
 <p>&nbsp;</p>
+
+
+
 
 <p class="CodeCommand">
     &gt;&gt;p1=std.Polynomial.new(0) <br>
@@ -117,9 +131,20 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 
@@ -137,15 +162,13 @@
 </p>
 
 <ol class="linespaced">
-    <li>
-        Polynomial <b>op</b> Polynomial = Polynomial
-    </li>
-    <li>Real number <b>op</b> Polynomial = Polynomial.</li>
+    <li>Polynomial <b>op</b> Polynomial = Polynomial</li>
+    <li>Real number <b>op</b> Polynomial = Polynomial</li>
     <li>Polynomial <b>op</b> Real number = Polynomial</li>
 </ol>
 
 <p>
-    where <b>op</b> is (+, -, *, /, ^).
+    where <b>op</b> is (+, -, *, /).
 </p>
 
 <p class="CodeCommand">
@@ -321,8 +344,19 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 
@@ -382,8 +416,97 @@
 
 
 
+
+
+
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 class="head_l3" id="div">div</h3>
+
+<p>
+    Returns quotient and remainder. 
+</p>
+
+<p class="funcsignature">
+    div(p=) &rarr; Polynomial , Polynomial
+</p>
+
+<p>
+    where parameter <em>p</em> is the divisor and returns quotient and remainder in the respective order.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;p1=std.Polynomial.new{1, 0, 2} <br>
+    &gt;&gt;p2=std.Polynomial.new{1, 2} <br>
+
+    <br>
+
+    &gt;&gt;p1 <br>
+    x^2 + 2 <br>
+
+    <br>
+
+    &gt;&gt;p2 <br>
+    x + 2 <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;p1/p2 <br>
+    x - 2 <br>
+
+    <br>
+    <br>
+
+    &gt;&gt;p1:div(p2) <br>
+    x - 2 <br>
+    6
+</p>
+
+
+<p>
+    Please notice the difference between <em>p1/p2</em> and <em>p1:div(p2)</em>. Please also note that 
+    <em>p1/p2</em> and <em>p1:div(p2)</em> have the same performance.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
 
 
 
@@ -479,8 +602,17 @@
 
 
 
+
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
+
+
 
 
 
@@ -562,7 +694,28 @@
 </p>
 
 <p class="CodeCommand">
+    &gt;&gt;p:integ{} <br>
+    0.333333x^3 + 2x <br>
 
+    <br>
+
+    &gt;&gt;p:integ{m=1, k=5} <br>
+    0.333333x^3 + 2x + 5 <br>
+
+    <br>
+
+    &gt;&gt;p:integ{m=2} <br>
+    0.0833333x^4 + x^2 <br>
+
+    <br>
+
+    &gt;&gt;p:integ{m=2, k={3, 5} } <br>
+    0.0833333x^4 + x^2 + 3x + 5 <br>
+
+    <br>
+
+    &gt;&gt;p:integ{m=2, k={3} } <br>
+    0.0833333x^4 + x^2 + 3x
 </p>
 
 
