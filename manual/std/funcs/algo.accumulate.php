@@ -90,7 +90,7 @@
 
     <br />
     <span class="LuaComment">--equivalent to sum function</span> <br />
-    &gt;&gt;std.accumulate(t, 0) <br />
+    &gt;&gt;std.algo.accumulate(t, 0) <br />
     22	<br />
     6	<br />
 
@@ -100,14 +100,14 @@
     &gt;&gt;v <br />
     3&emsp; 5&emsp; 2&emsp; 1&emsp; 7&emsp; 4&emsp; COL <br />
     <br />
-    &gt;&gt;std.accumulate(v, 0) <br />
+    &gt;&gt;std.algo.accumulate(v, 0) <br />
     22	<br />
     6	<br />
 
     <br />
     <br />
     <span class="LuaComment">--Sum up squares of entries</span> <br />
-    &gt;&gt;std.accumulate(t, 0, <span class="LuaKeyword">function</span>(x) 
+    &gt;&gt;std.algo.accumulate(t, 0, <span class="LuaKeyword">function</span>(x) 
     <span class="LuaKeyword">return</span> x^2 
     <span class="LuaKeyword">end</span>) <br />
     104	 <br />
@@ -136,7 +136,7 @@
     v2=Vector <br />
 
     <br />
-    &gt;&gt;std.accumulate(t, 0) <br />
+    &gt;&gt;std.algo.accumulate(t, 0) <br />
     5&emsp; 5&emsp; 5&emsp; 5&emsp; COL <br />
     2	
 
@@ -158,7 +158,7 @@
 
     <br />
 
-    &gt;&gt;std.accumulate(t, x0) <br />
+    &gt;&gt;std.algo.accumulate(t, x0) <br />
     5&emsp; 5&emsp; 5&emsp; 5&emsp; COL <br />
     2	
 </p>

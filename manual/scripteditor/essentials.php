@@ -435,9 +435,9 @@
     <a href="https://www.lua.org/pil/14.html" target="_blank">global environment</a>, namely _G.</p>
 
 <p>
-    For example: <a href="../../std/funcs/accumulate.php">accumulate</a> function resides 
-    in <a href="../../std/index.php">std library</a> which is in the global environment. 
-    Therefore, the name of the help file must be <a><em>std.accumulate</em></a><em>.html</em>. 
+    For example: <a href="../../std/funcs/algo.accumulate.php">accumulate</a> function resides 
+    in <a href="../../std/index.php">std.algo library</a> which is in the global environment. 
+    Therefore, the name of the help file must be <a><em>std.algo.accumulate</em></a><em>.html</em>. 
     Similarly, <a href="https://www.lua.org/pil/13.html" target="_blank">setmetatable</a> function is 
     directly under global environment, therefore its name is <em>setmetatable.html</em>.
 </p>

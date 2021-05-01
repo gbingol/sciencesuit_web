@@ -7,7 +7,17 @@
 
         */
        
-       
+  
+        
+  var StdAlgoLib = 
+  [
+    ["accumulate"], ["find","algo.find.php#find"],
+
+    ["find_if", "find.php#find_if"], ["findfirst_if","algo.find.php#findfirst_if"],
+
+    ["find_minmax","algo.find.php#find_minmax"], ["for_each"], ["search_if"]
+  ].sort();
+
        
 var StdUtilLib = 
 [
@@ -40,7 +50,7 @@ var StdLibFunctions = [
         ["bisection"],  ["brentq"], ["fsolve"], ["muller"],  ["ridder"], ["newton"], 
         //
         
-        ["accumulate"], ["activeworksheet"], ["anova"], ["anova2"], 
+        ["activeworksheet"], ["anova"], ["anova2"], 
 
         ["appendworksheet"], ["besselj", "specialfuncs.php#besselj"], ["beta", "specialfuncs.php#beta"],
 
@@ -58,19 +68,15 @@ var StdLibFunctions = [
 
         ["dt","dist_t.php#dt"], ["dunif","dist_unif.php#dunif"],
 
-        ["eig"], ["expfit"], ["eye"], ["find","find.php#find"],
-
-        ["find_if", "find.php#find_if"], ["findfirst_if","find.php#findfirst_if"],
-
-        ["find_minmax","find.php#find_minmax"], ["for_each"], ["gamma", "specialfuncs.php#gamma"],
+        ["eig"], ["expfit"], ["eye"],  ["gamma", "specialfuncs.php#gamma"],
 
         ["gammaln", "specialfuncs.php#gammaln"], ["gcd"], ["inv"], ["kurt"],
 
         ["lcm"], ["linspace"], ["lm"], ["logfit"], ["lu"],
 
-        ["max", "minmax.php#max"], ["mean"], ["median"],
+        ["minmax", "minmax.php"], ["max", "minmax.php#max"], ["mean"], ["median"],
 
-        ["meshgrid"], ["minmax", "minmax.php"], ["min", "minmax.php#min"],
+        ["meshgrid"], ["min", "minmax.php#min"],
 
         ["mode"], ["null"], ["pbinom", "dist_binom.php#pbinom"],
 
@@ -96,7 +102,7 @@ var StdLibFunctions = [
 
         ["rt","dist_t.php#rt"], ["runif","dist_unif.php#runif"], ["sample"], 
 
-        ["search_if"], ["sequence"], ["simpson"], ["size"], ["skew"], ["solve"],
+        ["sequence"], ["simpson"], ["size"], ["skew"], ["solve"],
 
         ["read_csv"],
 
@@ -107,6 +113,8 @@ var StdLibFunctions = [
         ["trans"], ["trapz"], ["tukey"], ["var"],
 
         ["argand"], ["boxplot"], ["scatter"],
+
+        ["algo", StdAlgoLib],
 
         ["fluid", StdFluidLib],
 

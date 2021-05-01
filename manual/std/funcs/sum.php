@@ -23,7 +23,7 @@
 <p>
     sums up addable entries in an <a href="../index.php">iteratable container</a>.
     For <a href=#container>containers</a> other than Vector and Matrix, 
-    it uses the <a href="accumulate.php">accumulate</a> function.
+    it uses the <a href="algo.accumulate.php">accumulate</a> function.
 </p>
 
 <p class="funcsignature"> 
@@ -217,7 +217,7 @@
 
 
 <div class="RelatedLinks">
-    <a href="accumulate.php">accumulate</a>
+    <a href="algo.accumulate.php">accumulate</a>
     <a href="mean.php">mean</a>
     <a href="var.php">var</a>
 </div>

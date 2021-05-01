@@ -97,7 +97,7 @@
 
 <p class="CodeCommand">
     &gt;&gt;t={1, 2, 3, 4} <br />
-    &gt;&gt;std.for_each(t, <span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>) <br />
+    &gt;&gt;std.algo.for_each(t, <span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x^2 <span class="LuaKeyword">end</span>) <br />
     1 &emsp; 4&emsp;9&emsp;16	<br />
 
     <br />
@@ -111,7 +111,7 @@
 
     &gt;&gt;t={1, 2, 3, 4} <br />
     &gt;&gt;y=2 <br />
-    &gt;&gt;std.for_each(t, <span class="LuaKeyword">function</span>(x, <mark>y</mark>) <span class="LuaKeyword">return </span>math.pow(x, y) <span class="LuaKeyword">end</span>, <mark>y</mark>) <br />
+    &gt;&gt;std.algo.for_each(t, <span class="LuaKeyword">function</span>(x, <mark>y</mark>) <span class="LuaKeyword">return </span>math.pow(x, y) <span class="LuaKeyword">end</span>, <mark>y</mark>) <br />
     1&emsp;4&emsp;9&emsp;	16	 <br />
 
      <br />
@@ -124,7 +124,7 @@
 
     &gt;&gt;v=std.util.tovector{1, 2, 3, 4} <br />
     &gt;&gt;y=2 <br />
-    &gt;&gt;std.for_each(v, <span class="LuaKeyword">function</span>(x, <mark>y</mark>) <span class="LuaKeyword">return</span> math.pow(x, y) <span class="LuaKeyword">end</span>, <mark>y</mark>) <br />
+    &gt;&gt;std.algo.for_each(v, <span class="LuaKeyword">function</span>(x, <mark>y</mark>) <span class="LuaKeyword">return</span> math.pow(x, y) <span class="LuaKeyword">end</span>, <mark>y</mark>) <br />
     1 &emsp; 4 &emsp;  9 &emsp;  16 &emsp;  COL <br />
 
      <br />
@@ -152,8 +152,8 @@
 
 <div class="RelatedLinks">
     
-    <a href="accumulate.php">accumulate</a>
-    <a href="find.php">find</a>
+    <a href="algo.accumulate.php">accumulate</a>
+    <a href="algo.find.php">find</a>
 </div>
 
 

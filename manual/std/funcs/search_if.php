@@ -32,7 +32,8 @@
 
 <h1>search_if</h1>
 <p>
-    Finds the entries in an iteratable container satisfying a given condition. Compare with <a href="find.php#find_if">std.find_if</a>.
+    Finds the entries in an iteratable container satisfying a given condition. 
+    Compare with <a href="algo.find.php#find_if">find_if</a>.
 </p>
 
 <p class="funcsignature">
@@ -63,13 +64,13 @@
 
     <br />
 
-    &gt;&gt;std.search_if(t, <span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x>15 <span class="LuaKeyword">end</span>) <br />
+    &gt;&gt;std.algo.search_if(t, <span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x>15 <span class="LuaKeyword">end</span>) <br />
     20&emsp; 30&emsp; 40 <br />
     3 <br />
 
     <br />
 
-    &gt;&gt;std.search_if(t, <span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x<15 <span class="LuaKeyword">end</span>) <br />
+    &gt;&gt;std.algo.search_if(t, <span class="LuaKeyword">function</span>(x) <span class="LuaKeyword">return</span> x<15 <span class="LuaKeyword">end</span>) <br />
     10 <br />
     1
 </p>
@@ -85,7 +86,7 @@
 
 
 <div class="RelatedLinks">
-    <a href="find.php#find_if">find_if</a>
+    <a href="algo.find.php#find_if">find_if</a>
     <a href="../index.php">Iteratable container</a>
 </div>
  

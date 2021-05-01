@@ -329,7 +329,7 @@
 
 
 <div class="RelatedLinks">
-    <a href="accumulate.php">accumulate</a>
+    <a href="algo.accumulate.php">accumulate</a>
     <a href="minmax.php">minmax</a>  
 </div>
 
