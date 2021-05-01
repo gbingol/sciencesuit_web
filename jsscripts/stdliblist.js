@@ -11,11 +11,11 @@
         
   var StdAlgoLib = 
   [
-    ["accumulate"], ["find","algo.find.php#find"],
+    ["accumulate"], ["find","find.php#find"],
 
-    ["find_if", "find.php#find_if"], ["findfirst_if","algo.find.php#findfirst_if"],
+    ["find_if", "find.php#find_if"], ["findfirst_if","find.php#findfirst_if"],
 
-    ["find_minmax","algo.find.php#find_minmax"], ["for_each"], ["search_if"]
+    ["find_minmax","find.php#find_minmax"], ["for_each"], ["search_if"]
   ].sort();
 
        

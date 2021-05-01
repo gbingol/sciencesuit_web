@@ -78,107 +78,111 @@
     
     
 <script>
-function ShowFuncClass(StdLibURL, Dir, DivID, RowDivisor)
+
+var count=0;
+
+function ToHTMLTableEntry(LibURL, Dir, NROWS, LibName)
+{
+
+    let HTMLText = "";
+
+    let nfunctions=LibURL.length;
+
+    for(let i=0; i < nfunctions; i++)
+    {
+        let FuncName = LibURL[i][0];
+        let SecondEntry = LibURL[i][1];
+
+        if(LibName!=null)
+            FuncName = LibName + "." + FuncName;
+
+        //second entry in main array in null
+        if(SecondEntry == null) 
+        {
+            let FileURL = Dir + FuncName.toLowerCase() + ".php";
+            
+            HTMLText = HTMLText + "<a href="+ FileURL + ">"+ FuncName + "</a><br>" + "\n";
+
+            count++;
+        }
+         //link is explicity specified
+         else if(typeof SecondEntry =='string')
+        {   
+            let FileURL = "";
+            
+            if(LibName == null)
+                FileURL = Dir + SecondEntry;
+            else
+                FileURL = Dir + LibName + "." + SecondEntry;
+            
+            HTMLText = HTMLText + "<a href="+ FileURL+ ">"+ FuncName + "</a><br>" + "\n";
+
+            count++;
+        }
+
+        else if(Array.isArray(SecondEntry))
+            HTMLText = HTMLText + ToHTMLTableEntry(SecondEntry, Dir, NROWS, FuncName);
+
+
+            
+        if(count === NROWS)
+        { 
+            HTMLText=HTMLText + "</td><td>" + "\n";
+
+            count=0;
+        }
+    }
+
+
+    return HTMLText;
+}
+
+
+
+
+function ShowFuncClass(StdLibURL, Dir, DivID)
 {
     var  ScreenWidth= screen.width;
     
-    
-    var NROWS = 15/RowDivisor;
-    if (ScreenWidth <= 600)
-        NROWS = 45/RowDivisor;
+    count=0;
 
-    else if (ScreenWidth <= 900)
-        NROWS = 30/RowDivisor;
+    let nfunctions=StdLibURL.length;
+    
+    let NROWS = Math.floor(nfunctions / 10) + 1;
+    
+    if (ScreenWidth <= 900)
+        NROWS = Math.floor(nfunctions / 5) + 1;
+
+    if (ScreenWidth <= 600)
+        NROWS = Math.floor(nfunctions / 3) + 1;
 
 	
-        var HTMLText="<table class='functionlist'><tr><td>";
-
-        var count=0;
-        var nfunctions=StdLibURL.length;
-
-        for(i=0; i<nfunctions; i++)
-        {
-            var FuncName = StdLibURL[i][0];
-            var SecondEntry = StdLibURL[i][1];
-
-            //second entry in main array in null
-            if(SecondEntry == null) 
-            {
-                                
-                var FileURL = Dir + FuncName.toLowerCase() + ".php"; 
-                
-                HTMLText = HTMLText + "<a href="+ FileURL + ">"+ FuncName + "</a><br>";
-
-                count++;
-            }
-            
-            //second entry is an Array, so it is a library under std
-            else if(Array.isArray(SecondEntry))
-            {
-                var Library = SecondEntry;
-                
-                for(j=0; j<Library.length; ++j)
-                {
-                    
-                    var FileURL = Dir + FuncName.toLowerCase()+ "." + Library[j] + ".php"; 
-                    
-                    var URLName=FuncName.toLowerCase()+ "." + Library[j];
-
-                    HTMLText = HTMLText + "<a href="+ FileURL + ">"+ URLName + "</a><br>";
-
-                    count++;
-                    
-                    
-                    if(count === NROWS)
-                    { 
-                        HTMLText=HTMLText + "</td><td>";
-
-                        count=0;
-                    }
-                }
-            }
-            
-            //link is explicity specified
-            else if(typeof SecondEntry =='string')
-            {
-                var FileURL = Dir + SecondEntry;
-                
-                HTMLText = HTMLText + "<a href="+ FileURL+ ">"+ FuncName + "</a><br>";
-
-                count++;
-            }
-
-            
-        
-            if(count === NROWS)
-            { 
-                HTMLText=HTMLText + "</td><td>";
-
-                count=0;
-            }
-        }
+    var HTMLText="<table class='functionlist'><tr><td>" + "\n";
 
 
-        HTMLText=HTMLText + "</td></tr>";
-        HTMLText=HTMLText + "</table>";
-        
-        document.getElementById(DivID).innerHTML = HTMLText;
+    HTMLText=HTMLText + ToHTMLTableEntry(StdLibURL, Dir, NROWS) + "\n";
+
+
+    HTMLText=HTMLText + "</td></tr>";
+    HTMLText=HTMLText + "</table>";
+    
+    document.getElementById(DivID).innerHTML = HTMLText;
 }
 
 
 window.addEventListener("load", function()
 {
-    ShowFuncClass(StdLibClasses, "./classes/", "datastructs", 15);
+    ShowFuncClass(StdLibClasses, "./classes/", "datastructs");
     
-    ShowFuncClass(StdLibFunctions, "./funcs/", "functions", 1);
+    ShowFuncClass(StdLibFunctions, "./funcs/", "functions");
 });
 
 
 window.addEventListener("resize", function()
 {
-    ShowFuncClass(StdLibClasses, "./classes/", "datastructs", 15);
+    ShowFuncClass(StdLibClasses, "./classes/", "datastructs");
     
-    ShowFuncClass(StdLibFunctions, "./funcs/", "functions", 1);
+    ShowFuncClass(StdLibFunctions, "./funcs/", "functions");
 });
 
 
