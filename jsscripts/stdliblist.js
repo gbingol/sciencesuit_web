@@ -124,7 +124,7 @@ var StdLibFunctions = [
 
   var StdLibClasses=[
       ["Array"], ["Complex"], ["Database"], ["DataFrame"], 
-      ["Food"], ["Matrix"], ["polynomial"],
+      ["Food"], ["Matrix"], ["Polynomial"],
       ["Range"], ["Vector"], ["Worksheet"]];
   
   
