@@ -36,19 +36,16 @@
 
 <p class="funcsignature">
     
-        polyfit(x=, y=, n=, [intercept=]) &rarr; Vector <br />
+        polyfit(x=, y=, n=, [intercept=]) &rarr; Polynomial <br />
         
         <br>
         
-        polyfit{x=, y=, n=, [intercept=] } &rarr; Vector 
+        polyfit{x=, y=, n=, [intercept=] } &rarr; Polynomial 
 </p>
 
 <p style="margin-right: 5%;">
     where <em>x</em> and <em>y</em> are Vectors and <em>n</em> is the degree of the polynomial. 
-    If argument <em>intercept</em> is provided, then <em>a</em><sub>0</sub> will be equal to 
-    the <em>intercept</em> and the <em>a</em><sub><em>1</em></sub><em>,...,a</em><sub>n</sub> will be 
-    calculated taking into account the explicitly provided <em>a<sub>0</sub></em>. The function 
-    returns a vector containing the coefficients of the fitting.
+    Returns a <a href="../classes/polynomial.php">Polynomial</a>.
 </p>
 
 
@@ -87,10 +84,10 @@
 
 
 <p class="CodeCommand">
-    &gt;&gt;std.polyfit(x, y, 3) <span class="LuaComment">-- std.polyfit{x=x, y=y, n=3}</span><br />
-    1 &emsp; 2 &emsp; 3 &emsp; 4 &emsp; COL
+    &gt;&gt;std.polyfit(x, y, 3) <br />
+    x<sup>3</sup>+ 2x<sup>2</sup> + 3x + 4
 </p>
-<p> corresponding to the polynomial: y=x<sup>3</sup>+2x<sup>2</sup>+3x+4</p>
+
     
  
 
