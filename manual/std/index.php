@@ -140,13 +140,13 @@ function ToHTMLTableEntry(LibURL, Dir, NROWS, LibName)
 
 
 
-function ShowFuncClass(StdLibURL, Dir, DivID)
+function ShowFuncClass(StdLibURL, Dir, DivID, IsClass)
 {
     var  ScreenWidth= screen.width;
     
     count=0;
 
-    let nfunctions=StdLibURL.length;
+    let nfunctions = GetNumberOfFunctions(IsClass);
     
     let NROWS = Math.floor(nfunctions / 10) + 1;
     
@@ -170,19 +170,21 @@ function ShowFuncClass(StdLibURL, Dir, DivID)
 }
 
 
+
+
 window.addEventListener("load", function()
 {
-    ShowFuncClass(StdLibClasses, "./classes/", "datastructs");
+    ShowFuncClass(StdLibClasses, "./classes/", "datastructs", true);
     
-    ShowFuncClass(StdLibFunctions, "./funcs/", "functions");
+    ShowFuncClass(StdLibFunctions, "./funcs/", "functions", false);
 });
 
 
 window.addEventListener("resize", function()
 {
-    ShowFuncClass(StdLibClasses, "./classes/", "datastructs");
+    ShowFuncClass(StdLibClasses, "./classes/", "datastructs", true);
     
-    ShowFuncClass(StdLibFunctions, "./funcs/", "functions");
+    ShowFuncClass(StdLibFunctions, "./funcs/", "functions", false);
 });
 
 
