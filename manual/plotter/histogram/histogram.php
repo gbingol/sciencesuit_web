@@ -81,37 +81,35 @@
     
 <h1>Histogram</h1>
 
-<p>&nbsp;</p>
 
 <p>
-    Histograms are rather useful to visually inspect the numerical data .
+    Used for visually inspecting the numerical data and make inference about its distribution.
 </p>
 
-<img src="images/anatomy.png" alt=""/>
 
 <p>&nbsp;</p>
 
-<p>Terminology:</p>
+<p>Let's first understand the terminology used:</p>
 
 <ul class="linespaced">
     <li>
-        <b>Bin:</b>
+        <b>Bin:</b> Each individual bar shown on the chart.
     </li>
 
     <li>
-        <b>Left/Right Close:</b>
+        <b>Left/Right Close:</b> Boundaries of the interval occupied by individual bin, i.e. "[" or "("  
     </li>
     
     <li>
-        <b>Frequency:</b>
+        <b>Frequency:</b> The number of data points in a bin.
     </li>
     
     <li>
-        <b>Relative Frequency:</b>
+        <b>Relative Frequency:</b> The ratio of frequency to the total number of data points.
     </li>
     
     <li>
-        <b>Density:</b>
+        <b>Density:</b> The ratio of relative frequency to class width (bin/interval width).
     </li>
 </ul>
 
@@ -138,14 +136,43 @@
 
 <h3 class="head_l3"  id="Existing_Selection">Existing Selection</h3>
 <p>
-    Let's assume you have the following data set
+    The following data set contains 500 random numbers from 
+    a standard normal distribution.
 </p>
 
+<img src="images/dataselection_workbook.png" alt="">
 
+<p>&nbsp;</p>
 
+<p>
+    After making the selection, clicking on Histogram button will display the following chart. 
+</p>
 
+<img src="images/fromexistingselection_simplechart.png" alt="">
 
+<p>&nbsp;</p>
 
+<p>The above-shown chart has the following default properties:</p>
+
+<ol class="linespaced">
+    <li>
+        The number of bins are calculated using Freedman–Diaconis rule.
+    </li>
+
+    <li>
+        Bins have equal widths.
+    </li>
+
+    <li>
+        On the vertical axis frequency is shown.
+    </li>
+
+    <li>
+        The right bound is closed and the left bound is open (except  
+        the bin on the very left).
+    </li>
+
+</ol>
 
 
 <p>&nbsp;</p>
@@ -158,11 +185,8 @@
 <h3 class="head_l3"  id="Using_Commands">Using Commands</h3>
 
 <p>
-    Depending on the nature of the process, it can be significantly more convenient to generate 
-    data points using commands and to plot them on the fly than using the above-described steps. 
+   Please see <a href="../../std/funcs/histogram.php">std.histogram</a>.
 </p>
-
-
 
 
 
@@ -187,13 +211,21 @@
 <h2 class="head_l2"  id="customizechart">Customizing the Chart</h2>
 
 
+
 <h3 class="head_l3"  id="Formatting_Series">Formatting Series</h3>
 
 
-<p>Right-clicking on the series to be formatted will show the following dialog :</p>
+<p>To format the histogram, right-click on any of the bins and then select "Format..." from the context-menu.</p>
+
+
 
 <h4 class="head_l4"  id="optionstab">Options Tab</h4>
 
+<p>
+    The options tab simply allows you to change the way histogram is constructed.
+</p>
+
+<img src="images/formathistogram_optionstab.png" alt="">
 
 
 
