@@ -119,7 +119,6 @@
 
 
 
-<!-- ---------------------------------- Plot Simple Chart ---------------------------------  -->
 
 <h2 class="head_l2"  id="plottingsimplechart">Plotting Simple Chart</h2>
 
@@ -215,7 +214,10 @@
 <h3 class="head_l3"  id="Formatting_Series">Formatting Series</h3>
 
 
-<p>To format the histogram, right-click on any of the bins and then select "Format..." from the context-menu.</p>
+<p>
+    To format the histogram, right-click on any of the bins and 
+    then select "Format..." from the context-menu.
+</p>
 
 
 
@@ -227,9 +229,14 @@
 
 <img src="images/formathistogram_optionstab.png" alt="">
 
+<p>
+    If "Relative Frequency" or "Density" option is selected, then 
+    the chart changes mode to relative frequency or "Density". If 
+    "Density" is selected, then "Cumulative" option is disabled. 
+    Below chart is constructed using the cumulative and relative frequency options.
+</p>
 
-
-
+<img src="images/chart_singleseries_relativefreq_cumulative.png" alt="">
 
 
 <p>&nbsp;</p>
