@@ -65,6 +65,12 @@
    
 </head>
 
+
+
+
+
+
+
 <body>
 <?php
     $mainmenuloc = $_SERVER["DOCUMENT_ROOT"]."/mainmenu.php"; 
@@ -140,6 +146,8 @@
     <li><a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a></li>
 
     <li><a href="scatter/bubblechart.php">Bubble Chart</a></li>
+
+     <li><a href="histogram/histogram.php">Histogram</a></li>
 
     <li><a href="scatter/scatterchart.php">Scatter Charts</a></li>
 
