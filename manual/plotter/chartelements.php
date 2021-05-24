@@ -39,23 +39,40 @@
 <h2 id="axes">Axes</h2>
 
 <p>
-    Charts allow customizing the axes. Here, changing the properties of the 
-    horizontal axis of scatter charts will be presented. 
+    For brevity, changing the properties of the horizontal axis of scatter charts will be presented. 
     Similar steps are followed to modify the properties of the vertical axis and a 
     similar rationale holds for other types of charts.
 </p>
 
-<p><b>1)</b> Right-click on the horizontal axis and select "<em>Format Horizontal Axis...</em>"</p>
+<p>
+    <b>1)</b> Right-click on the horizontal axis and select 
+    "<em>Format Horizontal Axis...</em>"
+</p>
 
 <img src="images/axisoptions_popupmenu_formathorizontalaxis.png" alt="" />
 
 <p>&nbsp;</p>
-<p><b>2)</b> A dialog similar to the following will be shown (note that minimum value has already been changed to 0):</p>
+
+<p>
+    <b>2)</b> A dialog similar to the following will be shown 
+    (note that minimum value has already been changed to 0):
+</p>
 
 
 <img src="images/axisoptions_dlg_horizontalaxisprop.png" alt=""/>
-<p>The bounds (minimum, maximum), major unit and the value at which horizontal axis crosses vertical axis are shown. </p>
+<p>
+    The bounds (minimum, maximum), major unit and the value at 
+    which horizontal axis crosses vertical axis are shown. 
+</p>
 
+
+<p>
+    <span style="color: red;">Note:</span> For the above chart, the horizontal axis has 
+    a corresponding orthogonal axis, namely the vertical axis. Therefore, the option 
+    "Crosses Vertical Axis" is shown as well. However, for charts which 
+    have only a single axis at a time, such as Box-Whisker, this option 
+    will not be displayed.
+</p>
 
 
 <p>&nbsp;</p>
@@ -239,6 +256,7 @@
     <a href="argand/argand.php">Argand Diagram</a>
     <a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a>
     <a href="scatter/bubblechart.php">Bubble Chart</a>
+    <a href="histogram/histogram.php">Histogram</a>
     <a href="scatter/scatterchart.php">Scatter Charts</a>
     
     
