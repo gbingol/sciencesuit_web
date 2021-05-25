@@ -56,11 +56,35 @@
     
 
 
-<h1>boxplot</h1>
+<h1>histogram</h1>
 
 <p class="funcsignature">
         histogram{ 
-       
+            <br />
+         ...  ,   <br />
+
+        <br />
+
+        [<span class="tablekey">mode</span>="f"], <br />
+
+        <br />
+
+        [<span class="tablekey">cumulative</span>=<span class="LuaKeyword">false</span>], <br />
+
+        <br />
+
+        [<span class="tablekey">title</span>=""], <br />
+
+        <br />
+
+        [<span class="tablekey">fill</span>={color=DefaultColor, style=DefaultStyle}], <br />
+        <br />
+
+        [<span class="tablekey">line</span>={ color=DefaultColor, width=1, style=DefaultStyle}], <br />
+        <br />
+        
+        [<span class="tablekey">hwnd</span>=<span class="LuaKeyword">nil</span>], <br />
+        <br />
 
         } &rarr; window handle (light userdata)
 </p>
@@ -93,12 +117,17 @@
 <table class="funcarguments">
     <tr>
         <td>... :</td>
-        <td>Any number of variable &larr; <em>Vector/Array</em></td>
+        <td>A variable &larr; <em>Vector/Array</em></td>
     </tr>
 
     <tr>
-        <td>name:</td>
-        <td>Name of the series &larr; <em>string</em></td>
+        <td>mode :</td>
+        <td>"d", "f" or "r" for density, frequency and relative frequency, respectively.</td>
+    </tr>
+
+    <tr>
+        <td>cumulative :</td>
+        <td>whether distribution is cumulative or not &larr; <em>boolean</em></td>
     </tr>
 
     <tr>
