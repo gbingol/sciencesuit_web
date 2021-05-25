@@ -89,7 +89,7 @@
 
 <p>&nbsp;</p>
 
-<p>Let's first understand the terminology used:</p>
+<p id="terminology"><b>Terminology</b></p>
 
 <ul class="linespaced">
     <li>
@@ -209,19 +209,12 @@
     
 <h2 class="head_l2"  id="customizechart">Customizing the Chart</h2>
 
-
-
-<h3 class="head_l3"  id="Formatting_Series">Formatting Series</h3>
-
-
 <p>
-    To format the histogram, right-click on any of the bins and 
+    To customize the histogram, right-click on any of the bins and 
     then select "Format..." from the context-menu.
 </p>
 
-
-
-<h4 class="head_l4"  id="optionstab">Options Tab</h4>
+<h3 class="head_l3"  id="optionstab">Options Tab</h3>
 
 <p>
     The options tab simply allows you to change the way histogram is constructed.
@@ -229,19 +222,106 @@
 
 <img src="images/formathistogram_optionstab.png" alt="">
 
+
+<h4 class="head_l4" id="series_distributionmode">Distribution Mode</h4>
+
 <p>
-    If "Relative Frequency" or "Density" option is selected, then 
-    the chart changes mode to relative frequency or "Density". If 
-    "Density" is selected, then "Cumulative" option is disabled. 
-    Below chart is constructed using the cumulative and relative frequency options.
+    Initially the chart is plotted using the "Frequency" mode; however, 
+    the mode can be changed to "Relative Frequency" or "Density".  
+    
+    If "Density" is selected, then "Cumulative" option is disabled and unchecked, therefore, 
+    the chart will not display a cumulative distribution anymore. 
+</p>
+
+<p>
+    Below, the chart is constructed using the cumulative and relative frequency options.
 </p>
 
 <img src="images/chart_singleseries_relativefreq_cumulative.png" alt="">
 
 
 <p>&nbsp;</p>
+
+<p>
+    The following chart displays the same data in the "Density" mode.
+</p>
+
+<img src="images/chart_singleseries_density.png" alt="">
+
+
 <p>&nbsp;</p>
 
+
+<h4 class="head_l4" id="bin_mode">Bin Method</h4>
+
+<p>
+    The default bin method is for computing the number of bins is Freedman–Diaconis rule. 
+    The number of bins can be changed and a number between [1, 100] can be selected. 
+</p>
+
+<p>
+    The following chart shows the same data using 30 bins. 
+</p>
+
+<img src="images/chart_singleseries_freq_binnum_30bins.png" alt="">
+
+
+<p>&nbsp;</p>
+
+
+<p><b>Class Intervals of Unequal Widths</b></p>
+
+<p>
+    The number of bins, whether automatically computed or manually changed,
+    results in equal class widths. However, unequal class widths can be used 
+    as well using the following steps: 
+</p>
+
+<p>
+    <b>1) </b> <a href="../../workbook/createdatastructures.php">Either using the workbook</a> 
+    or using the command-line create a vector variable holding the breaks.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;breaks=std.util.tovector{-2,-0.5, 0, 2}
+</p>
+
+<p>
+    <span style="color: red;">Note:</span> The breakpoints must be in (min, max) data.
+</p>
+
+<p>
+    <b>2)</b> In the "Binning Method", select "Lua Variable" and type the name of the Lua variable, 
+    namely <span style="background-color:lightcyan;">breaks</span>, and press enter.
+</p>
+
+<p>
+    <b>3)</b> The following chart was obtained using the above-generated breaks and in the density mode.
+</p>
+
+<img src="images/chart_singleseries_manualbreaks_density.png" alt="">
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h3 class="head_l3"  id="fill_linetab">Line/Fill Tab</h3>
+<p>
+    Appearance of the bins can be formatted. The following chart is displayed 
+    in frequency and cumulative mode using some formatting.
+</p>
+
+<img src="images/chart_singleseries_formatted_freq_cumulative.png" alt="">
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 
