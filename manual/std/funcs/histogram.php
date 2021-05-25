@@ -200,12 +200,73 @@
 
 
 
-<h2 id="examples">EXAMPLES</h2>
+<h2 class="head_l2" id="examples">EXAMPLES</h2>
+
+<p>
+    For all examples, the following random variable, 
+    generated from a standard normal distribution, is used.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;x=std.rnorm(500)
+</p>
 
 
 
 
+<p>&nbsp;</p>
 
+
+
+
+<h3 class="head_l3" id="onlydata">Only data</h3>
+
+<p>
+    Only data is provided and all other properties are provided by the system.
+</p>
+
+<p class="CodeCommand">
+    &gt;&gt;std.histogram{x}
+</p>
+
+<img src="../images/histogram_onlydata.png" alt="">
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<h3 class="head_l3" id="mode_cumulative">Distribution Mode</h3>
+
+<p>
+    Distribution mode is set to "relative frequency" and cumulative mode is true.
+</p>
+
+
+<p class="CodeCommand">
+    &gt;&gt;std.histogram{x, mode="r", cumulative=<span class="LuaKeyword">true</span>}
+</p>
+
+<img src="../images/histogram_mode_cumulative.png" alt="">
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h3 class="head_l3" id="fill_line">Fill/Line Properties</h3>
+
+<p>
+    Data, as well as, fill and line properties are provided. 
+</p>
+
+
+<p class="CodeCommand">
+    &gt;&gt;std.histogram{x, fill={color="255 0 0"}, line={color="0 255 0", width=2}}
+</p>
+
+<img src="../images/histogram_fill_line.png" alt="">
 
     
 <p>&nbsp;</p>
@@ -220,8 +281,8 @@
 
 <div class="RelatedLinks">
     <a href="../../plotter/histogram/histogram.php">Histogram chart</a>
-    <a href="boxplot.php">boxplot</a>
-    <a href="scatter.php">scatter</a>
+    <a href="boxplot.php">std.boxplot</a>
+    <a href="scatter.php">std.scatter</a>
 </div>
 
 
