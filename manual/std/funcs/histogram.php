@@ -61,7 +61,7 @@
 <p class="funcsignature">
         histogram{ 
             <br />
-         ...  ,   <br />
+        <span class="tablekey">[1]</span>=  ,   <br />
 
         <br />
 
@@ -73,7 +73,7 @@
 
         <br />
 
-        [<span class="tablekey">breaks</span> = DefaultValue, <br />
+        [<span class="tablekey">breaks</span> = DefaultValue], <br />
 
         <br />
 
@@ -93,11 +93,9 @@
         } &rarr; window handle (light userdata)
 </p>
 
-<p>&nbsp;</p>
-
 
 <p>
-    The functions returns the window handle of the plot window.
+    returns the window handle of the plot window.
 </p>
 
 
@@ -106,7 +104,7 @@
 <p> 
     <span class="italicunderlined"> <em>Note on Terminology:</em></span> 
     The word Default in the arguments is used to denote that the so-called value is 
-    assigned/computed by the system until a new value is assigned.
+    assigned/computed by the system unless a new value is assigned.
 </p>
     
 
@@ -120,7 +118,7 @@
     
 <table class="funcarguments">
     <tr>
-        <td>... :</td>
+        <td>[1]= :</td>
         <td>A variable &larr; <em>Vector/Array</em></td>
     </tr>
 
@@ -136,7 +134,7 @@
 
     <tr>
         <td>breaks :</td>
-        <td>Number of breaks or break points &larr; <em>integer/Vector</em></td>
+        <td>Number of breaks or the break points &larr; <em>integer/Vector</em></td>
     </tr>
 
     <tr>
@@ -200,6 +198,15 @@
 </table>
 
 
+<p>&nbsp;</p>
+
+<p>
+    Note that in Lua terminology, a table data structure can have entries with explicit or implicit keys. <br>
+    The notation <span style="background-color: lightgray;">[1]</span> 
+    denotes a keyless entry (with an implicit key) in the first position at the table; i.e. 
+    <span style="background-color: lightgray;">std.histogram{ x }</span> is equivalent to 
+    <span style="background-color: lightgray;">std.histogram{ [1] = x }</span>
+</p>
 
 
 
