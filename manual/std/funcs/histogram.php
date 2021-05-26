@@ -73,6 +73,10 @@
 
         <br />
 
+        [<span class="tablekey">breaks</span> = DefaultValue, <br />
+
+        <br />
+
         [<span class="tablekey">title</span>=""], <br />
 
         <br />
@@ -128,6 +132,11 @@
     <tr>
         <td>cumulative :</td>
         <td>whether distribution is cumulative or not &larr; <em>boolean</em></td>
+    </tr>
+
+    <tr>
+        <td>breaks :</td>
+        <td>Number of breaks or break points &larr; <em>integer/Vector</em></td>
     </tr>
 
     <tr>
