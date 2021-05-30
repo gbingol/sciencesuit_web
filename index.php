@@ -714,69 +714,9 @@
 
 
 
-
-
-
-<h2>How to start?</h2>
-<p class="FirstLetter">
-    Understanding the <a href="manual/environment/index.php">environment</a> will give you better insight about the framework.
-    Then, depending whether coding is your strong suit or not, you might choose a pathway to take your knowledge further.
-</p>
-
-
-<div class="flex-container">
-    
-    <div>
-    <p style="text-align:center;"><b>Coders</b></p>
-    <ol class="spaced">
-        <li><a href="manual/scripteditor/index.php">Script Editor</a></li>
-        <li><a href="manual/cmdline/index.php">Command Editor</a></li>
-        <li><a href="manual/std/index.php">std library</a></li>
-        <li><a href="manual/workbook/index.php">Workbook</a></li>
-        <li><a href="manual/plotter/index.php">Plotter</a></li>
-        <li><a href="manual/apps/index.php">Apps</a></li>
-
-    </ol>
-    </div>
-
-
-    <div>
-    <p style="text-align:center;"><b>Clickers</b></p>
-    <ol class="spaced">
-        <li><a href="manual/workbook/index.php">Workbook</a></li>
-        <li><a href="manual/plotter/index.php">Plotter</a></li>
-        <li><a href="manual/apps/index.php">Apps</a></li>
-        <li><a href="manual/std/index.php">std library</a></li>
-        <li><a href="manual/cmdline/index.php">Command Editor</a></li>
-        <li><a href="https://www.lua.org/pil/contents.html" target="_blank">Learn Lua</a></li>
-    </ol>
-
-    </div>
-</div>
-
-
-
-
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-
-
-
 <div id="mobiledownloadlink" style="font-size:0.8em;">
     Note that ScienceSuit is a desktop application. However, if you wish to download it to your mobile device then 
     click (<a href="downloads/index.php">download</a>).
-    
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
 </div>
 
 
