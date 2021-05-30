@@ -155,25 +155,6 @@ window.addEventListener("load",function()
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<p>The following video briefly demonstrates  how an app works:</p>
-
-
-<div class="youtube">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/B4fRv6vsEqU" frameborder="0" 
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-</div>
-
-
-    
-<p style="font-size: small; margin-right:5%;">
-    Please note that, if there is <em>already an existing selection before starting an app</em>, the app will attempt 
-    to <b>populate</b> the text fields. 
-</p>
-
- <p>&nbsp;</p>
-
-
 
 
 
