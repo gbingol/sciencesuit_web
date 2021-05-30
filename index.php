@@ -345,10 +345,10 @@
     
     <div id="VariablePlotContent" class="VariableContent">
         <p class="FirstLetter">
-            Plot, interact, format and export charts.
+            Plot, interact, format and export various types of charts.
         </p>
         
-        <img alt="" src="mainpage/images/plotter_multiplecharts.svg">
+        <img alt="" src="manual/plotter/images/home_ribbonbar.png">
     </div>
 </div>
 
