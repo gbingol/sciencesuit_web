@@ -86,16 +86,15 @@
 
 
 
+<img src="images/home_ribbonbar.png" alt=""/>
+
+<p>&nbsp;</p>
+
 <img style="max-height: 75vh; max-width: 90vw;" src="../../mainpage/images/plotter_multiplecharts.svg" alt="">
 
 <p>&nbsp;</p>
 
-<p>
-    Different variations of scatter and box-and-whisker plot  
-    can be found under the "Home" ribbon page as seen in the following figure. 
-</p>
 
-<img src="images/home_ribbonbar.png" alt=""/>
 
 
 <p>&nbsp;</p>

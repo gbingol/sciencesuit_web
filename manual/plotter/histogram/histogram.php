@@ -309,7 +309,15 @@
 
 <h3 class="head_l3"  id="fill_linetab">Line/Fill Tab</h3>
 <p>
-    Appearance of the bins can be formatted. The following chart is displayed 
+    Appearance of the bins can be formatted using the following options.
+</p>
+
+<img src="images/formathistogram_line_filltab.png" alt="">
+
+<p>&nbsp;</p>
+
+<p>
+    For example, the following chart is displayed 
     in frequency and cumulative mode using some formatting.
 </p>
 

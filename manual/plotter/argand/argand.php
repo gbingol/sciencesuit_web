@@ -163,27 +163,8 @@
 <h3 class="head_l3"  id="Using_Commands">Using Commands</h3>
 
 <p>
-    Let's assume that we are investigating the roots of the polynom: <em>x<sup>4</sup> + 1 = 0 </em>
+    For details please see <a href="../../std/funcs/argand.php">std.argand</a> function.
 </p>
-
-<p>
-    First we will find the roots of the polynom using <a href="../../std/funcs/polyroots.php">std.polyroots</a> 
-    function and then visualization will be done via <a href="../../std/funcs/argand.php">std.argand</a> function.
-</p>
-
-<p class="CodeCommand">
-    &gt;&gt;poly=std.util.tovector{1, 0, 0, 0, 1} <br>
-    &gt;&gt;roots=std.polyroots(poly) <br />
-
-    <br />
-
-    &gt;&gt;std.argand(roots) <br />
-</p>
-
-
-<img src="images/simpleplot_usingonlycommand.png" alt="" />
-
-
 
 
 

@@ -227,31 +227,9 @@
 
 <h3 class="head_l3"  id="Using_Commands">Using Commands</h3>
 
-<p>
-    Depending on the nature of the process, it can be significantly more convenient to generate 
-    data points using commands and to plot them on the fly than using the above-described steps. 
-</p>
-
-
-<p class="CodeCommand">
-    &gt;&gt;style=std.const.linestyle.dot <br>
-    
-    <br>
-    
-    &gt;&gt;x=std.util.tovector{2, 1, 3, 6, 4} <br>
-
-    <br>
-
-    &gt;&gt;std.boxplot{x, line={color="255 0 0", style=style, width=3}} <br>
-    Light userdata: 00000229B528AA30
-</p>
-    
-<p>
-    The above-commands will produce the following chart. For more details, 
+<p> 
     please see <a href="../../std/funcs/boxplot.php">std.boxplot</a> command.
 </p>
-
-<img src="images/simplechart_usingcommands.png" alt=""/>
 
 
 
@@ -494,43 +472,9 @@ delete option.
 <h3 class="head_l3"   id="Axis_Options">Axis Options</h3>
 
 <p>
-    Should you wish to, the chart allows changing the boundaries of its axis.
+    Please see <a href="../chartelements.php#axes">formatting axes</a> for more 
+    details.
 </p>
-
-<p><b>1)</b> Right-click on the axis and select "<em>Format Axis...</em>"</p>
-
-
-<p>&nbsp;</p>
-<p>
-    <b>2)</b> For the the <a href="#updateseriescontextmenu">chart seen</a>, the following dialog will be shown:
-</p>
-
-<img src="images/axisproperties_originalbounds.png" alt=""/>
-
-<p>
-    The bounds (minimum, maximum) are shown. Modifying the bounds, such that <br>
-    <em>Bounds</em> &rarr; Minimum: 1&nbsp;&nbsp;&nbsp; Maximum: 8  <br>
-    will modify the chart as follows:
-</p>
-
-<img src="images/axisproperties_chart_boundsmodified.png" alt=""/>
-
-<p>
-    If you had a large number of data and <em>Show Inner Points</em> option was on, re-scaling the axis would 
-    "filter" the data to contain only the points between the newly chosen scale.
-</p>
-
-
-<p>&nbsp;</p>
-<p>If you right-click on the horizontal axis again and select the "<em>Format Axis...</em>", the dialog will be shown as follows:</p>
-
-<img src="images/axisproperties_resetbuttonsactive.png" alt=""/>
-
-<p>
-    It is seen that the "<em>Reset</em>" buttons are active and if any of the "<em>Reset</em>" button is clicked 
-    the bounds will be reset to its value that had been calculated automatically, i.e., 0 for minimum and 9 for maximum.
-</p>
-
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
