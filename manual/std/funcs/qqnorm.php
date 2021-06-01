@@ -52,15 +52,15 @@
     <br />
     
 
-    [<key>title</key>="Q-Q Norm"], <br />
+    [<key>title</key>="Normal Q-Q Plot"], <br />
 
     <br />
 
-    [<key>xlab</key>="Theoretical Quantile"], <br />
+    [<key>xlab</key>="Theoretical Quantiles"], <br />
 
     <br />
 
-    [<key>ylab</key>="Data"], <br />
+    [<key>ylab</key>="Sample Quantiles"], <br />
 
     <br />
 
