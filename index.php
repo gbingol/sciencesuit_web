@@ -281,6 +281,53 @@
 
 
 
+<!-- ********************************** Plotter ********************************** -->
+
+<div class="ContentPanel">
+    
+    <div class="ContentHeader" >
+        <span onclick="OnPlotArrowClicked('l')" class="arrow leftarrow">&nbsp;&laquo;</span>
+        
+        <span class="ContentTitle" onclick="window.location.href='manual/plotter/index.php'">Plotter</span>
+        
+        <span onclick="OnPlotArrowClicked('r')" class="arrow rightarrow">&nbsp;&raquo;</span>
+    </div>
+    
+    
+    
+    <div id="VariablePlotContent" class="VariableContent">
+        <p class="FirstLetter">
+            Plot, interact, format and export various types of charts.
+        </p>
+        
+        <img alt="" src="manual/plotter/images/home_ribbonbar.svg">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -306,50 +353,6 @@
         <img alt="" src="manual/apps/images/ribbonpage_app.svg">
     </div>
          
-</div>
-
-
-
-
-
-
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-
-
-
-
-
-<!-- ********************************** Plotter ********************************** -->
-
-<div class="ContentPanel">
-    
-    <div class="ContentHeader" >
-        <span onclick="OnPlotArrowClicked('l')" class="arrow leftarrow">&nbsp;&laquo;</span>
-        
-        <span class="ContentTitle" onclick="window.location.href='manual/plotter/index.php'">Plotter</span>
-        
-        <span onclick="OnPlotArrowClicked('r')" class="arrow rightarrow">&nbsp;&raquo;</span>
-    </div>
-    
-    
-    
-    <div id="VariablePlotContent" class="VariableContent">
-        <p class="FirstLetter">
-            Plot, interact, format and export various types of charts.
-        </p>
-        
-        <img alt="" src="manual/plotter/images/home_ribbonbar.svg">
-    </div>
 </div>
 
 
