@@ -120,7 +120,7 @@
 
 
 
-<h3>Essentials</h3>
+<h3>Chart Elements</h3>
 
 <ul class="linespaced">
     <li>
@@ -128,7 +128,7 @@
     </li>
 
     <li>
-        <a href="chartelements.php">Chart Elements (Axes, Titles, Labels, Gridlines...)</a>
+        <a href="chartelements.php">Axes, Titles, Labels, Gridlines...</a>
     </li>
 
 </ul>
@@ -160,6 +160,50 @@
      </ol>
 </div>
 
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+<h3>Related Functions</h3>
+
+<ul class="linespaced">
+    <li>
+        <a href="../std/funcs/argand.php">std.argand</a>
+    </li>
+
+    <li>
+        <a href="../std/funcs/boxplot.php">std.boxplot</a>
+    </li>
+
+    <li>
+        <a href="../std/funcs/histogram.php">std.histogram</a>
+    </li>
+
+    <li>
+        <a href="../std/funcs/qqnorm.php">std.qqnorm</a>
+    </li>
+
+    <li>
+        <a href="../std/funcs/qqplot.php">std.qqplot</a>
+    </li>
+
+    <li>
+        <a href="../std/funcs/scatter.php">std.scatter</a>
+    </li>
+
+    <li>
+        <a href="../std/funcs/plot.hwnd.php">std.plot.hwnd</a>
+    </li>
+    <li>
+        <a href="../std/funcs/plot.layout.php">std.plot.layout</a>
+    </li>
     
 
 
