@@ -104,7 +104,8 @@ var StdLibFunctions = [
 
     ["trans"], ["trapz"], ["tukey"], ["var"],
 
-    ["argand"], ["boxplot"], ["scatter"],
+
+    ["argand"], ["boxplot"], ["histogram"], ["qqnorm"], ["qqplot"], ["scatter"],
 
     ["algo", StdAlgoLib],
 
