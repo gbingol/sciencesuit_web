@@ -195,26 +195,9 @@
 <h3 class="head_l3"  id="Using_Commands">Using Commands</h3>
 
 <p>
-    Depending on the nature of the process, it can be significantly more convenient to generate
-    data points using commands and to plot them on the fly than using the above-described steps.
+    For details please see 
+    <a href="../../std/funcs/scatter.php">std.scatter</a> function.
 </p>
-
-<p>
-    Suppose you are to inspect the plot F-distribution for degrees of freedom of 3 and 5.
-    Using commands this can be achieved quickly by typing the following commands:
-</p>
-
-<p class="CodeCommand">
-    &gt;&gt;x=std.sequence(0, 4, 0.1) <br />
-    &gt;&gt;y=std.df{x=x, df1=3, df2=5} <br />
-
-    <br />
-
-    &gt;&gt;std.scatter(x,y) <br />
-</p>
-
-
-<img src="images/howtoplot_simplechart_viausingcommands.png" alt="" />
 
 
 
@@ -920,7 +903,7 @@
 
 <p>&nbsp;</p>
 <p>
-    <b>2)</b> Check the boxes for "Display Equation on Chart" and "Display R-squared Value on Chart".
+    <b>2)</b> Check the boxes for "Display Equation on Chart" and "Display R2, RMSE".
     As you check or uncheck the boxes, the related information will be displayed on the chart as seen below:
 </p>
 
@@ -934,19 +917,9 @@
 
 <h3 class="head_l3" >Changing the format of the displayed info</h3>
 
-<p><b>1)</b> Right click on the textbox and select "Font..." menu item.</p>
-
-<img src="images/trendline_rightclickontextbox.png" alt=""/>
-
-<p>&nbsp;</p>
-<p><b>2)</b> Following dialog will be shown:</p>
-
-<img src="images/formattextboxdialog.png" alt="" />
-
-<p>&nbsp;</p>
-<p><b>3)</b> After some minor formatting:</p>
-
-<img src="images/trendlines_chart_r2_equation_formatted.png" alt=""/>
+<p>
+    Please see <a href="../chartelements.php#textbox">TextBox</a> for details.
+</p>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -1058,9 +1031,7 @@
 
 <div class="RelatedLinks">
     <a href="bubblechart.php">Bubble Chart</a>
-    <a href="../boxwhisker/boxwhisker.php">Box and Whisker</a>
     <a href="../../std/funcs/scatter.php">std.scatter</a>
-    <a href="../../std/funcs/boxplot.php">std.boxplot</a>
 </div>
 
 
