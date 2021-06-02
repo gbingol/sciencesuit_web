@@ -56,11 +56,11 @@
     
     <br>
     
-    count(Vector, [breaks="FD"], [LeftClose=false], [RightClose=true]) &rarr; 2D Lua table<br>
+    count(Vector, [breaks="FD"],  [right=true]) &rarr; 2D Lua table<br>
 
     <br>
 
-    count { Container, [breaks="FD"], [left=false], [right=true] } &rarr; 2D Lua table
+    count { Container, [breaks="FD"],  [right=true] } &rarr; 2D Lua table
         
     
 </p>
@@ -81,15 +81,10 @@
         <td>breaks:</td>
         <td>
             <em>integer:</em> A number greater than 0.<br>
-            <em>table:</em> With at least 3 elements spanning the range of data.<br>
+            <em>table:</em> Break points must be within (min, max).<br>
             <em>string:</em> "FD" for Freedman–Diaconis, "Sturges" or "Rice"
         
         </td>
-    </tr>
-    
-    <tr>
-        <td>left:</td>
-        <td><span class="LuaKeyword">true</span>: a&leq;x , <span class="LuaKeyword">false</span>: a&lt;x</td>
     </tr>
     
     <tr>
@@ -112,27 +107,27 @@
 
 <p class="CodeCommand">
     &gt;&gt;arr <br>
-   "A"&nbsp;&nbsp;&nbsp;"B"&nbsp;&nbsp;&nbsp;"C"&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;1 &nbsp;&nbsp;&nbsp;"A"&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;"B" <br>	
+   "A"&emsp;"B"&emsp;"C"&emsp;2&emsp;1 &emsp;"A"&emsp;1&emsp;"B" <br>	
    
    <br>
    
     &gt;&gt;t=std.count(arr) <br>
     &gt;&gt;t <br>
-    table&nbsp;&nbsp;&nbsp;table&nbsp;&nbsp;&nbsp;table&nbsp;&nbsp;&nbsp;table&nbsp;&nbsp;&nbsp;table <br>
+    table&emsp;table&emsp;table&emsp;table&emsp;table <br>
     
     <br>
     
     <span class="LuaKeyword">for</span> i=1,#t <span class="LuaKeyword">do</span> <br>
-    &nbsp;&nbsp;&nbsp;print(t[i][1]," ", t[i][2]) <br>
+    &emsp;print(t[i][1]," ", t[i][2]) <br>
     <span class="LuaKeyword">end</span> <br>
     
     <br>
     
-    1&nbsp;&nbsp;&nbsp;2 <br>
-    2&nbsp;&nbsp;&nbsp;1 <br>
-    A&nbsp;&nbsp;&nbsp;2 <br>
-    B&nbsp;&nbsp;&nbsp;2 <br>
-    C&nbsp;&nbsp;&nbsp;1	
+    1&emsp;2 <br>
+    2&emsp;1 <br>
+    A&emsp;2 <br>
+    B&emsp;2 <br>
+    C&emsp;1	
 </p>
 
 <p>&nbsp;</p>
@@ -153,7 +148,7 @@
     <br>
     
     <span class="LuaKeyword">for</span> i=1,#t2 <span class="LuaKeyword">do</span>  <br>
-    &nbsp;&nbsp;&nbsp;print(t2[i][1]," ", t2[i][2]) <br>
+    &emsp;print(t2[i][1]," ", t2[i][2]) <br>
     <span class="LuaKeyword">end</span> <br>
     
     <br>
@@ -196,12 +191,15 @@
 <h2 id="vector">Vector</h2>
 <p>
     Unlike Array where counts are performed based on number of unique elements, in Vectors 
-    counts are performed <em>in an interval</em>. If the interval is defined between numbers <em>a</em> and <em>b</em>, then:
+    counts are performed <em>in an interval</em>. 
+    If the interval is defined between numbers <em>a</em> and <em>b</em>, then:
 </p>
 
 <ol>
-    <li><em>Left-close:</em> <span class="LuaKeyword">true</span>: a&leq;x , <span class="LuaKeyword">false</span>: a&lt;x</li>
-    <li><em>Right-close:</em> <span class="LuaKeyword">true</span>: x&leq;b , <span class="LuaKeyword">false</span>: x&lt;b</li>
+    <li>
+        <em>Right-close:</em> 
+        <span class="LuaKeyword">true</span>: x&leq;b , <span class="LuaKeyword">false</span>: x&lt;b
+    </li>
 </ol>
 
 
@@ -209,7 +207,8 @@
 <p>&nbsp;</p>
 
 <p>
-    Below, let's initially demonstrate the differences between different methods, i.e., Freedman–Diaconis and Sturges.
+    Below, let's initially demonstrate the differences between different methods, 
+    i.e., Freedman–Diaconis and Sturges.
 </p>
 
 <div class="CodeCommand">
@@ -223,7 +222,7 @@
     <br>
     
     <span class="LuaKeyword">for</span> i=1,#t <span class="LuaKeyword">do</span> <br>
-    &nbsp;&nbsp;&nbsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
+    &emsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
     <span class="LuaKeyword">end</span> <br>
     
     <br>
@@ -280,7 +279,7 @@
     <br>
     
     <span class="LuaKeyword">for</span> i=1,#t <span class="LuaKeyword">do</span> <br>
-    &nbsp;&nbsp;&nbsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
+    &emsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
     <span class="LuaKeyword">end</span> <br>
     
     <br>
@@ -347,7 +346,7 @@
     <br>
     
     <span class="LuaKeyword">for</span> i=1,#t <span class="LuaKeyword">do</span> <br>
-    &nbsp;&nbsp;&nbsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
+    &emsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
     <span class="LuaKeyword">end</span> <br>
     
     <br>
@@ -388,7 +387,7 @@
     <br>
     
     <span class="LuaKeyword">for</span> i=1,#t <span class="LuaKeyword">do</span> <br>
-    &nbsp;&nbsp;&nbsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
+    &emsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
     <span class="LuaKeyword">end</span> <br>
     
     <br>
@@ -424,7 +423,7 @@
     <br>
     
     <span class="LuaKeyword">for</span> i=1,#t <span class="LuaKeyword">do</span> <br>
-    &nbsp;&nbsp;&nbsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
+    &emsp;print(t[i][1], " ", t[i][2], " ", t[i][3]) <br>
     <span class="LuaKeyword">end</span> <br>
     
     <br>
