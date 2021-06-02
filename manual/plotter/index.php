@@ -86,18 +86,65 @@
 
 
 
-<img src="images/home_ribbonbar.png" alt=""/>
-
-<p>&nbsp;</p>
-
-<img style="max-height: 75vh; max-width: 90vw;" src="../../mainpage/images/plotter_multiplecharts.svg" alt="">
+<img style="max-height: 75vh; max-width: 90vw;" src="images/home_ribbonbar.svg" alt=""/>
 
 <p>&nbsp;</p>
 
 
 
+<h3>Available charts</h3>
+
+<ol class="linespaced">
+    <li><a href="argand/argand.php">Argand Diagram</a></li>
+
+    <li><a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a></li>
+
+    <li><a href="scatter/bubblechart.php">Bubble Chart</a></li>
+
+     <li><a href="histogram/histogram.php">Histogram</a></li>
+
+     <li><a href="qqchart/qqchart.php">Q-Q Plot</a></li>
+
+    <li><a href="scatter/scatterchart.php">Scatter Charts</a></li>
+
+</ol>
+
+
+
+
 
 <p>&nbsp;</p>
+
+
+
+
+
+
+<h3>Essentials</h3>
+
+<ul class="linespaced">
+    <li>
+        <a href="plotwindow.php">Plot Window</a>
+    </li>
+
+    <li>
+        <a href="chartelements.php">Chart Elements (Axes, Titles, Labels, Gridlines...)</a>
+    </li>
+
+</ul>
+
+
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+
+
 
 
 <div class="potpourriinfo">
@@ -112,48 +159,6 @@
          <li>A potpourri of commands and GUI. </li>
      </ol>
 </div>
- 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-<h3>
-    Essentials: 
-</h3>
-
-<ul class="linespaced">
-    <li>
-        <a href="plotwindow.php">Plot Window</a>
-    </li>
-
-    <li>
-        <a href="chartelements.php">Chart Elements (Axes, Titles, Labels, Gridlines...)</a>
-    </li>
-
-</ul>
-
-
-<p>&nbsp;</p>
-
-<h3>
-    Available charts: 
-</h3>
-
-<ol class="linespaced">
-    <li><a href="argand/argand.php">Argand Diagram</a></li>
-
-    <li><a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a></li>
-
-    <li><a href="scatter/bubblechart.php">Bubble Chart</a></li>
-
-     <li><a href="histogram/histogram.php">Histogram</a></li>
-
-    <li><a href="scatter/scatterchart.php">Scatter Charts</a></li>
-
-</ol>
-
-
-
 
     
 

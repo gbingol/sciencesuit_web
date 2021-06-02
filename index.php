@@ -348,7 +348,7 @@
             Plot, interact, format and export various types of charts.
         </p>
         
-        <img alt="" src="manual/plotter/images/home_ribbonbar.png">
+        <img alt="" src="manual/plotter/images/home_ribbonbar.svg">
     </div>
 </div>
 
