@@ -87,13 +87,13 @@
     <br />
 
     &gt;&gt;t={"a","c","d","e"} <br />
-    &gt;&gt;std.find(t, "d") <br />
+    &gt;&gt;std.algo.find(t, "d") <br />
     3	<br />
     
     <br />
     
     &gt;&gt;m2=std.util.tomatrix{ {1, 2} , {4, 5} , {7, 8} } <br />
-    &gt;&gt;std.find(m2, 5) <br />
+    &gt;&gt;std.algo.find(m2, 5) <br />
     4	<br />
 
     <br />
@@ -157,17 +157,17 @@
 
     <br />
 
-    &gt;&gt;std.find_if(t, function(x) return x>3 end) <br />
+    &gt;&gt;std.algo.find_if(t, function(x) return x>3 end) <br />
     2&emsp; 4&emsp; 5	<br />
     
     <br />
 
-    &gt;&gt;std.find_if(t, function(x) return x==5 end) <br />
+    &gt;&gt;std.algo.find_if(t, function(x) return x==5 end) <br />
     2	<br />
 
     <br />
 
-    &gt;&gt;std.find_if(t, function(x) return x<3 end) <br />
+    &gt;&gt;std.algo.find_if(t, function(x) return x<3 end) <br />
     1&emsp; 6	
 </p>
     
@@ -230,7 +230,7 @@
 
     <br />
 
-    &gt;&gt;std.findfirst_if(t, function(x) return x>3 end) <br />
+    &gt;&gt;std.algo.findfirst_if(t, function(x) return x>3 end) <br />
     2&emsp; <br />
     
 </p>
@@ -279,13 +279,13 @@
 
     <br />
 
-    &gt;&gt;std.find_minmax(v) <br />
+    &gt;&gt;std.algo.find_minmax(v) <br />
     2&emsp; 5 <br />
     
     <br />
 
     &gt;&gt;t={"b", "a", "c", "d"} <br />
-    &gt;&gt;std.find_minmax(t) <br />
+    &gt;&gt;std.algo.find_minmax(t) <br />
     2&emsp; 4	
 
 </p>
