@@ -159,12 +159,18 @@
 
 <h3 class="head_l3"  id="Existing_Selection">Existing Selection</h3>
 <p>
-    The following data set used: <br>
+    The following data set used:
+</p>
+
+<p>
     <span style="font-size: small;">
         treatment = [24, 33,43,43,43,44,46,49,49,52,53,54,56,57,57,58,59,61,62,67,71] <br>
         control = [10,17,19,20,26,28,33,37,37,41,42,42,42,43,46,48,53,54,55,55,60,62,85]   
     </span>
 </p>
+
+
+<p>&nbsp;</p>
 
  <p>
     Assuming that the data has already been entered to worksheet, there are two cases: 
@@ -174,6 +180,10 @@
     <li>Selection of single column,</li>
     <li>Selection of two columns</li>
  </ol> 
+
+
+
+ <p>&nbsp;</p>
 
 
 
