@@ -277,7 +277,6 @@
 
             <div class="drop_menuitems">
                 <a href="/about/">Overview</a>
-                <a href="/about/roadmap.php">Road Map</a>
                 <a href="/about/gb/">Developer</a>
             </div>
 
@@ -338,7 +337,6 @@
 
 
         <a href="/about/">Overview</a>
-        <a href="/about/roadmap.php">Road Map</a>
         <a href="/about/gb/">Developer</a>
 
     </div>
