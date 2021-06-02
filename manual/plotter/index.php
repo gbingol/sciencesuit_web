@@ -103,7 +103,7 @@
 
      <li><a href="histogram/histogram.php">Histogram</a></li>
 
-     <li><a href="qqchart/qqchart.php">Q-Q Plot</a></li>
+     <li><a href="qqchart/qqchart.php">Q-Q Plot</a></li> 
 
     <li><a href="scatter/scatterchart.php">Scatter Charts</a></li>
 
