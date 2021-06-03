@@ -340,9 +340,10 @@
 
     
 <p>
-        Sometimes we might need to change the name or the data of a series. Although we can delete the series and then add new series 
-        it is mostly more convenient and faster to directly update the series itself. 
-        To update a series, right-click on any part of the series and select "Update" as shown in the following figure:
+    Sometimes we might need to change the name or the data of a series. 
+    Although we can delete the series and then add new series 
+    it is mostly more convenient and faster to directly update the series itself. 
+    To update a series, right-click on any part of the series and select "Update" as shown in the following figure:
 </p>
 
 <img id="updateseriescontextmenu" src="images/contextmenu_updateseries.png" alt=""/>
@@ -487,6 +488,8 @@ delete option.
     Two different context-menu will be shown: <b>i)</b> Series, <b>ii)</b> Chart.
 </p>
 
+
+
 <h4 class="head_l4"  id="contextmenu_series">Series</h4>
 
 <p>
@@ -497,20 +500,24 @@ delete option.
 <img src="images/contextmenu_series.png" alt=""/> 
 
 <p>
-    Except <em>Display Name</em> option, in sections <a href="#customizechart">customizing the chart</a> and <a href="#updatedeleteseries">update/delete series</a> 
-    we covered the menu options. Display name is self-explanatory and simply displays the name of the series as shown below:
+    Except <em>Display Name</em> option, in sections 
+    <a href="#customizechart">customizing the chart</a> and 
+    <a href="#updatedeleteseries">update/delete series</a> 
+    we covered the menu options. Display name is self-explanatory 
+    and simply displays the name of the series as shown below:
 </p>
 
 <img src="images/contextmenu_displayname_chartunformattedtext.png" alt=""/>
 
-<p id="formattextbox">
-    Right-clicking on the name will show the following options for textbox, which is extensively covered <a href="../chartelements.php#textbox">here</a>.
-</p>
 
-<img src="images/seriesname_format.png" alt=""/>
+
+
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
  <h4 class="head_l4"  id="contextmenu_chart">Chart</h4>
     
@@ -522,34 +529,27 @@ delete option.
 <img src="images/contextmenu_chart.png" alt=""/>
 
 <ul class="space10px">
-    <li><em>Add New Series</em> and <em>Add Visible Selection</em> options are already covered in <a href="#New_Selection">new selection</a> section.</li>
-    <li><em>Flip Orientation</em> option is covered <a href="#fliporientation">here</a></li>
-    <li><em>Add Chart Title:</em> A title on the top part of the chart will be shown.</li>
-    <li><em>Add Legend:</em> A legend will be shown.</li>
+    <li>
+        <em>Add New Series</em> and <em>Add Visible Selection</em> options are 
+        already covered in <a href="#New_Selection">new selection</a> section.
+    </li>
+
+    <li>
+        <em>Flip Orientation</em> option is covered <a href="#fliporientation">here</a>
+    </li>
+
+    <li>
+        <em>Add Chart Title:</em> A <a href="../chartelements.php#textbox">title</a> 
+        on the top part of the chart will be shown.
+    </li>
+
+    <li>
+        <em>Add Legend:</em> A <a href="../chartelements.php#legend">legend</a> will be shown.
+    </li>
 </ul>
 
 
-<p>&nbsp;</p>
 
-<p>
-    If you add a chart title and <em>left-click</em> on the title you will be able to edit the title and if you 
-    <em>right-click</em> on the title, the following options will be displayed:
-</p>
-
-<img src="images/charttitle_contextmenuoptions.png" alt=""/>
-
-<p>
-    The "Font..." options displayed are covered in <a href="../chartelements.php#textbox">chart elements page</a>.
-</p>
-
-<p>&nbsp;</p>
-
-<p>
-    If you click on <em>"Add Legend"</em> and right-click on the legend, the following options, which are discussed 
-    <a href="../chartelements.php#legend">here</a>, will be shown:
-</p>
-
-<img src="images/legend_contextmenu.png" alt=""/>
 
 
 
@@ -573,92 +573,9 @@ delete option.
     
 <h2 class="head_l2"  id="plotmultipleseries">Plotting Multiple Series</h2>
 
-<p>There are different ways to plot multiple series on the same plot window. Here, the most common approaches will be presented.</p>
-<p>&nbsp;</p>
-
-
-
-<h3 class="head_l3"  id="plotmultiple_selection">Selection</h3>
-
 <p>
-    This has already been discussed in the <a href="#Existing_Selection">first section</a>. 
+    Please see how to plot <a href="../multi_series.php">multiple series</a>.
 </p>
-
-
-
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-<h3 class="head_l3"  id="plotmultiple_onlycmds">Using Only Commands</h3>
-
-<p>
-    If there is already a plot window and the handle, <em>hwnd</em>, is known:
-</p>
-
-
-<p class="CodeCommand">
-    &gt;&gt;x=std.util.tovector{2, 1, 3, 6, 4} <br/>
-    &gt;&gt;y=std.util.tovector{7, 7, 8, 4, 2} <br/>
-
-    <br/>
-
-    <span style="color: green">--Creates a plot window, handle <em>hwnd</em>, with series <b>x</b></span> <br/>
-    &gt;&gt;hwnd=std.boxplot{x} <br/>
-
-    <br/>
-
-    <span style="color: green">--Adds series <b>y</b> on the plot window with handle <em>hwnd</em></span> <br/>
-    &gt;&gt;std.boxplot{y, hwnd=hwnd}
-</p>
-
-
-
-<p>&nbsp;</p>
-
-<p>
-    Same as above command sequences; however, creates multiple series using a single-command:
-</p>
-
-<p class="CodeCommand">
-    &gt;&gt;x=std.util.tovector{2, 1, 3, 6, 4} <br/>
-    &gt;&gt;y=std.util.tovector{7, 7, 8, 4, 2} <br/>
-
-    <br/>
-
-    &gt;&gt;std.boxplot{x,y}
-</p>
-
-<img src="images/fromexistingselection_simplechart.png" alt=""/>
-
-
-
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-
-
-
-
-<h3 class="head_l3"  id="plotmultiple_selection_cmd">Selection & Command</h3>
-<p>
-    If there is already a plot window with series on it, 
-    you can use <a href="../../std/funcs/plot.hwnd.php">std.plot.hwnd</a> to 
-    obtain the <em>window handle, hwnd</em> and then use 
-    <a href="../../std/funcs/boxplot.php">std.boxplot</a> to add series on 
-    the plot window. 
-</p>
-
 
 
 
@@ -672,9 +589,9 @@ delete option.
 
 
 <div class="RelatedLinks">
-   <a href="../scatter/scatterchart.php">Scatter chart</a>
+   <a href="../histogram/histogram.php">Histogram</a>
+   <a href="../qqchart/qqchart.php">Q-Q Plot</a>
    <a href="../../std/funcs/boxplot.php">std.boxplot</a>
-   <a href="../../std/funcs/scatter.php">std.scatter</a>
 </div>
 
   

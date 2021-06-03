@@ -95,17 +95,36 @@
 <h3>Available charts</h3>
 
 <ol class="linespaced">
-    <li><a href="argand/argand.php">Argand Diagram</a></li>
+    <li>
+        <a href="argand/argand.php">Argand Diagram</a>
+        ( <a href="../std/funcs/argand.php">std.argand</a> )
+    </li>
 
-    <li><a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a></li>
+    <li>
+        <a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a>
+        ( <a href="../std/funcs/boxplot.php">std.boxplot</a> )
+    </li>
 
-    <li><a href="scatter/bubblechart.php">Bubble Chart</a></li>
+    <li>
+        <a href="scatter/bubblechart.php">Bubble Chart</a>
+        (  <a href="../std/funcs/scatter.php">std.scatter</a> )
+    </li>
 
-     <li><a href="histogram/histogram.php">Histogram</a></li>
+     <li>
+        <a href="histogram/histogram.php">Histogram</a>
+        ( <a href="../std/funcs/histogram.php">std.histogram</a> )
+    </li>
 
-     <li><a href="qqchart/qqchart.php">Q-Q Plot</a></li> 
+     <li>
+        <a href="qqchart/qqchart.php">Q-Q Plot</a>
+        ( <a href="../std/funcs/qqnorm.php">std.qqnorm</a> , 
+        <a href="../std/funcs/qqplot.php">std.qqplot</a> )
+    </li> 
 
-    <li><a href="scatter/scatterchart.php">Scatter Charts</a></li>
+    <li>
+        <a href="scatter/scatterchart.php">Scatter Charts</a>
+        ( <a href="../std/funcs/scatter.php">std.scatter</a> )
+    </li>
 
 </ol>
 
@@ -171,40 +190,19 @@
 
 
 
-<h3>Related Functions</h3>
+<h3>Multiple Charts/Series</h3>
 
 <ul class="linespaced">
     <li>
-        <a href="../std/funcs/argand.php">std.argand</a>
+        It is also possible to plot several charts on the same plot window, please see 
+        <a href="../std/funcs/plot.layout.php">std.plot.layout</a>. 
     </li>
 
     <li>
-        <a href="../std/funcs/boxplot.php">std.boxplot</a>
+        Multiple series can be plotted on the same chart. 
+        For more info please see <a href="multi_series.php">multiple series</a>.
     </li>
-
-    <li>
-        <a href="../std/funcs/histogram.php">std.histogram</a>
-    </li>
-
-    <li>
-        <a href="../std/funcs/qqnorm.php">std.qqnorm</a>
-    </li>
-
-    <li>
-        <a href="../std/funcs/qqplot.php">std.qqplot</a>
-    </li>
-
-    <li>
-        <a href="../std/funcs/scatter.php">std.scatter</a>
-    </li>
-
-    <li>
-        <a href="../std/funcs/plot.hwnd.php">std.plot.hwnd</a>
-    </li>
-    <li>
-        <a href="../std/funcs/plot.layout.php">std.plot.layout</a>
-    </li>
-    
+</ul>  
 
 
 </body>

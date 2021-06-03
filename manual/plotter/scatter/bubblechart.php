@@ -482,8 +482,7 @@
 <h2 class="head_l2"  id="plotmultipleseries">Plotting Multiple Series</h2>
 
 <p>
-    The rationale to plot multiple series is the same with the scatter chart. Please read
-    the section on how to <a href="scatterchart.php#plotmultipleseries">plot multiple series</a>.
+    Please see the section on how to <a href="../multi_series.php">plot multiple series</a>.
 </p>
 
 
@@ -530,11 +529,11 @@
 
 
 <div class="RelatedLinks">
-    <a href="../boxwhisker/boxwhisker.php">Box and Whisker Chart</a>
     <a href="scatterchart.php">Scatter Charts</a>
     <a href="../../std/funcs/scatter.php">std.scatter</a>
-    <a href="../../std/funcs/boxplot.php">std.boxplot</a>
 </div>
+
+
 
 </body>
 
