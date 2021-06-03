@@ -43,7 +43,7 @@
 
 <p class="funcsignature">
     
-    qqnorm{ <br />
+    qqplot{ <br />
     <br />
     x = ,<br />
 
