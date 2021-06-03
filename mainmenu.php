@@ -291,7 +291,7 @@
     window.addEventListener("load",function()
     {
     
-        var VersionInfo="v1.9.4 (April 19, 2021)";
+        var VersionInfo="v1.9.5 (June 03, 2021)";
 
         var Elems=document.getElementsByClassName("VersionInfo");
 
