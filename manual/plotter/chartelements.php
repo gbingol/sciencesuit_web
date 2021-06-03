@@ -38,7 +38,7 @@
 
 <h2 id="axes">Axes</h2>
 
-<p>
+<p class="rightmargined">
     For brevity, changing the properties of the horizontal axis of scatter charts will be presented. 
     Similar steps are followed to modify the properties of the vertical axis and a 
     similar rationale holds for other types of charts.
@@ -66,12 +66,10 @@
 </p>
 
 
-<p>
-    <span style="color: red;">Note:</span> For the above chart, the horizontal axis has 
-    a corresponding orthogonal axis, namely the vertical axis. Therefore, the option 
-    "Crosses Vertical Axis" is shown as well. However, for charts which 
-    have only a single axis at a time, such as Box-Whisker, this option 
-    will not be displayed.
+<p class="rightmargined">
+    <span style="color: red;">Note:</span> When an axis does not have 
+    a corresponding orthogonal axis, the option 
+    <em>"Crosses Vertical Axis"</em> will not be shown.  
 </p>
 
 
@@ -89,15 +87,21 @@
 
 <img src="images/axisoptions_chart_afterchanginghoraxis.png" alt=""/>
 
-<p>It is seen that the data is "filtered" to contain only the points between the newly chosen scale.</p>
+<p>
+    It is seen that the data is "filtered" to contain only the points between the newly chosen scale.
+</p>
 
 
 <p>&nbsp;</p>
-<p>If you right-click on the horizontal axis again and select the "<em>Format Horizontal Axis...</em>", the dialog will be shown as follows:</p>
+<p>
+    If you right-click on the horizontal axis again and select the 
+    "<em>Format Horizontal Axis...</em>", the dialog will be shown as follows:
+</p>
 
 
 <img src="images/axisoptions_dlg_horizontalaxisprop_resetbtn.png" alt=""/>
-<p>
+
+<p class="rightmargined">
     It is seen that, the "<em>Reset</em>" buttons are now active for properties which have been manually changed.
     Clicking on the "<em>Reset</em>" button will reset the bound to its value that had been calculated automatically.
 </p>
@@ -155,7 +159,7 @@
 
 <h2 id="legend">Legend</h2>
 
-<p>
+<p class="rightmargined">
     Legends are useful to display information about the series. In ScienceSuit, when a chart has more than 1 series,
     legends can be aligned either vertically or horizontally. To change from horizontal alignment to vertical or vice versa,
     simply select "Change Alignment" option. The following figure shows the difference:
@@ -257,9 +261,8 @@
     <a href="boxwhisker/boxwhisker.php">Box and Whisker Chart</a>
     <a href="scatter/bubblechart.php">Bubble Chart</a>
     <a href="histogram/histogram.php">Histogram</a>
+    <a href="qqchart/qqchart.php">Q-Q Plot</a>
     <a href="scatter/scatterchart.php">Scatter Charts</a>
-    
-    
 </div>
 
 </body>
