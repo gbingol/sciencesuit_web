@@ -168,19 +168,31 @@
 <p>&nbsp;</p>
 
 
-<p>
-    It should be noted that, one can follow a potpourri of steps described above such that
+
+
+
+<p class="rightmargined">
+    <span style="color: red; font-size: x-large;">&#9432;</span> 
+    It is also possible to follow a potpourri of steps described above such that
     start with commands and continue with clicks or vice versa.
 </p>
 
 
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+
+
+
 <div class="RelatedLinks">
+    <a href="argand.php">argand</a>
     <a href="boxplot.php">boxplot</a>
+    <a href="histogram.php">histogram</a>
+    <a href="qqnorm.php">qqnorm</a>
+    <a href="qqplot.php">qqplot</a>
     <a href="scatter.php">scatter</a>
 </div>
 
