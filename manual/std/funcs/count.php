@@ -380,9 +380,8 @@
     <p>&nbsp;</p>
     
     
-    <span style="color: green">--<em>interval</em> points </span> <br>
-    
-    &gt;&gt;t=std.count( v, {-5, 0, 4} ) <br>
+    &gt;&gt; v=std.rnorm(100) <br>    
+    &gt;&gt;t=std.count( v, {-2, 0, 2} ) <br>
     
     <br>
     
@@ -394,14 +393,32 @@
     
     <table class="spaced">
         <tr>
-            <td>-5</td>
-            <td>0</td>
-            <td>56</td>
+            <td>a</td>
+            <td>b</td>
+            <td>N</td>
+        </tr>
+
+        <tr>
+            <td>-2.38453</td>
+            <td>-2</td>
+            <td>2</td>
         </tr>
         <tr>
+            <td>-2</td>
             <td>0</td>
-            <td>4</td>
-            <td>44</td>
+            <td>47</td>
+        </tr>
+
+        <tr>
+            <td>0</td>
+            <td>2</td>
+            <td>48</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>2.57279</td>
+            <td>3</td>
         </tr>
     </table>
 
@@ -418,7 +435,7 @@
 
 
 <div class="CodeCommand"> 
-    &gt;&gt;t=std.count{ v, breaks={-5, 0, 4} } <br>
+    &gt;&gt;t=std.count{ v, breaks={-2, 0, 2} } <br>
     
     <br>
     
@@ -430,61 +447,31 @@
     
     <table class="spaced">
         <tr>
-            <td>-5</td>
-            <td>0</td>
-            <td>46</td>
+            <td>a</td>
+            <td>b</td>
+            <td>N</td>
         </tr>
+
         <tr>
-            <td>0</td>
-            <td>4</td>
-            <td>54</td>
-        </tr>
-    </table>
-    
-    
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    
-    &gt;&gt;v <br>
-    1 &emsp;2 &emsp; 3 &emsp; 5 &emsp; 9 &emsp; 11 &emsp; 4 &emsp; 6 &emsp;COL <br>
-    
-    <br>
-    
-    
-    <span style="color: green">--left=false, right=true</span> <br>
-    &gt;&gt;t=std.count{v, breaks=1} <br>
-    
-    <br>
-    
-    <table class="spaced">
-        <tr>
-            <td>1</td>
-            <td>6</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>11</td>
+            <td>-2.38453</td>
+            <td>-2</td>
             <td>2</td>
         </tr>
-    </table>
-    	 	 	
-    
-    <br>
-    <br>
-    <br>
-    
-    &gt;&gt;t=std.count{v, breaks=1, left=true, right=false}    <br>
-    <br>
-    <table class="spaced">
         <tr>
-            <td>1</td>
-            <td>6</td>
-            <td>5</td>
+            <td>-2</td>
+            <td>0</td>
+            <td>47</td>
         </tr>
+
         <tr>
-            <td>6</td>
-            <td>11</td>
+            <td>0</td>
+            <td>2</td>
+            <td>48</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>2.57279</td>
             <td>3</td>
         </tr>
     </table>
@@ -502,8 +489,8 @@
 
 
 <div class="RelatedLinks">
-    <a href="util.tokenize.php">util.tokenize</a>
-    
+    <a href="../../plotter/histogram/histogram.php">histogram</a>
+    <a href="histogram.php">std.histogram</a>
 </div>
 
 
