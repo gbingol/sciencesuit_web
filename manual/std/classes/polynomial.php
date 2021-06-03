@@ -333,7 +333,7 @@
 
     <br>
 
-    &gt;&gt;p2:degree()
+    &gt;&gt;p2:degree() <br>
     2
 </p>
 
