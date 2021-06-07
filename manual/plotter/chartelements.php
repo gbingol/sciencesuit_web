@@ -162,7 +162,7 @@
 <p class="rightmargined">
     Legends are useful to display information about the series. In ScienceSuit, when a chart has more than 1 series,
     legends can be aligned either vertically or horizontally. To change from horizontal alignment to vertical or vice versa,
-    simply select "Change Alignment" option. The following figure shows the difference:
+    simply select <em>"Change Alignment"</em> option. The following figure shows the difference:
 </p>
 
 <img src="images/legend_scatter_boxwhisker.png" alt=""/>

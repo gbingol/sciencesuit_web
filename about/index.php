@@ -83,19 +83,22 @@
 
 <p>
     <em>ScienceSuit</em> is designed and programmed by <a href="gb/index.php">Dr Gokhan Bingol</a>.
-    Its design is inspired by <a href="https://products.office.com/en/excel" target="_blank">Excel</a><sup><span class="auto-style1">TM</span></sup> 
-        (including <a href="https://docs.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office" target="_blank">VBA</a>) 
+    Its design is mainly inspired by 
+    <a href="https://products.office.com/en/excel" target="_blank">Excel</a><sup><span class="auto-style1">TM</span></sup> 
+    (including <a href="https://docs.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office" target="_blank">VBA</a>) 
         and <a href="https://www.mathworks.com/products/matlab.html" target="_blank">Matlab</a><sup><span class="auto-style1">TM</span></sup> 
         and to some extent by <a href="https://cran.r-project.org/" target="_blank">R</a> and <a href="https://www.minitab.com/" target="_blank">Minitab</a><sup><span class="auto-style1">TM</span></sup>.</p>
     
     <p>
-        <em>ScienceSuit</em> is mainly programmed in modern C++ and also embeds <a href="https://www.lua.org/" target="_blank">Lua</a> scripting language. 
-        Most of the core functions and data structures are programmed in C++ and the functions and data structures written in Lua are open source. 
+        <em>ScienceSuit</em> is mainly programmed in modern C++ and also embeds 
+        <a href="https://www.lua.org/" target="_blank">Lua</a> scripting language. 
+        Most of the core functions and data structures are programmed in 
+        C++ and the functions and data structures written in Lua are open source. 
         The following well-known and stable libraries are used: 
     </p>
 
     
-    <ul class="space6x">
+    <ul class="linespaced">
         <li><a href="https://opencv.org/" target="_blank">OpenCV</a>,</li>
         <li><a href="http://eigen.tuxfamily.org/" target="_blank">Eigen</a>,</li>
         <li><a href="https://www.boost.org/" target="_blank">Boost</a>,</li>
