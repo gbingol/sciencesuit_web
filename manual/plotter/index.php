@@ -115,6 +115,14 @@
         ( <a href="../std/funcs/histogram.php">std.histogram</a> )
     </li>
 
+    <li>
+        <a href="pie/piechart.php">Pie</a>
+        ( <a href="../std/funcs/pie.php">std.pie</a> ) <br>
+
+        <a href="pie/pieofpiechart.php">Pie of Pie</a>
+        ( <a href="../std/funcs/piepie.php">std.piepie</a> )
+    </li>
+
      <li>
         <a href="qqchart/qqchart.php">Q-Q Plot</a>
         ( <a href="../std/funcs/qqnorm.php">std.qqnorm</a> , 
