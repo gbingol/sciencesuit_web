@@ -164,7 +164,7 @@
     </li>
     
     <li>
-        <i>Two columns</i>: First column is assumed to be the label part, 
+        <i>Two columns</i>: First column is evaluated as the label part, 
         and the second column is evaluated as the data part.
     </li>
 </ol>
@@ -175,7 +175,7 @@
 
 <p>
     Let's assume we have the following data pairs: 
-    (A, 10), (B, 6), (C, 8)
+    [A, 10], [B, 6], [C, 8]
 </p>
 
 
@@ -200,8 +200,14 @@
 
 
 
+
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
+
 
 
 
@@ -264,6 +270,7 @@
 
      
     
+
     
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -360,8 +367,10 @@
 
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
 
 
 
@@ -431,8 +440,11 @@
 
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 
@@ -487,8 +499,12 @@
 
 
 
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+
 
 
 
