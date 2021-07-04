@@ -225,7 +225,7 @@
     Selecting "<em>Add New Series</em>" will show the following dialog:
 </p>
 
-<img src="images/dlgaddseries.png" alt="" />
+<img src="images/pie/dlgaddseries.png" alt="" />
 
 
 <ul class="linespaced">
