@@ -196,7 +196,9 @@
 
  <img src="images/selection_singlecolumn.png" alt="">
 
-
+<p>
+    Note that Anderson-Darling normality test is not shown by default.
+</p>
 
 
  <p>&nbsp;</p>
@@ -264,9 +266,10 @@
 
 <p>&nbsp;</p>
 
-<p>
+<p class="rightmargined">
     When a single column is selected, the "theoretical line" can be shown or hidden 
-    and its appearance can be changed.
+    and its appearance can be changed. Furthermore, Anderson-Darling normality test 
+    can be carried out.
 </p>
 
 
