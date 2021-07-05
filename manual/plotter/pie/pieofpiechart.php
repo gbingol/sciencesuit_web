@@ -115,7 +115,7 @@
 </p>
 
 
-<img src="images/pieofpie/anatomy.png" alt=""/>
+<img id="pieofpie_anatomy" src="images/pieofpie/anatomy.png" alt=""/>
 
 
 <ul id="terminology" class="linespaced">
