@@ -132,21 +132,41 @@
 
 
 
-<p>The following work will be the focus of the next few <em>major</em> releases:</p>
+<p>The following is the planned work:</p>
 <ul class="linespaced">
+
     <li>
-        More <a href="../manual/plotter/index.php">charts</a>. 
+        Until v2.0 efforts will be dedicated to more <a href="../manual/plotter/index.php">charts</a> (always more...)
     </li>
 
     <li>
-        As of (v2.x) due to its popularity and demand more <a href="../manual/apps/index.php">apps</a>; 
-        on process engineering and on data analytics. 
+        v2.x, although they can already be easily exported, ability to save-load charts.
+    </li>
+
+        
+    <li>
+        v2.x, considerably more power to <a href="../manual/imgproc/index.php">image processing toolbox</a> .
+    </li> 
+
+
+    <li>
+        v2.x a Camera Toolbox for acquiring live images from cameras.
+    </li> 
+
+
+
+    <li>
+        v2.x, Replacement of command-line with a notebook style environment that itself includes a REPL command-line.
+    </li>
+
+
+    <li>
+        v2.x, Debugging facilities to <a href="../manual/scripteditor/index.php">script editor</a>.
     </li>
 
     <li>
-        As of (v2.x) a Camera Toolbox for acquiring live images from cameras.
+        Always more <a href="../manual/apps/index.php">apps</a>.
     </li>
-
 </ul>
     
     
