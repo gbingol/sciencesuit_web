@@ -638,7 +638,12 @@
                Result += PerformSearch(Text, SecondEntry, Library[i][0], Dir, UCase);
            
            if(LibraryName !=="")
-               EntryName = LibraryName+ "." + Library[i][0].toLowerCase();
+           {
+               if(typeof Library[i][1] != "undefined")
+                    EntryName = LibraryName + "." + Library[i][1].toLowerCase();
+                else
+                    EntryName = LibraryName+ "." + Library[i][0].toLowerCase();
+           }
            else
                EntryName = Library[i][0].toLowerCase();
            
@@ -648,7 +653,7 @@
            var EntryURL ="";
            
            if(typeof SecondEntry === 'string' )
-               EntryURL = Dir + SecondEntry;
+               EntryURL = Dir + EntryName;
            else
                EntryURL = Dir + EntryName + ".php";
            

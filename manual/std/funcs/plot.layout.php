@@ -191,6 +191,8 @@
     <a href="argand.php">argand</a>
     <a href="boxplot.php">boxplot</a>
     <a href="histogram.php">histogram</a>
+    <a href="pie.php">pie</a>
+    <a href="piepie.php">piepie</a>
     <a href="qqnorm.php">qqnorm</a>
     <a href="qqplot.php">qqplot</a>
     <a href="scatter.php">scatter</a>

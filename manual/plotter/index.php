@@ -115,6 +115,14 @@
         ( <a href="../std/funcs/histogram.php">std.histogram</a> )
     </li>
 
+    <li>
+        <a href="pie/piechart.php">Pie</a>
+        ( <a href="../std/funcs/pie.php">std.pie</a> ) <br>
+
+        <a href="pie/pieofpiechart.php">Pie of Pie</a>
+        ( <a href="../std/funcs/piepie.php">std.piepie</a> )
+    </li>
+
      <li>
         <a href="qqchart/qqchart.php">Q-Q Plot</a>
         ( <a href="../std/funcs/qqnorm.php">std.qqnorm</a> , 
@@ -194,13 +202,12 @@
 
 <ul class="linespaced">
     <li>
-        It is also possible to plot several charts on the same plot window, please see 
+        To plot multiple charts on the same plot window, please see 
         <a href="../std/funcs/plot.layout.php">std.plot.layout</a>. 
     </li>
 
     <li>
-        Multiple series can be plotted on the same chart. 
-        For more info please see <a href="multi_series.php">multiple series</a>.
+        To plot multiple series please <a href="multi_series.php">visit</a>.
     </li>
 </ul>  
 

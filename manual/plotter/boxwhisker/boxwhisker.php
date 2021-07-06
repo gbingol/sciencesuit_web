@@ -63,6 +63,12 @@
 
     
     <script src="/jsscripts/siteanalytics.js"></script>
+    
+    <script src="/jsscripts/createoutline.js"></script>
+    
+    <script>
+        window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
+    </script>
    
 </head>
 
@@ -73,10 +79,9 @@
 ?>
 
 
-<script src="/jsscripts/createoutline.js"></script>
-<script>
-    window.addEventListener("load", MakeElement_Details_FromOutline.bind(null, ["H2", "H3", "H4"]), false);
-</script>
+
+
+
 
     
 <h1>Box and Whisker Chart</h1>
@@ -94,9 +99,11 @@
 
 <img src="images/anatomy.png" alt=""/>
 
+
 <p>&nbsp;</p>
 
-<p>Some definitions:</p>
+
+<p id="terminology"> Terminology:</p>
 
 <ul class="linespaced">
     <li>
@@ -111,7 +118,11 @@
     <li><b>Inner points:</b> Any data point that is not an outlier point.</li>
 </ul>
 
+
+
 <p>&nbsp;</p>
+
+
 
 <p>
     Although the above box and whisker anatomy figure displays all parts of the chart, 
