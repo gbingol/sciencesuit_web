@@ -44,8 +44,15 @@
 
 <p>&nbsp;</p>
 
-<h2>Work Experience</h2>
+<h2> Experience</h2>
+
+
 <UL>
+
+    <li>
+        Scientific Software Development, 2019 -
+    </li>
+
     <LI class="mylist">
         Senior Lecturer, 
         <a href="https://www.auckland.ac.nz/en/engineering/about-the-faculty/chemical-and-materials-engineering.html" target="_blank">Chemical and Materials Engineering</a>, University of Auckland, February 
@@ -279,7 +286,7 @@
 
 	<li class="mylist">
 	    Abdul Ghani NH, Yu W, <strong>Bingol G</strong>, Young B (2015). Modelling exothermic reaction rate of coffee bean during roasting, 
-        12th International Congress on Engineering and Food, Québec City, Canada  June 14-18.
+        12th International Congress on Engineering and Food, Quï¿½bec City, Canada  June 14-18.
 	</li>
 
 	<li class="mylist">
